@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Reservation.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Rides24</a> &gt; <a href="index.source.html" class="el_package">domain</a> &gt; <span class="el_source">Reservation.java</span></div><h1>Reservation.java</h1><pre class="source lang-java linenums">package domain;
+
+import java.io.Serializable;
+import java.util.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlID;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
+@SuppressWarnings(&quot;serial&quot;)
+@XmlAccessorType(XmlAccessType.FIELD)
+@Entity
+public class Reservation implements Serializable {
+	@XmlID
+	@XmlJavaTypeAdapter(IntegerAdapter.class)
+	@GeneratedValue
+	@Id
+	private int erreserbaZenbakia;
+	private Traveler traveler;
+	private Ride ride;
+	private Date date;
+	private float prezioa;
+	private String state;
+	private int nSeats;
+	
+	
+	public Reservation(Traveler pTraveler, Ride pRide, Date pData, float pPrezioa) {
+<span class="nc" id="L32">		super();</span>
+<span class="nc" id="L33">		this.traveler = pTraveler;</span>
+<span class="nc" id="L34">		this.ride = pRide;</span>
+<span class="nc" id="L35">		this.date = pData;</span>
+<span class="nc" id="L36">		this.prezioa = pPrezioa;</span>
+<span class="nc" id="L37">		this.state = &quot;Ez-onartua&quot;;</span>
+<span class="nc" id="L38">		this.nSeats = 0;</span>
+<span class="nc" id="L39">	}</span>
+
+	public Traveler getTraveler() {
+<span class="nc" id="L42">		return traveler;</span>
+	}
+
+	public void setTraveler(Traveler traveler) {
+<span class="nc" id="L46">		this.traveler = traveler;</span>
+<span class="nc" id="L47">	}</span>
+
+	public Ride getRide() {
+<span class="nc" id="L50">		return ride;</span>
+	}
+
+	public void setRide(Ride ride) {
+<span class="nc" id="L54">		this.ride = ride;</span>
+<span class="nc" id="L55">	}</span>
+
+	public int getErreserbaZenbakia() {
+<span class="nc" id="L58">		return erreserbaZenbakia;</span>
+	}
+
+	public void setErreserbaZenbakia(int erreserbaZenbakia) {
+<span class="nc" id="L62">		this.erreserbaZenbakia = erreserbaZenbakia;</span>
+<span class="nc" id="L63">	}</span>
+
+	public Date getDate() {
+<span class="nc" id="L66">		return date;</span>
+	}
+
+	public void setDate(Date date) {
+<span class="nc" id="L70">		this.date = date;</span>
+<span class="nc" id="L71">	}</span>
+
+	public float getPrezioa() {
+<span class="nc" id="L74">		return prezioa;</span>
+	}
+
+	public void setPrezioa(float prezioa) {
+<span class="nc" id="L78">		this.prezioa = prezioa;</span>
+<span class="nc" id="L79">	}</span>
+
+	public boolean isOnartua() {
+<span class="nc bnc" id="L82" title="All 2 branches missed.">		if (state.equals(&quot;Onartua&quot;)) {</span>
+<span class="nc" id="L83">			return true;</span>
+		} else {
+<span class="nc" id="L85">			return false;</span>
+		}
+	}
+	
+	public boolean isBaieztatua() {
+<span class="nc bnc" id="L90" title="All 2 branches missed.">		if (state.equals(&quot;Baieztatua&quot;)) {</span>
+<span class="nc" id="L91">			return true;</span>
+		} else {
+<span class="nc" id="L93">			return false;</span>
+		}
+	}
+
+	public String getState() {
+<span class="nc" id="L98">		return this.state;</span>
+	}
+	
+	public void onartu() {
+<span class="nc" id="L102">		this.state = &quot;Onartua&quot;;</span>
+<span class="nc" id="L103">	}</span>
+	
+	public void baieztatu() {
+<span class="nc" id="L106">		this.state = &quot;Baieztatua&quot;;</span>
+<span class="nc" id="L107">	}</span>
+	
+	public void cancel() {
+<span class="nc" id="L110">		this.state = &quot;Kantzelatua&quot;;</span>
+<span class="nc" id="L111">	}</span>
+
+	public int getnSeats() {
+<span class="nc" id="L114">		return nSeats;</span>
+	}
+
+	public void setnSeats(int nSeats) {
+<span class="nc" id="L118">		this.nSeats = nSeats;</span>
+<span class="nc" id="L119">	}</span>
+	
+	public String toString(){
+<span class="nc" id="L122">		return this.ride.toString();</span>
+	}
+	
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

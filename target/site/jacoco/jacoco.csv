@@ -1,0 +1,930 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+Rides24,javax.persistence.metamodel,PluralAttribute.CollectionType,44,0,0,0,5,0,1,0,1,0
+Rides24,javax.persistence.metamodel,Attribute.PersistentAttributeType,74,0,0,0,8,0,1,0,1,0
+Rides24,javax.persistence.metamodel,Bindable.BindableType,34,0,0,0,4,0,1,0,1,0
+Rides24,javax.persistence.metamodel,Type.PersistenceType,44,0,0,0,5,0,1,0,1,0
+Rides24,dataAccess,ObjectdbManagerServer,192,0,2,0,43,0,3,0,2,0
+Rides24,dataAccess,DataAccess,1477,165,44,6,345,31,50,6,26,5
+Rides24,dataAccess,ObjectdbManagerServer.new ActionListener() {...},48,0,0,0,12,0,2,0,2,0
+Rides24,javax.transaction.xa,XAException,13,0,0,0,7,0,3,0,3,0
+Rides24,javax.jdo,JDOFatalUserException,34,0,0,0,14,0,7,0,7,0
+Rides24,javax.jdo,JDODataStoreException,34,0,0,0,14,0,7,0,7,0
+Rides24,javax.jdo,JDOHelper,1866,0,194,0,480,0,152,0,55,0
+Rides24,javax.jdo,JDOFatalDataStoreException,34,0,0,0,14,0,7,0,7,0
+Rides24,javax.jdo,JDOFatalInternalException,34,0,0,0,14,0,7,0,7,0
+Rides24,javax.jdo,JDOCanRetryException,34,0,0,0,14,0,7,0,7,0
+Rides24,javax.jdo,JDOHelper.new PrivilegedAction() {...},0,5,0,0,0,2,0,2,0,2
+Rides24,javax.jdo,JDOHelper.new JDOImplHelper.StateInterrogationObjectReturn() {...},4,3,0,0,1,1,1,1,1,1
+Rides24,javax.jdo,JDOHelper.new JDOImplHelper.StateInterrogationObjectReturn() {...},4,3,0,0,1,1,1,1,1,1
+Rides24,javax.jdo,JDOHelper.new JDOImplHelper.StateInterrogationBooleanReturn() {...},4,3,0,0,1,1,1,1,1,1
+Rides24,javax.jdo,JDOHelper.new JDOImplHelper.StateInterrogationBooleanReturn() {...},4,3,0,0,1,1,1,1,1,1
+Rides24,javax.jdo,JDOHelper.new JDOImplHelper.StateInterrogationObjectReturn() {...},4,3,0,0,1,1,1,1,1,1
+Rides24,javax.jdo,JDOHelper.new JDOImplHelper.StateInterrogationObjectReturn() {...},4,3,0,0,1,1,1,1,1,1
+Rides24,javax.jdo,JDOHelper.new JDOImplHelper.StateInterrogationBooleanReturn() {...},4,3,0,0,1,1,1,1,1,1
+Rides24,javax.jdo,JDOHelper.new JDOImplHelper.StateInterrogationBooleanReturn() {...},4,3,0,0,1,1,1,1,1,1
+Rides24,javax.jdo,JDOObjectNotFoundException,34,0,0,0,14,0,7,0,7,0
+Rides24,javax.jdo,JDOUserCallbackException,34,0,0,0,14,0,7,0,7,0
+Rides24,javax.jdo,JDOFatalException,34,0,0,0,14,0,7,0,7,0
+Rides24,javax.jdo,ObjectState,147,0,0,0,17,0,3,0,3,0
+Rides24,javax.jdo,JDOHelper.new PrivilegedExceptionAction() {...},10,0,0,0,2,0,2,0,2,0
+Rides24,javax.jdo,JDOHelper.new PrivilegedExceptionAction() {...},15,0,0,0,2,0,2,0,2,0
+Rides24,javax.jdo,JDOHelper.new PrivilegedExceptionAction() {...},20,0,0,0,2,0,2,0,2,0
+Rides24,javax.jdo,JDOHelper.new PrivilegedExceptionAction() {...},20,0,0,0,2,0,2,0,2,0
+Rides24,javax.jdo,JDOHelper.new PrivilegedExceptionAction() {...},20,0,0,0,2,0,2,0,2,0
+Rides24,javax.jdo,JDOHelper.new PrivilegedAction() {...},6,0,0,0,2,0,2,0,2,0
+Rides24,javax.jdo,JDOHelper.new PrivilegedAction() {...},15,0,0,0,2,0,2,0,2,0
+Rides24,javax.jdo,JDOHelper.new JDOImplHelper.StateInterrogationBooleanReturn() {...},4,3,0,0,1,1,1,1,1,1
+Rides24,javax.jdo,JDOHelper.new ErrorHandler() {...},8,0,0,0,4,0,4,0,4,0
+Rides24,javax.jdo,JDOHelper.new JDOImplHelper.StateInterrogationBooleanReturn() {...},4,3,0,0,1,1,1,1,1,1
+Rides24,javax.jdo,JDOException,376,0,42,0,91,0,38,0,17,0
+Rides24,javax.jdo,JDOUserException,34,0,0,0,14,0,7,0,7,0
+Rides24,javax.jdo,JDOUnsupportedOptionException,17,0,0,0,8,0,4,0,4,0
+Rides24,javax.jdo,JDONullIdentityException,22,0,0,0,10,0,5,0,5,0
+Rides24,javax.jdo,JDOReadOnlyException,17,0,0,0,8,0,4,0,4,0
+Rides24,javax.jdo,JDODetachedFieldAccessException,22,0,0,0,10,0,5,0,5,0
+Rides24,javax.jdo,JDOOptimisticVerificationException,29,0,0,0,12,0,6,0,6,0
+Rides24,com.objectdb.jpa.type,IdentifiableTypeImpl,281,0,34,0,62,0,30,0,13,0
+Rides24,com.objectdb.jpa.type,ManagedTypeImpl,629,0,34,0,109,0,52,0,35,0
+Rides24,com.objectdb.jpa.type,TypeImpl,20,0,0,0,5,0,3,0,3,0
+Rides24,com.objectdb.jpa.type,MappedSuperclassTypeImpl,7,0,0,0,3,0,2,0,2,0
+Rides24,com.objectdb.jpa.type,EmbeddableTypeImpl,6,0,0,0,3,0,2,0,2,0
+Rides24,com.objectdb.jpa.type,BasicTypeImpl,6,0,0,0,3,0,2,0,2,0
+Rides24,com.objectdb.jpa.type,EntityTypeImpl,19,0,0,0,7,0,5,0,5,0
+Rides24,configuration,ConfigXML,41,184,0,0,12,37,9,7,9,7
+Rides24,configuration,UtilDate,118,0,0,0,32,0,5,0,5,0
+Rides24,com.objectdb.jpa.attr,PluralAttributeImpl,18,0,0,0,6,0,4,0,4,0
+Rides24,com.objectdb.jpa.attr,MapAttributeImpl,19,0,0,0,6,0,4,0,4,0
+Rides24,com.objectdb.jpa.attr,CollectionAttributeImpl,9,0,0,0,3,0,2,0,2,0
+Rides24,com.objectdb.jpa.attr,AttributeImpl,174,0,24,0,53,0,23,0,11,0
+Rides24,com.objectdb.jpa.attr,SetAttributeImpl,9,0,0,0,3,0,2,0,2,0
+Rides24,com.objectdb.jpa.attr,SingularAttributeImpl,41,0,0,0,13,0,7,0,7,0
+Rides24,com.objectdb.jpa.attr,ListAttributeImpl,9,0,0,0,3,0,2,0,2,0
+Rides24,javax.persistence,PersistenceContextType,24,0,0,0,3,0,1,0,1,0
+Rides24,javax.persistence,InheritanceType,34,0,0,0,4,0,1,0,1,0
+Rides24,javax.persistence,NonUniqueResultException,7,0,0,0,4,0,2,0,2,0
+Rides24,javax.persistence,EntityNotFoundException,7,0,0,0,4,0,2,0,2,0
+Rides24,javax.persistence,CascadeType,64,0,0,0,7,0,1,0,1,0
+Rides24,javax.persistence,ConstraintMode,34,0,0,0,4,0,1,0,1,0
+Rides24,javax.persistence,NoResultException,7,0,0,0,4,0,2,0,2,0
+Rides24,javax.persistence,LockModeType,84,0,0,0,9,0,1,0,1,0
+Rides24,javax.persistence,OptimisticLockException,33,0,0,0,15,0,7,0,7,0
+Rides24,javax.persistence,SynchronizationType,24,0,0,0,3,0,1,0,1,0
+Rides24,javax.persistence,CacheStoreMode,34,0,0,0,4,0,1,0,1,0
+Rides24,javax.persistence,RollbackException,16,0,0,0,8,0,4,0,4,0
+Rides24,javax.persistence,AccessType,24,0,0,0,3,0,1,0,1,0
+Rides24,javax.persistence,CacheRetrieveMode,24,0,0,0,3,0,1,0,1,0
+Rides24,javax.persistence,PersistenceException,16,0,0,0,8,0,4,0,4,0
+Rides24,javax.persistence,DiscriminatorType,34,0,0,0,4,0,1,0,1,0
+Rides24,javax.persistence,TemporalType,34,0,0,0,4,0,1,0,1,0
+Rides24,javax.persistence,TransactionRequiredException,7,0,0,0,4,0,2,0,2,0
+Rides24,javax.persistence,SharedCacheMode,54,0,0,0,6,0,1,0,1,0
+Rides24,javax.persistence,FlushModeType,24,0,0,0,3,0,1,0,1,0
+Rides24,javax.persistence,ValidationMode,34,0,0,0,4,0,1,0,1,0
+Rides24,javax.persistence,FetchType,24,0,0,0,3,0,1,0,1,0
+Rides24,javax.persistence,LockTimeoutException,33,0,0,0,15,0,7,0,7,0
+Rides24,javax.persistence,EntityExistsException,16,0,0,0,8,0,4,0,4,0
+Rides24,javax.persistence,ParameterMode,44,0,0,0,5,0,1,0,1,0
+Rides24,javax.persistence,GenerationType,44,0,0,0,5,0,1,0,1,0
+Rides24,javax.persistence,QueryTimeoutException,33,0,0,0,15,0,7,0,7,0
+Rides24,javax.persistence,PessimisticLockScope,24,0,0,0,3,0,1,0,1,0
+Rides24,javax.persistence,Persistence,93,0,10,0,22,0,11,0,6,0
+Rides24,javax.persistence,Persistence.PersistenceUtilImpl,94,0,18,0,27,0,11,0,2,0
+Rides24,javax.persistence,PessimisticLockException,33,0,0,0,15,0,7,0,7,0
+Rides24,javax.persistence,EnumType,24,0,0,0,3,0,1,0,1,0
+Rides24,javax.transaction,HeuristicCommitException,7,0,0,0,4,0,2,0,2,0
+Rides24,javax.transaction,NotSupportedException,7,0,0,0,4,0,2,0,2,0
+Rides24,javax.transaction,HeuristicMixedException,7,0,0,0,4,0,2,0,2,0
+Rides24,javax.transaction,SystemException,13,0,0,0,7,0,3,0,3,0
+Rides24,javax.transaction,TransactionRolledbackException,7,0,0,0,4,0,2,0,2,0
+Rides24,javax.transaction,HeuristicRollbackException,7,0,0,0,4,0,2,0,2,0
+Rides24,javax.transaction,TransactionRequiredException,7,0,0,0,4,0,2,0,2,0
+Rides24,javax.transaction,RollbackException,7,0,0,0,4,0,2,0,2,0
+Rides24,javax.transaction,InvalidTransactionException,7,0,0,0,4,0,2,0,2,0
+Rides24,javax.jdo.listener,InstanceLifecycleEvent,90,0,18,0,27,0,19,0,9,0
+Rides24,javax.jdo.datastore,DataStoreCache.EmptyDataStoreCache,19,0,0,0,18,0,17,0,17,0
+Rides24,com.objectdb.jpa,Provider,252,0,38,0,77,0,33,0,14,0
+Rides24,com.objectdb.jpa,ObjectdbJpaVendorAdapter,63,0,0,0,18,0,9,0,9,0
+Rides24,com.objectdb.jpa,EMImpl,963,0,82,0,303,0,106,0,65,0
+Rides24,com.objectdb.jpa,EMF,371,0,38,0,110,0,39,0,20,0
+Rides24,com.objectdb.jpa,MetamodelImpl,347,0,31,0,88,0,28,0,12,0
+Rides24,com.objectdb.jpa,JpaQuery,685,0,62,0,157,0,70,0,39,0
+Rides24,com.objectdb,OID,84,0,6,0,20,0,10,0,7,0
+Rides24,com.objectdb,Server,631,0,64,0,146,0,42,0,10,0
+Rides24,com.objectdb,JEnhancerAgent,412,0,30,0,92,0,21,0,6,0
+Rides24,com.objectdb,Activator,135,0,2,0,36,0,6,0,5,0
+Rides24,com.objectdb,Enhancer,51,0,4,0,15,0,6,0,4,0
+Rides24,com.objectdb,Doctor,6,0,0,0,3,0,2,0,2,0
+Rides24,com.objectdb,Utilities,235,0,20,0,55,0,21,0,11,0
+Rides24,com.objectdb,ServerRunner,10,0,0,0,3,0,2,0,2,0
+Rides24,com.objectdb,Replayer,84,0,8,0,23,0,6,0,2,0
+Rides24,com.objectdb.jpa.criteria,JpqlWritable,16,0,0,0,5,0,3,0,3,0
+Rides24,com.objectdb.jpa.criteria,JpqlWriter,197,0,24,0,43,0,24,0,12,0
+Rides24,com.objectdb.jpa.criteria,AbstractQueryImpl,268,0,32,0,63,0,37,0,21,0
+Rides24,com.objectdb.jpa.criteria,Expressions,46,0,6,0,8,0,8,0,5,0
+Rides24,com.objectdb.jpa.criteria,RootImpl,31,0,0,0,10,0,4,0,4,0
+Rides24,com.objectdb.jpa.criteria,JoinImpl.d,44,0,0,0,10,0,8,0,8,0
+Rides24,com.objectdb.jpa.criteria,JoinImpl.c,34,0,0,0,8,0,6,0,6,0
+Rides24,com.objectdb.jpa.criteria,JoinImpl.b,24,0,0,0,7,0,5,0,5,0
+Rides24,com.objectdb.jpa.criteria,JoinImpl,106,0,6,0,30,0,13,0,10,0
+Rides24,com.objectdb.jpa.criteria,PathImpl,102,0,4,0,22,0,11,0,9,0
+Rides24,com.objectdb.jpa.criteria,CriteriaElement.a,80,0,6,0,19,0,8,0,5,0
+Rides24,com.objectdb.jpa.criteria,Expressions.i,5,0,0,0,2,0,1,0,1,0
+Rides24,com.objectdb.jpa.criteria,Expressions.j,41,0,0,0,11,0,5,0,5,0
+Rides24,com.objectdb.jpa.criteria,Expressions.k,71,0,4,0,13,0,6,0,4,0
+Rides24,com.objectdb.jpa.criteria,Expressions.l,20,0,0,0,7,0,3,0,3,0
+Rides24,com.objectdb.jpa.criteria,CriteriaElement,185,0,6,0,31,0,21,0,18,0
+Rides24,com.objectdb.jpa.criteria,Expressions.a,66,0,10,0,14,0,11,0,6,0
+Rides24,com.objectdb.jpa.criteria,Expressions.b,42,0,6,0,7,0,6,0,3,0
+Rides24,com.objectdb.jpa.criteria,Expressions.c,18,0,0,0,6,0,2,0,2,0
+Rides24,com.objectdb.jpa.criteria,Expressions.d,103,0,6,0,21,0,9,0,6,0
+Rides24,com.objectdb.jpa.criteria,Expressions.e,17,0,0,0,5,0,3,0,3,0
+Rides24,com.objectdb.jpa.criteria,FromImpl,345,0,12,0,66,0,40,0,34,0
+Rides24,com.objectdb.jpa.criteria,Expressions.f,18,0,0,0,5,0,3,0,3,0
+Rides24,com.objectdb.jpa.criteria,Expressions.g,29,0,0,0,8,0,4,0,4,0
+Rides24,com.objectdb.jpa.criteria,Expressions.h,49,0,2,0,14,0,7,0,6,0
+Rides24,com.objectdb.jpa.criteria,CriteriaBuilderImpl,1596,0,22,0,173,0,159,0,148,0
+Rides24,com.objectdb.jpa.criteria,CriteriaQueryImpl.a,51,0,6,0,13,0,8,0,5,0
+Rides24,com.objectdb.jpa.criteria,JoinImpl.a,24,0,0,0,7,0,5,0,5,0
+Rides24,com.objectdb.jpa.criteria,CriteriaQueryImpl,159,0,16,0,41,0,24,0,16,0
+Rides24,com.objectdb.jpa.criteria,SubqueryImpl,211,0,4,0,53,0,22,0,20,0
+Rides24,com.objectdb.spi,OVisitor,0,3,0,0,0,1,0,1,0,1
+Rides24,com.objectdb.spi,OMember,11,0,0,0,4,0,4,0,4,0
+Rides24,com.objectdb.spi,Tracker,397,0,68,0,130,0,87,0,53,0
+Rides24,com.objectdb.spi,OWriter,0,3,0,0,0,1,0,1,0,1
+Rides24,com.objectdb.spi,Trackable,4,0,0,0,1,0,1,0,1,0
+Rides24,com.objectdb.spi,OType,3,0,0,0,1,0,1,0,1,0
+Rides24,com.objectdb.spi,DetachedTracker,164,0,18,0,48,0,22,0,13,0
+Rides24,com.objectdb.spi,SignedType,4,0,0,0,1,0,1,0,1,0
+Rides24,com.objectdb.spi,TrackableSysType,4,0,0,0,1,0,1,0,1,0
+Rides24,com.objectdb.spi,OReader,0,3,0,0,0,1,0,1,0,1
+Rides24,com.objectdb.spi,TrackableUserType,4,0,0,0,1,0,1,0,1,0
+Rides24,javax.jdo.annotations,DiscriminatorStrategy,44,0,0,0,5,0,1,0,1,0
+Rides24,javax.jdo.annotations,PersistenceModifier,44,0,0,0,5,0,1,0,1,0
+Rides24,javax.jdo.annotations,IdentityType,44,0,0,0,5,0,1,0,1,0
+Rides24,javax.jdo.annotations,VersionStrategy,54,0,0,0,6,0,1,0,1,0
+Rides24,javax.jdo.annotations,ForeignKeyAction,64,0,0,0,7,0,1,0,1,0
+Rides24,javax.jdo.annotations,SequenceStrategy,34,0,0,0,4,0,1,0,1,0
+Rides24,javax.jdo.annotations,IdGeneratorStrategy,74,0,0,0,8,0,1,0,1,0
+Rides24,javax.jdo.annotations,InheritanceStrategy,44,0,0,0,5,0,1,0,1,0
+Rides24,javax.jdo.annotations,NullValue,34,0,0,0,4,0,1,0,1,0
+Rides24,exceptions,RideAlreadyExistException,3,4,0,0,2,2,1,1,1,1
+Rides24,exceptions,RideMustBeLaterThanTodayException,7,0,0,0,4,0,2,0,2,0
+Rides24,javax.jdo.identity,IntIdentity,139,0,12,0,40,0,18,0,12,0
+Rides24,javax.jdo.identity,ObjectIdentity,227,0,20,0,55,0,19,0,9,0
+Rides24,javax.jdo.identity,CharIdentity,163,0,14,0,46,0,21,0,14,0
+Rides24,javax.jdo.identity,LongIdentity,155,0,16,0,45,0,20,0,12,0
+Rides24,javax.jdo.identity,ObjectIdentity.new PrivilegedAction() {...},5,0,0,0,2,0,2,0,2,0
+Rides24,javax.jdo.identity,ByteIdentity,139,0,12,0,40,0,18,0,12,0
+Rides24,javax.jdo.identity,ShortIdentity,139,0,12,0,40,0,18,0,12,0
+Rides24,javax.jdo.identity,StringIdentity,94,14,10,0,25,4,12,1,7,1
+Rides24,javax.jdo.identity,SingleFieldIdentity,131,0,16,0,41,0,23,0,15,0
+Rides24,javax.persistence.spi,PersistenceProviderResolverHolder.DefaultPersistenceProviderResolver,347,0,28,0,75,0,23,0,9,0
+Rides24,javax.persistence.spi,PersistenceProviderResolverHolder.DefaultPersistenceProviderResolver.LoaderReference,14,0,0,0,5,0,2,0,2,0
+Rides24,javax.persistence.spi,PersistenceProviderResolverHolder,22,0,2,0,7,0,5,0,4,0
+Rides24,javax.persistence.spi,PersistenceProviderResolverHolder.DefaultPersistenceProviderResolver.PersistenceProviderReference,14,0,0,0,5,0,2,0,2,0
+Rides24,javax.persistence.spi,PersistenceProviderResolverHolder.DefaultPersistenceProviderResolver.new PrivilegedAction() {...},6,0,0,0,2,0,2,0,2,0
+Rides24,javax.persistence.spi,PersistenceProviderResolverHolder.DefaultPersistenceProviderResolver.CacheKey,134,0,22,0,33,0,18,0,7,0
+Rides24,javax.persistence.spi,PersistenceUnitTransactionType,24,0,0,0,3,0,1,0,1,0
+Rides24,javax.persistence.spi,LoadState,34,0,0,0,4,0,1,0,1,0
+Rides24,javax.persistence.spi,PersistenceProviderResolverHolder.DefaultPersistenceProviderResolver.ProviderName,31,0,0,0,7,0,4,0,4,0
+Rides24,javax.persistence.criteria,Predicate.BooleanOperator,24,0,0,0,2,0,1,0,1,0
+Rides24,javax.persistence.criteria,CriteriaBuilder.Trimspec,34,0,0,0,4,0,1,0,1,0
+Rides24,javax.persistence.criteria,JoinType,34,0,0,0,4,0,1,0,1,0
+Rides24,domain,Ride,182,78,2,0,60,18,29,6,28,6
+Rides24,domain,Assessment,66,0,0,0,22,0,12,0,12,0
+Rides24,domain,Traveler,83,8,6,0,19,3,10,1,7,1
+Rides24,domain,Driver,58,134,6,16,17,24,13,11,8,5
+Rides24,domain,Car,38,18,0,0,12,7,8,2,8,2
+Rides24,domain,IntegerAdapter,14,0,2,0,4,0,4,0,3,0
+Rides24,domain,Reservation,100,0,4,0,40,0,22,0,20,0
+Rides24,domain,Movement,43,0,0,0,18,0,9,0,9,0
+Rides24,domain,User,85,31,10,0,31,10,18,3,13,3
+Rides24,com.objectdb.o,DQI,254,0,46,0,69,0,27,0,4,0
+Rides24,com.objectdb.o,DQP,46,0,0,0,7,0,4,0,4,0
+Rides24,com.objectdb.o,EXR.d,13,0,0,0,5,0,2,0,2,0
+Rides24,com.objectdb.o,SNP,521,0,58,0,128,0,61,0,32,0
+Rides24,com.objectdb.o,MBI,85,0,12,0,24,0,10,0,4,0
+Rides24,com.objectdb.o,URT,361,0,30,0,94,0,31,0,16,0
+Rides24,com.objectdb.o,EXR.h,12,0,0,0,5,0,2,0,2,0
+Rides24,com.objectdb.o,EXR.g,63,0,8,0,16,0,6,0,2,0
+Rides24,com.objectdb.o,EXR.f,34,0,2,0,10,0,3,0,2,0
+Rides24,com.objectdb.o,SNV,128,0,18,0,38,0,20,0,11,0
+Rides24,com.objectdb.o,EXR.e,132,0,33,0,30,0,21,0,2,0
+Rides24,com.objectdb.o,BLV,128,0,28,0,26,0,31,0,17,0
+Rides24,com.objectdb.o,MBF,142,0,6,0,40,0,18,0,15,0
+Rides24,com.objectdb.o,WVP,819,0,162,0,192,0,92,0,11,0
+Rides24,com.objectdb.o,HST.A,39,0,0,0,12,0,8,0,8,0
+Rides24,com.objectdb.o,DPS,63,0,4,0,16,0,4,0,2,0
+Rides24,com.objectdb.o,SNC,45,0,2,0,12,0,7,0,6,0
+Rides24,com.objectdb.o,QJD,305,0,44,0,80,0,29,0,7,0
+Rides24,com.objectdb.o,BLT,99,0,14,0,24,0,17,0,9,0
+Rides24,com.objectdb.o,DPV,1437,0,118,0,264,0,77,0,16,0
+Rides24,com.objectdb.o,FTP,168,0,26,0,40,0,17,0,4,0
+Rides24,com.objectdb.o,FTC,5,0,0,0,2,0,2,0,2,0
+Rides24,com.objectdb.o,DPE,25,0,0,0,8,0,4,0,4,0
+Rides24,com.objectdb.o,SMR,945,0,107,0,246,0,75,0,18,0
+Rides24,com.objectdb.o,SMT,12,0,0,0,4,0,2,0,2,0
+Rides24,com.objectdb.o,EXR.i,53,0,10,0,14,0,7,0,2,0
+Rides24,com.objectdb.o,SML,125,0,4,0,28,0,13,0,11,0
+Rides24,com.objectdb.o,SLV,115,0,14,0,23,0,15,0,8,0
+Rides24,com.objectdb.o,EDC.D,74,0,6,0,17,0,9,0,6,0
+Rides24,com.objectdb.o,SLP,270,0,40,0,53,0,26,0,6,0
+Rides24,com.objectdb.o,UPR,96,0,12,0,22,0,8,0,2,0
+Rides24,com.objectdb.o,UPT,360,0,40,0,83,0,31,0,11,0
+Rides24,com.objectdb.o,SLT,277,0,50,0,81,0,47,0,10,0
+Rides24,com.objectdb.o,SLS,131,0,18,0,31,0,15,0,6,0
+Rides24,com.objectdb.o,CLN.aB,50,0,4,0,14,0,5,0,3,0
+Rides24,com.objectdb.o,BNN.ay,116,0,10,0,38,0,13,0,4,0
+Rides24,com.objectdb.o,BNN.az,116,0,10,0,38,0,13,0,4,0
+Rides24,com.objectdb.o,CLN.aA,24,0,0,0,8,0,3,0,3,0
+Rides24,com.objectdb.o,BNN.aA,116,0,10,0,38,0,13,0,4,0
+Rides24,com.objectdb.o,BNN.aB,139,0,15,0,43,0,16,0,4,0
+Rides24,com.objectdb.o,BNN.aG,97,0,12,0,29,0,13,0,3,0
+Rides24,com.objectdb.o,_JdoException,28,0,0,0,11,0,5,0,5,0
+Rides24,com.objectdb.o,WSP,925,0,126,0,210,0,79,0,14,0
+Rides24,com.objectdb.o,WSS,159,0,0,0,49,0,33,0,33,0
+Rides24,com.objectdb.o,BNN.aC,116,0,10,0,38,0,13,0,4,0
+Rides24,com.objectdb.o,BNN.aD,94,0,12,0,29,0,14,0,4,0
+Rides24,com.objectdb.o,EmbeddedIdResultBuilder,54,0,2,0,14,0,6,0,5,0
+Rides24,com.objectdb.o,BNN.aE,54,0,6,0,17,0,8,0,4,0
+Rides24,com.objectdb.o,BNN.aF,35,0,2,0,12,0,4,0,3,0
+Rides24,com.objectdb.o,BIT,536,0,86,0,119,0,63,0,20,0
+Rides24,com.objectdb.o,WSM,56,0,0,0,16,0,4,0,4,0
+Rides24,com.objectdb.o,WSN,1017,0,74,0,282,0,62,0,25,0
+Rides24,com.objectdb.o,FQP,94,0,2,0,21,0,7,0,6,0
+Rides24,com.objectdb.o,DMR,1837,0,152,0,372,0,98,0,22,0
+Rides24,com.objectdb.o,LKM.D,248,0,38,0,56,0,33,0,14,0
+Rides24,com.objectdb.o,SRS,229,0,54,0,75,0,37,0,6,0
+Rides24,com.objectdb.o,MFP,50,0,0,0,14,0,6,0,6,0
+Rides24,com.objectdb.o,MFT,114,0,12,0,25,0,11,0,5,0
+Rides24,com.objectdb.o,BQI,134,0,14,0,40,0,12,0,5,0
+Rides24,com.objectdb.o,SRN,97,0,10,0,27,0,12,0,7,0
+Rides24,com.objectdb.o,SRP,168,0,8,0,35,0,12,0,8,0
+Rides24,com.objectdb.o,DTT,117,0,6,0,29,0,9,0,6,0
+Rides24,com.objectdb.o,QNF,1744,0,221,0,433,0,156,0,30,0
+Rides24,com.objectdb.o,CLN.az,24,0,0,0,8,0,3,0,3,0
+Rides24,com.objectdb.o,CLN.av,34,0,2,0,9,0,4,0,3,0
+Rides24,com.objectdb.o,CLN.aw,48,0,4,0,15,0,6,0,4,0
+Rides24,com.objectdb.o,CLN.ax,36,0,2,0,13,0,5,0,4,0
+Rides24,com.objectdb.o,SRB,129,0,14,0,32,0,13,0,6,0
+Rides24,com.objectdb.o,CLN.ay,67,0,8,0,21,0,7,0,3,0
+Rides24,com.objectdb.o,OIN,51,0,4,0,18,0,6,0,4,0
+Rides24,com.objectdb.o,QMR,366,0,136,0,78,0,72,0,4,0
+Rides24,com.objectdb.o,DSV,350,0,30,0,73,0,21,0,6,0
+Rides24,com.objectdb.o,SQI,216,0,28,0,53,0,20,0,6,0
+Rides24,com.objectdb.o,DSN,19,0,0,0,6,0,4,0,4,0
+Rides24,com.objectdb.o,_LockTimeoutException,28,0,0,0,11,0,5,0,5,0
+Rides24,com.objectdb.o,UTT,890,0,86,0,194,0,60,0,17,0
+Rides24,com.objectdb.o,UTV,176,0,8,0,48,0,14,0,10,0
+Rides24,com.objectdb.o,SPS,84,0,16,0,14,0,14,0,6,0
+Rides24,com.objectdb.o,SPV,199,0,22,0,48,0,24,0,13,0
+Rides24,com.objectdb.o,SPW,669,0,68,0,153,0,44,0,10,0
+Rides24,com.objectdb.o,UTY,2315,0,281,0,525,0,214,0,71,0
+Rides24,com.objectdb.o,InvMemberQuery,234,0,24,0,49,0,15,0,3,0
+Rides24,com.objectdb.o,MDF,957,0,148,0,189,0,122,0,48,0
+Rides24,com.objectdb.o,UTR,66,0,6,0,19,0,11,0,8,0
+Rides24,com.objectdb.o,DRV,1160,0,72,0,210,0,51,0,15,0
+Rides24,com.objectdb.o,BNV,486,0,66,0,118,0,48,0,14,0
+Rides24,com.objectdb.o,QKW,671,0,36,0,216,0,35,0,16,0
+Rides24,com.objectdb.o,UMR.Z,39,0,0,0,10,0,6,0,6,0
+Rides24,com.objectdb.o,UMR.Y,41,0,0,0,10,0,6,0,6,0
+Rides24,com.objectdb.o,UMR.X,42,0,0,0,10,0,6,0,6,0
+Rides24,com.objectdb.o,UMR.W,42,0,0,0,10,0,6,0,6,0
+Rides24,com.objectdb.o,BNN,149,0,36,0,36,0,25,0,4,0
+Rides24,com.objectdb.o,UMR.V,42,0,0,0,10,0,6,0,6,0
+Rides24,com.objectdb.o,UMR.U,26,0,0,0,7,0,4,0,4,0
+Rides24,com.objectdb.o,UMR.T,52,0,4,0,16,0,7,0,5,0
+Rides24,com.objectdb.o,USR,512,0,36,0,95,0,33,0,15,0
+Rides24,com.objectdb.o,UMR.S,86,0,4,0,24,0,8,0,6,0
+Rides24,com.objectdb.o,MCN,415,0,36,0,101,0,29,0,11,0
+Rides24,com.objectdb.o,USV,85,0,10,0,21,0,14,0,9,0
+Rides24,com.objectdb.o,DRH,427,0,40,0,97,0,27,0,7,0
+Rides24,com.objectdb.o,SFT,40,0,2,0,9,0,3,0,2,0
+Rides24,com.objectdb.o,SFL,2010,0,154,0,452,0,134,0,57,0
+Rides24,com.objectdb.o,_JdoUnsupportedOptionException,26,0,0,0,10,0,5,0,5,0
+Rides24,com.objectdb.o,BDP,126,0,2,0,26,0,9,0,8,0
+Rides24,com.objectdb.o,FLT,110,0,16,0,26,0,18,0,8,0
+Rides24,com.objectdb.o,FLV,435,0,88,0,101,0,76,0,26,0
+Rides24,com.objectdb.o,SEV,238,0,12,0,50,0,22,0,16,0
+Rides24,com.objectdb.o,FLM,232,0,14,0,44,0,19,0,12,0
+Rides24,com.objectdb.o,UIV,109,0,14,0,25,0,16,0,9,0
+Rides24,com.objectdb.o,UNM.z,161,0,14,0,32,0,15,0,8,0
+Rides24,com.objectdb.o,SEM,111,0,6,0,20,0,8,0,5,0
+Rides24,com.objectdb.o,BCN,217,0,32,0,61,0,28,0,12,0
+Rides24,com.objectdb.o,JSW,1479,0,82,0,342,0,60,0,19,0
+Rides24,com.objectdb.o,SEC,174,0,16,0,42,0,19,0,11,0
+Rides24,com.objectdb.o,JSM,190,0,24,0,57,0,24,0,6,0
+Rides24,com.objectdb.o,BCL,49,0,6,0,11,0,5,0,2,0
+Rides24,com.objectdb.o,_EntityNotFoundException,25,0,0,0,10,0,5,0,5,0
+Rides24,com.objectdb.o,TYN.az,21,0,0,0,8,0,4,0,4,0
+Rides24,com.objectdb.o,_JdoDetachedFieldAccessException,26,0,0,0,10,0,5,0,5,0
+Rides24,com.objectdb.o,JRW,416,0,50,0,93,0,33,0,8,0
+Rides24,com.objectdb.o,_OptimisticLockException,28,0,0,0,11,0,5,0,5,0
+Rides24,com.objectdb.o,SCU,160,0,12,0,37,0,17,0,11,0
+Rides24,com.objectdb.o,SCM,546,0,90,0,151,0,61,0,16,0
+Rides24,com.objectdb.o,SCO,72,0,10,0,11,0,9,0,4,0
+Rides24,com.objectdb.o,HND,318,0,30,0,87,0,27,0,12,0
+Rides24,com.objectdb.o,FIX,5,0,0,0,2,0,1,0,1,0
+Rides24,com.objectdb.o,FIW,76,0,2,0,20,0,7,0,6,0
+Rides24,com.objectdb.o,SCD,59,0,8,0,13,0,9,0,5,0
+Rides24,com.objectdb.o,DEX,307,0,18,0,52,0,18,0,9,0
+Rides24,com.objectdb.o,SCG,415,0,36,0,71,0,33,0,15,0
+Rides24,com.objectdb.o,FIP,181,0,14,0,40,0,13,0,6,0
+Rides24,com.objectdb.o,FIR,192,0,24,0,32,0,18,0,6,0
+Rides24,com.objectdb.o,TYN.aB,77,0,2,0,18,0,6,0,5,0
+Rides24,com.objectdb.o,TYN.aC,125,0,15,0,38,0,15,0,3,0
+Rides24,com.objectdb.o,SBT,103,0,13,0,23,0,15,0,8,0
+Rides24,com.objectdb.o,BAC,176,0,20,0,44,0,13,0,3,0
+Rides24,com.objectdb.o,SBV,52,0,4,0,15,0,10,0,8,0
+Rides24,com.objectdb.o,FIL,3,0,0,0,1,0,1,0,1,0
+Rides24,com.objectdb.o,FHN.ad,35,0,0,0,11,0,5,0,5,0
+Rides24,com.objectdb.o,HMP,465,0,56,0,94,0,44,0,16,0
+Rides24,com.objectdb.o,QFT,102,0,6,0,26,0,10,0,7,0
+Rides24,com.objectdb.o,FQI,101,0,12,0,27,0,10,0,4,0
+Rides24,com.objectdb.o,OBH,503,0,78,0,110,0,53,0,14,0
+Rides24,com.objectdb.o,TYN.aA,129,0,16,0,34,0,15,0,7,0
+Rides24,com.objectdb.o,UNM,123,0,14,0,25,0,13,0,6,0
+Rides24,com.objectdb.o,OBI,613,0,108,0,149,0,63,0,9,0
+Rides24,com.objectdb.o,RQI.h,110,0,16,0,30,0,13,0,5,0
+Rides24,com.objectdb.o,OBM,1656,0,250,0,429,0,157,0,32,0
+Rides24,com.objectdb.o,UNH,632,0,76,0,138,0,51,0,13,0
+Rides24,com.objectdb.o,OBC,1541,0,222,0,424,0,200,0,88,0
+Rides24,com.objectdb.o,UNI,396,0,24,0,96,0,37,0,25,0
+Rides24,com.objectdb.o,WRA,208,0,0,0,53,0,36,0,36,0
+Rides24,com.objectdb.o,HTI,47,0,8,0,11,0,6,0,2,0
+Rides24,com.objectdb.o,WebSphereJtaManager.new InvocationHandler() {...},47,0,8,0,9,0,6,0,2,0
+Rides24,com.objectdb.o,SIT,110,0,16,0,26,0,18,0,8,0
+Rides24,com.objectdb.o,SIV,96,0,12,0,21,0,14,0,8,0
+Rides24,com.objectdb.o,FPL,450,0,16,0,121,0,34,0,26,0
+Rides24,com.objectdb.o,SIX,27,0,2,0,8,0,4,0,3,0
+Rides24,com.objectdb.o,UML,834,0,138,0,180,0,97,0,28,0
+Rides24,com.objectdb.o,HTB,513,0,62,0,134,0,51,0,20,0
+Rides24,com.objectdb.o,FPD,101,0,2,0,27,0,10,0,9,0
+Rides24,com.objectdb.o,UMR,1168,0,140,0,289,0,124,0,44,0
+Rides24,com.objectdb.o,BGT,129,0,23,0,36,0,22,0,8,0
+Rides24,com.objectdb.o,SID,40,0,0,0,10,0,6,0,6,0
+Rides24,com.objectdb.o,BGV,255,0,34,0,66,0,42,0,23,0
+Rides24,com.objectdb.o,HST,203,0,24,0,47,0,21,0,9,0
+Rides24,com.objectdb.o,ULV,272,0,44,0,58,0,38,0,16,0
+Rides24,com.objectdb.o,DSV.i,188,0,14,0,27,0,13,0,6,0
+Rides24,com.objectdb.o,SHN,834,0,87,0,253,0,85,0,30,0
+Rides24,com.objectdb.o,_NonUniqueResultException,25,0,0,0,10,0,5,0,5,0
+Rides24,com.objectdb.o,QCP,66,0,4,0,16,0,8,0,6,0
+Rides24,com.objectdb.o,QCR,51,0,0,0,15,0,7,0,7,0
+Rides24,com.objectdb.o,DIX,38,0,0,0,13,0,3,0,3,0
+Rides24,com.objectdb.o,QCD,349,0,58,0,83,0,38,0,9,0
+Rides24,com.objectdb.o,MSG,131,0,10,0,24,0,13,0,8,0
+Rides24,com.objectdb.o,MSF,356,0,38,0,79,0,29,0,10,0
+Rides24,com.objectdb.o,EBW,145,0,10,0,33,0,11,0,6,0
+Rides24,com.objectdb.o,KNV,136,0,16,0,31,0,14,0,6,0
+Rides24,com.objectdb.o,MRN,37,0,0,0,9,0,5,0,5,0
+Rides24,com.objectdb.o,MRP,552,0,57,0,106,0,44,0,15,0
+Rides24,com.objectdb.o,VCW,33,0,0,0,10,0,5,0,5,0
+Rides24,com.objectdb.o,INR.i,47,0,4,0,12,0,7,0,5,0
+Rides24,com.objectdb.o,INR.j,50,0,4,0,12,0,7,0,5,0
+Rides24,com.objectdb.o,BYR.new ObjectInputStream() {...},18,0,0,0,4,0,2,0,2,0
+Rides24,com.objectdb.o,IIX,24,0,0,0,9,0,3,0,3,0
+Rides24,com.objectdb.o,GEN,464,0,10,0,103,0,34,0,29,0
+Rides24,com.objectdb.o,IIS,31,0,0,0,9,0,4,0,4,0
+Rides24,com.objectdb.o,INR.k,30,0,2,0,9,0,6,0,5,0
+Rides24,com.objectdb.o,MQI,101,0,16,0,36,0,12,0,4,0
+Rides24,com.objectdb.o,IHS,161,0,18,0,40,0,17,0,8,0
+Rides24,com.objectdb.o,OIdentityHashMap,147,0,16,0,34,0,14,0,6,0
+Rides24,com.objectdb.o,MPT,723,0,98,0,169,0,67,0,18,0
+Rides24,com.objectdb.o,FetchResearchHelper,78,0,8,0,25,0,12,0,8,0
+Rides24,com.objectdb.o,VAR,1148,0,126,0,274,0,114,0,51,0
+Rides24,com.objectdb.o,VAL,889,0,86,0,116,0,93,0,36,0
+Rides24,com.objectdb.o,JCP.G,26,0,0,0,11,0,6,0,6,0
+Rides24,com.objectdb.o,JCP.H,86,0,13,0,20,0,12,0,5,0
+Rides24,com.objectdb.o,JCP.I,48,0,6,0,11,0,7,0,4,0
+Rides24,com.objectdb.o,JCP.J,65,0,8,0,13,0,8,0,4,0
+Rides24,com.objectdb.o,JCP.K,65,0,8,0,13,0,8,0,4,0
+Rides24,com.objectdb.o,OST,339,0,8,0,127,0,37,0,33,0
+Rides24,com.objectdb.o,_RollbackException,26,0,0,0,10,0,5,0,5,0
+Rides24,com.objectdb.o,TDF,1441,0,172,0,340,0,154,0,68,0
+Rides24,com.objectdb.o,INR,227,0,26,0,59,0,25,0,12,0
+Rides24,com.objectdb.o,INT,112,0,6,0,30,0,19,0,16,0
+Rides24,com.objectdb.o,INV,303,0,47,0,61,0,54,0,17,0
+Rides24,com.objectdb.o,INU,112,0,4,0,26,0,12,0,10,0
+Rides24,com.objectdb.o,EFT,21,0,0,0,7,0,4,0,4,0
+Rides24,com.objectdb.o,CBD,182,0,16,0,45,0,23,0,12,0
+Rides24,com.objectdb.o,MVP,924,0,129,0,234,0,88,0,23,0
+Rides24,com.objectdb.o,VGN,126,0,8,0,27,0,11,0,7,0
+Rides24,com.objectdb.o,MVL,197,0,24,0,45,0,17,0,5,0
+Rides24,com.objectdb.o,TCD,47,0,17,0,19,0,15,0,3,0
+Rides24,com.objectdb.o,IMP,111,0,4,0,37,0,19,0,17,0
+Rides24,com.objectdb.o,MUT,1003,0,159,0,251,0,105,0,24,0
+Rides24,com.objectdb.o,VLV.t,99,0,12,0,26,0,12,0,6,0
+Rides24,com.objectdb.o,VGD,161,0,30,0,36,0,27,0,10,0
+Rides24,com.objectdb.o,EEI,31,0,2,0,9,0,7,0,6,0
+Rides24,com.objectdb.o,EDT,72,0,12,0,19,0,8,0,2,0
+Rides24,com.objectdb.o,EDS,288,0,26,0,70,0,22,0,9,0
+Rides24,com.objectdb.o,JER.k,298,0,38,0,77,0,23,0,4,0
+Rides24,com.objectdb.o,JER.l,136,0,20,0,31,0,13,0,3,0
+Rides24,com.objectdb.o,JER.m,88,0,12,0,15,0,8,0,2,0
+Rides24,com.objectdb.o,ILP,229,0,14,0,67,0,35,0,28,0
+Rides24,com.objectdb.o,EDC,379,0,40,0,94,0,35,0,15,0
+Rides24,com.objectdb.o,MTR,233,0,36,0,59,0,28,0,10,0
+Rides24,com.objectdb.o,WebSphereJtaManager,104,0,2,0,26,0,4,0,3,0
+Rides24,com.objectdb.o,TAI,226,0,22,0,70,0,23,0,12,0
+Rides24,com.objectdb.o,MTH,251,0,26,0,75,0,21,0,8,0
+Rides24,com.objectdb.o,LOM.y,62,0,2,0,14,0,9,0,8,0
+Rides24,com.objectdb.o,MSS,1439,0,0,0,206,0,2,0,2,0
+Rides24,com.objectdb.o,MST,2617,0,268,0,614,0,212,0,78,0
+Rides24,com.objectdb.o,ECI,79,0,4,0,24,0,5,0,3,0
+Rides24,com.objectdb.o,QRY,390,0,52,0,96,0,40,0,14,0
+Rides24,com.objectdb.o,RPM.D,92,0,6,0,19,0,5,0,2,0
+Rides24,com.objectdb.o,QRM,618,0,98,0,150,0,60,0,11,0
+Rides24,com.objectdb.o,QRR,813,0,88,0,199,0,56,0,12,0
+Rides24,com.objectdb.o,QRQ,357,0,36,0,94,0,40,0,22,0
+Rides24,com.objectdb.o,QRS,398,0,46,0,110,0,42,0,19,0
+Rides24,com.objectdb.o,MIX,148,0,24,0,44,0,16,0,4,0
+Rides24,com.objectdb.o,BTP,1065,0,120,0,220,0,84,0,24,0
+Rides24,com.objectdb.o,BTS,185,0,22,0,45,0,21,0,10,0
+Rides24,com.objectdb.o,C64,73,0,8,0,15,0,7,0,3,0
+Rides24,com.objectdb.o,BTR,434,0,6,0,92,0,31,0,28,0
+Rides24,com.objectdb.o,BTU,75,0,7,0,22,0,13,0,8,0
+Rides24,com.objectdb.o,QRD,372,0,37,0,94,0,34,0,15,0
+Rides24,com.objectdb.o,QRC,1351,0,168,0,304,0,104,0,20,0
+Rides24,com.objectdb.o,_JdoUserException,28,0,0,0,11,0,5,0,5,0
+Rides24,com.objectdb.o,IAL,252,0,22,0,51,0,27,0,16,0
+Rides24,com.objectdb.o,LGN.q,9,0,0,0,4,0,1,0,1,0
+Rides24,com.objectdb.o,OMF,1414,0,176,0,377,0,128,0,40,0
+Rides24,com.objectdb.o,_EntityExistsException,39,0,2,0,13,0,7,0,6,0
+Rides24,com.objectdb.o,STV,539,0,80,0,130,0,60,0,20,0
+Rides24,com.objectdb.o,STN,100,0,13,0,24,0,13,0,4,0
+Rides24,com.objectdb.o,STM,1364,0,24,0,360,0,24,0,12,0
+Rides24,com.objectdb.o,QPN,666,0,92,0,156,0,57,0,11,0
+Rides24,com.objectdb.o,STR,86,0,12,0,27,0,16,0,10,0
+Rides24,com.objectdb.o,QPR,1576,0,230,0,431,0,140,0,25,0
+Rides24,com.objectdb.o,STT,57,0,14,0,15,0,12,0,5,0
+Rides24,com.objectdb.o,STS,131,0,14,0,31,0,11,0,4,0
+Rides24,com.objectdb.o,_PersistenceException,38,0,2,0,13,0,7,0,6,0
+Rides24,com.objectdb.o,STH,712,0,92,0,176,0,90,0,44,0
+Rides24,com.objectdb.o,STL,142,0,10,0,32,0,12,0,7,0
+Rides24,com.objectdb.o,STA,733,0,118,0,214,0,103,0,44,0
+Rides24,com.objectdb.o,STD,167,0,12,0,45,0,13,0,6,0
+Rides24,com.objectdb.o,STC,729,0,45,0,197,0,53,0,22,0
+Rides24,com.objectdb.o,SST,107,0,14,0,24,0,16,0,8,0
+Rides24,com.objectdb.o,SSV,67,0,8,0,16,0,12,0,8,0
+Rides24,com.objectdb.o,IXM.new Thread() {...},40,0,0,0,7,0,2,0,2,0
+Rides24,com.objectdb.o,_JdoDataStoreException,38,0,0,0,15,0,6,0,6,0
+Rides24,com.objectdb.o,SSL,291,0,30,0,83,0,27,0,12,0
+Rides24,com.objectdb.o,SSS,1167,0,110,0,284,0,90,0,35,0
+Rides24,com.objectdb.o,SLV.U,15,0,0,0,6,0,3,0,3,0
+Rides24,com.objectdb.o,BYW,1246,0,134,0,317,0,118,0,51,0
+Rides24,com.objectdb.o,_JdoReadOnlyException,26,0,0,0,10,0,5,0,5,0
+Rides24,com.objectdb.o,IHS.A,39,0,2,0,11,0,8,0,7,0
+Rides24,com.objectdb.o,BYP,47,0,2,0,20,0,10,0,9,0
+Rides24,com.objectdb.o,BYR,1192,0,119,0,294,0,127,0,67,0
+Rides24,com.objectdb.o,MNL,109,0,10,0,29,0,11,0,6,0
+Rides24,com.objectdb.o,ORN,48,0,8,0,17,0,7,0,3,0
+Rides24,com.objectdb.o,CMN.aG,22,0,2,0,7,0,6,0,5,0
+Rides24,com.objectdb.o,CMN.aH,22,0,2,0,7,0,6,0,5,0
+Rides24,com.objectdb.o,CMN.aE,22,0,2,0,7,0,6,0,5,0
+Rides24,com.objectdb.o,ORB,258,0,12,0,56,0,12,0,6,0
+Rides24,com.objectdb.o,CMN.aF,22,0,2,0,7,0,6,0,5,0
+Rides24,com.objectdb.o,IOM.B,66,0,4,0,14,0,10,0,8,0
+Rides24,com.objectdb.o,ORF,156,0,26,0,31,0,20,0,7,0
+Rides24,com.objectdb.o,CLC.i,9,0,0,0,4,0,1,0,1,0
+Rides24,com.objectdb.o,_JdoFatalUserException,28,0,0,0,11,0,5,0,5,0
+Rides24,com.objectdb.o,CMN.aC,48,0,10,0,13,0,11,0,6,0
+Rides24,com.objectdb.o,CMN.aD,23,0,4,0,7,0,7,0,5,0
+Rides24,com.objectdb.o,CMN.aA,45,0,10,0,11,0,10,0,5,0
+Rides24,com.objectdb.o,CMN.aB,21,0,4,0,6,0,6,0,4,0
+Rides24,com.objectdb.o,MMM,1899,0,193,0,408,0,140,0,43,0
+Rides24,com.objectdb.o,SYR,695,0,81,0,177,0,58,0,17,0
+Rides24,com.objectdb.o,MMN,123,0,10,0,35,0,10,0,5,0
+Rides24,com.objectdb.o,QUO,289,0,20,0,62,0,18,0,8,0
+Rides24,com.objectdb.o,QUN,388,0,58,0,98,0,73,0,44,0
+Rides24,com.objectdb.o,QUE,118,0,12,0,24,0,13,0,7,0
+Rides24,com.objectdb.o,QUD,252,0,22,0,65,0,28,0,17,0
+Rides24,com.objectdb.o,SYH,541,0,54,0,148,0,60,0,33,0
+Rides24,com.objectdb.o,QSP,737,0,130,0,239,0,105,0,21,0
+Rides24,com.objectdb.o,_QueryTimeoutException,27,0,0,0,10,0,5,0,5,0
+Rides24,com.objectdb.o,PHL,488,0,90,0,147,0,64,0,19,0
+Rides24,com.objectdb.o,DCE.V,92,0,12,0,15,0,15,0,9,0
+Rides24,com.objectdb.o,TPL,89,0,6,0,18,0,12,0,9,0
+Rides24,com.objectdb.o,CNP,330,0,32,0,71,0,30,0,14,0
+Rides24,com.objectdb.o,ERR,264,0,22,0,65,0,19,0,8,0
+Rides24,com.objectdb.o,TPE,21,0,0,0,8,0,4,0,4,0
+Rides24,com.objectdb.o,CNV,34,0,2,0,10,0,3,0,2,0
+Rides24,com.objectdb.o,CNU,452,0,52,0,107,0,45,0,19,0
+Rides24,com.objectdb.o,PGT,270,0,36,0,80,0,23,0,5,0
+Rides24,com.objectdb.o,_JdoObjectNotFoundException,35,0,0,0,13,0,6,0,6,0
+Rides24,com.objectdb.o,OIdentityHashMap.z,56,0,2,0,14,0,8,0,7,0
+Rides24,com.objectdb.o,ERM,65,0,10,0,16,0,7,0,2,0
+Rides24,com.objectdb.o,PGW,1184,0,120,0,293,0,81,0,21,0
+Rides24,com.objectdb.o,CNN,12,0,0,0,4,0,2,0,2,0
+Rides24,com.objectdb.o,CNM,687,0,78,0,151,0,52,0,13,0
+Rides24,com.objectdb.o,InvToOneLoadRequest,3,0,0,0,1,0,1,0,1,0
+Rides24,com.objectdb.o,VST,71,0,4,0,19,0,8,0,6,0
+Rides24,com.objectdb.o,ERF,101,0,16,0,26,0,10,0,2,0
+Rides24,com.objectdb.o,TOT,104,0,6,0,32,0,20,0,17,0
+Rides24,com.objectdb.o,CMV,507,0,56,0,112,0,45,0,17,0
+Rides24,com.objectdb.o,PGC,909,0,96,0,222,0,70,0,22,0
+Rides24,com.objectdb.o,VSL,605,0,150,0,139,0,90,0,15,0
+Rides24,com.objectdb.o,PGE,821,0,46,0,162,0,40,0,17,0
+Rides24,com.objectdb.o,TOL,97,0,14,0,39,0,20,0,13,0
+Rides24,com.objectdb.o,VSP,49,0,6,0,21,0,16,0,13,0
+Rides24,com.objectdb.o,CMN,323,0,71,0,85,0,51,0,8,0
+Rides24,com.objectdb.o,EQP,337,0,36,0,75,0,29,0,11,0
+Rides24,com.objectdb.o,AIS,84,0,6,0,19,0,9,0,6,0
+Rides24,com.objectdb.o,EQI,9,0,0,0,4,0,4,0,4,0
+Rides24,com.objectdb.o,PFT,147,0,18,0,27,0,14,0,5,0
+Rides24,com.objectdb.o,VRS,226,0,28,0,62,0,31,0,17,0
+Rides24,com.objectdb.o,VRN,55,0,2,0,13,0,7,0,6,0
+Rides24,com.objectdb.o,CLN,16,0,2,0,6,0,3,0,2,0
+Rides24,com.objectdb.o,IXS,154,0,12,0,42,0,12,0,6,0
+Rides24,com.objectdb.o,EPR,91,0,18,0,22,0,11,0,2,0
+Rides24,com.objectdb.o,CLT,503,0,70,0,122,0,50,0,15,0
+Rides24,com.objectdb.o,CLS,474,0,36,0,114,0,33,0,15,0
+Rides24,com.objectdb.o,IXN,632,0,98,0,131,0,65,0,16,0
+Rides24,com.objectdb.o,EPI,42,0,4,0,12,0,5,0,3,0
+Rides24,com.objectdb.o,IXM,1093,0,119,0,223,0,85,0,25,0
+Rides24,com.objectdb.o,PGW.aE,37,0,0,0,8,0,1,0,1,0
+Rides24,com.objectdb.o,IXR,16,0,0,0,7,0,3,0,3,0
+Rides24,com.objectdb.o,NAV,129,0,2,0,30,0,13,0,12,0
+Rides24,com.objectdb.o,IXD,514,0,50,0,120,0,53,0,28,0
+Rides24,com.objectdb.o,IXF,50,0,0,0,9,0,5,0,5,0
+Rides24,com.objectdb.o,CLC,130,0,8,0,26,0,10,0,6,0
+Rides24,com.objectdb.o,VQI,156,0,16,0,39,0,14,0,6,0
+Rides24,com.objectdb.o,AGN,169,0,18,0,42,0,24,0,13,0
+Rides24,com.objectdb.o,RPR,251,0,16,0,76,0,19,0,11,0
+Rides24,com.objectdb.o,CSF,100,0,8,0,20,0,8,0,4,0
+Rides24,com.objectdb.o,RPT,191,0,18,0,51,0,19,0,10,0
+Rides24,com.objectdb.o,LDR,1579,0,190,0,426,0,134,0,39,0
+Rides24,com.objectdb.o,RPM,524,0,60,0,114,0,44,0,14,0
+Rides24,com.objectdb.o,PLL,211,0,34,0,49,0,28,0,11,0
+Rides24,com.objectdb.o,PLN,381,0,46,0,112,0,52,0,29,0
+Rides24,com.objectdb.o,ANT,1415,0,190,0,319,0,132,0,37,0
+Rides24,com.objectdb.o,ANI,49,0,4,0,19,0,6,0,4,0
+Rides24,com.objectdb.o,ANN,72,0,14,0,22,0,11,0,4,0
+Rides24,com.objectdb.o,ANM,842,0,154,0,228,0,126,0,49,0
+Rides24,com.objectdb.o,ANP,78,0,0,0,14,0,6,0,6,0
+Rides24,com.objectdb.o,NGP,44,0,2,0,12,0,4,0,3,0
+Rides24,com.objectdb.o,ANF,138,0,26,0,32,0,20,0,7,0
+Rides24,com.objectdb.o,EVI,7,0,0,0,2,0,2,0,2,0
+Rides24,com.objectdb.o,ROW,105,0,14,0,30,0,19,0,12,0
+Rides24,com.objectdb.o,TSK,136,0,20,0,50,0,22,0,12,0
+Rides24,com.objectdb.o,TSM,123,0,14,0,35,0,10,0,3,0
+Rides24,com.objectdb.o,ROM,337,0,38,0,79,0,33,0,14,0
+Rides24,com.objectdb.o,PKN,64,0,8,0,14,0,9,0,5,0
+Rides24,com.objectdb.o,EVC,190,0,18,0,48,0,17,0,8,0
+Rides24,com.objectdb.o,PKE,47,0,6,0,15,0,5,0,2,0
+Rides24,com.objectdb.o,TRS,307,0,40,0,81,0,29,0,9,0
+Rides24,com.objectdb.o,NFL,112,0,20,0,33,0,18,0,8,0
+Rides24,com.objectdb.o,CQI,50,0,4,0,16,0,6,0,4,0
+Rides24,com.objectdb.o,TRB,78,0,2,0,16,0,6,0,5,0
+Rides24,com.objectdb.o,ALS,566,0,50,0,119,0,57,0,32,0
+Rides24,com.objectdb.o,TRF,192,0,36,0,54,0,30,0,10,0
+Rides24,com.objectdb.o,PIX,21,0,2,0,8,0,3,0,2,0
+Rides24,com.objectdb.o,ETM,56,0,6,0,15,0,9,0,6,0
+Rides24,com.objectdb.o,ETR,22,0,2,0,7,0,3,0,2,0
+Rides24,com.objectdb.o,VUT,1360,0,203,0,318,0,197,0,20,0
+Rides24,com.objectdb.o,LAL,223,0,16,0,45,0,22,0,14,0
+Rides24,com.objectdb.o,TQI,32,0,4,0,13,0,6,0,4,0
+Rides24,com.objectdb.o,_JdoUserCallbackException,26,0,0,0,10,0,5,0,5,0
+Rides24,com.objectdb.o,EST,172,0,26,0,47,0,23,0,10,0
+Rides24,com.objectdb.o,ESW,50,0,4,0,14,0,8,0,6,0
+Rides24,com.objectdb.o,ESV,59,0,0,0,16,0,8,0,8,0
+Rides24,com.objectdb.o,RMF,322,0,46,0,84,0,43,0,20,0
+Rides24,com.objectdb.o,VLS,85,0,6,0,17,0,9,0,6,0
+Rides24,com.objectdb.o,VLR,55,0,8,0,18,0,11,0,7,0
+Rides24,com.objectdb.o,VLT,226,0,20,0,55,0,22,0,12,0
+Rides24,com.objectdb.o,VLV,473,0,52,0,109,0,38,0,12,0
+Rides24,com.objectdb.o,ServerTrayIcon,375,0,24,0,83,0,18,0,6,0
+Rides24,com.objectdb.o,CFO,30,0,2,0,10,0,7,0,6,0
+Rides24,com.objectdb.o,CFT,78,0,8,0,16,0,8,0,4,0
+Rides24,com.objectdb.o,ABT,347,0,40,0,69,0,63,0,43,0
+Rides24,com.objectdb.o,CFG,1237,0,146,0,290,0,107,0,33,0
+Rides24,com.objectdb.o,AGN.aM,94,0,12,0,25,0,11,0,5,0
+Rides24,com.objectdb.o,GND,236,0,14,0,60,0,22,0,15,0
+Rides24,com.objectdb.o,RCN,82,0,2,0,23,0,16,0,15,0
+Rides24,com.objectdb.o,AGN.aN,128,0,16,0,31,0,12,0,4,0
+Rides24,com.objectdb.o,AGN.aO,147,0,12,0,34,0,11,0,5,0
+Rides24,com.objectdb.o,AGN.aP,151,0,22,0,43,0,16,0,5,0
+Rides24,com.objectdb.o,RCO,86,0,2,0,25,0,9,0,8,0
+Rides24,com.objectdb.o,OsHelper,262,0,18,0,61,0,28,0,19,0
+Rides24,com.objectdb.o,EIX,159,0,14,0,44,0,11,0,4,0
+Rides24,com.objectdb.o,IRB,31,0,2,0,10,0,5,0,4,0
+Rides24,com.objectdb.o,RCL,312,0,22,0,76,0,21,0,10,0
+Rides24,com.objectdb.o,EIV,77,0,4,0,19,0,10,0,8,0
+Rides24,com.objectdb.o,AGN.aQ,25,0,4,0,7,0,5,0,3,0
+Rides24,com.objectdb.o,AGN.aR,25,0,4,0,7,0,5,0,3,0
+Rides24,com.objectdb.o,AGN.aS,9,0,0,0,3,0,1,0,1,0
+Rides24,com.objectdb.o,GMD,249,0,20,0,51,0,22,0,12,0
+Rides24,com.objectdb.o,_PessimisticLockException,28,0,0,0,11,0,5,0,5,0
+Rides24,com.objectdb.o,TFM,229,0,26,0,61,0,18,0,5,0
+Rides24,com.objectdb.o,UTV.n,32,0,0,0,11,0,4,0,4,0
+Rides24,com.objectdb.o,IPW,201,0,24,0,48,0,17,0,5,0
+Rides24,com.objectdb.o,RAT,108,0,10,0,29,0,9,0,4,0
+Rides24,com.objectdb.o,VIX,210,0,32,0,60,0,22,0,6,0
+Rides24,com.objectdb.o,TEX,17,0,0,0,4,0,2,0,2,0
+Rides24,com.objectdb.o,MXV,41,0,4,0,16,0,11,0,9,0
+Rides24,com.objectdb.o,IPC,298,0,31,0,54,0,22,0,6,0
+Rides24,com.objectdb.o,MXL,109,0,10,0,29,0,11,0,6,0
+Rides24,com.objectdb.o,IXM.Mode,34,0,0,0,4,0,1,0,1,0
+Rides24,com.objectdb.o,STN.ay,36,0,0,0,11,0,3,0,3,0
+Rides24,com.objectdb.o,DateNode,166,0,25,0,50,0,22,0,3,0
+Rides24,com.objectdb.o,STN.ax,32,0,0,0,10,0,4,0,4,0
+Rides24,com.objectdb.o,XMN,795,0,96,0,187,0,89,0,40,0
+Rides24,com.objectdb.o,STN.az,50,0,2,0,14,0,4,0,3,0
+Rides24,com.objectdb.o,XMB,772,0,129,0,181,0,78,0,7,0
+Rides24,com.objectdb.o,XMA,63,0,0,0,17,0,8,0,8,0
+Rides24,com.objectdb.o,KSW,43,0,2,0,11,0,7,0,6,0
+Rides24,com.objectdb.o,XMD,283,0,14,0,68,0,21,0,14,0
+Rides24,com.objectdb.o,IOM,240,0,28,0,47,0,23,0,9,0
+Rides24,com.objectdb.o,CCH,297,0,40,0,81,0,33,0,13,0
+Rides24,com.objectdb.o,QRM.w,9,0,0,0,2,0,2,0,2,0
+Rides24,com.objectdb.o,_TransactionRequiredException,25,0,0,0,10,0,5,0,5,0
+Rides24,com.objectdb.o,JtaManagerFactory,189,0,8,0,33,0,7,0,3,0
+Rides24,com.objectdb.o,RSL.s,18,0,0,0,6,0,4,0,4,0
+Rides24,com.objectdb.o,AFT,51,0,6,0,10,0,7,0,4,0
+Rides24,com.objectdb.o,GRP,231,0,16,0,47,0,17,0,9,0
+Rides24,com.objectdb.o,STN.aH,63,0,6,0,18,0,6,0,3,0
+Rides24,com.objectdb.o,STN.aG,95,0,8,0,22,0,8,0,4,0
+Rides24,com.objectdb.o,STN.aF,160,0,28,0,41,0,20,0,5,0
+Rides24,com.objectdb.o,ENT,1882,0,326,0,488,0,244,0,81,0
+Rides24,com.objectdb.o,STN.aA,98,0,12,0,23,0,11,0,5,0
+Rides24,com.objectdb.o,TKS,28,0,0,0,7,0,4,0,4,0
+Rides24,com.objectdb.o,ENH,411,0,66,0,136,0,43,0,10,0
+Rides24,com.objectdb.o,VOW,40,0,2,0,14,0,11,0,10,0
+Rides24,com.objectdb.o,STN.aE,28,0,0,0,9,0,3,0,3,0
+Rides24,com.objectdb.o,STN.aD,28,0,0,0,9,0,3,0,3,0
+Rides24,com.objectdb.o,IVP,97,0,4,0,32,0,14,0,12,0
+Rides24,com.objectdb.o,STN.aC,94,0,6,0,21,0,7,0,4,0
+Rides24,com.objectdb.o,STN.aB,28,0,0,0,9,0,3,0,3,0
+Rides24,com.objectdb.o,TKN,684,0,85,0,164,0,78,0,35,0
+Rides24,com.objectdb.o,TKR,1860,0,300,0,407,0,184,0,16,0
+Rides24,com.objectdb.o,EMT,96,0,4,0,32,0,14,0,12,0
+Rides24,com.objectdb.o,TKI,291,0,50,0,82,0,44,0,14,0
+Rides24,com.objectdb.o,VOB,399,0,58,0,85,0,44,0,15,0
+Rides24,com.objectdb.o,_IllegalArgumentException,39,0,2,0,13,0,7,0,6,0
+Rides24,com.objectdb.o,EMP,47,0,0,0,14,0,8,0,8,0
+Rides24,com.objectdb.o,EMR,417,0,52,0,108,0,32,0,6,0
+Rides24,com.objectdb.o,GQI,352,0,52,0,87,0,30,0,4,0
+Rides24,com.objectdb.o,UPR.c,6,0,0,0,3,0,1,0,1,0
+Rides24,com.objectdb.o,UPR.d,24,0,0,0,7,0,2,0,2,0
+Rides24,com.objectdb.o,EMI,11,0,0,0,4,0,4,0,4,0
+Rides24,com.objectdb.o,UPR.e,16,0,0,0,6,0,2,0,2,0
+Rides24,com.objectdb.o,RFV,273,0,28,0,69,0,31,0,17,0
+Rides24,com.objectdb.o,PBI,173,0,14,0,35,0,13,0,6,0
+Rides24,com.objectdb.o,RFM,387,0,20,0,106,0,26,0,16,0
+Rides24,com.objectdb.o,ITW,36,0,2,0,12,0,6,0,5,0
+Rides24,com.objectdb.o,CHT,107,0,14,0,24,0,16,0,8,0
+Rides24,com.objectdb.o,ELV,57,0,0,0,16,0,8,0,8,0
+Rides24,com.objectdb.o,CHV,65,0,8,0,18,0,12,0,8,0
+Rides24,com.objectdb.o,InternalException,192,0,10,0,50,0,17,0,12,0
+Rides24,com.objectdb.o,ADL,704,0,14,0,163,0,26,0,19,0
+Rides24,com.objectdb.o,PAN,56,0,4,0,18,0,8,0,6,0
+Rides24,com.objectdb.o,PAP,124,0,2,0,30,0,16,0,15,0
+Rides24,com.objectdb.o,PAR,99,0,12,0,27,0,19,0,13,0
+Rides24,com.objectdb.o,CHE,13,0,0,0,5,0,4,0,4,0
+Rides24,com.objectdb.o,_JdoFatalDataStoreException,26,0,0,0,10,0,5,0,5,0
+Rides24,com.objectdb.o,ELI,114,0,12,0,25,0,9,0,3,0
+Rides24,com.objectdb.o,InvToManyLoadRequest,3,0,0,0,1,0,1,0,1,0
+Rides24,com.objectdb.o,REG,1411,0,196,0,376,0,143,0,45,0
+Rides24,com.objectdb.o,PAG,1458,0,108,0,310,0,129,0,75,0
+Rides24,com.objectdb.o,ACN,54,0,4,0,20,0,15,0,13,0
+Rides24,com.objectdb.o,UserException,91,0,8,0,26,0,15,0,11,0
+Rides24,com.objectdb.o,XQI,28,0,2,0,12,0,5,0,4,0
+Rides24,com.objectdb.o,ISP,134,0,8,0,42,0,22,0,18,0
+Rides24,com.objectdb.o,ACL,116,0,8,0,32,0,8,0,4,0
+Rides24,com.objectdb.o,NTS,318,0,24,0,87,0,34,0,22,0
+Rides24,com.objectdb.o,LPS,133,0,10,0,24,0,8,0,3,0
+Rides24,com.objectdb.o,NTN,42,0,6,0,11,0,6,0,3,0
+Rides24,com.objectdb.o,NTC,23,0,0,0,2,0,2,0,2,0
+Rides24,com.objectdb.o,_IllegalStateException,27,0,0,0,10,0,5,0,5,0
+Rides24,com.objectdb.o,FCL,311,0,24,0,79,0,18,0,6,0
+Rides24,com.objectdb.o,LOM,111,0,12,0,28,0,11,0,5,0
+Rides24,com.objectdb.o,FAP,133,0,2,0,29,0,8,0,7,0
+Rides24,com.objectdb.o,HEP,259,0,34,0,63,0,24,0,7,0
+Rides24,com.objectdb.o,LMT,29,0,4,0,9,0,9,0,7,0
+Rides24,com.objectdb.o,UFT,594,0,82,0,133,0,47,0,6,0
+Rides24,com.objectdb.o,SBI,92,0,10,0,23,0,10,0,5,0
+Rides24,com.objectdb.o,ServerTrayIcon.new MouseAdapter() {...},12,0,2,0,4,0,3,0,2,0
+Rides24,com.objectdb.o,FHN,1161,0,162,0,273,0,100,0,15,0
+Rides24,com.objectdb.o,JPW,785,0,70,0,194,0,56,0,21,0
+Rides24,com.objectdb.o,JPM,1069,0,134,0,240,0,80,0,13,0
+Rides24,com.objectdb.o,LTN,165,0,16,0,40,0,17,0,9,0
+Rides24,com.objectdb.o,JPE,312,0,66,0,58,0,37,0,4,0
+Rides24,com.objectdb.o,DCT,176,0,29,0,42,0,29,0,8,0
+Rides24,com.objectdb.o,DCV,650,0,109,0,154,0,88,0,29,0
+Rides24,com.objectdb.o,PageCacheFile,174,0,8,0,37,0,13,0,9,0
+Rides24,com.objectdb.o,JPA,804,0,138,0,222,0,81,0,9,0
+Rides24,com.objectdb.o,DCK,49,0,8,0,17,0,8,0,4,0
+Rides24,com.objectdb.o,DCN,97,0,2,0,29,0,11,0,10,0
+Rides24,com.objectdb.o,FGR,519,0,36,0,123,0,48,0,30,0
+Rides24,com.objectdb.o,FGS,210,0,16,0,53,0,17,0,9,0
+Rides24,com.objectdb.o,DCE,1001,0,141,0,259,0,106,0,35,0
+Rides24,com.objectdb.o,FTP.g,9,0,0,0,4,0,1,0,1,0
+Rides24,com.objectdb.o,JOP,281,0,10,0,78,0,9,0,4,0
+Rides24,com.objectdb.o,FTP.f,30,0,0,0,12,0,2,0,2,0
+Rides24,com.objectdb.o,LSD,206,0,22,0,49,0,22,0,11,0
+Rides24,com.objectdb.o,WHP,548,0,62,0,119,0,39,0,8,0
+Rides24,com.objectdb.o,FGD,245,0,14,0,56,0,20,0,13,0
+Rides24,com.objectdb.o,WHS,316,0,44,0,70,0,38,0,16,0
+Rides24,com.objectdb.o,DBT,174,0,26,0,44,0,26,0,10,0
+Rides24,com.objectdb.o,DBV,471,0,94,0,109,0,82,0,27,0
+Rides24,com.objectdb.o,StandardJtaManager,36,0,4,0,13,0,5,0,3,0
+Rides24,com.objectdb.o,LRS,202,0,30,0,52,0,23,0,8,0
+Rides24,com.objectdb.o,HMP.F,69,0,0,0,16,0,9,0,9,0
+Rides24,com.objectdb.o,LRV,84,0,2,0,24,0,14,0,13,0
+Rides24,com.objectdb.o,JNW,368,0,8,0,76,0,13,0,9,0
+Rides24,com.objectdb.o,OLargeBitSet,130,0,12,0,26,0,16,0,10,0
+Rides24,com.objectdb.o,NVN,76,0,2,0,19,0,7,0,6,0
+Rides24,com.objectdb.o,LRQ,101,0,10,0,25,0,14,0,9,0
+Rides24,com.objectdb.o,JNN,78,0,12,0,22,0,12,0,6,0
+Rides24,com.objectdb.o,JMW,181,0,18,0,45,0,14,0,5,0
+Rides24,com.objectdb.o,DAT,259,0,30,0,64,0,28,0,9,0
+Rides24,com.objectdb.o,DAV,602,0,65,0,136,0,66,0,29,0
+Rides24,com.objectdb.o,JMH,1389,0,187,0,414,0,158,0,41,0
+Rides24,com.objectdb.o,JML,601,0,68,0,106,0,41,0,7,0
+Rides24,com.objectdb.o,UBV,72,0,8,0,20,0,13,0,9,0
+Rides24,com.objectdb.o,TYD,160,0,6,0,40,0,12,0,9,0
+Rides24,com.objectdb.o,TYH,1000,0,208,0,257,0,144,0,40,0
+Rides24,com.objectdb.o,_JdoOptimisticVerificationException,35,0,0,0,13,0,6,0,6,0
+Rides24,com.objectdb.o,PPW,453,0,76,0,110,0,47,0,9,0
+Rides24,com.objectdb.o,NLT,78,0,8,0,18,0,11,0,7,0
+Rides24,com.objectdb.o,NLV,32,0,2,0,13,0,11,0,10,0
+Rides24,com.objectdb.o,JDM,1009,0,168,0,212,0,92,0,8,0
+Rides24,com.objectdb.o,RTT,255,0,24,0,66,0,22,0,10,0
+Rides24,com.objectdb.o,JDA,989,0,176,0,236,0,99,0,9,0
+Rides24,com.objectdb.o,JDE,284,0,50,0,59,0,30,0,5,0
+Rides24,com.objectdb.o,RTM,81,0,12,0,26,0,12,0,6,0
+Rides24,com.objectdb.o,JCW,870,0,112,0,214,0,97,0,38,0
+Rides24,com.objectdb.o,ART,196,0,22,0,43,0,22,0,11,0
+Rides24,com.objectdb.o,RSV,142,0,16,0,31,0,20,0,12,0
+Rides24,com.objectdb.o,JCM,346,0,30,0,73,0,23,0,8,0
+Rides24,com.objectdb.o,JCP,485,0,28,0,102,0,38,0,21,0
+Rides24,com.objectdb.o,LGR,359,0,53,0,109,0,58,0,29,0
+Rides24,com.objectdb.o,JCR,197,0,28,0,53,0,22,0,8,0
+Rides24,com.objectdb.o,JCF,61,0,0,0,14,0,3,0,3,0
+Rides24,com.objectdb.o,JCE,65,0,4,0,20,0,9,0,7,0
+Rides24,com.objectdb.o,ARB,66,0,6,0,15,0,7,0,4,0
+Rides24,com.objectdb.o,JCL,595,0,46,0,131,0,44,0,21,0
+Rides24,com.objectdb.o,LGN,245,0,18,0,58,0,24,0,15,0
+Rides24,com.objectdb.o,RST,289,0,32,0,78,0,23,0,7,0
+Rides24,com.objectdb.o,LGM,571,0,58,0,129,0,41,0,12,0
+Rides24,com.objectdb.o,JCA,87,0,10,0,23,0,11,0,6,0
+Rides24,com.objectdb.o,RSL,279,0,28,0,66,0,22,0,8,0
+Rides24,com.objectdb.o,JBW,236,0,10,0,44,0,17,0,12,0
+Rides24,com.objectdb.o,AQR,3,0,0,0,1,0,1,0,1,0
+Rides24,com.objectdb.o,RSC,70,0,0,0,22,0,11,0,11,0
+Rides24,com.objectdb.o,LFN,21,0,0,0,7,0,4,0,4,0
+Rides24,com.objectdb.o,RRT,348,0,80,0,96,0,45,0,5,0
+Rides24,com.objectdb.o,JBR,132,0,0,0,18,0,10,0,10,0
+Rides24,com.objectdb.o,TVS,133,0,14,0,34,0,17,0,10,0
+Rides24,com.objectdb.o,TVR,63,0,8,0,15,0,8,0,4,0
+Rides24,com.objectdb.o,LFL,1213,0,114,0,298,0,115,0,58,0
+Rides24,com.objectdb.o,EXP,233,0,38,0,43,0,25,0,6,0
+Rides24,com.objectdb.o,EXR,53,0,9,0,11,0,7,0,2,0
+Rides24,com.objectdb.o,CTR,145,0,18,0,40,0,18,0,9,0
+Rides24,com.objectdb.o,EXT,167,0,6,0,40,0,11,0,8,0
+Rides24,com.objectdb.o,EXV,96,0,0,0,23,0,12,0,12,0
+Rides24,com.objectdb.o,EXU,454,0,16,0,55,0,22,0,14,0
+Rides24,com.objectdb.o,RRB,317,0,26,0,65,0,25,0,10,0
+Rides24,com.objectdb.o,EXH,327,0,22,0,69,0,31,0,20,0
+Rides24,com.objectdb.o,_NoResultException,25,0,0,0,10,0,5,0,5,0
+Rides24,com.objectdb.o,EXL,29,0,0,0,7,0,5,0,5,0
+Rides24,com.objectdb.o,RQW,456,0,10,0,157,0,33,0,28,0
+Rides24,com.objectdb.o,CTL,285,0,22,0,73,0,19,0,7,0
+Rides24,com.objectdb.o,EXN,249,0,28,0,57,0,29,0,15,0
+Rides24,com.objectdb.o,CST,705,0,22,0,219,0,54,0,43,0
+Rides24,com.objectdb.o,RQC,176,0,12,0,44,0,13,0,7,0
+Rides24,com.objectdb.o,RQI,246,0,34,0,59,0,21,0,4,0
+Rides24,com.objectdb.o,EXT.f,211,0,18,0,58,0,22,0,13,0
+Rides24,com.objectdb.o,PTN,670,0,98,0,171,0,84,0,35,0
+Rides24,com.objectdb.o,AVS,19,0,0,0,8,0,7,0,7,0
+Rides24,com.objectdb.o,UMR.ab,41,0,0,0,10,0,6,0,6,0
+Rides24,com.objectdb.o,UMR.aa,41,0,0,0,10,0,6,0,6,0
+Rides24,com.objectdb.o,LKM,331,0,46,0,87,0,37,0,13,0
+Rides24,com.objectdb.o,UMR.ac,122,0,6,0,35,0,8,0,5,0
+Rides24,com.objectdb.o,PRU,335,0,26,0,74,0,29,0,16,0
+Rides24,com.objectdb.o,PRG,1621,0,207,0,397,0,149,0,45,0
+Rides24,com.objectdb.o,NNF,15,0,2,0,4,0,5,0,4,0
+Rides24,com.objectdb.o,PRM,160,0,10,0,32,0,13,0,8,0
+Rides24,com.objectdb.o,TFM.k,26,0,0,0,8,0,3,0,3,0
+Rides24,com.objectdb.o,JEW,609,0,78,0,156,0,55,0,16,0
+Rides24,com.objectdb.o,TFM.l,22,0,0,0,7,0,2,0,2,0
+Rides24,com.objectdb.o,ATR,78,0,8,0,20,0,12,0,8,0
+Rides24,com.objectdb.o,B64,428,0,52,0,77,0,35,0,9,0
+Rides24,com.objectdb.o,JER,198,0,22,0,46,0,18,0,7,0
+Rides24,com.objectdb.o,LIW,80,0,6,0,26,0,14,0,11,0
+Rides24,com.objectdb.o,TYR,1259,0,155,0,276,0,166,0,41,0
+Rides24,com.objectdb.o,TYT,104,0,14,0,29,0,14,0,7,0
+Rides24,com.objectdb.o,TYS,1446,0,169,0,324,0,102,0,17,0
+Rides24,com.objectdb.o,WVP.s,53,0,18,0,16,0,11,0,2,0
+Rides24,com.objectdb.o,JEL,899,0,120,0,198,0,88,0,28,0
+Rides24,com.objectdb.o,LIN,27,0,0,0,7,0,5,0,5,0
+Rides24,com.objectdb.o,TYV,110,0,10,0,27,0,16,0,11,0
+Rides24,com.objectdb.o,WVP.r,44,0,8,0,12,0,6,0,2,0
+Rides24,com.objectdb.o,JEN,367,0,52,0,80,0,32,0,6,0
+Rides24,com.objectdb.o,TYW,691,0,107,0,206,0,90,0,33,0
+Rides24,com.objectdb.o,TYN,78,0,5,0,15,0,8,0,5,0
+Rides24,com.objectdb.o,TYM,2020,0,210,0,459,0,163,0,58,0
+Rides24,gui,AssessmentCheckGUI,277,0,4,0,59,0,4,0,2,0
+Rides24,gui,MovementGUI,127,0,4,0,20,0,3,0,1,0
+Rides24,gui,ConfirmReservationGUI.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
+Rides24,gui,ConfirmReservationGUI.new ActionListener() {...},33,0,2,0,7,0,3,0,2,0
+Rides24,gui,ConfirmReservationGUI.new ActionListener() {...},28,0,0,0,5,0,2,0,2,0
+Rides24,gui,ConfirmDeleteGUI,100,0,0,0,20,0,1,0,1,0
+Rides24,gui,MainGUI.new ActionListener() {...},25,0,0,0,4,0,2,0,2,0
+Rides24,gui,MainGUI.new ActionListener() {...},25,0,0,0,5,0,2,0,2,0
+Rides24,gui,MainGUI.new ActionListener() {...},18,0,0,0,5,0,2,0,2,0
+Rides24,gui,MainGUI.new ActionListener() {...},18,0,0,0,5,0,2,0,2,0
+Rides24,gui,MainGUI.new ActionListener() {...},25,0,0,0,4,0,2,0,2,0
+Rides24,gui,MainGUI.new ActionListener() {...},15,0,0,0,4,0,2,0,2,0
+Rides24,gui,MainGUI.new WindowAdapter() {...},9,0,0,0,3,0,2,0,2,0
+Rides24,gui,AddMoneyGUI,166,0,0,0,30,0,2,0,2,0
+Rides24,gui,ReservationGUI,357,0,2,0,60,0,3,0,2,0
+Rides24,gui,ConfirmDeleteGUI.new ActionListener() {...},64,0,4,0,13,0,4,0,2,0
+Rides24,gui,ConfirmDeleteGUI.new ActionListener() {...},43,0,4,0,10,0,4,0,2,0
+Rides24,gui,ReservationGUI.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
+Rides24,gui,ReservationGUI.new ActionListener() {...},20,0,0,0,4,0,2,0,2,0
+Rides24,gui,ReservationGUI.new ActionListener() {...},52,0,2,0,8,0,3,0,2,0
+Rides24,gui,ReservationGUI.new ActionListener() {...},52,0,0,0,6,0,2,0,2,0
+Rides24,gui,AddCarGUI.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
+Rides24,gui,AddCarGUI.new ActionListener() {...},72,0,2,0,14,0,3,0,2,0
+Rides24,gui,RegisterGUI.new ActionListener() {...},110,0,12,0,23,0,8,0,2,0
+Rides24,gui,RegisterGUI.new WindowAdapter() {...},17,0,0,0,5,0,2,0,2,0
+Rides24,gui,RegisterGUI.new Runnable() {...},15,0,0,0,7,0,2,0,2,0
+Rides24,gui,ManageReservationsGUI,310,0,8,0,58,0,7,0,3,0
+Rides24,gui,FindRidesGUI.new PropertyChangeListener() {...},284,0,12,0,39,0,8,0,2,0
+Rides24,gui,FindRidesGUI.new ActionListener() {...},73,0,8,0,14,0,6,0,2,0
+Rides24,gui,FindRidesGUI.new ItemListener() {...},50,0,0,0,6,0,2,0,2,0
+Rides24,gui,FindRidesGUI.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
+Rides24,gui,FindRidesGUI.new ItemListener() {...},46,0,2,0,10,0,3,0,2,0
+Rides24,gui,TravelerGUI.new ActionListener() {...},17,0,0,0,4,0,2,0,2,0
+Rides24,gui,TravelerGUI.new ActionListener() {...},17,0,0,0,4,0,2,0,2,0
+Rides24,gui,TravelerGUI.new ActionListener() {...},17,0,0,0,4,0,2,0,2,0
+Rides24,gui,TravelerGUI.new ActionListener() {...},17,0,0,0,4,0,2,0,2,0
+Rides24,gui,TravelerGUI.new ActionListener() {...},17,0,0,0,4,0,2,0,2,0
+Rides24,gui,TravelerGUI.new ActionListener() {...},17,0,0,0,4,0,2,0,2,0
+Rides24,gui,TravelerGUI.new ActionListener() {...},17,0,0,0,4,0,2,0,2,0
+Rides24,gui,TravelerGUI.new WindowAdapter() {...},17,0,0,0,5,0,2,0,2,0
+Rides24,gui,TravelerGUI.new ActionListener() {...},17,0,0,0,4,0,2,0,2,0
+Rides24,gui,LoginGUI,172,0,0,0,34,0,3,0,3,0
+Rides24,gui,CancelRideGUI,154,0,2,0,31,0,3,0,2,0
+Rides24,gui,ReservationStateGUI.new ActionListener() {...},23,0,0,0,5,0,2,0,2,0
+Rides24,gui,ReservationStateGUI.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
+Rides24,gui,RemoveMoneyGUI.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
+Rides24,gui,RemoveMoneyGUI.new ActionListener() {...},42,0,2,0,8,0,3,0,2,0
+Rides24,gui,TravelerGUI,270,0,0,0,42,0,1,0,1,0
+Rides24,gui,AssessmentGUI.new ActionListener() {...},95,0,14,0,19,0,9,0,2,0
+Rides24,gui,AssessmentGUI,305,0,4,0,63,0,4,0,2,0
+Rides24,gui,CreateRideGUI,553,0,14,0,94,0,11,0,4,0
+Rides24,gui,CreateRideGUI.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
+Rides24,gui,CreateRideGUI.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
+Rides24,gui,CreateRideGUI.new PropertyChangeListener() {...},126,0,10,0,21,0,7,0,2,0
+Rides24,gui,AddCarGUI,242,0,0,0,46,0,2,0,2,0
+Rides24,gui,AssessmentCheckGUI.new ActionListener() {...},40,0,0,0,7,0,2,0,2,0
+Rides24,gui,AssessmentCheckGUI.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
+Rides24,gui,RemoveMoneyGUI,185,0,0,0,34,0,2,0,2,0
+Rides24,gui,ConfirmReservationGUI,165,0,4,0,32,0,4,0,2,0
+Rides24,gui,FindRidesGUI,585,0,12,0,100,0,10,0,4,0
+Rides24,gui,ManageReservationsGUI.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
+Rides24,gui,ManageReservationsGUI.new ActionListener() {...},88,0,6,0,17,0,5,0,2,0
+Rides24,gui,ManageReservationsGUI.new ActionListener() {...},51,0,4,0,9,0,4,0,2,0
+Rides24,gui,ReservationStateGUI,188,0,2,0,36,0,3,0,2,0
+Rides24,gui,AddMoneyGUI.new ActionListener() {...},32,0,0,0,6,0,2,0,2,0
+Rides24,gui,AddMoneyGUI.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
+Rides24,gui,CancelRideGUI.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
+Rides24,gui,CancelRideGUI.new ActionListener() {...},26,0,0,0,5,0,2,0,2,0
+Rides24,gui,DriverGUI.new WindowAdapter() {...},17,0,0,0,5,0,2,0,2,0
+Rides24,gui,DriverGUI.new ActionListener() {...},17,0,0,0,4,0,2,0,2,0
+Rides24,gui,DriverGUI.new ActionListener() {...},17,0,0,0,4,0,2,0,2,0
+Rides24,gui,DriverGUI.new ActionListener() {...},17,0,0,0,4,0,2,0,2,0
+Rides24,gui,DriverGUI.new ActionListener() {...},17,0,0,0,4,0,2,0,2,0
+Rides24,gui,DriverGUI.new ActionListener() {...},17,0,0,0,4,0,2,0,2,0
+Rides24,gui,MainGUI,280,0,0,0,53,0,5,0,5,0
+Rides24,gui,DriverGUI.new ActionListener() {...},17,0,0,0,4,0,2,0,2,0
+Rides24,gui,DriverGUI.new ActionListener() {...},17,0,0,0,4,0,2,0,2,0
+Rides24,gui,DriverGUI.new ActionListener() {...},17,0,0,0,4,0,2,0,2,0
+Rides24,gui,ApplicationLauncher,112,0,2,0,23,0,3,0,2,0
+Rides24,gui,LoginGUI.new WindowAdapter() {...},17,0,0,0,5,0,2,0,2,0
+Rides24,gui,LoginGUI.new ActionListener() {...},78,0,4,0,19,0,4,0,2,0
+Rides24,gui,LoginGUI.new Runnable() {...},15,0,0,0,7,0,2,0,2,0
+Rides24,gui,DriverGUI,284,0,0,0,48,0,1,0,1,0
+Rides24,gui,RegisterGUI,270,0,0,0,51,0,3,0,3,0
+Rides24,com.objectdb.jdo,JdoListenerManager.a,39,0,6,0,10,0,5,0,2,0
+Rides24,com.objectdb.jdo,PMF,756,0,48,0,222,0,62,0,38,0
+Rides24,com.objectdb.jdo,JdoQuery,1034,0,56,0,317,0,84,0,56,0
+Rides24,com.objectdb.jdo,JdoListenerManager,731,0,130,0,162,0,85,0,20,0
+Rides24,com.objectdb.jdo,PMImpl,2755,0,343,0,857,0,293,0,119,0
+Rides24,businessLogic,BLFacadeImplementation,466,0,8,0,135,0,36,0,32,0
+Rides24,businessLogic,BusinessLogicServer.new ActionListener() {...},14,0,0,0,4,0,2,0,2,0
+Rides24,businessLogic,BusinessLogicServer.new WindowAdapter() {...},9,0,0,0,3,0,2,0,2,0
+Rides24,businessLogic,BusinessLogicServer,233,0,4,0,48,0,4,0,2,0
+Rides24,javax.jdo.spi,JDOImplHelper.Meta,45,0,0,0,13,0,7,0,7,0
+Rides24,javax.jdo.spi,I18NHelper,362,0,16,0,73,0,34,0,26,0
+Rides24,javax.jdo.spi,RegisterClassEvent,34,0,0,0,12,0,6,0,6,0
+Rides24,javax.jdo.spi,JDOPermission,30,0,0,0,8,0,3,0,3,0
+Rides24,javax.jdo.spi,JDOImplHelper.new JDOImplHelper.StringConstructor() {...},25,0,0,0,6,0,2,0,2,0
+Rides24,javax.jdo.spi,JDOImplHelper.new JDOImplHelper.StringConstructor() {...},15,0,0,0,4,0,2,0,2,0
+Rides24,javax.jdo.spi,JDOImplHelper.new JDOImplHelper.StringConstructor() {...},49,0,2,0,10,0,3,0,2,0
+Rides24,javax.jdo.spi,JDOImplHelper.new PrivilegedAction() {...},0,5,0,0,0,2,0,2,0,2
+Rides24,javax.jdo.spi,I18NHelper.new PrivilegedAction() {...},10,0,0,0,2,0,2,0,2,0
+Rides24,javax.jdo.spi,I18NHelper.new PrivilegedAction() {...},5,0,0,0,2,0,2,0,2,0
+Rides24,javax.jdo.spi,JDOImplHelper,772,0,74,0,234,0,76,0,39,0

@@ -1,0 +1,105 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-19 12:40:02 #1 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' is opened by 10076@ByNekox
+
+[2025-02-19 12:40:02 #2 type.registry] 
+New type domain.User
+
+[2025-02-19 12:40:02 #3 type.registry] 
+New type domain.Driver
+
+[2025-02-19 12:40:02 #4 type] 
+Type domain.User is not enhanced.
+
+[2025-02-19 12:40:02 #5 type.registry] 
+New type domain.Ride
+
+[2025-02-19 12:40:02 #6 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-19 12:40:02 #7 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-19 12:40:02 #8 type.registry] 
+New type domain.Traveler
+
+[2025-02-19 12:40:02 #9 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-02-19 12:40:02 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-02-19 12:40:02 #11 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-19 12:41:11 #1 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' is opened by 15368@ByNekox
+
+[2025-02-19 12:41:11 #2 type.registry] 
+New type domain.User
+
+[2025-02-19 12:41:11 #3 type.registry] 
+New type domain.Driver
+
+[2025-02-19 12:41:11 #4 type] 
+Type domain.User is not enhanced.
+
+[2025-02-19 12:41:11 #5 type.registry] 
+New type domain.Ride
+
+[2025-02-19 12:41:11 #6 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-19 12:41:11 #7 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-19 12:41:11 #8 type.registry] 
+New type domain.Traveler
+
+[2025-02-19 12:41:11 #9 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-02-19 12:41:11 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-02-19 12:41:11 #11 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-19 12:42:32 #1 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' is opened by 8444@ByNekox
+
+[2025-02-19 12:42:32 #2 type.registry] 
+New type domain.User
+
+[2025-02-19 12:42:32 #3 type.registry] 
+New type domain.Driver
+
+[2025-02-19 12:42:32 #4 type] 
+Type domain.User is not enhanced.
+
+[2025-02-19 12:42:32 #5 type.registry] 
+New type domain.Ride
+
+[2025-02-19 12:42:32 #6 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-19 12:42:32 #7 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-19 12:42:32 #8 type.registry] 
+New type domain.Traveler
+
+[2025-02-19 12:42:32 #9 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-02-19 12:42:32 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-02-19 12:42:32 #11 type.registry] 
+New type java.util.Vector<domain.Ride>
+

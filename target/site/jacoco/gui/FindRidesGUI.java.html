@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FindRidesGUI.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Rides24</a> &gt; <a href="index.source.html" class="el_package">gui</a> &gt; <span class="el_source">FindRidesGUI.java</span></div><h1>FindRidesGUI.java</h1><pre class="source lang-java linenums">package gui;
+
+import businessLogic.BLFacade;
+import configuration.UtilDate;
+
+import com.toedter.calendar.JCalendar;
+
+import domain.Driver;
+import domain.Reservation;
+import domain.Ride;
+import domain.Traveler;
+import domain.User;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.beans.*;
+import java.text.DateFormat;
+import java.util.*;
+import java.util.List;
+
+import javax.swing.table.DefaultTableModel;
+
+
+public class FindRidesGUI extends JFrame {
+	private static final long serialVersionUID = 1L;
+
+
+	private User user;
+	
+<span class="nc" id="L31">	private JComboBox&lt;String&gt; jComboBoxOrigin = new JComboBox&lt;String&gt;();</span>
+<span class="nc" id="L32">	DefaultComboBoxModel&lt;String&gt; originLocations = new DefaultComboBoxModel&lt;String&gt;();</span>
+
+<span class="nc" id="L34">	private JComboBox&lt;String&gt; jComboBoxDestination = new JComboBox&lt;String&gt;();</span>
+<span class="nc" id="L35">	DefaultComboBoxModel&lt;String&gt; destinationCities = new DefaultComboBoxModel&lt;String&gt;();</span>
+
+<span class="nc" id="L37">	private JLabel jLabelOrigin = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;CreateRideGUI.LeavingFrom&quot;));</span>
+<span class="nc" id="L38">	private JLabel jLabelDestination = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;CreateRideGUI.GoingTo&quot;));</span>
+<span class="nc" id="L39">	private final JLabel jLabelEventDate = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;CreateRideGUI.RideDate&quot;));</span>
+<span class="nc" id="L40">	private final JLabel jLabelEvents = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;CreateRideGUI.Rides&quot;)); </span>
+
+<span class="nc" id="L42">	private JButton jButtonClose = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Close&quot;));</span>
+
+	// Code for JCalendar
+<span class="nc" id="L45">	private JCalendar jCalendar1 = new JCalendar();</span>
+<span class="nc" id="L46">	private Calendar calendarAnt = null;</span>
+<span class="nc" id="L47">	private Calendar calendarAct = null;</span>
+<span class="nc" id="L48">	private JScrollPane scrollPaneEvents = new JScrollPane();</span>
+
+<span class="nc" id="L50">	private List&lt;Date&gt; datesWithRidesCurrentMonth = new Vector&lt;Date&gt;();</span>
+
+<span class="nc" id="L52">	private JTable tableRides= new JTable();</span>
+
+	private DefaultTableModel tableModelRides;
+
+
+<span class="nc" id="L57">	private String[] columnNamesRides = new String[] {</span>
+<span class="nc" id="L58">			ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;FindRidesGUI.Driver&quot;), </span>
+<span class="nc" id="L59">			ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;FindRidesGUI.NPlaces&quot;), </span>
+<span class="nc" id="L60">			ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;FindRidesGUI.Price&quot;)</span>
+	};
+
+
+	public FindRidesGUI(User pUser)
+<span class="nc" id="L65">	{</span>
+<span class="nc" id="L66">		this.user = pUser;</span>
+<span class="nc" id="L67">		this.getContentPane().setLayout(null);</span>
+<span class="nc" id="L68">		this.setSize(new Dimension(700, 500));</span>
+<span class="nc" id="L69">		this.setTitle(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;FindRidesGUI.FindRides&quot;));</span>
+
+<span class="nc" id="L71">		jLabelEventDate.setBounds(new Rectangle(457, 6, 140, 25));</span>
+<span class="nc" id="L72">		jLabelEvents.setBounds(172, 229, 353, 16);</span>
+
+<span class="nc" id="L74">		this.getContentPane().add(jLabelEventDate, null);</span>
+<span class="nc" id="L75">		this.getContentPane().add(jLabelEvents);</span>
+
+<span class="nc" id="L77">		jButtonClose.setBounds(new Rectangle(274, 419, 130, 30));</span>
+
+<span class="nc" id="L79">		jButtonClose.addActionListener(new ActionListener()</span>
+<span class="nc" id="L80">		{</span>
+			public void actionPerformed(ActionEvent e)
+			{
+<span class="nc" id="L83">				jButton2_actionPerformed(e);</span>
+<span class="nc" id="L84">			}</span>
+		});
+<span class="nc" id="L86">		BLFacade facade = MainGUI.getBusinessLogic();</span>
+<span class="nc" id="L87">		List&lt;String&gt; origins=facade.getDepartCities();</span>
+		
+<span class="nc bnc" id="L89" title="All 2 branches missed.">		for(String location:origins) originLocations.addElement(location);</span>
+		
+<span class="nc" id="L91">		jLabelOrigin.setBounds(new Rectangle(6, 56, 92, 20));</span>
+<span class="nc" id="L92">		jLabelDestination.setBounds(6, 81, 61, 16);</span>
+<span class="nc" id="L93">		getContentPane().add(jLabelOrigin);</span>
+
+<span class="nc" id="L95">		getContentPane().add(jLabelDestination);</span>
+
+<span class="nc" id="L97">		jComboBoxOrigin.setModel(originLocations);</span>
+<span class="nc" id="L98">		jComboBoxOrigin.setBounds(new Rectangle(103, 50, 172, 20));</span>
+		
+
+<span class="nc" id="L101">		List&lt;String&gt; aCities=facade.getDestinationCities((String)jComboBoxOrigin.getSelectedItem());</span>
+<span class="nc bnc" id="L102" title="All 2 branches missed.">		for(String aciti:aCities) {</span>
+<span class="nc" id="L103">			destinationCities.addElement(aciti);</span>
+<span class="nc" id="L104">		}</span>
+		
+<span class="nc" id="L106">		jComboBoxOrigin.addItemListener(new ItemListener() {</span>
+			public void itemStateChanged(ItemEvent e) {
+<span class="nc" id="L108">				destinationCities.removeAllElements();</span>
+<span class="nc" id="L109">				BLFacade facade = MainGUI.getBusinessLogic();</span>
+
+<span class="nc" id="L111">				List&lt;String&gt; aCities=facade.getDestinationCities((String)jComboBoxOrigin.getSelectedItem());</span>
+<span class="nc bnc" id="L112" title="All 2 branches missed.">				for(String aciti:aCities) {</span>
+<span class="nc" id="L113">					destinationCities.addElement(aciti);</span>
+<span class="nc" id="L114">				}</span>
+<span class="nc" id="L115">				tableModelRides.getDataVector().removeAllElements();</span>
+<span class="nc" id="L116">				tableModelRides.fireTableDataChanged();</span>
+
+				
+<span class="nc" id="L119">			}</span>
+		});
+
+
+<span class="nc" id="L123">		JButton jButtonErreserbatu = new JButton((String) null); //Erreserba botoia</span>
+<span class="nc" id="L124">		jButtonErreserbatu.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L126">				int errenkadaZbk = tableRides.getSelectedRow();</span>
+<span class="nc bnc" id="L127" title="All 2 branches missed.">		        if (errenkadaZbk != -1) { //Errenkada bat aukeratuta dago</span>
+<span class="nc" id="L128">		        	int nPlazak = (int) tableModelRides.getValueAt(errenkadaZbk, 1);</span>
+<span class="nc" id="L129">		            Ride ride = (Ride) tableModelRides.getValueAt(errenkadaZbk, 3);</span>
+<span class="nc" id="L130">		            Traveler traveler = (Traveler) user;</span>
+<span class="nc bnc" id="L131" title="All 6 branches missed.">		            if (ride!=null &amp;&amp; nPlazak &gt; 0 &amp;&amp; (traveler.containsReservation(ride)==false)) {</span>
+<span class="nc" id="L132">		            	JFrame a = new ReservationGUI(traveler,ride);</span>
+<span class="nc" id="L133">						a.setVisible(true);</span>
+<span class="nc" id="L134">						jButtonErreserbatu.setEnabled(false);</span>
+<span class="nc" id="L135">						System.out.println(&quot;END&quot;);</span>
+<span class="nc" id="L136">		            } else {</span>
+<span class="nc" id="L137">		            	jLabelEvents.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;FindRidesGUI.NoReservationTwice&quot;));</span>
+		            }
+		        }
+<span class="nc" id="L140">			}</span>
+		});
+		
+<span class="nc" id="L143">		jButtonErreserbatu.setBounds(new Rectangle(274, 419, 130, 30));</span>
+<span class="nc" id="L144">		jButtonErreserbatu.setBounds(426, 419, 130, 30);</span>
+<span class="nc" id="L145">		jButtonErreserbatu.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;FindRidesGUI.Book&quot;));</span>
+<span class="nc" id="L146">		jButtonErreserbatu.setEnabled(false);</span>
+		
+<span class="nc" id="L148">		jButtonErreserbatu.setVisible(this.user instanceof Traveler);</span>
+<span class="nc" id="L149">		getContentPane().add(jButtonErreserbatu);</span>
+		
+<span class="nc" id="L151">		jComboBoxDestination.setModel(destinationCities);</span>
+<span class="nc" id="L152">		jComboBoxDestination.setBounds(new Rectangle(103, 80, 172, 20));</span>
+<span class="nc" id="L153">		jComboBoxDestination.addItemListener(new ItemListener() {</span>
+			public void itemStateChanged(ItemEvent e) {
+
+<span class="nc" id="L156">				paintDaysWithEvents(jCalendar1,datesWithRidesCurrentMonth,	new Color(210,228,238));</span>
+
+<span class="nc" id="L158">				BLFacade facade = MainGUI.getBusinessLogic();</span>
+
+<span class="nc" id="L160">				datesWithRidesCurrentMonth=facade.getThisMonthDatesWithRides((String)jComboBoxOrigin.getSelectedItem(),(String)jComboBoxDestination.getSelectedItem(),jCalendar1.getDate());</span>
+<span class="nc" id="L161">				paintDaysWithEvents(jCalendar1,datesWithRidesCurrentMonth,Color.CYAN);</span>
+
+<span class="nc" id="L163">			}</span>
+		});
+
+<span class="nc" id="L166">		this.getContentPane().add(jButtonClose, null);</span>
+<span class="nc" id="L167">		this.getContentPane().add(jComboBoxOrigin, null);</span>
+
+<span class="nc" id="L169">		this.getContentPane().add(jComboBoxDestination, null);</span>
+
+
+<span class="nc" id="L172">		jCalendar1.setBounds(new Rectangle(300, 50, 225, 150));</span>
+
+
+		// Code for JCalendar
+<span class="nc" id="L176">		jCalendar1.addPropertyChangeListener(new PropertyChangeListener()</span>
+<span class="nc" id="L177">		{</span>
+			public void propertyChange(PropertyChangeEvent propertychangeevent)
+			{
+
+<span class="nc bnc" id="L181" title="All 2 branches missed.">				if (propertychangeevent.getPropertyName().equals(&quot;locale&quot;))</span>
+				{
+<span class="nc" id="L183">					jCalendar1.setLocale((Locale) propertychangeevent.getNewValue());</span>
+				}
+<span class="nc bnc" id="L185" title="All 2 branches missed.">				else if (propertychangeevent.getPropertyName().equals(&quot;calendar&quot;))</span>
+				{
+<span class="nc" id="L187">					calendarAnt = (Calendar) propertychangeevent.getOldValue();</span>
+<span class="nc" id="L188">					calendarAct = (Calendar) propertychangeevent.getNewValue();</span>
+					
+
+					
+<span class="nc" id="L192">					DateFormat dateformat1 = DateFormat.getDateInstance(1, jCalendar1.getLocale());</span>
+
+<span class="nc" id="L194">					int monthAnt = calendarAnt.get(Calendar.MONTH);</span>
+<span class="nc" id="L195">					int monthAct = calendarAct.get(Calendar.MONTH);</span>
+
+<span class="nc bnc" id="L197" title="All 2 branches missed.">					if (monthAct!=monthAnt) {</span>
+<span class="nc bnc" id="L198" title="All 2 branches missed.">						if (monthAct==monthAnt+2) {</span>
+							// Si en JCalendar está 30 de enero y se avanza al mes siguiente, devolvería 2 de marzo (se toma como equivalente a 30 de febrero)
+							// Con este código se dejará como 1 de febrero en el JCalendar
+<span class="nc" id="L201">							calendarAct.set(Calendar.MONTH, monthAnt+1);</span>
+<span class="nc" id="L202">							calendarAct.set(Calendar.DAY_OF_MONTH, 1);</span>
+						}						
+
+<span class="nc" id="L205">						jCalendar1.setCalendar(calendarAct);</span>
+
+					}
+					
+					try {
+<span class="nc" id="L210">						tableModelRides.setDataVector(null, columnNamesRides);</span>
+<span class="nc" id="L211">						tableModelRides.setColumnCount(4); // another column added to allocate ride objects</span>
+
+<span class="nc" id="L213">						BLFacade facade = MainGUI.getBusinessLogic();</span>
+<span class="nc" id="L214">						List&lt;domain.Ride&gt; rides=facade.getRides((String)jComboBoxOrigin.getSelectedItem(),(String)jComboBoxDestination.getSelectedItem(),UtilDate.trim(jCalendar1.getDate()));</span>
+
+<span class="nc bnc" id="L216" title="All 2 branches missed.">						if (rides.isEmpty() ) jLabelEvents.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;FindRidesGUI.NoRides&quot;)+ &quot;: &quot;+dateformat1.format(calendarAct.getTime()));</span>
+<span class="nc" id="L217">						else jLabelEvents.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;FindRidesGUI.Rides&quot;)+ &quot;: &quot;+dateformat1.format(calendarAct.getTime()));</span>
+<span class="nc bnc" id="L218" title="All 2 branches missed.">						for (domain.Ride ride:rides){</span>
+<span class="nc" id="L219">							Vector&lt;Object&gt; row = new Vector&lt;Object&gt;();</span>
+<span class="nc" id="L220">							row.add(ride.getDriver().getName());</span>
+<span class="nc" id="L221">							row.add(ride.getnPlaces());</span>
+<span class="nc" id="L222">							row.add(ride.getPrice());</span>
+<span class="nc" id="L223">							row.add(ride); // ev object added in order to obtain it with tableModelEvents.getValueAt(i,3)</span>
+<span class="nc" id="L224">							tableModelRides.addRow(row);		</span>
+<span class="nc" id="L225">						}</span>
+<span class="nc" id="L226">						datesWithRidesCurrentMonth=facade.getThisMonthDatesWithRides((String)jComboBoxOrigin.getSelectedItem(),(String)jComboBoxDestination.getSelectedItem(),jCalendar1.getDate());</span>
+<span class="nc" id="L227">						paintDaysWithEvents(jCalendar1,datesWithRidesCurrentMonth,Color.CYAN);</span>
+
+
+<span class="nc" id="L230">					} catch (Exception e1) {</span>
+
+<span class="nc" id="L232">						e1.printStackTrace();</span>
+<span class="nc" id="L233">					}</span>
+<span class="nc" id="L234">					tableRides.getColumnModel().getColumn(0).setPreferredWidth(170);</span>
+<span class="nc" id="L235">					tableRides.getColumnModel().getColumn(1).setPreferredWidth(30);</span>
+<span class="nc" id="L236">					tableRides.getColumnModel().getColumn(1).setPreferredWidth(30);</span>
+<span class="nc" id="L237">					tableRides.getColumnModel().removeColumn(tableRides.getColumnModel().getColumn(3)); // not shown in JTable</span>
+<span class="nc" id="L238">					jButtonErreserbatu.setEnabled(false);//Erreserba botoia desaktibatu</span>
+				}
+<span class="nc" id="L240">			} </span>
+			
+		});
+
+<span class="nc" id="L244">		this.getContentPane().add(jCalendar1, null);</span>
+
+<span class="nc" id="L246">		scrollPaneEvents.setBounds(new Rectangle(172, 257, 346, 150));</span>
+
+<span class="nc" id="L248">		scrollPaneEvents.setViewportView(tableRides);</span>
+<span class="nc" id="L249">		tableModelRides = new DefaultTableModel(null, columnNamesRides);</span>
+
+<span class="nc" id="L251">		tableRides.setModel(tableModelRides);</span>
+
+<span class="nc" id="L253">		tableModelRides.setDataVector(null, columnNamesRides);</span>
+<span class="nc" id="L254">		tableModelRides.setColumnCount(4); // another column added to allocate ride objects</span>
+
+<span class="nc" id="L256">		tableRides.getColumnModel().getColumn(0).setPreferredWidth(170);</span>
+<span class="nc" id="L257">		tableRides.getColumnModel().getColumn(1).setPreferredWidth(30);</span>
+<span class="nc" id="L258">		tableRides.getColumnModel().getColumn(1).setPreferredWidth(30);</span>
+
+<span class="nc" id="L260">		tableRides.getColumnModel().removeColumn(tableRides.getColumnModel().getColumn(3)); // not shown in JTable</span>
+
+<span class="nc" id="L262">		this.getContentPane().add(scrollPaneEvents, null);</span>
+<span class="nc" id="L263">		datesWithRidesCurrentMonth=facade.getThisMonthDatesWithRides((String)jComboBoxOrigin.getSelectedItem(),(String)jComboBoxDestination.getSelectedItem(),jCalendar1.getDate());</span>
+<span class="nc" id="L264">		paintDaysWithEvents(jCalendar1,datesWithRidesCurrentMonth,Color.CYAN);</span>
+		
+<span class="nc" id="L266">		tableRides.getSelectionModel().addListSelectionListener(event -&gt; {</span>
+<span class="nc bnc" id="L267" title="All 4 branches missed.">	        if (!event.getValueIsAdjusting() &amp;&amp; tableRides.getSelectedRow() != -1) {</span>
+<span class="nc bnc" id="L268" title="All 2 branches missed.">	        	if ((int)tableModelRides.getValueAt(tableRides.getSelectedRow(), 1)&gt;0) { //0 eserleku baino gehiago badaude</span>
+<span class="nc" id="L269">	        		jButtonErreserbatu.setEnabled(true);</span>
+	        	} else {
+<span class="nc" id="L271">	        		jButtonErreserbatu.setEnabled(false);</span>
+	        	}
+	        }
+<span class="nc" id="L274">	    });</span>
+
+<span class="nc" id="L276">	}</span>
+	public static void paintDaysWithEvents(JCalendar jCalendar,List&lt;Date&gt; datesWithEventsCurrentMonth, Color color) {
+		//		// For each day with events in current month, the background color for that day is changed to cyan.
+
+
+<span class="nc" id="L281">		Calendar calendar = jCalendar.getCalendar();</span>
+
+<span class="nc" id="L283">		int month = calendar.get(Calendar.MONTH);</span>
+<span class="nc" id="L284">		int today=calendar.get(Calendar.DAY_OF_MONTH);</span>
+<span class="nc" id="L285">		int year=calendar.get(Calendar.YEAR);</span>
+
+<span class="nc" id="L287">		calendar.set(Calendar.DAY_OF_MONTH, 1);</span>
+<span class="nc" id="L288">		int offset = calendar.get(Calendar.DAY_OF_WEEK);</span>
+
+		//if (Locale.getDefault().equals(new Locale(&quot;es&quot;)))
+			//offset += 4;
+		//else
+<span class="nc" id="L293">			offset += 5;</span>
+
+
+<span class="nc bnc" id="L296" title="All 2 branches missed.">		for (Date d:datesWithEventsCurrentMonth){</span>
+
+<span class="nc" id="L298">			calendar.setTime(d);</span>
+
+
+			// Obtain the component of the day in the panel of the DayChooser of the
+			// JCalendar.
+			// The component is located after the decorator buttons of &quot;Sun&quot;, &quot;Mon&quot;,... or
+			// &quot;Lun&quot;, &quot;Mar&quot;...,
+			// the empty days before day 1 of month, and all the days previous to each day.
+			// That number of components is calculated with &quot;offset&quot; and is different in
+			// English and Spanish
+			//			    		  Component o=(Component) jCalendar.getDayChooser().getDayPanel().getComponent(i+offset);; 
+<span class="nc" id="L309">			Component o = (Component) jCalendar.getDayChooser().getDayPanel()</span>
+<span class="nc" id="L310">					.getComponent(calendar.get(Calendar.DAY_OF_MONTH) + offset);</span>
+<span class="nc" id="L311">			o.setBackground(color);</span>
+<span class="nc" id="L312">		}</span>
+
+<span class="nc" id="L314">		calendar.set(Calendar.DAY_OF_MONTH, today);</span>
+<span class="nc" id="L315">		calendar.set(Calendar.MONTH, month);</span>
+<span class="nc" id="L316">		calendar.set(Calendar.YEAR, year);</span>
+
+
+<span class="nc" id="L319">	}</span>
+	private void jButton2_actionPerformed(ActionEvent e) {
+<span class="nc" id="L321">		this.setVisible(false);</span>
+<span class="nc" id="L322">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

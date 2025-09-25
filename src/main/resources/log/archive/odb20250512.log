@@ -1,0 +1,38 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-05-12 23:39:50 #1 store] 
+Database 'C:\Users\bynek\Desktop\UNI\Segundo\SI\Iterazioa3\Iterazioa3Workspace\Rides24\src\main\resources\rides.temp' is opened by 29084@ByNekox
+
+[2025-05-12 23:39:51 #2 type] 
+Type domain.User is not enhanced.
+
+[2025-05-12 23:39:51 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2025-05-12 23:39:51 #4 type] 
+Type domain.Movement is not enhanced.
+
+[2025-05-12 23:39:51 #5 type] 
+Type domain.Reclamation is not enhanced.
+
+[2025-05-12 23:39:51 #6 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-05-12 23:39:51 #7 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-05-12 23:39:51 #8 type] 
+Type domain.Ride is not enhanced.
+
+[2025-05-12 23:39:51 #9 type] 
+Type domain.Alert is not enhanced.
+
+[2025-05-12 23:39:51 #10 type] 
+Type domain.Driver is not enhanced.
+
+[2025-05-12 23:39:51 #11 type] 
+Type domain.Car is not enhanced.
+
+[2025-05-12 23:39:51 #12 type] 
+Type domain.Assessment is not enhanced.
+

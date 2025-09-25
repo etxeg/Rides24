@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CreateRideGUI.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Rides24</a> &gt; <a href="index.source.html" class="el_package">gui</a> &gt; <span class="el_source">CreateRideGUI.java</span></div><h1>CreateRideGUI.java</h1><pre class="source lang-java linenums">package gui;
+
+import java.text.DateFormat;
+import java.util.*;
+import java.util.List;
+
+import javax.swing.*;
+
+import com.toedter.calendar.JCalendar;
+
+import java.awt.*;
+import java.awt.event.*;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+
+import businessLogic.BLFacade;
+import configuration.UtilDate;
+import domain.Car;
+import domain.Driver;
+import domain.Ride;
+import exceptions.RideAlreadyExistException;
+import exceptions.RideMustBeLaterThanTodayException;
+
+public class CreateRideGUI extends JFrame {
+	private static final long serialVersionUID = 1L;
+
+	
+	private Driver driver;
+<span class="nc" id="L29">	private JTextField fieldOrigin=new JTextField();</span>
+<span class="nc" id="L30">	private JTextField fieldDestination=new JTextField();</span>
+	
+<span class="nc" id="L32">	private JLabel jLabelOrigin = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;CreateRideGUI.LeavingFrom&quot;));</span>
+<span class="nc" id="L33">	private JLabel jLabelDestination = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;CreateRideGUI.GoingTo&quot;)); </span>
+	
+<span class="nc" id="L35">	private JLabel jLabelCar = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;CreateRideGUI.Car&quot;));</span>
+<span class="nc" id="L36">	private JLabel jLabRideDate = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;CreateRideGUI.RideDate&quot;));</span>
+<span class="nc" id="L37">	private JLabel jLabelPrice = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;CreateRideGUI.Price&quot;));</span>
+
+	
+	
+<span class="nc" id="L41">	private JComboBox&lt;Car&gt; carComboBox = new JComboBox&lt;Car&gt;();</span>
+<span class="nc" id="L42">	private JTextField jTextFieldPrice = new JTextField();</span>
+
+<span class="nc" id="L44">	private JCalendar jCalendar = new JCalendar();</span>
+<span class="nc" id="L45">	private Calendar calendarAct = null;</span>
+<span class="nc" id="L46">	private Calendar calendarAnt = null;</span>
+
+<span class="nc" id="L48">	private JScrollPane scrollPaneEvents = new JScrollPane();</span>
+
+<span class="nc" id="L50">	private JButton jButtonCreate = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;CreateRideGUI.CreateRide&quot;));</span>
+<span class="nc" id="L51">	private JButton jButtonClose = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Close&quot;));</span>
+<span class="nc" id="L52">	private JLabel jLabelMsg = new JLabel();</span>
+<span class="nc" id="L53">	private JLabel jLabelError = new JLabel();</span>
+	
+	private List&lt;Date&gt; datesWithEventsCurrentMonth;
+
+
+<span class="nc" id="L58">	public CreateRideGUI(Driver driver) {</span>
+
+<span class="nc" id="L60">		this.driver=driver;</span>
+<span class="nc" id="L61">		this.getContentPane().setLayout(null);</span>
+<span class="nc" id="L62">		this.setSize(new Dimension(604, 370));</span>
+<span class="nc" id="L63">		this.setTitle(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;CreateRideGUI.CreateRide&quot;));</span>
+
+<span class="nc" id="L65">		jLabelOrigin.setBounds(new Rectangle(6, 56, 92, 20));</span>
+<span class="nc" id="L66">		jLabelCar.setBounds(new Rectangle(6, 119, 173, 20));</span>
+<span class="nc" id="L67">		carComboBox.setBounds(new Rectangle(100, 119, 130, 20));</span>
+		
+<span class="nc" id="L69">		jLabelPrice.setBounds(new Rectangle(6, 159, 173, 20));</span>
+<span class="nc" id="L70">		jTextFieldPrice.setBounds(new Rectangle(139, 159, 60, 20));</span>
+
+<span class="nc" id="L72">		jCalendar.setBounds(new Rectangle(300, 50, 225, 150));</span>
+<span class="nc" id="L73">		scrollPaneEvents.setBounds(new Rectangle(25, 44, 346, 116));</span>
+
+<span class="nc" id="L75">		jButtonCreate.setBounds(new Rectangle(100, 263, 130, 30));</span>
+
+<span class="nc" id="L77">		jButtonCreate.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L79">				jButtonCreate_actionPerformed(e);</span>
+<span class="nc" id="L80">			}</span>
+		});
+<span class="nc" id="L82">		jButtonClose.setBounds(new Rectangle(275, 263, 130, 30));</span>
+<span class="nc" id="L83">		jButtonClose.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L85">				jButtonClose_actionPerformed(e);</span>
+<span class="nc" id="L86">			}</span>
+		});
+
+<span class="nc" id="L89">		jLabelMsg.setBounds(new Rectangle(275, 214, 305, 20));</span>
+<span class="nc" id="L90">		jLabelMsg.setForeground(Color.red);</span>
+
+<span class="nc" id="L92">		jLabelError.setBounds(new Rectangle(6, 191, 320, 20));</span>
+<span class="nc" id="L93">		jLabelError.setForeground(Color.red);</span>
+
+<span class="nc" id="L95">		this.getContentPane().add(jLabelMsg, null);</span>
+<span class="nc" id="L96">		this.getContentPane().add(jLabelError, null);</span>
+
+<span class="nc" id="L98">		this.getContentPane().add(jButtonClose, null);</span>
+<span class="nc" id="L99">		this.getContentPane().add(jButtonCreate, null);</span>
+<span class="nc" id="L100">		this.getContentPane().add(carComboBox, null);</span>
+
+<span class="nc" id="L102">		this.getContentPane().add(jLabelCar, null);</span>
+<span class="nc" id="L103">		this.getContentPane().add(jLabelOrigin, null);</span>
+		
+
+		
+
+<span class="nc" id="L108">		this.getContentPane().add(jCalendar, null);</span>
+		
+<span class="nc" id="L110">		this.getContentPane().add(jLabelPrice, null);</span>
+<span class="nc" id="L111">		this.getContentPane().add(jTextFieldPrice, null);</span>
+
+<span class="nc bnc" id="L113" title="All 2 branches missed.">		for (Car actualCar : driver.getCars()){</span>
+<span class="nc" id="L114">			System.out.println(actualCar.getMarka());</span>
+<span class="nc" id="L115">        	carComboBox.addItem(actualCar);</span>
+<span class="nc" id="L116">        }</span>
+		
+<span class="nc" id="L118">		BLFacade facade = MainGUI.getBusinessLogic();</span>
+<span class="nc" id="L119">		datesWithEventsCurrentMonth=facade.getThisMonthDatesWithRides(&quot;a&quot;,&quot;b&quot;,jCalendar.getDate());		</span>
+		
+<span class="nc" id="L121">		jLabRideDate.setBounds(new Rectangle(40, 15, 140, 25));</span>
+<span class="nc" id="L122">		jLabRideDate.setBounds(298, 16, 140, 25);</span>
+<span class="nc" id="L123">		getContentPane().add(jLabRideDate);</span>
+		
+<span class="nc" id="L125">		jLabelDestination.setBounds(6, 81, 61, 16);</span>
+<span class="nc" id="L126">		getContentPane().add(jLabelDestination);</span>
+		
+		
+<span class="nc" id="L129">		fieldOrigin.setBounds(100, 53, 130, 26);</span>
+<span class="nc" id="L130">		getContentPane().add(fieldOrigin);</span>
+<span class="nc" id="L131">		fieldOrigin.setColumns(10);</span>
+		
+		
+<span class="nc" id="L134">		fieldDestination.setBounds(104, 81, 123, 26);</span>
+<span class="nc" id="L135">		getContentPane().add(fieldDestination);</span>
+<span class="nc" id="L136">		fieldDestination.setColumns(10);</span>
+		 //Code for JCalendar
+<span class="nc" id="L138">		this.jCalendar.addPropertyChangeListener(new PropertyChangeListener() {</span>
+			public void propertyChange(PropertyChangeEvent propertychangeevent) {
+//			
+<span class="nc bnc" id="L141" title="All 2 branches missed.">				if (propertychangeevent.getPropertyName().equals(&quot;locale&quot;)) {</span>
+<span class="nc" id="L142">					jCalendar.setLocale((Locale) propertychangeevent.getNewValue());</span>
+<span class="nc bnc" id="L143" title="All 2 branches missed.">				} else if (propertychangeevent.getPropertyName().equals(&quot;calendar&quot;)) {</span>
+<span class="nc" id="L144">					calendarAnt = (Calendar) propertychangeevent.getOldValue();</span>
+<span class="nc" id="L145">					calendarAct = (Calendar) propertychangeevent.getNewValue();</span>
+<span class="nc" id="L146">					DateFormat dateformat1 = DateFormat.getDateInstance(1, jCalendar.getLocale());</span>
+					
+<span class="nc" id="L148">					int monthAnt = calendarAnt.get(Calendar.MONTH);</span>
+<span class="nc" id="L149">					int monthAct = calendarAct.get(Calendar.MONTH);</span>
+<span class="nc bnc" id="L150" title="All 2 branches missed.">					if (monthAct!=monthAnt) {</span>
+<span class="nc bnc" id="L151" title="All 2 branches missed.">						if (monthAct==monthAnt+2) { </span>
+							// Si en JCalendar está 30 de enero y se avanza al mes siguiente, devolverá 2 de marzo (se toma como equivalente a 30 de febrero)
+							// Con este código se dejará como 1 de febrero en el JCalendar
+<span class="nc" id="L154">							calendarAct.set(Calendar.MONTH, monthAnt+1);</span>
+<span class="nc" id="L155">							calendarAct.set(Calendar.DAY_OF_MONTH, 1);</span>
+						}
+						
+<span class="nc" id="L158">						jCalendar.setCalendar(calendarAct);						</span>
+	
+					}
+<span class="nc" id="L161">					jCalendar.setCalendar(calendarAct);</span>
+<span class="nc" id="L162">					int offset = jCalendar.getCalendar().get(Calendar.DAY_OF_WEEK);</span>
+					
+<span class="nc bnc" id="L164" title="All 2 branches missed.">						if (Locale.getDefault().equals(new Locale(&quot;es&quot;)))</span>
+<span class="nc" id="L165">							offset += 4;</span>
+						else
+<span class="nc" id="L167">							offset += 5;</span>
+<span class="nc" id="L168">				Component o = (Component) jCalendar.getDayChooser().getDayPanel().getComponent(jCalendar.getCalendar().get(Calendar.DAY_OF_MONTH) + offset);</span>
+<span class="nc" id="L169">				}}});</span>
+		
+<span class="nc" id="L171">	}	 </span>
+	private void jButtonCreate_actionPerformed(ActionEvent e) {
+<span class="nc" id="L173">		jLabelMsg.setText(&quot;&quot;);</span>
+<span class="nc" id="L174">		String error=field_Errors();</span>
+<span class="nc bnc" id="L175" title="All 2 branches missed.">		if (error!=null) </span>
+<span class="nc" id="L176">			jLabelMsg.setText(error);</span>
+		else
+			try {
+<span class="nc" id="L179">				BLFacade facade = MainGUI.getBusinessLogic();</span>
+<span class="nc" id="L180">				Car selectedCar = (Car) carComboBox.getSelectedItem();</span>
+<span class="nc" id="L181">				float price = Float.parseFloat(jTextFieldPrice.getText());</span>
+
+<span class="nc" id="L183">				Ride r=facade.createRide(fieldOrigin.getText(), fieldDestination.getText(), UtilDate.trim(jCalendar.getDate()), price, driver.getEmail(),selectedCar);</span>
+<span class="nc" id="L184">				jLabelMsg.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;CreateRideGUI.RideCreated&quot;));</span>
+
+<span class="nc" id="L186">			} catch (RideMustBeLaterThanTodayException e1) {</span>
+				// TODO Auto-generated catch block
+<span class="nc" id="L188">				jLabelMsg.setText(e1.getMessage());</span>
+<span class="nc" id="L189">			} catch (RideAlreadyExistException e1) {</span>
+				// TODO Auto-generated catch block
+<span class="nc" id="L191">				jLabelMsg.setText(e1.getMessage());</span>
+<span class="nc" id="L192">			}</span>
+
+<span class="nc" id="L194">		}</span>
+	
+
+	private void jButtonClose_actionPerformed(ActionEvent e) {
+<span class="nc" id="L198">		this.setVisible(false);</span>
+<span class="nc" id="L199">	}</span>
+	private String field_Errors() {
+		
+		try {
+<span class="nc bnc" id="L203" title="All 8 branches missed.">			if ((fieldOrigin.getText().length()==0) || (fieldDestination.getText().length()==0) || (carComboBox.getItemCount()==0) || (jTextFieldPrice.getText().length()==0))</span>
+<span class="nc" id="L204">				return ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;CreateRideGUI.ErrorQuery&quot;);</span>
+			else {
+<span class="nc" id="L206">				float price = Float.parseFloat(jTextFieldPrice.getText());</span>
+<span class="nc bnc" id="L207" title="All 2 branches missed.">				if (price &lt;= 0) </span>
+<span class="nc" id="L208">					return ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;CreateRideGUI.PriceMustBeGreaterThan0&quot;);</span>
+				
+				else 
+<span class="nc" id="L211">					return null;</span>
+			}
+<span class="nc" id="L213">		} catch (java.lang.NumberFormatException e1) {</span>
+
+<span class="nc" id="L215">			return  ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;CreateRideGUI.ErrorNumber&quot;);		</span>
+<span class="nc" id="L216">		} catch (Exception e1) {</span>
+
+<span class="nc" id="L218">			e1.printStackTrace();</span>
+<span class="nc" id="L219">			return null;</span>
+
+		}
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: CreateRideTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.965 sec <<< FAILURE! - in CreateRideTest
+test3(CreateRideTest)  Time elapsed: 0.018 sec  <<< FAILURE!
+java.lang.AssertionError
+	at CreateRideTest.test3(CreateRideTest.java:199)
+
+test4(CreateRideTest)  Time elapsed: 0.049 sec  <<< FAILURE!
+java.lang.AssertionError: expected null, but was:<null-Zarautz: Sun Oct 05 00:00:00 CEST 2025>
+	at CreateRideTest.test4(CreateRideTest.java:233)
+

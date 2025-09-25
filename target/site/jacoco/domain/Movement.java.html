@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Movement.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Rides24</a> &gt; <a href="index.source.html" class="el_package">domain</a> &gt; <span class="el_source">Movement.java</span></div><h1>Movement.java</h1><pre class="source lang-java linenums">package domain;
+
+import java.io.Serializable;
+import java.time.LocalDate;
+import java.util.Date;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlID;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
+@XmlAccessorType(XmlAccessType.FIELD)
+@Entity
+public class Movement {
+
+	@XmlID
+	@XmlJavaTypeAdapter(IntegerAdapter.class)
+	@GeneratedValue
+	@Id
+	private int id;
+	private int mugimenduZenbakia;
+	private double dirua;
+	private boolean sarreraDa;
+	private Date data;
+	
+	@ManyToOne
+    private User user;
+	
+<span class="nc" id="L32">	public Movement(int id, double cantidad, boolean esEntrada, Date fecha) {</span>
+<span class="nc" id="L33">		this.mugimenduZenbakia = id ;</span>
+<span class="nc" id="L34">        this.dirua = cantidad;</span>
+<span class="nc" id="L35">        this.sarreraDa = esEntrada;</span>
+<span class="nc" id="L36">        this.data = fecha;</span>
+<span class="nc" id="L37">    }</span>
+	
+	public int getMugimenduZenbakia() {
+<span class="nc" id="L40">        return mugimenduZenbakia;</span>
+    }
+
+    public void setMugimenduZenbakia(int id) {
+<span class="nc" id="L44">        this.mugimenduZenbakia = id;</span>
+<span class="nc" id="L45">    }</span>
+
+    public double getDirua() {
+<span class="nc" id="L48">        return dirua;</span>
+    }
+
+    public void setDirua(double cantidad) {
+<span class="nc" id="L52">        this.dirua = cantidad;</span>
+<span class="nc" id="L53">    }</span>
+
+    public boolean getSarreraDa() {
+<span class="nc" id="L56">        return sarreraDa;</span>
+    }
+
+    public void setSarreraDa(boolean esEntrada) {
+<span class="nc" id="L60">        this.sarreraDa = esEntrada;</span>
+<span class="nc" id="L61">    }</span>
+
+    public Date getData() {
+<span class="nc" id="L64">        return data;</span>
+    }
+
+    public void setData(Date fecha) {
+<span class="nc" id="L68">        this.data = fecha;</span>
+<span class="nc" id="L69">    }</span>
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

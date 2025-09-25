@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AddMoneyGUI.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Rides24</a> &gt; <a href="index.source.html" class="el_package">gui</a> &gt; <span class="el_source">AddMoneyGUI.java</span></div><h1>AddMoneyGUI.java</h1><pre class="source lang-java linenums">package gui;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+import businessLogic.BLFacade;
+import domain.Traveler;
+import domain.User;
+
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.util.ResourceBundle;
+import java.awt.event.ActionEvent;
+
+public class AddMoneyGUI extends JFrame {
+
+	private static final long serialVersionUID = 1L;
+	private JPanel contentPane;
+	private JTextField addMoney;
+ 
+<span class="nc" id="L26">	public AddMoneyGUI(User user) {</span>
+<span class="nc" id="L27">		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);</span>
+<span class="nc" id="L28">		setBounds(100, 100, 450, 300);</span>
+<span class="nc" id="L29">		contentPane = new JPanel();</span>
+<span class="nc" id="L30">		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));</span>
+
+<span class="nc" id="L32">		setContentPane(contentPane);</span>
+<span class="nc" id="L33">		contentPane.setLayout(null);</span>
+		
+<span class="nc" id="L35">		JLabel moneyQuantityText = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;AddMoneyGUI.MoneyQuantity&quot;));</span>
+<span class="nc" id="L36">		moneyQuantityText.setBounds(90, 63, 91, 13);</span>
+<span class="nc" id="L37">		contentPane.add(moneyQuantityText);</span>
+		
+<span class="nc" id="L39">		addMoney = new JTextField();</span>
+<span class="nc" id="L40">		addMoney.setBounds(223, 60, 96, 19);</span>
+<span class="nc" id="L41">		contentPane.add(addMoney);</span>
+<span class="nc" id="L42">		addMoney.setColumns(10);</span>
+		
+<span class="nc" id="L44">		BLFacade facade = MainGUI.getBusinessLogic();</span>
+		
+<span class="nc" id="L46">		JButton btnAdd = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;AddMoneyGUI.Add&quot;));</span>
+<span class="nc" id="L47">		btnAdd.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L49">				String dirua = addMoney.getText();</span>
+<span class="nc" id="L50">				float diruFloat = Float.parseFloat(dirua);</span>
+<span class="nc" id="L51">				facade.addMoney(user, diruFloat);</span>
+				
+<span class="nc" id="L53">				jButton2_actionPerformed(e);//Itxi leihoa</span>
+<span class="nc" id="L54">			}</span>
+		});
+<span class="nc" id="L56">		btnAdd.setBounds(180, 146, 85, 21);</span>
+<span class="nc" id="L57">		contentPane.add(btnAdd);</span>
+		
+<span class="nc" id="L59">		JLabel lblNewLabel_1 = new JLabel(&quot;€&quot;);</span>
+<span class="nc" id="L60">		lblNewLabel_1.setBounds(326, 63, 45, 13);</span>
+<span class="nc" id="L61">		contentPane.add(lblNewLabel_1);</span>
+		
+<span class="nc" id="L63">		JButton jButtonClose = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Close&quot;));</span>
+<span class="nc" id="L64">		jButtonClose.setBounds(180, 232, 85, 21);</span>
+<span class="nc" id="L65">		contentPane.add(jButtonClose);</span>
+<span class="nc" id="L66">		jButtonClose.addActionListener(new ActionListener()</span>
+<span class="nc" id="L67">		{</span>
+			public void actionPerformed(ActionEvent e)
+			{
+<span class="nc" id="L70">				jButton2_actionPerformed(e);</span>
+<span class="nc" id="L71">			}</span>
+		});
+		
+<span class="nc" id="L74">		setTitle(user.getName()+&quot;: &quot;+user.getMoney()+&quot;€&quot;);</span>
+<span class="nc" id="L75">	}</span>
+	private void jButton2_actionPerformed(ActionEvent e) {
+<span class="nc" id="L77">		this.setVisible(false);</span>
+<span class="nc" id="L78">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

@@ -1,0 +1,1129 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-05-13 00:07:31 #1 store] 
+Database 'C:\Users\bynek\Desktop\UNI\Segundo\SI\Iterazioa3\Iterazioa3Workspace\Rides24\src\main\resources\rides.temp' is opened by 7140@ByNekox
+
+[2025-05-13 00:07:31 #2 type.registry] 
+New type domain.User
+
+[2025-05-13 00:07:31 #3 type.registry] 
+New type domain.Admin
+
+[2025-05-13 00:07:31 #4 type] 
+Type domain.User is not enhanced.
+
+[2025-05-13 00:07:31 #5 type.registry] 
+New type domain.Movement
+
+[2025-05-13 00:07:31 #6 type] 
+Type domain.Admin is not enhanced.
+
+[2025-05-13 00:07:31 #7 type.registry] 
+New type domain.Reclamation
+
+[2025-05-13 00:07:31 #8 type] 
+Type domain.Movement is not enhanced.
+
+[2025-05-13 00:07:31 #9 type] 
+Type domain.Reclamation is not enhanced.
+
+[2025-05-13 00:07:31 #10 type.registry] 
+New type domain.Reservation
+
+[2025-05-13 00:07:31 #11 type.registry] 
+New type domain.Traveler
+
+[2025-05-13 00:07:31 #12 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-05-13 00:07:31 #13 type.registry] 
+New type domain.Ride
+
+[2025-05-13 00:07:31 #14 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-05-13 00:07:31 #15 type.registry] 
+New type domain.Alert
+
+[2025-05-13 00:07:31 #16 type] 
+Type domain.Ride is not enhanced.
+
+[2025-05-13 00:07:31 #17 type.registry] 
+New type domain.Driver
+
+[2025-05-13 00:07:31 #18 type.registry] 
+New type domain.Car
+
+[2025-05-13 00:07:31 #19 type] 
+Type domain.Alert is not enhanced.
+
+[2025-05-13 00:07:31 #20 type] 
+Type domain.Driver is not enhanced.
+
+[2025-05-13 00:07:31 #21 type.registry] 
+New type domain.Assessment
+
+[2025-05-13 00:07:31 #22 type] 
+Type domain.Car is not enhanced.
+
+[2025-05-13 00:07:31 #23 type] 
+Type domain.Assessment is not enhanced.
+
+[2025-05-13 00:07:31 #24 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-05-13 00:07:31 #25 type.registry] 
+New type java.util.Vector<domain.Reservation>
+
+[2025-05-13 00:07:31 #26 type.registry] 
+New type java.util.Vector<domain.Movement>
+
+[2025-05-13 00:07:31 #27 type.registry] 
+New type java.util.Vector<domain.Reclamation>
+
+[2025-05-13 00:07:31 #28 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+[2025-05-13 00:07:31 #29 type.registry] 
+New type java.util.Vector<domain.Car>
+
+[2025-05-13 00:07:31 #30 type.registry] 
+New type java.util.Vector<domain.Assessment>
+
+[2025-05-13 00:07:31 #31 type.registry] 
+New type java.util.Vector<domain.Alert>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-05-13 00:09:03 #1 store] 
+Database 'C:\Users\bynek\Desktop\UNI\Segundo\SI\Iterazioa3\Iterazioa3Workspace\Rides24\src\main\resources\rides.temp' is opened by 62128@ByNekox
+
+[2025-05-13 00:09:03 #2 type.registry] 
+New type domain.User
+
+[2025-05-13 00:09:03 #3 type.registry] 
+New type domain.Admin
+
+[2025-05-13 00:09:03 #4 type] 
+Type domain.User is not enhanced.
+
+[2025-05-13 00:09:03 #5 type.registry] 
+New type domain.Movement
+
+[2025-05-13 00:09:03 #6 type] 
+Type domain.Admin is not enhanced.
+
+[2025-05-13 00:09:03 #7 type.registry] 
+New type domain.Reclamation
+
+[2025-05-13 00:09:03 #8 type] 
+Type domain.Movement is not enhanced.
+
+[2025-05-13 00:09:03 #9 type] 
+Type domain.Reclamation is not enhanced.
+
+[2025-05-13 00:09:03 #10 type.registry] 
+New type domain.Reservation
+
+[2025-05-13 00:09:03 #11 type.registry] 
+New type domain.Traveler
+
+[2025-05-13 00:09:03 #12 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-05-13 00:09:03 #13 type.registry] 
+New type domain.Ride
+
+[2025-05-13 00:09:03 #14 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-05-13 00:09:03 #15 type.registry] 
+New type domain.Alert
+
+[2025-05-13 00:09:03 #16 type] 
+Type domain.Ride is not enhanced.
+
+[2025-05-13 00:09:03 #17 type.registry] 
+New type domain.Driver
+
+[2025-05-13 00:09:03 #18 type.registry] 
+New type domain.Car
+
+[2025-05-13 00:09:03 #19 type] 
+Type domain.Alert is not enhanced.
+
+[2025-05-13 00:09:03 #20 type] 
+Type domain.Driver is not enhanced.
+
+[2025-05-13 00:09:03 #21 type.registry] 
+New type domain.Assessment
+
+[2025-05-13 00:09:03 #22 type] 
+Type domain.Car is not enhanced.
+
+[2025-05-13 00:09:03 #23 type] 
+Type domain.Assessment is not enhanced.
+
+[2025-05-13 00:09:03 #24 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-05-13 00:09:03 #25 type.registry] 
+New type java.util.Vector<domain.Reservation>
+
+[2025-05-13 00:09:03 #26 type.registry] 
+New type java.util.Vector<domain.Movement>
+
+[2025-05-13 00:09:03 #27 type.registry] 
+New type java.util.Vector<domain.Reclamation>
+
+[2025-05-13 00:09:03 #28 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+[2025-05-13 00:09:03 #29 type.registry] 
+New type java.util.Vector<domain.Car>
+
+[2025-05-13 00:09:03 #30 type.registry] 
+New type java.util.Vector<domain.Assessment>
+
+[2025-05-13 00:09:03 #31 type.registry] 
+New type java.util.Vector<domain.Alert>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-05-13 00:11:14 #1 store] 
+Database 'C:\Users\bynek\Desktop\UNI\Segundo\SI\Iterazioa3\Iterazioa3Workspace\Rides24\src\main\resources\rides.temp' has been recovered (tr. 1-13)
+
+[2025-05-13 00:11:14 #2 store] 
+Database 'C:\Users\bynek\Desktop\UNI\Segundo\SI\Iterazioa3\Iterazioa3Workspace\Rides24\src\main\resources\rides.temp' is opened by 55440@ByNekox
+
+[2025-05-13 00:11:14 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-05-13 00:11:14 #4 type] 
+Type domain.Admin is not enhanced.
+
+[2025-05-13 00:11:14 #5 type] 
+Type domain.Movement is not enhanced.
+
+[2025-05-13 00:11:14 #6 type] 
+Type domain.Reclamation is not enhanced.
+
+[2025-05-13 00:11:14 #7 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-05-13 00:11:14 #8 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-05-13 00:11:14 #9 type] 
+Type domain.Ride is not enhanced.
+
+[2025-05-13 00:11:14 #10 type] 
+Type domain.Alert is not enhanced.
+
+[2025-05-13 00:11:14 #11 type] 
+Type domain.Driver is not enhanced.
+
+[2025-05-13 00:11:14 #12 type] 
+Type domain.Car is not enhanced.
+
+[2025-05-13 00:11:14 #13 type] 
+Type domain.Assessment is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-05-13 00:11:38 #1 store] 
+Database 'C:\Users\bynek\Desktop\UNI\Segundo\SI\Iterazioa3\Iterazioa3Workspace\Rides24\src\main\resources\rides.temp' has been recovered (tr. 14-14)
+
+[2025-05-13 00:11:38 #2 store] 
+Database 'C:\Users\bynek\Desktop\UNI\Segundo\SI\Iterazioa3\Iterazioa3Workspace\Rides24\src\main\resources\rides.temp' is opened by 60556@ByNekox
+
+[2025-05-13 00:11:39 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-05-13 00:11:39 #4 type] 
+Type domain.Admin is not enhanced.
+
+[2025-05-13 00:11:39 #5 type] 
+Type domain.Movement is not enhanced.
+
+[2025-05-13 00:11:39 #6 type] 
+Type domain.Reclamation is not enhanced.
+
+[2025-05-13 00:11:39 #7 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-05-13 00:11:39 #8 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-05-13 00:11:39 #9 type] 
+Type domain.Ride is not enhanced.
+
+[2025-05-13 00:11:39 #10 type] 
+Type domain.Alert is not enhanced.
+
+[2025-05-13 00:11:39 #11 type] 
+Type domain.Driver is not enhanced.
+
+[2025-05-13 00:11:39 #12 type] 
+Type domain.Car is not enhanced.
+
+[2025-05-13 00:11:39 #13 type] 
+Type domain.Assessment is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-05-13 00:20:00 #1 store] 
+Database 'C:\Users\bynek\Desktop\UNI\Segundo\SI\Iterazioa3\Iterazioa3Workspace\Rides24\src\main\resources\rides.temp' is opened by 59960@ByNekox
+
+[2025-05-13 00:20:00 #2 type.registry] 
+New type domain.User
+
+[2025-05-13 00:20:00 #3 type.registry] 
+New type domain.Admin
+
+[2025-05-13 00:20:00 #4 type] 
+Type domain.User is not enhanced.
+
+[2025-05-13 00:20:00 #5 type.registry] 
+New type domain.Movement
+
+[2025-05-13 00:20:00 #6 type] 
+Type domain.Admin is not enhanced.
+
+[2025-05-13 00:20:00 #7 type.registry] 
+New type domain.Reclamation
+
+[2025-05-13 00:20:00 #8 type] 
+Type domain.Movement is not enhanced.
+
+[2025-05-13 00:20:00 #9 type] 
+Type domain.Reclamation is not enhanced.
+
+[2025-05-13 00:20:00 #10 type.registry] 
+New type domain.Reservation
+
+[2025-05-13 00:20:00 #11 type.registry] 
+New type domain.Traveler
+
+[2025-05-13 00:20:00 #12 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-05-13 00:20:00 #13 type.registry] 
+New type domain.Ride
+
+[2025-05-13 00:20:00 #14 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-05-13 00:20:00 #15 type.registry] 
+New type domain.Alert
+
+[2025-05-13 00:20:00 #16 type] 
+Type domain.Ride is not enhanced.
+
+[2025-05-13 00:20:00 #17 type.registry] 
+New type domain.Driver
+
+[2025-05-13 00:20:00 #18 type.registry] 
+New type domain.Car
+
+[2025-05-13 00:20:00 #19 type] 
+Type domain.Alert is not enhanced.
+
+[2025-05-13 00:20:00 #20 type] 
+Type domain.Driver is not enhanced.
+
+[2025-05-13 00:20:00 #21 type.registry] 
+New type domain.Assessment
+
+[2025-05-13 00:20:00 #22 type] 
+Type domain.Car is not enhanced.
+
+[2025-05-13 00:20:00 #23 type] 
+Type domain.Assessment is not enhanced.
+
+[2025-05-13 00:20:00 #24 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-05-13 00:20:00 #25 type.registry] 
+New type java.util.Vector<domain.Reservation>
+
+[2025-05-13 00:20:00 #26 type.registry] 
+New type java.util.Vector<domain.Movement>
+
+[2025-05-13 00:20:00 #27 type.registry] 
+New type java.util.Vector<domain.Reclamation>
+
+[2025-05-13 00:20:00 #28 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+[2025-05-13 00:20:00 #29 type.registry] 
+New type java.util.Vector<domain.Car>
+
+[2025-05-13 00:20:00 #30 type.registry] 
+New type java.util.Vector<domain.Assessment>
+
+[2025-05-13 00:20:00 #31 type.registry] 
+New type java.util.Vector<domain.Alert>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-05-13 00:24:40 #1 store] 
+Database 'C:\Users\bynek\Desktop\UNI\Segundo\SI\Iterazioa3\Iterazioa3Workspace\Rides24\src\main\resources\rides.temp' is opened by 51636@ByNekox
+
+[2025-05-13 00:24:40 #2 type.registry] 
+New type domain.User
+
+[2025-05-13 00:24:40 #3 type.registry] 
+New type domain.Admin
+
+[2025-05-13 00:24:40 #4 type] 
+Type domain.User is not enhanced.
+
+[2025-05-13 00:24:40 #5 type.registry] 
+New type domain.Movement
+
+[2025-05-13 00:24:40 #6 type] 
+Type domain.Admin is not enhanced.
+
+[2025-05-13 00:24:40 #7 type.registry] 
+New type domain.Reclamation
+
+[2025-05-13 00:24:40 #8 type] 
+Type domain.Movement is not enhanced.
+
+[2025-05-13 00:24:40 #9 type] 
+Type domain.Reclamation is not enhanced.
+
+[2025-05-13 00:24:40 #10 type.registry] 
+New type domain.Reservation
+
+[2025-05-13 00:24:40 #11 type.registry] 
+New type domain.Traveler
+
+[2025-05-13 00:24:40 #12 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-05-13 00:24:40 #13 type.registry] 
+New type domain.Ride
+
+[2025-05-13 00:24:40 #14 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-05-13 00:24:40 #15 type.registry] 
+New type domain.Alert
+
+[2025-05-13 00:24:40 #16 type] 
+Type domain.Ride is not enhanced.
+
+[2025-05-13 00:24:40 #17 type.registry] 
+New type domain.Driver
+
+[2025-05-13 00:24:40 #18 type.registry] 
+New type domain.Car
+
+[2025-05-13 00:24:40 #19 type] 
+Type domain.Alert is not enhanced.
+
+[2025-05-13 00:24:40 #20 type] 
+Type domain.Driver is not enhanced.
+
+[2025-05-13 00:24:40 #21 type.registry] 
+New type domain.Assessment
+
+[2025-05-13 00:24:40 #22 type] 
+Type domain.Car is not enhanced.
+
+[2025-05-13 00:24:40 #23 type] 
+Type domain.Assessment is not enhanced.
+
+[2025-05-13 00:24:40 #24 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-05-13 00:24:40 #25 type.registry] 
+New type java.util.Vector<domain.Reservation>
+
+[2025-05-13 00:24:40 #26 type.registry] 
+New type java.util.Vector<domain.Movement>
+
+[2025-05-13 00:24:40 #27 type.registry] 
+New type java.util.Vector<domain.Reclamation>
+
+[2025-05-13 00:24:40 #28 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+[2025-05-13 00:24:40 #29 type.registry] 
+New type java.util.Vector<domain.Car>
+
+[2025-05-13 00:24:40 #30 type.registry] 
+New type java.util.Vector<domain.Assessment>
+
+[2025-05-13 00:24:40 #31 type.registry] 
+New type java.util.Vector<domain.Alert>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-05-13 00:57:46 #1 store] 
+Database 'C:\Users\bynek\Desktop\UNI\Segundo\SI\Iterazioa3\Iterazioa3Workspace\Rides24\src\main\resources\rides.temp' is opened by 58124@ByNekox
+
+[2025-05-13 00:57:46 #2 type.registry] 
+New type domain.User
+
+[2025-05-13 00:57:46 #3 type.registry] 
+New type domain.Admin
+
+[2025-05-13 00:57:46 #4 type] 
+Type domain.User is not enhanced.
+
+[2025-05-13 00:57:46 #5 type.registry] 
+New type domain.Movement
+
+[2025-05-13 00:57:46 #6 type] 
+Type domain.Admin is not enhanced.
+
+[2025-05-13 00:57:46 #7 type.registry] 
+New type domain.Reclamation
+
+[2025-05-13 00:57:46 #8 type] 
+Type domain.Movement is not enhanced.
+
+[2025-05-13 00:57:46 #9 type] 
+Type domain.Reclamation is not enhanced.
+
+[2025-05-13 00:57:46 #10 type.registry] 
+New type domain.Reservation
+
+[2025-05-13 00:57:46 #11 type.registry] 
+New type domain.Traveler
+
+[2025-05-13 00:57:46 #12 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-05-13 00:57:46 #13 type.registry] 
+New type domain.Ride
+
+[2025-05-13 00:57:46 #14 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-05-13 00:57:46 #15 type.registry] 
+New type domain.Alert
+
+[2025-05-13 00:57:46 #16 type] 
+Type domain.Ride is not enhanced.
+
+[2025-05-13 00:57:46 #17 type.registry] 
+New type domain.Driver
+
+[2025-05-13 00:57:46 #18 type.registry] 
+New type domain.Car
+
+[2025-05-13 00:57:46 #19 type] 
+Type domain.Alert is not enhanced.
+
+[2025-05-13 00:57:46 #20 type] 
+Type domain.Driver is not enhanced.
+
+[2025-05-13 00:57:46 #21 type.registry] 
+New type domain.Assessment
+
+[2025-05-13 00:57:46 #22 type] 
+Type domain.Car is not enhanced.
+
+[2025-05-13 00:57:46 #23 type] 
+Type domain.Assessment is not enhanced.
+
+[2025-05-13 00:57:46 #24 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-05-13 00:57:46 #25 type.registry] 
+New type java.util.Vector<domain.Reservation>
+
+[2025-05-13 00:57:46 #26 type.registry] 
+New type java.util.Vector<domain.Movement>
+
+[2025-05-13 00:57:46 #27 type.registry] 
+New type java.util.Vector<domain.Reclamation>
+
+[2025-05-13 00:57:46 #28 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+[2025-05-13 00:57:46 #29 type.registry] 
+New type java.util.Vector<domain.Car>
+
+[2025-05-13 00:57:46 #30 type.registry] 
+New type java.util.Vector<domain.Assessment>
+
+[2025-05-13 00:57:46 #31 type.registry] 
+New type java.util.Vector<domain.Alert>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-05-13 00:58:42 #1 store] 
+Database 'C:\Users\bynek\Desktop\UNI\Segundo\SI\Iterazioa3\Iterazioa3Workspace\Rides24\src\main\resources\rides.temp' has been recovered (tr. 1-14)
+
+[2025-05-13 00:58:42 #2 store] 
+Database 'C:\Users\bynek\Desktop\UNI\Segundo\SI\Iterazioa3\Iterazioa3Workspace\Rides24\src\main\resources\rides.temp' is opened by 57996@ByNekox
+
+[2025-05-13 00:58:42 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-05-13 00:58:42 #4 type] 
+Type domain.Admin is not enhanced.
+
+[2025-05-13 00:58:42 #5 type] 
+Type domain.Movement is not enhanced.
+
+[2025-05-13 00:58:42 #6 type] 
+Type domain.Reclamation is not enhanced.
+
+[2025-05-13 00:58:42 #7 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-05-13 00:58:42 #8 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-05-13 00:58:42 #9 type] 
+Type domain.Ride is not enhanced.
+
+[2025-05-13 00:58:42 #10 type] 
+Type domain.Alert is not enhanced.
+
+[2025-05-13 00:58:42 #11 type] 
+Type domain.Driver is not enhanced.
+
+[2025-05-13 00:58:42 #12 type] 
+Type domain.Car is not enhanced.
+
+[2025-05-13 00:58:42 #13 type] 
+Type domain.Assessment is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-05-13 00:59:30 #1 store] 
+Database 'C:\Users\bynek\Desktop\UNI\Segundo\SI\Iterazioa3\Iterazioa3Workspace\Rides24\src\main\resources\rides.temp' has been recovered (tr. 15-15)
+
+[2025-05-13 00:59:30 #2 store] 
+Database 'C:\Users\bynek\Desktop\UNI\Segundo\SI\Iterazioa3\Iterazioa3Workspace\Rides24\src\main\resources\rides.temp' is opened by 2924@ByNekox
+
+[2025-05-13 00:59:30 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-05-13 00:59:30 #4 type] 
+Type domain.Admin is not enhanced.
+
+[2025-05-13 00:59:30 #5 type] 
+Type domain.Movement is not enhanced.
+
+[2025-05-13 00:59:30 #6 type] 
+Type domain.Reclamation is not enhanced.
+
+[2025-05-13 00:59:30 #7 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-05-13 00:59:30 #8 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-05-13 00:59:30 #9 type] 
+Type domain.Ride is not enhanced.
+
+[2025-05-13 00:59:30 #10 type] 
+Type domain.Alert is not enhanced.
+
+[2025-05-13 00:59:30 #11 type] 
+Type domain.Driver is not enhanced.
+
+[2025-05-13 00:59:30 #12 type] 
+Type domain.Car is not enhanced.
+
+[2025-05-13 00:59:30 #13 type] 
+Type domain.Assessment is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-05-13 01:03:19 #1 store] 
+Database 'C:\Users\bynek\Desktop\UNI\Segundo\SI\Iterazioa3\Iterazioa3Workspace\Rides24\src\main\resources\rides.temp' has been recovered (tr. 16-16)
+
+[2025-05-13 01:03:19 #2 store] 
+Database 'C:\Users\bynek\Desktop\UNI\Segundo\SI\Iterazioa3\Iterazioa3Workspace\Rides24\src\main\resources\rides.temp' is opened by 52256@ByNekox
+
+[2025-05-13 01:03:20 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-05-13 01:03:20 #4 type] 
+Type domain.Admin is not enhanced.
+
+[2025-05-13 01:03:20 #5 type] 
+Type domain.Movement is not enhanced.
+
+[2025-05-13 01:03:20 #6 type] 
+Type domain.Reclamation is not enhanced.
+
+[2025-05-13 01:03:20 #7 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-05-13 01:03:20 #8 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-05-13 01:03:20 #9 type] 
+Type domain.Ride is not enhanced.
+
+[2025-05-13 01:03:20 #10 type] 
+Type domain.Alert is not enhanced.
+
+[2025-05-13 01:03:20 #11 type] 
+Type domain.Driver is not enhanced.
+
+[2025-05-13 01:03:20 #12 type] 
+Type domain.Car is not enhanced.
+
+[2025-05-13 01:03:20 #13 type] 
+Type domain.Assessment is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-05-13 01:03:29 #1 store] 
+Database 'C:\Users\bynek\Desktop\UNI\Segundo\SI\Iterazioa3\Iterazioa3Workspace\Rides24\src\main\resources\rides.temp' is opened by 57208@ByNekox
+
+[2025-05-13 01:03:29 #2 type.registry] 
+New type domain.User
+
+[2025-05-13 01:03:29 #3 type.registry] 
+New type domain.Admin
+
+[2025-05-13 01:03:29 #4 type] 
+Type domain.User is not enhanced.
+
+[2025-05-13 01:03:29 #5 type.registry] 
+New type domain.Movement
+
+[2025-05-13 01:03:29 #6 type] 
+Type domain.Admin is not enhanced.
+
+[2025-05-13 01:03:29 #7 type.registry] 
+New type domain.Reclamation
+
+[2025-05-13 01:03:29 #8 type] 
+Type domain.Movement is not enhanced.
+
+[2025-05-13 01:03:29 #9 type] 
+Type domain.Reclamation is not enhanced.
+
+[2025-05-13 01:03:29 #10 type.registry] 
+New type domain.Reservation
+
+[2025-05-13 01:03:29 #11 type.registry] 
+New type domain.Traveler
+
+[2025-05-13 01:03:29 #12 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-05-13 01:03:29 #13 type.registry] 
+New type domain.Ride
+
+[2025-05-13 01:03:29 #14 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-05-13 01:03:29 #15 type.registry] 
+New type domain.Alert
+
+[2025-05-13 01:03:29 #16 type] 
+Type domain.Ride is not enhanced.
+
+[2025-05-13 01:03:29 #17 type.registry] 
+New type domain.Driver
+
+[2025-05-13 01:03:29 #18 type.registry] 
+New type domain.Car
+
+[2025-05-13 01:03:29 #19 type] 
+Type domain.Alert is not enhanced.
+
+[2025-05-13 01:03:29 #20 type] 
+Type domain.Driver is not enhanced.
+
+[2025-05-13 01:03:29 #21 type.registry] 
+New type domain.Assessment
+
+[2025-05-13 01:03:29 #22 type] 
+Type domain.Car is not enhanced.
+
+[2025-05-13 01:03:29 #23 type] 
+Type domain.Assessment is not enhanced.
+
+[2025-05-13 01:03:29 #24 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-05-13 01:03:29 #25 type.registry] 
+New type java.util.Vector<domain.Reservation>
+
+[2025-05-13 01:03:29 #26 type.registry] 
+New type java.util.Vector<domain.Movement>
+
+[2025-05-13 01:03:29 #27 type.registry] 
+New type java.util.Vector<domain.Reclamation>
+
+[2025-05-13 01:03:29 #28 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+[2025-05-13 01:03:29 #29 type.registry] 
+New type java.util.Vector<domain.Car>
+
+[2025-05-13 01:03:29 #30 type.registry] 
+New type java.util.Vector<domain.Assessment>
+
+[2025-05-13 01:03:29 #31 type.registry] 
+New type java.util.Vector<domain.Alert>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-05-13 01:08:22 #1 store] 
+Database 'C:\Users\bynek\Desktop\UNI\Segundo\SI\Iterazioa3\Iterazioa3Workspace\Rides24\src\main\resources\rides.temp' is opened by 56884@ByNekox
+
+[2025-05-13 01:08:23 #2 type.registry] 
+New type domain.User
+
+[2025-05-13 01:08:23 #3 type.registry] 
+New type domain.Admin
+
+[2025-05-13 01:08:23 #4 type] 
+Type domain.User is not enhanced.
+
+[2025-05-13 01:08:23 #5 type.registry] 
+New type domain.Movement
+
+[2025-05-13 01:08:23 #6 type] 
+Type domain.Admin is not enhanced.
+
+[2025-05-13 01:08:23 #7 type.registry] 
+New type domain.Reclamation
+
+[2025-05-13 01:08:23 #8 type] 
+Type domain.Movement is not enhanced.
+
+[2025-05-13 01:08:23 #9 type] 
+Type domain.Reclamation is not enhanced.
+
+[2025-05-13 01:08:23 #10 type.registry] 
+New type domain.Reservation
+
+[2025-05-13 01:08:23 #11 type.registry] 
+New type domain.Traveler
+
+[2025-05-13 01:08:23 #12 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-05-13 01:08:23 #13 type.registry] 
+New type domain.Ride
+
+[2025-05-13 01:08:23 #14 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-05-13 01:08:23 #15 type.registry] 
+New type domain.Alert
+
+[2025-05-13 01:08:23 #16 type] 
+Type domain.Ride is not enhanced.
+
+[2025-05-13 01:08:23 #17 type.registry] 
+New type domain.Driver
+
+[2025-05-13 01:08:23 #18 type.registry] 
+New type domain.Car
+
+[2025-05-13 01:08:23 #19 type] 
+Type domain.Alert is not enhanced.
+
+[2025-05-13 01:08:23 #20 type] 
+Type domain.Driver is not enhanced.
+
+[2025-05-13 01:08:23 #21 type.registry] 
+New type domain.Assessment
+
+[2025-05-13 01:08:23 #22 type] 
+Type domain.Car is not enhanced.
+
+[2025-05-13 01:08:23 #23 type] 
+Type domain.Assessment is not enhanced.
+
+[2025-05-13 01:08:23 #24 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-05-13 01:08:23 #25 type.registry] 
+New type java.util.Vector<domain.Reservation>
+
+[2025-05-13 01:08:23 #26 type.registry] 
+New type java.util.Vector<domain.Movement>
+
+[2025-05-13 01:08:23 #27 type.registry] 
+New type java.util.Vector<domain.Reclamation>
+
+[2025-05-13 01:08:23 #28 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+[2025-05-13 01:08:23 #29 type.registry] 
+New type java.util.Vector<domain.Car>
+
+[2025-05-13 01:08:23 #30 type.registry] 
+New type java.util.Vector<domain.Assessment>
+
+[2025-05-13 01:08:23 #31 type.registry] 
+New type java.util.Vector<domain.Alert>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-05-13 20:20:21 #1 store] 
+Database 'C:\Users\bynek\Desktop\UNI\Segundo\SI\Iterazioa3\Iterazioa3Workspace\Rides24\src\main\resources\rides.temp' is opened by 13340@ByNekox
+
+[2025-05-13 20:20:21 #2 type.registry] 
+New type domain.User
+
+[2025-05-13 20:20:21 #3 type.registry] 
+New type domain.Admin
+
+[2025-05-13 20:20:21 #4 type] 
+Type domain.User is not enhanced.
+
+[2025-05-13 20:20:21 #5 type.registry] 
+New type domain.Movement
+
+[2025-05-13 20:20:21 #6 type] 
+Type domain.Admin is not enhanced.
+
+[2025-05-13 20:20:21 #7 type.registry] 
+New type domain.Reclamation
+
+[2025-05-13 20:20:21 #8 type] 
+Type domain.Movement is not enhanced.
+
+[2025-05-13 20:20:21 #9 type] 
+Type domain.Reclamation is not enhanced.
+
+[2025-05-13 20:20:21 #10 type.registry] 
+New type domain.Reservation
+
+[2025-05-13 20:20:21 #11 type.registry] 
+New type domain.Traveler
+
+[2025-05-13 20:20:21 #12 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-05-13 20:20:21 #13 type.registry] 
+New type domain.Ride
+
+[2025-05-13 20:20:21 #14 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-05-13 20:20:21 #15 type.registry] 
+New type domain.Alert
+
+[2025-05-13 20:20:21 #16 type] 
+Type domain.Ride is not enhanced.
+
+[2025-05-13 20:20:21 #17 type.registry] 
+New type domain.Driver
+
+[2025-05-13 20:20:21 #18 type.registry] 
+New type domain.Car
+
+[2025-05-13 20:20:21 #19 type] 
+Type domain.Alert is not enhanced.
+
+[2025-05-13 20:20:21 #20 type] 
+Type domain.Driver is not enhanced.
+
+[2025-05-13 20:20:21 #21 type.registry] 
+New type domain.Assessment
+
+[2025-05-13 20:20:21 #22 type] 
+Type domain.Car is not enhanced.
+
+[2025-05-13 20:20:21 #23 type] 
+Type domain.Assessment is not enhanced.
+
+[2025-05-13 20:20:21 #24 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-05-13 20:20:21 #25 type.registry] 
+New type java.util.Vector<domain.Reservation>
+
+[2025-05-13 20:20:21 #26 type.registry] 
+New type java.util.Vector<domain.Movement>
+
+[2025-05-13 20:20:21 #27 type.registry] 
+New type java.util.Vector<domain.Reclamation>
+
+[2025-05-13 20:20:22 #28 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+[2025-05-13 20:20:22 #29 type.registry] 
+New type java.util.Vector<domain.Car>
+
+[2025-05-13 20:20:22 #30 type.registry] 
+New type java.util.Vector<domain.Assessment>
+
+[2025-05-13 20:20:22 #31 type.registry] 
+New type java.util.Vector<domain.Alert>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-05-13 20:24:35 #1 store] 
+Database 'C:\Users\bynek\Desktop\UNI\Segundo\SI\Iterazioa3\Iterazioa3Workspace\Rides24\src\main\resources\rides.temp' has been recovered (tr. 1-15)
+
+[2025-05-13 20:24:35 #2 store] 
+Database 'C:\Users\bynek\Desktop\UNI\Segundo\SI\Iterazioa3\Iterazioa3Workspace\Rides24\src\main\resources\rides.temp' is opened by 60468@ByNekox
+
+[2025-05-13 20:24:35 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-05-13 20:24:35 #4 type] 
+Type domain.Admin is not enhanced.
+
+[2025-05-13 20:24:35 #5 type] 
+Type domain.Movement is not enhanced.
+
+[2025-05-13 20:24:35 #6 type] 
+Type domain.Reclamation is not enhanced.
+
+[2025-05-13 20:24:35 #7 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-05-13 20:24:35 #8 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-05-13 20:24:35 #9 type] 
+Type domain.Ride is not enhanced.
+
+[2025-05-13 20:24:35 #10 type] 
+Type domain.Alert is not enhanced.
+
+[2025-05-13 20:24:35 #11 type] 
+Type domain.Driver is not enhanced.
+
+[2025-05-13 20:24:35 #12 type] 
+Type domain.Car is not enhanced.
+
+[2025-05-13 20:24:35 #13 type] 
+Type domain.Assessment is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-05-13 20:25:27 #1 store] 
+Database 'C:\Users\bynek\Desktop\UNI\Segundo\SI\Iterazioa3\Iterazioa3Workspace\Rides24\src\main\resources\rides.temp' has been recovered (tr. 16-16)
+
+[2025-05-13 20:25:27 #2 store] 
+Database 'C:\Users\bynek\Desktop\UNI\Segundo\SI\Iterazioa3\Iterazioa3Workspace\Rides24\src\main\resources\rides.temp' is opened by 62008@ByNekox
+
+[2025-05-13 20:25:27 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-05-13 20:25:27 #4 type] 
+Type domain.Admin is not enhanced.
+
+[2025-05-13 20:25:27 #5 type] 
+Type domain.Movement is not enhanced.
+
+[2025-05-13 20:25:27 #6 type] 
+Type domain.Reclamation is not enhanced.
+
+[2025-05-13 20:25:28 #7 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-05-13 20:25:28 #8 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-05-13 20:25:28 #9 type] 
+Type domain.Ride is not enhanced.
+
+[2025-05-13 20:25:28 #10 type] 
+Type domain.Alert is not enhanced.
+
+[2025-05-13 20:25:28 #11 type] 
+Type domain.Driver is not enhanced.
+
+[2025-05-13 20:25:28 #12 type] 
+Type domain.Car is not enhanced.
+
+[2025-05-13 20:25:28 #13 type] 
+Type domain.Assessment is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-05-13 20:26:31 #1 store] 
+Database 'C:\Users\bynek\Desktop\UNI\Segundo\SI\Iterazioa3\Iterazioa3Workspace\Rides24\src\main\resources\rides.temp' has been recovered (tr. 17-17)
+
+[2025-05-13 20:26:31 #2 store] 
+Database 'C:\Users\bynek\Desktop\UNI\Segundo\SI\Iterazioa3\Iterazioa3Workspace\Rides24\src\main\resources\rides.temp' is opened by 70304@ByNekox
+
+[2025-05-13 20:26:32 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-05-13 20:26:32 #4 type] 
+Type domain.Admin is not enhanced.
+
+[2025-05-13 20:26:32 #5 type] 
+Type domain.Movement is not enhanced.
+
+[2025-05-13 20:26:32 #6 type] 
+Type domain.Reclamation is not enhanced.
+
+[2025-05-13 20:26:32 #7 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-05-13 20:26:32 #8 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-05-13 20:26:32 #9 type] 
+Type domain.Ride is not enhanced.
+
+[2025-05-13 20:26:32 #10 type] 
+Type domain.Alert is not enhanced.
+
+[2025-05-13 20:26:32 #11 type] 
+Type domain.Driver is not enhanced.
+
+[2025-05-13 20:26:32 #12 type] 
+Type domain.Car is not enhanced.
+
+[2025-05-13 20:26:32 #13 type] 
+Type domain.Assessment is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-05-13 20:27:36 #1 store] 
+Database 'C:\Users\bynek\Desktop\UNI\Segundo\SI\Iterazioa3\Iterazioa3Workspace\Rides24\src\main\resources\rides.temp' has been recovered (tr. 18-18)
+
+[2025-05-13 20:27:37 #2 store] 
+Database 'C:\Users\bynek\Desktop\UNI\Segundo\SI\Iterazioa3\Iterazioa3Workspace\Rides24\src\main\resources\rides.temp' is opened by 41764@ByNekox
+
+[2025-05-13 20:27:37 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-05-13 20:27:37 #4 type] 
+Type domain.Admin is not enhanced.
+
+[2025-05-13 20:27:37 #5 type] 
+Type domain.Movement is not enhanced.
+
+[2025-05-13 20:27:37 #6 type] 
+Type domain.Reclamation is not enhanced.
+
+[2025-05-13 20:27:37 #7 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-05-13 20:27:37 #8 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-05-13 20:27:37 #9 type] 
+Type domain.Ride is not enhanced.
+
+[2025-05-13 20:27:37 #10 type] 
+Type domain.Alert is not enhanced.
+
+[2025-05-13 20:27:37 #11 type] 
+Type domain.Driver is not enhanced.
+
+[2025-05-13 20:27:37 #12 type] 
+Type domain.Car is not enhanced.
+
+[2025-05-13 20:27:37 #13 type] 
+Type domain.Assessment is not enhanced.
+

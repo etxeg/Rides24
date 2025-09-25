@@ -1,0 +1,450 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-04-30 12:08:34 #1 store] 
+Database 'C:\Users\aitor\OneDrive\Escritorio\si3.iterazioa\Rides24\src\main\resources\rides.temp' is opened by 45216@LAPTOP-BVQGUDGK
+
+[2025-04-30 12:08:35 #2 type] 
+Type domain.Movement is not enhanced.
+
+[2025-04-30 12:08:35 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-04-30 12:08:35 #4 type] 
+Type domain.Car is not enhanced.
+
+[2025-04-30 12:08:35 #5 type] 
+Type domain.Driver is not enhanced.
+
+[2025-04-30 12:08:35 #6 type] 
+Type domain.Ride is not enhanced.
+
+[2025-04-30 12:08:35 #7 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-04-30 12:08:35 #8 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-04-30 12:08:35 #9 type] 
+Type domain.Assessment is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-04-30 12:16:25 #1 store] 
+Database 'C:\Users\aitor\OneDrive\Escritorio\si3.iterazioa\Rides24\src\main\resources\rides.temp' has been recovered (tr. 26-30)
+
+[2025-04-30 12:16:25 #2 store] 
+Database 'C:\Users\aitor\OneDrive\Escritorio\si3.iterazioa\Rides24\src\main\resources\rides.temp' is opened by 41952@LAPTOP-BVQGUDGK
+
+[2025-04-30 12:16:25 #3 type] 
+Type domain.Movement is not enhanced.
+
+[2025-04-30 12:16:25 #4 type] 
+Type domain.User is not enhanced.
+
+[2025-04-30 12:16:25 #5 type] 
+Type domain.Car is not enhanced.
+
+[2025-04-30 12:16:25 #6 type] 
+Type domain.Driver is not enhanced.
+
+[2025-04-30 12:16:25 #7 type] 
+Type domain.Ride is not enhanced.
+
+[2025-04-30 12:16:25 #8 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-04-30 12:16:25 #9 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-04-30 12:16:25 #10 type] 
+Type domain.Assessment is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-04-30 12:23:03 #1 store] 
+Database 'C:\Users\aitor\OneDrive\Escritorio\si3.iterazioa\Rides24\src\main\resources\rides.temp' is opened by 11320@LAPTOP-BVQGUDGK
+
+[2025-04-30 12:23:03 #2 type] 
+Type domain.Movement is not enhanced.
+
+[2025-04-30 12:23:03 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-04-30 12:23:03 #4 type] 
+Type domain.Car is not enhanced.
+
+[2025-04-30 12:23:03 #5 type] 
+Type domain.Driver is not enhanced.
+
+[2025-04-30 12:23:03 #6 type] 
+Type domain.Ride is not enhanced.
+
+[2025-04-30 12:23:03 #7 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-04-30 12:23:03 #8 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-04-30 12:23:03 #9 type] 
+Type domain.Assessment is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-04-30 12:24:05 #1 store] 
+Database 'C:\Users\aitor\OneDrive\Escritorio\si3.iterazioa\Rides24\src\main\resources\rides.temp' is opened by 31944@LAPTOP-BVQGUDGK
+
+[2025-04-30 12:24:05 #2 type] 
+Type domain.Movement is not enhanced.
+
+[2025-04-30 12:24:05 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-04-30 12:24:05 #4 type] 
+Type domain.Car is not enhanced.
+
+[2025-04-30 12:24:05 #5 type] 
+Type domain.Driver is not enhanced.
+
+[2025-04-30 12:24:05 #6 type] 
+Type domain.Ride is not enhanced.
+
+[2025-04-30 12:24:05 #7 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-04-30 12:24:05 #8 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-04-30 12:24:05 #9 type] 
+Type domain.Assessment is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-04-30 12:27:20 #1 store] 
+Database 'C:\Users\aitor\OneDrive\Escritorio\si3.iterazioa\Rides24\src\main\resources\rides.temp' is opened by 13504@LAPTOP-BVQGUDGK
+
+[2025-04-30 12:27:20 #2 type] 
+Type domain.Movement is not enhanced.
+
+[2025-04-30 12:27:20 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-04-30 12:27:20 #4 type] 
+Type domain.Car is not enhanced.
+
+[2025-04-30 12:27:20 #5 type] 
+Type domain.Driver is not enhanced.
+
+[2025-04-30 12:27:20 #6 type] 
+Type domain.Ride is not enhanced.
+
+[2025-04-30 12:27:20 #7 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-04-30 12:27:20 #8 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-04-30 12:27:20 #9 type] 
+Type domain.Assessment is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-04-30 12:35:05 #1 store] 
+Database 'C:\Users\aitor\OneDrive\Escritorio\si3.iterazioa\Rides24\src\main\resources\rides.temp' is opened by 42700@LAPTOP-BVQGUDGK
+
+[2025-04-30 12:35:05 #2 type] 
+Type domain.Movement is not enhanced.
+
+[2025-04-30 12:35:05 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-04-30 12:35:05 #4 type] 
+Type domain.Car is not enhanced.
+
+[2025-04-30 12:35:05 #5 type] 
+Type domain.Driver is not enhanced.
+
+[2025-04-30 12:35:05 #6 type] 
+Type domain.Ride is not enhanced.
+
+[2025-04-30 12:35:05 #7 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-04-30 12:35:05 #8 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-04-30 12:35:05 #9 type] 
+Type domain.Assessment is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-04-30 12:47:36 #1 store] 
+Database 'C:\Users\aitor\OneDrive\Escritorio\si3.iterazioa\Rides24\src\main\resources\rides.temp' is opened by 13836@LAPTOP-BVQGUDGK
+
+[2025-04-30 12:47:37 #2 type] 
+Type domain.Movement is not enhanced.
+
+[2025-04-30 12:47:37 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-04-30 12:47:37 #4 type] 
+Type domain.Car is not enhanced.
+
+[2025-04-30 12:47:37 #5 type] 
+Type domain.Driver is not enhanced.
+
+[2025-04-30 12:47:37 #6 type] 
+Type domain.Ride is not enhanced.
+
+[2025-04-30 12:47:37 #7 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-04-30 12:47:37 #8 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-04-30 12:47:37 #9 type] 
+Type domain.Assessment is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-04-30 12:53:03 #1 store] 
+Database 'C:\Users\aitor\OneDrive\Escritorio\si3.iterazioa\Rides24\src\main\resources\rides.temp' is opened by 13516@LAPTOP-BVQGUDGK
+
+[2025-04-30 12:53:03 #2 type] 
+Type domain.Movement is not enhanced.
+
+[2025-04-30 12:53:03 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-04-30 12:53:03 #4 type] 
+Type domain.Car is not enhanced.
+
+[2025-04-30 12:53:03 #5 type] 
+Type domain.Driver is not enhanced.
+
+[2025-04-30 12:53:03 #6 type] 
+Type domain.Ride is not enhanced.
+
+[2025-04-30 12:53:03 #7 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-04-30 12:53:03 #8 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-04-30 12:53:03 #9 type] 
+Type domain.Assessment is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-04-30 12:56:53 #1 store] 
+Database 'C:\Users\aitor\OneDrive\Escritorio\si3.iterazioa\Rides24\src\main\resources\rides.temp' has been recovered (tr. 31-31)
+
+[2025-04-30 12:56:53 #2 store] 
+Database 'C:\Users\aitor\OneDrive\Escritorio\si3.iterazioa\Rides24\src\main\resources\rides.temp' is opened by 9120@LAPTOP-BVQGUDGK
+
+[2025-04-30 12:56:54 #3 type] 
+Type domain.Movement is not enhanced.
+
+[2025-04-30 12:56:54 #4 type] 
+Type domain.User is not enhanced.
+
+[2025-04-30 12:56:54 #5 type] 
+Type domain.Car is not enhanced.
+
+[2025-04-30 12:56:54 #6 type] 
+Type domain.Driver is not enhanced.
+
+[2025-04-30 12:56:54 #7 type] 
+Type domain.Ride is not enhanced.
+
+[2025-04-30 12:56:54 #8 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-04-30 12:56:54 #9 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-04-30 12:56:54 #10 type] 
+Type domain.Assessment is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-04-30 13:00:27 #1 store] 
+Database 'C:\Users\aitor\OneDrive\Escritorio\si3.iterazioa\Rides24\src\main\resources\rides.temp' is opened by 41236@LAPTOP-BVQGUDGK
+
+[2025-04-30 13:00:28 #2 type] 
+Type domain.Movement is not enhanced.
+
+[2025-04-30 13:00:28 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-04-30 13:00:28 #4 type] 
+Type domain.Car is not enhanced.
+
+[2025-04-30 13:00:28 #5 type] 
+Type domain.Driver is not enhanced.
+
+[2025-04-30 13:00:28 #6 type] 
+Type domain.Ride is not enhanced.
+
+[2025-04-30 13:00:28 #7 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-04-30 13:00:28 #8 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-04-30 13:00:28 #9 type] 
+Type domain.Assessment is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-04-30 13:05:04 #1 store] 
+Database 'C:\Users\aitor\OneDrive\Escritorio\si3.iterazioa\Rides24\src\main\resources\rides.temp' has been recovered (tr. 32-32)
+
+[2025-04-30 13:05:04 #2 store] 
+Database 'C:\Users\aitor\OneDrive\Escritorio\si3.iterazioa\Rides24\src\main\resources\rides.temp' is opened by 42048@LAPTOP-BVQGUDGK
+
+[2025-04-30 13:05:04 #3 type] 
+Type domain.Movement is not enhanced.
+
+[2025-04-30 13:05:04 #4 type] 
+Type domain.User is not enhanced.
+
+[2025-04-30 13:05:04 #5 type] 
+Type domain.Car is not enhanced.
+
+[2025-04-30 13:05:04 #6 type] 
+Type domain.Driver is not enhanced.
+
+[2025-04-30 13:05:04 #7 type] 
+Type domain.Ride is not enhanced.
+
+[2025-04-30 13:05:04 #8 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-04-30 13:05:04 #9 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-04-30 13:05:04 #10 type] 
+Type domain.Assessment is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-04-30 13:05:30 #1 store] 
+Database 'C:\Users\aitor\OneDrive\Escritorio\si3.iterazioa\Rides24\src\main\resources\rides.temp' is opened by 48244@LAPTOP-BVQGUDGK
+
+[2025-04-30 13:05:30 #2 type] 
+Type domain.Movement is not enhanced.
+
+[2025-04-30 13:05:30 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-04-30 13:05:30 #4 type] 
+Type domain.Car is not enhanced.
+
+[2025-04-30 13:05:30 #5 type] 
+Type domain.Driver is not enhanced.
+
+[2025-04-30 13:05:30 #6 type] 
+Type domain.Ride is not enhanced.
+
+[2025-04-30 13:05:30 #7 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-04-30 13:05:30 #8 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-04-30 13:05:30 #9 type] 
+Type domain.Assessment is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-04-30 13:08:05 #1 store] 
+Database 'C:\Users\aitor\OneDrive\Escritorio\si3.iterazioa\Rides24\src\main\resources\rides.temp' has been recovered (tr. 33-33)
+
+[2025-04-30 13:08:05 #2 store] 
+Database 'C:\Users\aitor\OneDrive\Escritorio\si3.iterazioa\Rides24\src\main\resources\rides.temp' is opened by 26668@LAPTOP-BVQGUDGK
+
+[2025-04-30 13:08:05 #3 type] 
+Type domain.Movement is not enhanced.
+
+[2025-04-30 13:08:05 #4 type] 
+Type domain.User is not enhanced.
+
+[2025-04-30 13:08:05 #5 type] 
+Type domain.Car is not enhanced.
+
+[2025-04-30 13:08:05 #6 type] 
+Type domain.Driver is not enhanced.
+
+[2025-04-30 13:08:05 #7 type] 
+Type domain.Ride is not enhanced.
+
+[2025-04-30 13:08:05 #8 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-04-30 13:08:05 #9 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-04-30 13:08:05 #10 type] 
+Type domain.Assessment is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-04-30 13:13:53 #1 store] 
+Database 'C:\Users\aitor\OneDrive\Escritorio\si3.iterazioa\Rides24\src\main\resources\rides.temp' has been recovered (tr. 34-34)
+
+[2025-04-30 13:13:53 #2 store] 
+Database 'C:\Users\aitor\OneDrive\Escritorio\si3.iterazioa\Rides24\src\main\resources\rides.temp' is opened by 2576@LAPTOP-BVQGUDGK
+
+[2025-04-30 13:13:53 #3 type] 
+Type domain.Movement is not enhanced.
+
+[2025-04-30 13:13:53 #4 type] 
+Type domain.User is not enhanced.
+
+[2025-04-30 13:13:53 #5 type] 
+Type domain.Car is not enhanced.
+
+[2025-04-30 13:13:53 #6 type] 
+Type domain.Driver is not enhanced.
+
+[2025-04-30 13:13:53 #7 type] 
+Type domain.Ride is not enhanced.
+
+[2025-04-30 13:13:53 #8 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-04-30 13:13:53 #9 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-04-30 13:13:53 #10 type] 
+Type domain.Assessment is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-04-30 13:17:14 #1 store] 
+Database 'C:\Users\aitor\OneDrive\Escritorio\si3.iterazioa\Rides24\src\main\resources\rides.temp' is opened by 43048@LAPTOP-BVQGUDGK
+
+[2025-04-30 13:17:14 #2 type] 
+Type domain.Movement is not enhanced.
+
+[2025-04-30 13:17:14 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-04-30 13:17:14 #4 type] 
+Type domain.Car is not enhanced.
+
+[2025-04-30 13:17:14 #5 type] 
+Type domain.Driver is not enhanced.
+
+[2025-04-30 13:17:14 #6 type] 
+Type domain.Ride is not enhanced.
+
+[2025-04-30 13:17:14 #7 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-04-30 13:17:14 #8 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-04-30 13:17:14 #9 type] 
+Type domain.Assessment is not enhanced.
+

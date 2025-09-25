@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>DriverGUI.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Rides24</a> &gt; <a href="index.source.html" class="el_package">gui</a> &gt; <span class="el_source">DriverGUI.java</span></div><h1>DriverGUI.java</h1><pre class="source lang-java linenums">package gui;
+
+/**
+ * @author Software Engineering teachers
+ */
+
+
+import javax.swing.*;
+
+import domain.Driver;
+import businessLogic.BLFacade;
+
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.GridLayout;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.util.Locale;
+import java.util.ResourceBundle;
+
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+
+public class DriverGUI extends JFrame {
+	
+    private Driver driver;
+	private static final long serialVersionUID = 1L;
+
+<span class="nc" id="L30">	private JPanel jContentPane = null;</span>
+<span class="nc" id="L31">	private JButton jButtonCreateQuery = null;</span>
+<span class="nc" id="L32">	private JButton jButtonQueryQueries = null;</span>
+	
+	protected JLabel jLabelSelectOption;
+	private JPanel panel;
+	
+	/**
+	 * This is the default constructor
+	 */
+	public DriverGUI(Driver d) {
+<span class="nc" id="L41">		super();</span>
+<span class="nc" id="L42">		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);</span>
+<span class="nc" id="L43">		driver=d;</span>
+		
+		// this.setSize(271, 295);
+<span class="nc" id="L46">		this.setSize(495, 290);</span>
+<span class="nc" id="L47">		jLabelSelectOption = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;MainGUI.SelectOption&quot;));</span>
+<span class="nc" id="L48">		jLabelSelectOption.setFont(new Font(&quot;Tahoma&quot;, Font.BOLD, 13));</span>
+<span class="nc" id="L49">		jLabelSelectOption.setForeground(Color.BLACK);</span>
+<span class="nc" id="L50">		jLabelSelectOption.setHorizontalAlignment(SwingConstants.CENTER);</span>
+		
+<span class="nc" id="L52">		panel = new JPanel();</span>
+		
+<span class="nc" id="L54">		jButtonCreateQuery = new JButton();</span>
+<span class="nc" id="L55">		jButtonCreateQuery.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;DriverGUI.CreateRide&quot;));</span>
+<span class="nc" id="L56">		jButtonCreateQuery.addActionListener(new java.awt.event.ActionListener() {</span>
+			public void actionPerformed(java.awt.event.ActionEvent e) {
+<span class="nc" id="L58">				JFrame a = new CreateRideGUI(driver);</span>
+<span class="nc" id="L59">				a.setVisible(true);</span>
+<span class="nc" id="L60">			}</span>
+		});
+		
+<span class="nc" id="L63">		jContentPane = new JPanel();</span>
+<span class="nc" id="L64">		jContentPane.setLayout(new GridLayout(10, 1, 0, 0));</span>
+<span class="nc" id="L65">		jContentPane.add(jLabelSelectOption);</span>
+<span class="nc" id="L66">		jContentPane.add(jButtonCreateQuery);</span>
+		
+<span class="nc" id="L68">		jButtonQueryQueries = new JButton();</span>
+<span class="nc" id="L69">		jButtonQueryQueries.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;DriverGUI.QueryRides&quot;));</span>
+<span class="nc" id="L70">		jButtonQueryQueries.addActionListener(new java.awt.event.ActionListener() {</span>
+			public void actionPerformed(java.awt.event.ActionEvent e) {
+<span class="nc" id="L72">				JFrame a = new FindRidesGUI(driver);</span>
+<span class="nc" id="L73">				a.setVisible(true);</span>
+<span class="nc" id="L74">			}</span>
+		});
+<span class="nc" id="L76">		jContentPane.add(jButtonQueryQueries);</span>
+		
+<span class="nc" id="L78">		JButton jButtonAcceptRejectReservation = new JButton();</span>
+<span class="nc" id="L79">		jButtonAcceptRejectReservation.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L81">				JFrame a = new ManageReservationsGUI(driver);</span>
+<span class="nc" id="L82">				a.setVisible(true);</span>
+<span class="nc" id="L83">			}</span>
+		});
+<span class="nc" id="L85">		jButtonAcceptRejectReservation.setText((String) null);</span>
+<span class="nc" id="L86">		jButtonAcceptRejectReservation.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;DriverGUI.AcceptReject&quot;));</span>
+<span class="nc" id="L87">		jContentPane.add(jButtonAcceptRejectReservation);</span>
+		
+<span class="nc" id="L89">		JButton jButtonAddMoney = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;UserGUI.AddMoney&quot;));</span>
+<span class="nc" id="L90">		jButtonAddMoney.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L92">				JFrame a = new AddMoneyGUI(driver);</span>
+<span class="nc" id="L93">				a.setVisible(true);</span>
+<span class="nc" id="L94">			}</span>
+		});
+<span class="nc" id="L96">		jContentPane.add(jButtonAddMoney);</span>
+		
+<span class="nc" id="L98">		JButton jButtonWithdrawMoney = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;UserGUI.WithdrawMoney&quot;));</span>
+<span class="nc" id="L99">		jButtonWithdrawMoney.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L101">				JFrame a = new RemoveMoneyGUI(driver);</span>
+<span class="nc" id="L102">				a.setVisible(true);</span>
+<span class="nc" id="L103">			}</span>
+		});
+<span class="nc" id="L105">		jContentPane.add(jButtonWithdrawMoney);</span>
+		
+<span class="nc" id="L107">		JButton jButtonAddCar = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;DriverGUI.AddCar&quot;));</span>
+<span class="nc" id="L108">		jButtonAddCar.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L110">				JFrame a = new AddCarGUI(driver);</span>
+<span class="nc" id="L111">				a.setVisible(true);</span>
+<span class="nc" id="L112">			}</span>
+		});
+<span class="nc" id="L114">		jContentPane.add(jButtonAddCar);</span>
+		
+<span class="nc" id="L116">		JButton jButtonMovements = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;DriverGUI.Movements&quot;));</span>
+<span class="nc" id="L117">		jButtonMovements.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L119">				JFrame a = new MovementGUI(driver);</span>
+<span class="nc" id="L120">				a.setVisible(true);</span>
+<span class="nc" id="L121">			}</span>
+		});
+		
+<span class="nc" id="L124">		jContentPane.add(jButtonMovements);</span>
+		
+<span class="nc" id="L126">		JButton jButtonCancelRide = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;CancelRideGUI.CancelRide&quot;));</span>
+<span class="nc" id="L127">		jButtonCancelRide.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L129">				JFrame a = new CancelRideGUI(driver);</span>
+<span class="nc" id="L130">				a.setVisible(true);</span>
+<span class="nc" id="L131">			}</span>
+		});
+<span class="nc" id="L133">		jContentPane.add(jButtonCancelRide);</span>
+<span class="nc" id="L134">		jContentPane.add(panel);</span>
+		
+		
+<span class="nc" id="L137">		setContentPane(jContentPane);</span>
+<span class="nc" id="L138">		setTitle(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;DriverGUI.MainTitle&quot;) + &quot; - &quot;+ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Driver&quot;)+&quot;: &quot;+driver.getName());</span>
+		
+<span class="nc" id="L140">		addWindowListener(new WindowAdapter() {</span>
+			@Override
+			public void windowClosing(WindowEvent evt) {
+<span class="nc" id="L143">				JFrame a = new MainGUI();</span>
+<span class="nc" id="L144">				a.setVisible(true);</span>
+<span class="nc" id="L145">				dispose();</span>
+<span class="nc" id="L146">			}</span>
+		});
+<span class="nc" id="L148">	}</span>
+} // @jve:decl-index=0:visual-constraint=&quot;0,0&quot;
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

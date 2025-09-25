@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AddCarGUI.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Rides24</a> &gt; <a href="index.source.html" class="el_package">gui</a> &gt; <span class="el_source">AddCarGUI.java</span></div><h1>AddCarGUI.java</h1><pre class="source lang-java linenums">package gui;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+import businessLogic.BLFacade;
+import domain.Car;
+import domain.Driver;
+import domain.Traveler;
+import domain.User;
+
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.util.ResourceBundle;
+import java.awt.event.ActionEvent;
+
+public class AddCarGUI extends JFrame {
+
+	private static final long serialVersionUID = 1L;
+	private JPanel contentPane;
+	private JTextField matrikulaBox;
+	private JTextField plazakBox;
+	private JTextField markaBox;
+ 
+<span class="nc" id="L31">	public AddCarGUI(Driver driver) {</span>
+<span class="nc" id="L32">		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);</span>
+<span class="nc" id="L33">		setBounds(100, 100, 450, 300);</span>
+<span class="nc" id="L34">		contentPane = new JPanel();</span>
+<span class="nc" id="L35">		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));</span>
+
+<span class="nc" id="L37">		setContentPane(contentPane);</span>
+<span class="nc" id="L38">		contentPane.setLayout(null);</span>
+		
+<span class="nc" id="L40">		JLabel matrikulaText = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;AddCar.Plate&quot;));</span>
+<span class="nc" id="L41">		matrikulaText.setBounds(90, 63, 91, 13);</span>
+<span class="nc" id="L42">		contentPane.add(matrikulaText);</span>
+		
+<span class="nc" id="L44">		matrikulaBox = new JTextField();</span>
+<span class="nc" id="L45">		matrikulaBox.setBounds(223, 60, 96, 19);</span>
+<span class="nc" id="L46">		contentPane.add(matrikulaBox);</span>
+<span class="nc" id="L47">		matrikulaBox.setColumns(10);</span>
+		
+<span class="nc" id="L49">		BLFacade facade = MainGUI.getBusinessLogic();</span>
+		
+<span class="nc" id="L51">		JButton jButtonClose = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Close&quot;));</span>
+<span class="nc" id="L52">		jButtonClose.setBounds(129, 232, 85, 21);</span>
+<span class="nc" id="L53">		contentPane.add(jButtonClose);</span>
+		
+<span class="nc" id="L55">		plazakBox = new JTextField();</span>
+<span class="nc" id="L56">		plazakBox.setColumns(10);</span>
+<span class="nc" id="L57">		plazakBox.setBounds(223, 89, 96, 19);</span>
+<span class="nc" id="L58">		contentPane.add(plazakBox);</span>
+		
+<span class="nc" id="L60">		JLabel plazakText = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;AddCar.Places&quot;));</span>
+<span class="nc" id="L61">		plazakText.setBounds(90, 92, 91, 13);</span>
+<span class="nc" id="L62">		contentPane.add(plazakText);</span>
+		
+<span class="nc" id="L64">		markaBox = new JTextField();</span>
+<span class="nc" id="L65">		markaBox.setColumns(10);</span>
+<span class="nc" id="L66">		markaBox.setBounds(223, 118, 96, 19);</span>
+<span class="nc" id="L67">		contentPane.add(markaBox);</span>
+		
+<span class="nc" id="L69">		JLabel markaText = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;AddCar.Brand&quot;));</span>
+<span class="nc" id="L70">		markaText.setBounds(90, 121, 91, 13);</span>
+<span class="nc" id="L71">		contentPane.add(markaText);</span>
+<span class="nc" id="L72">		jButtonClose.addActionListener(new ActionListener()</span>
+<span class="nc" id="L73">		{</span>
+			public void actionPerformed(ActionEvent e)
+			{
+<span class="nc" id="L76">				jButton2_actionPerformed(e);</span>
+<span class="nc" id="L77">			}</span>
+		});
+		
+<span class="nc" id="L80">		JLabel errorText = new JLabel();</span>
+<span class="nc" id="L81">		errorText.setVisible(false);</span>
+<span class="nc" id="L82">		errorText.setHorizontalAlignment(SwingConstants.CENTER);</span>
+<span class="nc" id="L83">		errorText.setBounds(46, 161, 342, 19);</span>
+<span class="nc" id="L84">		contentPane.add(errorText);</span>
+		
+<span class="nc" id="L86">		JButton btnAdd = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;AddMoneyGUI.Add&quot;));</span>
+<span class="nc" id="L87">		btnAdd.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L89">				String pMatrikula = matrikulaBox.getText();</span>
+<span class="nc" id="L90">				String pMarka = markaBox.getText();</span>
+				try {
+<span class="nc" id="L92">					int nPlazak = Integer.parseInt(plazakBox.getText());</span>
+					
+<span class="nc" id="L94">					Car createdCar =facade.createCar(driver, pMatrikula, nPlazak, pMarka);</span>
+<span class="nc bnc" id="L95" title="All 2 branches missed.">					if (createdCar != null) {</span>
+<span class="nc" id="L96">						jButton2_actionPerformed(e);//Itxi leihoa</span>
+					} else {
+<span class="nc" id="L98">						errorText.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;AddCar.CarExisted&quot;));</span>
+<span class="nc" id="L99">						errorText.setVisible(true);</span>
+					}
+					
+<span class="nc" id="L102">				} catch (NumberFormatException e1) {</span>
+<span class="nc" id="L103">					errorText.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;AddCar.MustBeNumber&quot;));</span>
+<span class="nc" id="L104">					errorText.setVisible(true);</span>
+<span class="nc" id="L105">				}</span>
+<span class="nc" id="L106">			}</span>
+		});
+<span class="nc" id="L108">		btnAdd.setBounds(223, 232, 85, 21);</span>
+<span class="nc" id="L109">		contentPane.add(btnAdd);</span>
+		
+<span class="nc" id="L111">		setTitle(driver.getName());</span>
+<span class="nc" id="L112">	}</span>
+	private void jButton2_actionPerformed(ActionEvent e) {
+<span class="nc" id="L114">		this.setVisible(false);</span>
+<span class="nc" id="L115">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

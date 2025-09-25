@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Ride.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Rides24</a> &gt; <a href="index.source.html" class="el_package">domain</a> &gt; <span class="el_source">Ride.java</span></div><h1>Ride.java</h1><pre class="source lang-java linenums">package domain;
+
+import java.io.*;
+import java.util.Date;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Vector;
+
+import javax.persistence.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlID;
+import javax.xml.bind.annotation.XmlIDREF;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
+
+@SuppressWarnings(&quot;serial&quot;)
+@XmlAccessorType(XmlAccessType.FIELD)
+@Entity
+public class Ride implements Serializable {
+	@XmlID
+	@Id 
+	@XmlJavaTypeAdapter(IntegerAdapter.class)
+	@GeneratedValue
+	private Integer rideNumber;
+	private String from;
+	private String to;
+	private int nPlaces;
+	private Date date;
+	private float price;
+	private Car car;
+	private boolean cancelled;
+	
+	private Driver driver;  
+<span class="pc" id="L35">	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.MERGE)</span>
+	private List&lt;Reservation&gt; acceptedReservations = new Vector&lt;Reservation&gt;();
+<span class="pc" id="L37">	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.MERGE)</span>
+	private List&lt;Reservation&gt; pendingReservations = new Vector&lt;Reservation&gt;();
+	
+	public Ride(){
+<span class="fc" id="L41">		super();</span>
+<span class="fc" id="L42">	}</span>
+	
+	public Ride(Integer pRideNumber, String pFrom, String pTo, Date pDate, float pPrice, Driver pDriver, Car pCar) {
+<span class="nc" id="L45">		super();</span>
+<span class="nc" id="L46">		this.rideNumber = pRideNumber;</span>
+<span class="nc" id="L47">		this.from = pFrom;</span>
+<span class="nc" id="L48">		this.to = pTo;</span>
+<span class="nc" id="L49">		this.nPlaces = pCar.getPlazak();</span>
+<span class="nc" id="L50">		this.date=pDate;</span>
+<span class="nc" id="L51">		this.price=pPrice;</span>
+<span class="nc" id="L52">		this.driver = pDriver;</span>
+<span class="nc" id="L53">		this.car = pCar;</span>
+<span class="nc" id="L54">		this.cancelled = false;</span>
+<span class="nc" id="L55">	}</span>
+
+	
+
+	public Ride(String pFrom, String pTo,  Date pDate, float pPrice, Driver pDriver, Car pCar) {
+<span class="fc" id="L60">		super();</span>
+<span class="fc" id="L61">		this.from = pFrom;</span>
+<span class="fc" id="L62">		this.to = pTo;</span>
+<span class="fc" id="L63">		this.nPlaces = pCar.getPlazak();</span>
+<span class="fc" id="L64">		this.date=pDate;</span>
+<span class="fc" id="L65">		this.price=pPrice;</span>
+<span class="fc" id="L66">		this.driver = pDriver;</span>
+<span class="fc" id="L67">		this.car = pCar;</span>
+<span class="fc" id="L68">		this.cancelled = false;</span>
+<span class="fc" id="L69">	}</span>
+	
+	public void addPendingReservation(Reservation pReservation) {
+<span class="nc" id="L72">		System.out.println(&quot;Ride erreserba: &quot; + pReservation.getErreserbaZenbakia());</span>
+<span class="nc" id="L73">		this.pendingReservations.add(pReservation);</span>
+<span class="nc" id="L74">	}</span>
+	
+	public void removePendingReservation(Reservation pReservation) {
+<span class="nc" id="L77">		this.pendingReservations.remove(pReservation);</span>
+<span class="nc" id="L78">	}</span>
+	
+	public void addAcceptedReservations(Reservation pReservation) {
+<span class="nc" id="L81">		this.acceptedReservations.add(pReservation);</span>
+<span class="nc" id="L82">	}</span>
+	
+	public void printPendingReservations() {
+<span class="nc bnc" id="L85" title="All 2 branches missed.">		for (Reservation reservation:this.pendingReservations) {</span>
+<span class="nc" id="L86">			System.out.println(reservation.getErreserbaZenbakia());</span>
+<span class="nc" id="L87">		}</span>
+<span class="nc" id="L88">	}</span>
+	
+	public void deleteNChairs(int n) {
+<span class="nc" id="L91">		this.nPlaces = this.nPlaces-n;</span>
+<span class="nc" id="L92">	}</span>
+	public void addNChairs(int n) {
+<span class="nc" id="L94">		this.nPlaces = this.nPlaces+n;</span>
+<span class="nc" id="L95">	}</span>
+	/**
+	 * Get the  number of the ride
+	 * 
+	 * @return the ride number
+	 */
+	public Integer getRideNumber() {
+<span class="nc" id="L102">		return rideNumber;</span>
+	}
+
+	
+	/**
+	 * Set the ride number to a ride
+	 * 
+	 * @param ride Number to be set	 */
+	
+	public void setRideNumber(Integer rideNumber) {
+<span class="nc" id="L112">		this.rideNumber = rideNumber;</span>
+<span class="nc" id="L113">	}</span>
+
+
+	/**
+	 * Get the origin  of the ride
+	 * 
+	 * @return the origin location
+	 */
+
+	public String getFrom() {
+<span class="fc" id="L123">		return from;</span>
+	}
+
+
+	/**
+	 * Set the origin of the ride
+	 * 
+	 * @param origin to be set
+	 */	
+	
+	public void setFrom(String origin) {
+<span class="nc" id="L134">		this.from = origin;</span>
+<span class="nc" id="L135">	}</span>
+
+	/**
+	 * Get the destination  of the ride
+	 * 
+	 * @return the destination location
+	 */
+
+	public String getTo() {
+<span class="fc" id="L144">		return to;</span>
+	}
+
+
+	/**
+	 * Set the origin of the ride
+	 * 
+	 * @param destination to be set
+	 */	
+	public void setTo(String destination) {
+<span class="nc" id="L154">		this.to = destination;</span>
+<span class="nc" id="L155">	}</span>
+	
+	/**
+	 * Get the date  of the ride
+	 * 
+	 * @return the ride date 
+	 */
+	public Date getDate() {
+<span class="fc" id="L163">		return date;</span>
+	}
+	/**
+	 * Set the date of the ride
+	 * 
+	 * @param date to be set
+	 */	
+	public void setDate(Date date) {
+<span class="nc" id="L171">		this.date = date;</span>
+<span class="nc" id="L172">	}</span>
+
+	
+	public int getnPlaces() {
+<span class="nc" id="L176">		return nPlaces;</span>
+	}
+
+	/**
+	 * Set the free places of the ride
+	 * 
+	 * @param  nPlaces places to be set
+	 */
+
+	public void setBetMinimum(int nPlaces) {
+<span class="nc" id="L186">		this.nPlaces = nPlaces;</span>
+<span class="nc" id="L187">	}</span>
+
+	/**
+	 * Get the driver associated to the ride
+	 * 
+	 * @return the associated driver
+	 */
+	public Driver getDriver() {
+<span class="nc" id="L195">		return driver;</span>
+	}
+
+	/**
+	 * Set the driver associated to the ride
+	 * 
+	 * @param driver to associate to the ride
+	 */
+	public void setDriver(Driver driver) {
+<span class="nc" id="L204">		this.driver = driver;</span>
+<span class="nc" id="L205">	}</span>
+
+	public float getPrice() {
+<span class="nc" id="L208">		return price;</span>
+	}
+
+	public void setPrice(float price) {
+<span class="nc" id="L212">		this.price = price;</span>
+<span class="nc" id="L213">	}</span>
+
+	public List&lt;Reservation&gt; getAcceptedReservations() {
+<span class="nc" id="L216">		return acceptedReservations;</span>
+	}
+
+	public void setAcceptedReservations(LinkedList&lt;Reservation&gt; acceptedReservations) {
+<span class="nc" id="L220">		this.acceptedReservations = acceptedReservations;</span>
+<span class="nc" id="L221">	}</span>
+
+	public List&lt;Reservation&gt; getPendingReservations() {
+<span class="nc" id="L224">		return pendingReservations;</span>
+	}
+
+	public void setPendingReservations(LinkedList&lt;Reservation&gt; pendingReservations) {
+<span class="nc" id="L228">		this.pendingReservations = pendingReservations;</span>
+<span class="nc" id="L229">	}</span>
+
+	public void setnPlaces(int nPlaces) {
+<span class="nc" id="L232">		this.nPlaces = nPlaces;</span>
+<span class="nc" id="L233">	}</span>
+
+	public Car getCar() {
+<span class="nc" id="L236">		return car;</span>
+	}
+
+	public void setCar(Car car) {
+<span class="nc" id="L240">		this.car = car;</span>
+<span class="nc" id="L241">	}</span>
+	
+	public void cancelRide() {
+<span class="nc" id="L244">		this.cancelled = true;</span>
+<span class="nc" id="L245">	}</span>
+	
+	public boolean isCancelled() {
+<span class="nc" id="L248">		return cancelled;</span>
+	}
+	
+	public Assessment addAssessment(Traveler traveler, int stars, String text)  {
+<span class="nc" id="L252">        Assessment assessment = driver.addAssessment(traveler, stars, text);</span>
+<span class="nc" id="L253">        return assessment;</span>
+	}
+	
+	public String toString(){
+<span class="fc" id="L257">		return from+&quot;-&quot;+to+&quot;: &quot;+date;</span>
+	}
+
+
+
+	
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

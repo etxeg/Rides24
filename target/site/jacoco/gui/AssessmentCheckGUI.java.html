@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AssessmentCheckGUI.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Rides24</a> &gt; <a href="index.source.html" class="el_package">gui</a> &gt; <span class="el_source">AssessmentCheckGUI.java</span></div><h1>AssessmentCheckGUI.java</h1><pre class="source lang-java linenums">package gui;
+
+import java.awt.EventQueue;
+import java.awt.Rectangle;
+import java.util.List;
+import java.util.ResourceBundle;
+import java.util.Vector;
+
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.border.EmptyBorder;
+import javax.swing.table.DefaultTableModel;
+
+import businessLogic.BLFacade;
+import domain.Assessment;
+import domain.Driver;
+import domain.Reservation;
+import domain.Ride;
+import domain.Traveler;
+
+import javax.swing.JLabel;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.SwingConstants;
+import javax.swing.JRadioButton;
+import javax.swing.ButtonGroup;
+import javax.swing.JTextPane;
+
+public class AssessmentCheckGUI extends JFrame {
+
+	private static final long serialVersionUID = 1L;
+	private JPanel contentPane;
+<span class="nc" id="L37">	private JComboBox&lt;Assessment&gt; assessmentComboBox = new JComboBox&lt;Assessment&gt;();</span>
+
+	/**
+	 * Create the frame.
+	 */
+<span class="nc" id="L42">	public AssessmentCheckGUI(Driver driver) {</span>
+<span class="nc" id="L43">		boolean balorazioaDu = false;</span>
+<span class="nc" id="L44">		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);</span>
+<span class="nc" id="L45">		setBounds(100, 100, 450, 300);</span>
+<span class="nc" id="L46">		contentPane = new JPanel();</span>
+<span class="nc" id="L47">		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));</span>
+
+<span class="nc" id="L49">		setContentPane(contentPane);</span>
+<span class="nc" id="L50">		contentPane.setLayout(null);</span>
+		
+<span class="nc" id="L52">		BLFacade facade = MainGUI.getBusinessLogic();</span>
+		
+<span class="nc" id="L54">		JLabel assessmentText = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;AssessmentCheckGUI.SelectReview&quot;));</span>
+<span class="nc" id="L55">		assessmentText.setHorizontalAlignment(SwingConstants.CENTER);</span>
+<span class="nc" id="L56">		assessmentText.setBounds(83, 28, 260, 20);</span>
+<span class="nc" id="L57">		contentPane.add(assessmentText);</span>
+		
+<span class="nc" id="L59">		JLabel starsText = new JLabel(&quot;Loading...&quot;);</span>
+<span class="nc" id="L60">		starsText.setBounds(193, 133, 85, 13);</span>
+<span class="nc" id="L61">		contentPane.add(starsText);</span>
+		
+        
+<span class="nc" id="L64">        assessmentComboBox.setBounds(63, 58, 300, 20);</span>
+<span class="nc" id="L65">        contentPane.add(assessmentComboBox);</span>
+		
+<span class="nc" id="L67">		JButton jButtonClose = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Close&quot;));</span>
+<span class="nc" id="L68">		jButtonClose.setBounds(168, 236, 100, 21);</span>
+<span class="nc" id="L69">		contentPane.add(jButtonClose);</span>
+		
+<span class="nc" id="L71">		JLabel starsLabel = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;AssessmentCheckGUI.Stars&quot;));</span>
+<span class="nc" id="L72">		starsLabel.setBounds(83, 126, 100, 27);</span>
+<span class="nc" id="L73">		contentPane.add(starsLabel);</span>
+		
+<span class="nc" id="L75">		JLabel reviewLabel = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;AssessmentCheckGUI.Review&quot;));</span>
+<span class="nc" id="L76">		reviewLabel.setBounds(83, 156, 100, 27);</span>
+<span class="nc" id="L77">		contentPane.add(reviewLabel);</span>
+		
+<span class="nc" id="L79">		JLabel noAssessmentLabel = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;AssessmentCheckGUI.noAssessment&quot;));</span>
+<span class="nc" id="L80">		noAssessmentLabel.setHorizontalAlignment(SwingConstants.CENTER);</span>
+<span class="nc" id="L81">		noAssessmentLabel.setBounds(63, 110, 300, 13);</span>
+<span class="nc" id="L82">		contentPane.add(noAssessmentLabel);</span>
+		
+<span class="nc" id="L84">		JTextPane reviewText = new JTextPane();</span>
+<span class="nc" id="L85">		reviewText.setEditable(false);</span>
+<span class="nc" id="L86">		reviewText.setBounds(193, 156, 218, 70);</span>
+<span class="nc" id="L87">		contentPane.add(reviewText);</span>
+		
+<span class="nc" id="L89">		starsLabel.setVisible(false);</span>
+<span class="nc" id="L90">		reviewLabel.setVisible(false);</span>
+<span class="nc" id="L91">		starsText.setVisible(false);</span>
+<span class="nc" id="L92">		reviewText.setVisible(false);</span>
+		
+<span class="nc bnc" id="L94" title="All 2 branches missed.">		for (Assessment actualAssessment : driver.getAssessments()){</span>
+<span class="nc bnc" id="L95" title="All 2 branches missed.">        	if (balorazioaDu == false) {</span>
+<span class="nc" id="L96">        		balorazioaDu = true;</span>
+<span class="nc" id="L97">        		String actualStars = actualAssessment.getStars()+&quot;/5&quot;;</span>
+<span class="nc" id="L98">				String actualReview = actualAssessment.getText();</span>
+<span class="nc" id="L99">				starsText.setText(actualStars);</span>
+<span class="nc" id="L100">				reviewText.setText(actualReview);</span>
+				
+<span class="nc" id="L102">				starsLabel.setVisible(true);</span>
+<span class="nc" id="L103">				reviewLabel.setVisible(true);</span>
+<span class="nc" id="L104">				starsText.setVisible(true);</span>
+<span class="nc" id="L105">				reviewText.setVisible(true);</span>
+<span class="nc" id="L106">				noAssessmentLabel.setVisible(false);</span>
+				
+        	}
+<span class="nc" id="L109">            assessmentComboBox.addItem(actualAssessment);</span>
+<span class="nc" id="L110">        }</span>
+		
+<span class="nc" id="L112">		assessmentComboBox.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L114">				Assessment selectedAssessment = (Assessment) assessmentComboBox.getSelectedItem();</span>
+<span class="nc" id="L115">				String actualStars = selectedAssessment.getStars()+&quot;/5&quot;;</span>
+<span class="nc" id="L116">				String actualReview = selectedAssessment.getText();</span>
+<span class="nc" id="L117">				starsText.setText(actualStars);</span>
+<span class="nc" id="L118">				reviewText.setText(actualReview);</span>
+<span class="nc" id="L119">			}</span>
+		});
+		
+<span class="nc" id="L122">		jButtonClose.addActionListener(new ActionListener()</span>
+<span class="nc" id="L123">		{</span>
+			public void actionPerformed(ActionEvent e)
+			{
+<span class="nc" id="L126">				jButton2_actionPerformed(e);</span>
+<span class="nc" id="L127">			}</span>
+		});
+<span class="nc" id="L129">	}</span>
+	private void jButton2_actionPerformed(ActionEvent e) {
+<span class="nc" id="L131">		this.setVisible(false);</span>
+<span class="nc" id="L132">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

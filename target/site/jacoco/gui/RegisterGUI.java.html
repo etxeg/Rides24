@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>RegisterGUI.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Rides24</a> &gt; <a href="index.source.html" class="el_package">gui</a> &gt; <span class="el_source">RegisterGUI.java</span></div><h1>RegisterGUI.java</h1><pre class="source lang-java linenums">package gui;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+import businessLogic.BLFacade;
+import domain.Driver;
+import domain.Traveler;
+import domain.User;
+
+import javax.swing.JTextField;
+import javax.swing.JLabel;
+import javax.swing.JPasswordField;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.util.ResourceBundle;
+import java.awt.event.ActionEvent;
+import javax.swing.JTextPane;
+import javax.swing.JCheckBox;
+import javax.swing.JTextArea;
+import javax.swing.JToggleButton;
+import javax.swing.JComboBox;
+
+public class RegisterGUI extends JFrame {
+
+	private static final long serialVersionUID = 1L;
+	private JPanel contentPane;
+	private JTextField textErabiltzailea;
+	private JPasswordField passwordField;
+<span class="nc" id="L36">	private DefaultComboBoxModel erabiltzaileak = new DefaultComboBoxModel();</span>
+	private JTextField textEmail;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+<span class="nc" id="L43">		EventQueue.invokeLater(new Runnable() {</span>
+			public void run() {
+				try {
+<span class="nc" id="L46">					RegisterGUI frame = new RegisterGUI();</span>
+<span class="nc" id="L47">					frame.setVisible(true);</span>
+<span class="nc" id="L48">				} catch (Exception e) {</span>
+<span class="nc" id="L49">					e.printStackTrace();</span>
+<span class="nc" id="L50">				}</span>
+<span class="nc" id="L51">			}</span>
+		});
+<span class="nc" id="L53">	}</span>
+
+	/**
+	 * Create the frame.
+	 */
+<span class="nc" id="L58">	public RegisterGUI() {</span>
+<span class="nc" id="L59">		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);</span>
+<span class="nc" id="L60">		addWindowListener(new WindowAdapter() {</span>
+			@Override
+			public void windowClosing(WindowEvent evt) {
+<span class="nc" id="L63">				JFrame a = new MainGUI();</span>
+<span class="nc" id="L64">				a.setVisible(true);</span>
+<span class="nc" id="L65">				dispose();</span>
+<span class="nc" id="L66">			}</span>
+		});
+<span class="nc" id="L68">		setBounds(100, 100, 450, 300);</span>
+<span class="nc" id="L69">		contentPane = new JPanel();</span>
+<span class="nc" id="L70">		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));</span>
+
+<span class="nc" id="L72">		setContentPane(contentPane);</span>
+<span class="nc" id="L73">		contentPane.setLayout(null);</span>
+		
+<span class="nc" id="L75">		textErabiltzailea = new JTextField();</span>
+<span class="nc" id="L76">		textErabiltzailea.setBounds(251, 32, 96, 19);</span>
+<span class="nc" id="L77">		contentPane.add(textErabiltzailea);</span>
+<span class="nc" id="L78">		textErabiltzailea.setColumns(10);</span>
+		
+<span class="nc" id="L80">		JLabel erabiltzaileaLabel = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;RegisterGUI.User&quot;));</span>
+<span class="nc" id="L81">		erabiltzaileaLabel.setBounds(95, 36, 86, 13);</span>
+<span class="nc" id="L82">		contentPane.add(erabiltzaileaLabel);</span>
+		
+<span class="nc" id="L84">		JLabel pasahitzaLabel = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;RegisterGUI.Password&quot;));</span>
+<span class="nc" id="L85">		pasahitzaLabel.setBounds(95, 89, 86, 13);</span>
+<span class="nc" id="L86">		contentPane.add(pasahitzaLabel);</span>
+		
+<span class="nc" id="L88">		JTextPane sarreraText = new JTextPane();</span>
+<span class="nc" id="L89">		sarreraText.setEditable(false);</span>
+<span class="nc" id="L90">		sarreraText.setBounds(95, 137, 252, 57);</span>
+<span class="nc" id="L91">		contentPane.add(sarreraText);</span>
+		
+<span class="nc" id="L93">		JLabel motaLabel = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;RegisterGUI.Type&quot;));</span>
+<span class="nc" id="L94">		motaLabel.setBounds(95, 113, 86, 13);</span>
+<span class="nc" id="L95">		contentPane.add(motaLabel);</span>
+		
+<span class="nc" id="L97">		JLabel emailLabel = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;RegisterGUI.Email&quot;));</span>
+<span class="nc" id="L98">		emailLabel.setBounds(95, 60, 46, 14);</span>
+<span class="nc" id="L99">		contentPane.add(emailLabel);</span>
+		
+<span class="nc" id="L101">		passwordField = new JPasswordField();</span>
+<span class="nc" id="L102">		passwordField.setBounds(251, 85, 96, 19);</span>
+<span class="nc" id="L103">		contentPane.add(passwordField);</span>
+		
+<span class="nc" id="L105">		JComboBox textMota = new JComboBox();</span>
+<span class="nc" id="L106">		textMota.setBounds(251, 108, 96, 22);</span>
+<span class="nc" id="L107">		contentPane.add(textMota);</span>
+<span class="nc" id="L108">		textMota.setModel(erabiltzaileak);</span>
+		
+<span class="nc" id="L110">		textEmail = new JTextField();</span>
+<span class="nc" id="L111">		textEmail.setColumns(10);</span>
+<span class="nc" id="L112">		textEmail.setBounds(251, 57, 96, 19);</span>
+<span class="nc" id="L113">		contentPane.add(textEmail);</span>
+<span class="nc" id="L114">		erabiltzaileak.addElement(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;RegisterGUI.Driver&quot;));</span>
+<span class="nc" id="L115">		erabiltzaileak.addElement(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;RegisterGUI.Traveler&quot;));</span>
+		
+<span class="nc" id="L117">		JButton sartuBotoia = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;RegisterGUI.Enter&quot;));</span>
+<span class="nc" id="L118">		sartuBotoia.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L120">				String izena = textErabiltzailea.getText();</span>
+<span class="nc" id="L121">				String pasahitza = new String(passwordField.getPassword());</span>
+<span class="nc" id="L122">				String email = textEmail.getText();</span>
+<span class="nc" id="L123">				String mota = erabiltzaileak.getSelectedItem().toString();</span>
+<span class="nc bnc" id="L124" title="All 8 branches missed.">				if (!izena.isEmpty() &amp;&amp; !pasahitza.isEmpty() &amp;&amp; !email.isEmpty() &amp;&amp; !mota.isEmpty()) {</span>
+<span class="nc" id="L125">					BLFacade facade = MainGUI.getBusinessLogic();</span>
+<span class="nc" id="L126">					User user = facade.register(izena, email, pasahitza, mota);</span>
+<span class="nc bnc" id="L127" title="All 2 branches missed.">					if (user!=null) {</span>
+<span class="nc" id="L128">						sarreraText.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;RegisterGUI.Success&quot;));</span>
+<span class="nc bnc" id="L129" title="All 2 branches missed.">						if (user instanceof Driver) { //Driver-bat da</span>
+<span class="nc" id="L130">							DriverGUI a=new DriverGUI((Driver)user);</span>
+<span class="nc" id="L131">							a.setVisible(true);</span>
+<span class="nc" id="L132">							closeWindow(e);</span>
+<span class="nc" id="L133">						} else {</span>
+<span class="nc" id="L134">							TravelerGUI a=new TravelerGUI((Traveler)user);</span>
+<span class="nc" id="L135">							a.setVisible(true);</span>
+<span class="nc" id="L136">							closeWindow(e);</span>
+<span class="nc" id="L137">						}</span>
+					} else {
+<span class="nc" id="L139">						sarreraText.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;RegisterGUI.AccountAlreadyExistErrorMsg&quot;));</span>
+					}
+					
+<span class="nc" id="L142">				} else {</span>
+<span class="nc" id="L143">					sarreraText.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;RegisterGUI.InvalidDataErrorMsg&quot;));</span>
+				}
+<span class="nc" id="L145">			}</span>
+		});
+<span class="nc" id="L147">		sartuBotoia.setBounds(168, 205, 113, 21);</span>
+<span class="nc" id="L148">		contentPane.add(sartuBotoia);</span>
+		
+		
+<span class="nc" id="L151">	}</span>
+	private void closeWindow(ActionEvent e) {
+<span class="nc" id="L153">		this.setVisible(false);</span>
+<span class="nc" id="L154">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

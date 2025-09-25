@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AssessmentGUI.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Rides24</a> &gt; <a href="index.source.html" class="el_package">gui</a> &gt; <span class="el_source">AssessmentGUI.java</span></div><h1>AssessmentGUI.java</h1><pre class="source lang-java linenums">package gui;
+
+import java.awt.EventQueue;
+import java.awt.Rectangle;
+import java.util.List;
+import java.util.ResourceBundle;
+import java.util.Vector;
+
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.border.EmptyBorder;
+import javax.swing.table.DefaultTableModel;
+
+import businessLogic.BLFacade;
+import domain.Assessment;
+import domain.Driver;
+import domain.Reservation;
+import domain.Ride;
+import domain.Traveler;
+
+import javax.swing.JLabel;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.SwingConstants;
+import javax.swing.JRadioButton;
+import javax.swing.ButtonGroup;
+import javax.swing.JTextPane;
+
+public class AssessmentGUI extends JFrame {
+
+	private static final long serialVersionUID = 1L;
+	private JPanel contentPane;
+<span class="nc" id="L37">	private final ButtonGroup buttonGroup = new ButtonGroup();</span>
+	private DefaultTableModel tableModelRides;
+<span class="nc" id="L39">	private String[] columnNamesRides = new String[] {</span>
+<span class="nc" id="L40">			ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Traveler&quot;),</span>
+<span class="nc" id="L41">			ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ManageReservationsGUI.nSeats&quot;)</span>
+	};
+<span class="nc" id="L43">	private JComboBox&lt;Reservation&gt; rideComboBox = new JComboBox&lt;Reservation&gt;();</span>
+<span class="nc" id="L44">	private final ButtonGroup buttonGroup_1 = new ButtonGroup();</span>
+
+	/**
+	 * Create the frame.
+	 */
+<span class="nc" id="L49">	public AssessmentGUI(Traveler traveler) {</span>
+<span class="nc" id="L50">		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);</span>
+<span class="nc" id="L51">		setBounds(100, 100, 450, 300);</span>
+<span class="nc" id="L52">		contentPane = new JPanel();</span>
+<span class="nc" id="L53">		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));</span>
+
+<span class="nc" id="L55">		setContentPane(contentPane);</span>
+<span class="nc" id="L56">		contentPane.setLayout(null);</span>
+		
+<span class="nc" id="L58">		BLFacade facade = MainGUI.getBusinessLogic();</span>
+		
+<span class="nc" id="L60">		JLabel reservationText = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ReservationStateGUI.SelectReservation&quot;));</span>
+<span class="nc" id="L61">		reservationText.setHorizontalAlignment(SwingConstants.CENTER);</span>
+<span class="nc" id="L62">		reservationText.setBounds(83, 28, 260, 20);</span>
+<span class="nc" id="L63">		contentPane.add(reservationText);</span>
+		
+<span class="nc bnc" id="L65" title="All 2 branches missed.">        for (Reservation actualReservation : traveler.getReservations()){</span>
+<span class="nc bnc" id="L66" title="All 2 branches missed.">        	if (actualReservation.isBaieztatua()) {</span>
+<span class="nc" id="L67">        		rideComboBox.addItem(actualReservation);</span>
+        	}
+<span class="nc" id="L69">        }</span>
+<span class="nc" id="L70">        rideComboBox.setBounds(63, 58, 300, 20);</span>
+<span class="nc" id="L71">        contentPane.add(rideComboBox);</span>
+		
+<span class="nc" id="L73">		JButton jButtonSend = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Send&quot;));</span>
+		
+<span class="nc" id="L75">		jButtonSend.setBounds(168, 232, 100, 21);</span>
+<span class="nc" id="L76">		contentPane.add(jButtonSend);</span>
+		
+<span class="nc" id="L78">		JRadioButton rdbtnBal1 = new JRadioButton();</span>
+<span class="nc" id="L79">		buttonGroup_1.add(rdbtnBal1);</span>
+<span class="nc" id="L80">		rdbtnBal1.setText(&quot;1&quot;);</span>
+<span class="nc" id="L81">		rdbtnBal1.setBounds(120, 132, 41, 21);</span>
+<span class="nc" id="L82">		contentPane.add(rdbtnBal1);</span>
+		
+<span class="nc" id="L84">		JRadioButton rdbtnBal2 = new JRadioButton();</span>
+<span class="nc" id="L85">		buttonGroup_1.add(rdbtnBal2);</span>
+<span class="nc" id="L86">		rdbtnBal2.setText(&quot;2&quot;);</span>
+<span class="nc" id="L87">		rdbtnBal2.setBounds(162, 132, 41, 21);</span>
+<span class="nc" id="L88">		contentPane.add(rdbtnBal2);</span>
+		
+<span class="nc" id="L90">		JRadioButton rdbtnBal3 = new JRadioButton();</span>
+<span class="nc" id="L91">		buttonGroup_1.add(rdbtnBal3);</span>
+<span class="nc" id="L92">		rdbtnBal3.setText(&quot;3&quot;);</span>
+<span class="nc" id="L93">		rdbtnBal3.setBounds(204, 132, 41, 21);</span>
+<span class="nc" id="L94">		contentPane.add(rdbtnBal3);</span>
+		
+<span class="nc" id="L96">		JRadioButton rdbtnBal4 = new JRadioButton();</span>
+<span class="nc" id="L97">		buttonGroup_1.add(rdbtnBal4);</span>
+<span class="nc" id="L98">		rdbtnBal4.setText(&quot;4&quot;);</span>
+<span class="nc" id="L99">		rdbtnBal4.setBounds(246, 132, 41, 21);</span>
+<span class="nc" id="L100">		contentPane.add(rdbtnBal4);</span>
+		
+<span class="nc" id="L102">		JRadioButton rdbtnBal5 = new JRadioButton();</span>
+<span class="nc" id="L103">		buttonGroup_1.add(rdbtnBal5);</span>
+<span class="nc" id="L104">		rdbtnBal5.setText(&quot;5&quot;);</span>
+<span class="nc" id="L105">		rdbtnBal5.setBounds(289, 132, 41, 21);</span>
+<span class="nc" id="L106">		contentPane.add(rdbtnBal5);</span>
+		
+<span class="nc" id="L108">		JLabel BalText = new JLabel(&quot;Balorazioa&quot;);</span>
+<span class="nc" id="L109">		BalText.setHorizontalAlignment(SwingConstants.CENTER);</span>
+<span class="nc" id="L110">		BalText.setBounds(83, 99, 260, 13);</span>
+<span class="nc" id="L111">		contentPane.add(BalText);</span>
+		
+<span class="nc" id="L113">		JTextPane textPane = new JTextPane();</span>
+<span class="nc" id="L114">		textPane.setBounds(63, 159, 300, 63);</span>
+<span class="nc" id="L115">		contentPane.add(textPane);</span>
+		
+<span class="nc" id="L117">		jButtonSend.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L119">				Reservation reservation = (Reservation) rideComboBox.getSelectedItem();</span>
+<span class="nc" id="L120">				int star = 0;</span>
+<span class="nc bnc" id="L121" title="All 2 branches missed.">				if (rdbtnBal1.isSelected()) {</span>
+<span class="nc" id="L122">					star = 1;</span>
+<span class="nc bnc" id="L123" title="All 2 branches missed.">				} else if (rdbtnBal2.isSelected()) {</span>
+<span class="nc" id="L124">					star = 2;</span>
+<span class="nc bnc" id="L125" title="All 2 branches missed.">				} else if (rdbtnBal3.isSelected()) {</span>
+<span class="nc" id="L126">					star = 3;</span>
+<span class="nc bnc" id="L127" title="All 2 branches missed.">				} else if (rdbtnBal4.isSelected()) {</span>
+<span class="nc" id="L128">					star = 4;</span>
+<span class="nc bnc" id="L129" title="All 2 branches missed.">				} else if (rdbtnBal5.isSelected()) {</span>
+<span class="nc" id="L130">					star = 5;</span>
+				}
+<span class="nc" id="L132">				String text = textPane.getText();</span>
+<span class="nc bnc" id="L133" title="All 2 branches missed.">				if (star &gt; 0) {</span>
+<span class="nc" id="L134">					Assessment assessment = facade.createAssessment(reservation.getRide(), traveler, star, text);</span>
+<span class="nc bnc" id="L135" title="All 2 branches missed.">					if (assessment != null) {</span>
+<span class="nc" id="L136">						jButton2_actionPerformed(e);</span>
+					}
+				}
+<span class="nc" id="L139">			}</span>
+		});
+<span class="nc" id="L141">	}</span>
+	private void jButton2_actionPerformed(ActionEvent e) {
+<span class="nc" id="L143">		this.setVisible(false);</span>
+<span class="nc" id="L144">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Car.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Rides24</a> &gt; <a href="index.source.html" class="el_package">domain</a> &gt; <span class="el_source">Car.java</span></div><h1>Car.java</h1><pre class="source lang-java linenums">package domain;
+
+import javax.persistence.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlIDREF;
+
+@XmlAccessorType(XmlAccessType.FIELD)
+@Entity
+public class Car  {
+	
+	/**
+	 * 
+	 */
+	@XmlIDREF
+	@Id
+	private String matrikula;
+	private Driver driver;
+	private int plazak;
+	private String marka;
+
+<span class="fc" id="L22">	public Car(String pMatrikula, Driver pDriver, int pPlazak, String pMarka) {</span>
+<span class="fc" id="L23">		this.matrikula = pMatrikula;</span>
+<span class="fc" id="L24">		this.driver = pDriver;</span>
+<span class="fc" id="L25">		this.plazak = pPlazak;</span>
+<span class="fc" id="L26">		this.marka = pMarka;</span>
+<span class="fc" id="L27">	}</span>
+
+	public String getMatrikula() {
+<span class="nc" id="L30">		return matrikula;</span>
+	}
+
+	public void setMatrikula(String matrikula) {
+<span class="nc" id="L34">		this.matrikula = matrikula;</span>
+<span class="nc" id="L35">	}</span>
+
+	public Driver getDriver() {
+<span class="nc" id="L38">		return driver;</span>
+	}
+
+	public void setDriver(Driver driver) {
+<span class="nc" id="L42">		this.driver = driver;</span>
+<span class="nc" id="L43">	}</span>
+
+	public int getPlazak() {
+<span class="fc" id="L46">		return plazak;</span>
+	}
+
+	public void setPlazak(int plazak) {
+<span class="nc" id="L50">		this.plazak = plazak;</span>
+<span class="nc" id="L51">	}</span>
+
+	public String getMarka() {
+<span class="nc" id="L54">		return marka;</span>
+	}
+
+	public void setMarka(String marka) {
+<span class="nc" id="L58">		this.marka = marka;</span>
+<span class="nc" id="L59">	}</span>
+
+	@Override
+	public String toString() {
+<span class="nc" id="L63">		return this.marka+&quot;-&quot;+this.matrikula;</span>
+	}
+	
+	
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

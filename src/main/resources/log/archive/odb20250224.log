@@ -1,0 +1,968 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-24 12:40:00 #1 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' is opened by 59112@ByNekox
+
+[2025-02-24 12:40:01 #2 type.registry] 
+New type domain.User
+
+[2025-02-24 12:40:01 #3 type.registry] 
+New type domain.Driver
+
+[2025-02-24 12:40:01 #4 type] 
+Type domain.User is not enhanced.
+
+[2025-02-24 12:40:01 #5 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-24 12:40:01 #6 type.registry] 
+New type domain.Ride
+
+[2025-02-24 12:40:01 #7 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-24 12:40:01 #8 type.registry] 
+New type domain.Reservation
+
+[2025-02-24 12:40:01 #9 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-02-24 12:40:01 #10 type.registry] 
+New type domain.Traveler
+
+[2025-02-24 12:40:01 #11 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-02-24 12:40:01 #12 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-02-24 12:40:01 #13 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+[2025-02-24 12:40:01 #14 type.registry] 
+New type java.util.Vector<domain.Reservation>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-24 12:44:03 #1 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' is opened by 57936@ByNekox
+
+[2025-02-24 12:44:03 #2 type.registry] 
+New type domain.User
+
+[2025-02-24 12:44:03 #3 type.registry] 
+New type domain.Driver
+
+[2025-02-24 12:44:03 #4 type] 
+Type domain.User is not enhanced.
+
+[2025-02-24 12:44:03 #5 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-24 12:44:03 #6 type.registry] 
+New type domain.Ride
+
+[2025-02-24 12:44:03 #7 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-24 12:44:03 #8 type.registry] 
+New type domain.Reservation
+
+[2025-02-24 12:44:03 #9 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-02-24 12:44:03 #10 type.registry] 
+New type domain.Traveler
+
+[2025-02-24 12:44:03 #11 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-02-24 12:44:03 #12 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-02-24 12:44:03 #13 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+[2025-02-24 12:44:03 #14 type.registry] 
+New type java.util.Vector<domain.Reservation>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-24 12:47:20 #1 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' is opened by 53500@ByNekox
+
+[2025-02-24 12:47:20 #2 type.registry] 
+New type domain.User
+
+[2025-02-24 12:47:20 #3 type.registry] 
+New type domain.Driver
+
+[2025-02-24 12:47:20 #4 type] 
+Type domain.User is not enhanced.
+
+[2025-02-24 12:47:20 #5 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-24 12:47:20 #6 type.registry] 
+New type domain.Ride
+
+[2025-02-24 12:47:20 #7 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-24 12:47:20 #8 type.registry] 
+New type domain.Reservation
+
+[2025-02-24 12:47:20 #9 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-02-24 12:47:20 #10 type.registry] 
+New type domain.Traveler
+
+[2025-02-24 12:47:20 #11 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-02-24 12:47:20 #12 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-02-24 12:47:20 #13 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+[2025-02-24 12:47:20 #14 type.registry] 
+New type java.util.Vector<domain.Reservation>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-24 12:53:07 #1 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' has been recovered (tr. 1-8)
+
+[2025-02-24 12:53:07 #2 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' is opened by 53904@ByNekox
+
+[2025-02-24 12:53:08 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-02-24 12:53:08 #4 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-24 12:53:08 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-24 12:53:08 #6 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-02-24 12:53:08 #7 type] 
+Type domain.Traveler is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-24 12:53:54 #1 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' has been recovered (tr. 9-12)
+
+[2025-02-24 12:53:54 #2 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' is opened by 56088@ByNekox
+
+[2025-02-24 12:53:55 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-02-24 12:53:55 #4 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-24 12:53:55 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-24 12:53:55 #6 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-02-24 12:53:55 #7 type] 
+Type domain.Traveler is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-24 12:54:15 #1 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' has been recovered (tr. 13-15)
+
+[2025-02-24 12:54:15 #2 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' is opened by 58504@ByNekox
+
+[2025-02-24 12:54:15 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-02-24 12:54:15 #4 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-24 12:54:15 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-24 12:54:15 #6 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-02-24 12:54:15 #7 type] 
+Type domain.Traveler is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-24 12:57:43 #1 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' is opened by 59344@ByNekox
+
+[2025-02-24 12:57:43 #2 type] 
+Type domain.User is not enhanced.
+
+[2025-02-24 12:57:43 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-24 12:57:43 #4 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-24 12:57:43 #5 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-02-24 12:57:43 #6 type] 
+Type domain.Traveler is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-24 13:00:52 #1 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' is opened by 59316@ByNekox
+
+[2025-02-24 13:00:52 #2 type] 
+Type domain.User is not enhanced.
+
+[2025-02-24 13:00:52 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-24 13:00:52 #4 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-24 13:00:52 #5 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-02-24 13:00:52 #6 type] 
+Type domain.Traveler is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-24 13:01:37 #1 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' is opened by 49456@ByNekox
+
+[2025-02-24 13:01:38 #2 type] 
+Type domain.User is not enhanced.
+
+[2025-02-24 13:01:38 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-24 13:01:38 #4 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-24 13:01:38 #5 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-02-24 13:01:38 #6 type] 
+Type domain.Traveler is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-24 13:03:48 #1 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' is opened by 52096@ByNekox
+
+[2025-02-24 13:03:48 #2 type] 
+Type domain.User is not enhanced.
+
+[2025-02-24 13:03:48 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-24 13:03:48 #4 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-24 13:03:48 #5 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-02-24 13:03:48 #6 type] 
+Type domain.Traveler is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-24 13:07:19 #1 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' is opened by 57940@ByNekox
+
+[2025-02-24 13:07:19 #2 type] 
+Type domain.User is not enhanced.
+
+[2025-02-24 13:07:19 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-24 13:07:19 #4 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-24 13:07:19 #5 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-02-24 13:07:19 #6 type] 
+Type domain.Traveler is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-24 13:08:48 #1 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' is opened by 45184@ByNekox
+
+[2025-02-24 13:08:48 #2 type] 
+Type domain.User is not enhanced.
+
+[2025-02-24 13:08:48 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-24 13:08:48 #4 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-24 13:08:48 #5 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-02-24 13:08:48 #6 type] 
+Type domain.Traveler is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-24 13:10:47 #1 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' is opened by 29864@ByNekox
+
+[2025-02-24 13:10:47 #2 type] 
+Type domain.User is not enhanced.
+
+[2025-02-24 13:10:47 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-24 13:10:47 #4 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-24 13:10:47 #5 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-02-24 13:10:47 #6 type] 
+Type domain.Traveler is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-24 13:13:24 #1 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' is opened by 58760@ByNekox
+
+[2025-02-24 13:13:25 #2 type] 
+Type domain.User is not enhanced.
+
+[2025-02-24 13:13:25 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-24 13:13:25 #4 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-24 13:13:25 #5 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-02-24 13:13:25 #6 type] 
+Type domain.Traveler is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-24 16:45:45 #1 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' is opened by 35568@ByNekox
+
+[2025-02-24 16:45:45 #2 type] 
+Type domain.User is not enhanced.
+
+[2025-02-24 16:45:45 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-24 16:45:45 #4 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-24 16:45:45 #5 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-02-24 16:45:45 #6 type] 
+Type domain.Traveler is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-24 16:53:07 #1 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' has been recovered (tr. 17-17)
+
+[2025-02-24 16:53:07 #2 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' is opened by 52144@ByNekox
+
+[2025-02-24 16:53:08 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-02-24 16:53:08 #4 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-24 16:53:08 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-24 16:53:08 #6 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-02-24 16:53:08 #7 type] 
+Type domain.Traveler is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-24 17:14:08 #1 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' has been recovered (tr. 18-19)
+
+[2025-02-24 17:14:08 #2 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' is opened by 56084@ByNekox
+
+[2025-02-24 17:14:08 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-02-24 17:14:08 #4 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-24 17:14:08 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-24 17:14:08 #6 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-02-24 17:14:08 #7 type] 
+Type domain.Traveler is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-24 17:15:15 #1 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' is opened by 35328@ByNekox
+
+[2025-02-24 17:15:15 #2 type.registry] 
+New type domain.User
+
+[2025-02-24 17:15:15 #3 type.registry] 
+New type domain.Driver
+
+[2025-02-24 17:15:15 #4 type] 
+Type domain.User is not enhanced.
+
+[2025-02-24 17:15:15 #5 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-24 17:15:15 #6 type.registry] 
+New type domain.Ride
+
+[2025-02-24 17:15:15 #7 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-24 17:15:15 #8 type.registry] 
+New type domain.Reservation
+
+[2025-02-24 17:15:15 #9 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-02-24 17:15:15 #10 type.registry] 
+New type domain.Traveler
+
+[2025-02-24 17:15:15 #11 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-02-24 17:15:15 #12 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-02-24 17:15:15 #13 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+[2025-02-24 17:15:15 #14 type.registry] 
+New type java.util.Vector<domain.Reservation>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-24 17:15:38 #1 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' has been recovered (tr. 1-7)
+
+[2025-02-24 17:15:38 #2 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' is opened by 24748@ByNekox
+
+[2025-02-24 17:15:38 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-02-24 17:15:38 #4 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-24 17:15:38 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-24 17:15:38 #6 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-02-24 17:15:38 #7 type] 
+Type domain.Traveler is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-24 17:17:17 #1 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' is opened by 52540@ByNekox
+
+[2025-02-24 17:17:17 #2 type] 
+Type domain.User is not enhanced.
+
+[2025-02-24 17:17:17 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-24 17:17:17 #4 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-24 17:17:17 #5 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-02-24 17:17:17 #6 type] 
+Type domain.Traveler is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-24 17:18:21 #1 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' is opened by 54172@ByNekox
+
+[2025-02-24 17:18:21 #2 type] 
+Type domain.User is not enhanced.
+
+[2025-02-24 17:18:21 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-24 17:18:21 #4 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-24 17:18:21 #5 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-02-24 17:18:21 #6 type] 
+Type domain.Traveler is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-24 17:20:12 #1 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' has been recovered (tr. 8-22)
+
+[2025-02-24 17:20:12 #2 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' is opened by 37812@ByNekox
+
+[2025-02-24 17:20:12 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-02-24 17:20:12 #4 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-24 17:20:12 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-24 17:20:12 #6 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-02-24 17:20:12 #7 type] 
+Type domain.Traveler is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-24 17:35:54 #1 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' has been recovered (tr. 23-26)
+
+[2025-02-24 17:35:54 #2 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' is opened by 47368@ByNekox
+
+[2025-02-24 17:35:55 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-02-24 17:35:55 #4 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-24 17:35:55 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-24 17:35:55 #6 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-02-24 17:35:55 #7 type] 
+Type domain.Traveler is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-24 17:37:47 #1 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' has been recovered (tr. 27-29)
+
+[2025-02-24 17:37:48 #2 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' is opened by 46760@ByNekox
+
+[2025-02-24 17:37:48 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-02-24 17:37:48 #4 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-24 17:37:48 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-24 17:37:48 #6 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-02-24 17:37:48 #7 type] 
+Type domain.Traveler is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-24 17:45:07 #1 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' has been recovered (tr. 30-32)
+
+[2025-02-24 17:45:07 #2 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' is opened by 55384@ByNekox
+
+[2025-02-24 17:45:08 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-02-24 17:45:08 #4 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-24 17:45:08 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-24 17:45:08 #6 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-02-24 17:45:08 #7 type] 
+Type domain.Traveler is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-24 17:45:16 #1 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' is opened by 55924@ByNekox
+
+[2025-02-24 17:45:16 #2 type] 
+Type domain.User is not enhanced.
+
+[2025-02-24 17:45:16 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-24 17:45:16 #4 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-24 17:45:16 #5 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-02-24 17:45:16 #6 type] 
+Type domain.Traveler is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-24 18:08:25 #1 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' is opened by 56820@ByNekox
+
+[2025-02-24 18:08:25 #2 type] 
+Type domain.User is not enhanced.
+
+[2025-02-24 18:08:25 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-24 18:08:25 #4 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-24 18:08:25 #5 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-02-24 18:08:25 #6 type] 
+Type domain.Traveler is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-24 18:16:33 #1 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' has been recovered (tr. 33-34)
+
+[2025-02-24 18:16:33 #2 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' is opened by 41900@ByNekox
+
+[2025-02-24 18:16:33 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-02-24 18:16:33 #4 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-24 18:16:33 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-24 18:16:33 #6 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-02-24 18:16:33 #7 type] 
+Type domain.Traveler is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-24 18:17:40 #1 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' is opened by 30456@ByNekox
+
+[2025-02-24 18:17:41 #2 type] 
+Type domain.User is not enhanced.
+
+[2025-02-24 18:17:41 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-24 18:17:41 #4 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-24 18:17:41 #5 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-02-24 18:17:41 #6 type] 
+Type domain.Traveler is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-24 18:19:37 #1 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' is opened by 42364@ByNekox
+
+[2025-02-24 18:19:37 #2 type] 
+Type domain.User is not enhanced.
+
+[2025-02-24 18:19:37 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-24 18:19:37 #4 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-24 18:19:37 #5 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-02-24 18:19:37 #6 type] 
+Type domain.Traveler is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-24 18:22:09 #1 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' is opened by 57124@ByNekox
+
+[2025-02-24 18:22:10 #2 type.registry] 
+New type domain.User
+
+[2025-02-24 18:22:10 #3 type.registry] 
+New type domain.Driver
+
+[2025-02-24 18:22:10 #4 type] 
+Type domain.User is not enhanced.
+
+[2025-02-24 18:22:10 #5 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-24 18:22:10 #6 type.registry] 
+New type domain.Ride
+
+[2025-02-24 18:22:10 #7 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-24 18:22:10 #8 type.registry] 
+New type domain.Reservation
+
+[2025-02-24 18:22:10 #9 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-02-24 18:22:10 #10 type.registry] 
+New type domain.Traveler
+
+[2025-02-24 18:22:10 #11 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-02-24 18:22:10 #12 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-02-24 18:22:10 #13 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+[2025-02-24 18:22:10 #14 type.registry] 
+New type java.util.Vector<domain.Reservation>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-24 18:22:25 #1 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' has been recovered (tr. 1-7)
+
+[2025-02-24 18:22:25 #2 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' is opened by 43752@ByNekox
+
+[2025-02-24 18:22:25 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-02-24 18:22:25 #4 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-24 18:22:25 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-24 18:22:25 #6 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-02-24 18:22:25 #7 type] 
+Type domain.Traveler is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-24 18:23:30 #1 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' is opened by 58004@ByNekox
+
+[2025-02-24 18:23:30 #2 type] 
+Type domain.User is not enhanced.
+
+[2025-02-24 18:23:30 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-24 18:23:30 #4 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-24 18:23:30 #5 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-02-24 18:23:30 #6 type] 
+Type domain.Traveler is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-24 18:23:48 #1 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' is opened by 50384@ByNekox
+
+[2025-02-24 18:23:48 #2 type] 
+Type domain.User is not enhanced.
+
+[2025-02-24 18:23:48 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-24 18:23:48 #4 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-24 18:23:48 #5 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-02-24 18:23:48 #6 type] 
+Type domain.Traveler is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-24 18:24:30 #1 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' has been recovered (tr. 8-10)
+
+[2025-02-24 18:24:31 #2 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' is opened by 59792@ByNekox
+
+[2025-02-24 18:24:31 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-02-24 18:24:31 #4 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-24 18:24:31 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-24 18:24:31 #6 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-02-24 18:24:31 #7 type] 
+Type domain.Traveler is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-24 18:30:41 #1 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' has been recovered (tr. 11-17)
+
+[2025-02-24 18:30:41 #2 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' is opened by 28400@ByNekox
+
+[2025-02-24 18:30:41 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-02-24 18:30:41 #4 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-24 18:30:41 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-24 18:30:41 #6 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-02-24 18:30:41 #7 type] 
+Type domain.Traveler is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-24 18:31:49 #1 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' is opened by 60772@ByNekox
+
+[2025-02-24 18:31:49 #2 type] 
+Type domain.User is not enhanced.
+
+[2025-02-24 18:31:49 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-24 18:31:49 #4 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-24 18:31:49 #5 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-02-24 18:31:49 #6 type] 
+Type domain.Traveler is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-24 18:41:18 #1 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' is opened by 52000@ByNekox
+
+[2025-02-24 18:41:18 #2 type] 
+Type domain.User is not enhanced.
+
+[2025-02-24 18:41:18 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-24 18:41:18 #4 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-24 18:41:18 #5 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-02-24 18:41:18 #6 type] 
+Type domain.Traveler is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-24 18:43:45 #1 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' has been recovered (tr. 18-22)
+
+[2025-02-24 18:43:45 #2 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' is opened by 23532@ByNekox
+
+[2025-02-24 18:43:46 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-02-24 18:43:46 #4 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-24 18:43:46 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-24 18:43:46 #6 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-02-24 18:43:46 #7 type] 
+Type domain.Traveler is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-24 18:44:46 #1 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' has been recovered (tr. 23-25)
+
+[2025-02-24 18:44:47 #2 store] 
+Database 'C:\Users\bynek\git\Rides241\src\main\resources\rides.temp' is opened by 59900@ByNekox
+
+[2025-02-24 18:44:47 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-02-24 18:44:47 #4 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-24 18:44:47 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-24 18:44:47 #6 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-02-24 18:44:47 #7 type] 
+Type domain.Traveler is not enhanced.
+
