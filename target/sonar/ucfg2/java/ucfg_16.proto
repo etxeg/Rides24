@@ -1,0 +1,185 @@
+
+>dataAccess.DataAccess#acceptReservation(Ldomain/Reservation;)ZN
+BC:/Users/USER/git/Rides24/src/main/java/dataAccess/DataAccess.java‡ ‡(!"15*ö
+13
+„ „(Å
+
+„ „(
+
+%3void"domain.Reservation#onartu()V*=
+
+__unknown_file (!
+
+	erreserbadomain.Reservation2onartu()*
+12*¥
+14
+‚ ‚(õò
+
+‚ ‚(
+
+%2void",javax.persistence.EntityTransaction#begin()V*G
+
+__unknown_file (+
+)
+%1#javax.persistence.EntityTransaction2begin()*
+13*˝
+15
+‚ ‚(z
+x
+
+‚ ‚(%
+%0javax.persistence.EntityManager"__id*=
+
+__unknown_file (!*
+dataAccess.DataAccess"
+dbËÂ
+
+‚ ‚()
+%1#javax.persistence.EntityTransaction"Ujavax.persistence.EntityManager#getTransaction()Ljavax/persistence/EntityTransaction;*C
+
+__unknown_file ('
+%
+%0javax.persistence.EntityManager2getTransaction()*
+14*%
+3
+È
+ È("
+
+È È(
+""*∂
+4
+Ë Ë(üú
+
+Ë Ë(
+%15void"-javax.persistence.EntityTransaction#commit()V*H
+
+__unknown_file (,
+*
+%14#javax.persistence.EntityTransaction2commit()*
+3*˛
+5
+Ë Ë({
+y
+
+Ë Ë(&
+%13javax.persistence.EntityManager"__id*=
+
+__unknown_file (!*
+dataAccess.DataAccess"
+dbÍÁ
+
+Ë Ë(*
+%14#javax.persistence.EntityTransaction"Ujavax.persistence.EntityManager#getTransaction()Ljavax/persistence/EntityTransaction;*D
+
+__unknown_file ((
+&
+%13javax.persistence.EntityManager2getTransaction()*
+4*ö
+6
+Á Á( ÉÄ
+
+Á Á( 
+%12domain.Ride"Kjavax.persistence.EntityManager#merge(Ljava/lang/Object;)Ljava/lang/Object;*D
+
+__unknown_file ((
+&
+%10javax.persistence.EntityManager*0
+
+__unknown_file (
+
+%11domain.Ride2merge(Ljava/lang/Object;)*
+5*¨
+7
+Á Á({
+y
+
+Á Á(&
+%10javax.persistence.EntityManager"__id*=
+
+__unknown_file (!*
+dataAccess.DataAccess"
+dbòï
+
+Á Á(
+%11domain.Ride")domain.Reservation#getRide()Ldomain/Ride;*=
+
+__unknown_file (!
+
+	erreserbadomain.Reservation2	getRide()*
+6*®
+8
+Ê Ê(z
+x
+
+Ê Ê(%
+%8javax.persistence.EntityManager"__id*=
+
+__unknown_file (!*
+dataAccess.DataAccess"
+dbïí
+
+Ê Ê(
+%9domain.Reservation"Kjavax.persistence.EntityManager#merge(Ljava/lang/Object;)Ljava/lang/Object;*C
+
+__unknown_file ('
+%
+%8javax.persistence.EntityManager*=
+
+__unknown_file (!
+
+	erreserbadomain.Reservation2merge(Ljava/lang/Object;)*
+7*ç
+9
+Â/ Â(8ˆÛ
+
+Â Â(9
+
+%7void":domain.Ride#addAcceptedReservations(Ldomain/Reservation;)V*/
+
+__unknown_file (
+
+%6domain.Ride*=
+
+__unknown_file (!
+
+	erreserbadomain.Reservation2-addAcceptedReservations(Ldomain/Reservation;)*
+8*Ø
+10
+Â Â(óî
+
+Â Â(
+%6domain.Ride")domain.Reservation#getRide()Ldomain/Ride;*=
+
+__unknown_file (!
+
+	erreserbadomain.Reservation2	getRide()*
+9*ë
+11
+‰0 ‰(9¯ı
+
+‰ ‰(:
+
+%5void";domain.Ride#removePendingReservation(Ldomain/Reservation;)V*/
+
+__unknown_file (
+
+%4domain.Ride*=
+
+__unknown_file (!
+
+	erreserbadomain.Reservation2.removePendingReservation(Ldomain/Reservation;)*
+10*∞
+12
+‰ ‰(óî
+
+‰ ‰(
+%4domain.Ride")domain.Reservation#getRide()Ldomain/Ride;*=
+
+__unknown_file (!
+
+	erreserbadomain.Reservation2	getRide()*
+11:-
+
+‡" ‡(7
+	erreserbadomain.ReservationB
+dataAccess.DataAccessHX

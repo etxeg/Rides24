@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AlertGUI.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Rides24</a> &gt; <a href="index.source.html" class="el_package">gui</a> &gt; <span class="el_source">AlertGUI.java</span></div><h1>AlertGUI.java</h1><pre class="source lang-java linenums">package gui;
+
+import java.util.Date;
+import java.util.ResourceBundle;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.border.EmptyBorder;
+
+import businessLogic.BLFacade;
+import domain.Traveler;
+import domain.User;
+import javax.swing.JLabel;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.awt.event.ActionEvent;
+import javax.swing.SwingConstants;
+
+public class AlertGUI extends JFrame {
+
+	private static final long serialVersionUID = 1L;
+	private JPanel contentPane;
+	private JTextField textFieldNondik;
+	private JTextField textFieldNora;
+	private JTextField textFieldData;
+<span class="nc" id="L30">	private BLFacade facade = MainGUI.getBusinessLogic();</span>
+ 
+<span class="nc" id="L32">	public AlertGUI(Traveler user) {</span>
+<span class="nc" id="L33">		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);</span>
+<span class="nc" id="L34">		setBounds(100, 100, 450, 300);</span>
+<span class="nc" id="L35">		contentPane = new JPanel();</span>
+<span class="nc" id="L36">		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));</span>
+
+<span class="nc" id="L38">		setContentPane(contentPane);</span>
+<span class="nc" id="L39">		contentPane.setLayout(null); </span>
+		
+<span class="nc" id="L41">		JLabel lblNondik = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;AlertGUI.Nondik&quot;));</span>
+<span class="nc" id="L42">		lblNondik.setBounds(60, 43, 102, 14);</span>
+<span class="nc" id="L43">		contentPane.add(lblNondik);</span>
+		
+<span class="nc" id="L45">		JLabel lblNora = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;AlertGUI.Nora&quot;));</span>
+<span class="nc" id="L46">		lblNora.setBounds(60, 77, 102, 14);</span>
+<span class="nc" id="L47">		contentPane.add(lblNora);</span>
+		
+<span class="nc" id="L49">		textFieldNondik = new JTextField();</span>
+<span class="nc" id="L50">		textFieldNondik.setBounds(188, 40, 86, 20);</span>
+<span class="nc" id="L51">		contentPane.add(textFieldNondik);</span>
+<span class="nc" id="L52">		textFieldNondik.setColumns(10);</span>
+		
+<span class="nc" id="L54">		textFieldNora = new JTextField();</span>
+<span class="nc" id="L55">		textFieldNora.setBounds(188, 74, 86, 20);</span>
+<span class="nc" id="L56">		contentPane.add(textFieldNora);</span>
+<span class="nc" id="L57">		textFieldNora.setColumns(10);</span>
+		
+<span class="nc" id="L59">		JLabel lblData = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;AlertGUI.Data&quot;));</span>
+<span class="nc" id="L60">		lblData.setBounds(60, 129, 102, 14);</span>
+<span class="nc" id="L61">		contentPane.add(lblData);</span>
+		
+<span class="nc" id="L63">		textFieldData = new JTextField();</span>
+<span class="nc" id="L64">		textFieldData.setBounds(188, 126, 86, 20);</span>
+<span class="nc" id="L65">		contentPane.add(textFieldData);</span>
+<span class="nc" id="L66">		textFieldData.setColumns(10);</span>
+		
+<span class="nc" id="L68">		JLabel errorTextLabel = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;AlertGUI.DateError&quot;));</span>
+<span class="nc" id="L69">		errorTextLabel.setHorizontalAlignment(SwingConstants.CENTER);</span>
+<span class="nc" id="L70">		errorTextLabel.setVisible(false);</span>
+<span class="nc" id="L71">		errorTextLabel.setBounds(54, 171, 342, 13);</span>
+<span class="nc" id="L72">		contentPane.add(errorTextLabel);</span>
+		
+<span class="nc" id="L74">		JButton jButtonCreateAlert = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;AlertGUI.jButtonCreateAlert&quot;)); </span>
+<span class="nc" id="L75">		jButtonCreateAlert.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc bnc" id="L77" title="All 8 branches missed.">				if (textFieldNondik.getText() == null || textFieldNondik.getText().isEmpty() || textFieldNora.getText() == null || textFieldNora.getText().isEmpty()) {</span>
+<span class="nc" id="L78">					return;</span>
+				}
+<span class="nc" id="L80">				SimpleDateFormat format = new SimpleDateFormat(&quot;yyyy/MM/dd&quot;);</span>
+				Date fecha;
+				try {
+<span class="nc" id="L83">					fecha = format.parse(textFieldData.getText());</span>
+<span class="nc" id="L84">					facade.createAlert(user, textFieldNondik.getText(), textFieldNora.getText(), fecha);</span>
+<span class="nc" id="L85">					jButton2_actionPerformed(e);</span>
+<span class="nc" id="L86">				} catch (ParseException e1) {</span>
+<span class="nc" id="L87">					errorTextLabel.setVisible(true);</span>
+<span class="nc" id="L88">				}</span>
+<span class="nc" id="L89">			}</span>
+		});
+<span class="nc" id="L91">		jButtonCreateAlert.setBounds(185, 203, 89, 23);</span>
+<span class="nc" id="L92">		contentPane.add(jButtonCreateAlert);</span>
+<span class="nc" id="L93">	}</span>
+	private void jButton2_actionPerformed(ActionEvent e) {
+<span class="nc" id="L95">		this.setVisible(false);</span>
+<span class="nc" id="L96">	}</span>
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

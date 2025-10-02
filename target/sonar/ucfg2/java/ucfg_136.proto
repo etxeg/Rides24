@@ -1,0 +1,138 @@
+
+'domain.User#equals(Ljava/lang/Object;)ZB
+8C:/Users/USER/git/Rides24/src/main/java/domain/User.javag g("startingBlock*!
+2p
+ p("
+p p(
+""*Ï
+3n n(_
+]
+n n(
+otherdomain.User"__id*5
+
+__unknown_file (
+
+objjava.lang.Objectb
+`
+o o(
+%5java.lang.String"__id*6
+
+__unknown_file (*
+domain.User"
+emaili
+g
+o o(
+%6java.lang.String"__id*=
+
+__unknown_file (!*
+
+otherdomain.User"
+email‡
+„
+o o(
+%7boolean"	__compare*
+o o(
+!=*$
+o o(
+
+%5java.lang.String*$
+o o(
+
+%6java.lang.String*
+2
+1*„
+startingBlockg g("Š
+‡
+f f(
+
+%8"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*5
+
+__unknown_file (
+
+objjava.lang.ObjectW
+U
+g g(!
+objjava.lang.Object"__annotation*"
+
+__unknown_file (
+
+%8*
+9*!
+4m
+ m("
+m m(
+""*Ã
+5l l(‹ˆ
+l l(
+%2java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*+
+
+__unknown_file (
+domain.User2
+getClass()•’
+l l("
+%3java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*5
+
+__unknown_file (
+
+objjava.lang.Object2
+getClass()…
+‚
+l l("
+%4boolean"	__compare*
+l l(
+!=*#
+l l(
+
+%2java.lang.Class*#
+l l("
+
+%3java.lang.Class*
+3
+4*!
+6k
+ k("
+k k(
+""*Œ
+7j j(	u
+s
+j j(
+%1boolean"	__compare*
+j
+ j(
+==*%
+j j(	
+
+objjava.lang.Object*
+j j(
+""*
+5
+6*!
+8i
+ i("
+i i(
+""*•
+9h h(
+~
+|
+h h(
+%0boolean"	__compare*
+h h(
+==*
+h h(
+
+domain.User*%
+h h(
+
+objjava.lang.Object*
+7
+8*!
+1q	 q("
+q q(
+"":#
+g g(!
+objjava.lang.ObjectB
+domain.UserHX

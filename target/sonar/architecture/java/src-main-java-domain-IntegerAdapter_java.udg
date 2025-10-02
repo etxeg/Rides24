@@ -1,0 +1,91 @@
+
+1.0cianaranburu_rides24JavaFrontend"1759404075327*java2.Bÿ
+-
+(src/main/java/domain/IntegerAdapter.java2
+	
+type3
+	
+MAIN4
+
+
+module-key5
+
+cianaranburu_rides246
+
+package8
+ 
+cianaranburu_rides24:domain9
+
+domain.IntegerAdapter11
+
+class12
+
+access13
+
+public14
+
+simple-name15
+
+IntegerAdapter16
+L
+Fdomain.IntegerAdapter#unmarshal(Ljava/lang/String;)Ljava/lang/Integer;18
+
+method19
+
+	unmarshal20
+J
+Ddomain.IntegerAdapter#marshal(Ljava/lang/Integer;)Ljava/lang/String;22
+
+marshal23J#
+!
+1
+12
+
+3
+4
+
+5
+6Z
+
+7
+7982
+
+
+5
+6j»
+B
+21<
+212219 *
+1 (210:7B
+
+
+13
+14
+
+
+15
+23
+B
+17<
+171819 *
+1 (210:7B
+
+
+13
+14
+
+
+15
+20
+>
+108
+101112 *
+1 (:7B
+
+
+13
+14
+
+
+15
+16

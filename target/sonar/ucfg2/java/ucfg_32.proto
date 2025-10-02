@@ -1,0 +1,354 @@
+
+0dataAccess.DataAccess#deleteUser(Ldomain/User;)ZN
+BC:/Users/USER/git/Rides24/src/main/java/dataAccess/DataAccess.javaò ò("31*&
+13
+™ ™("
+
+™ ™(
+""*∏
+14
+© ©( üú
+
+© ©( 
+%13void"-javax.persistence.EntityTransaction#commit()V*H
+
+__unknown_file (,
+*
+%12#javax.persistence.EntityTransaction2commit()*
+13*è
+25
+û	 û( [
+Y
+
+û	 û( !
+reservationdomain.Reservation"__id*"
+
+__unknown_file (
+""ñ
+ì
+
+û	 û( !
+reservationdomain.Reservation"
+__arrayGet*2
+
+__unknown_file (
+
+%3java.util.List*"
+
+__unknown_file (
+""*
+26
+9*Ä
+15
+© ©({
+y
+
+© ©(&
+%11javax.persistence.EntityManager"__id*=
+
+__unknown_file (!*
+dataAccess.DataAccess"
+dbÍÁ
+
+© ©(*
+%12#javax.persistence.EntityTransaction"Ujavax.persistence.EntityManager#getTransaction()Ljavax/persistence/EntityTransaction;*D
+
+__unknown_file ((
+&
+%11javax.persistence.EntityManager2getTransaction()*
+14*≥
+26
+ü ü(öó
+
+ü ü($
+
+%4void"'domain.Reservation#cancelReservation()V*?
+
+__unknown_file (#
+!
+reservationdomain.Reservation2cancelReservation()*
+25*Ÿ
+16
+® ®(
+S
+Q
+
+® ®(
+%9java.io.PrintStream"__id*"
+
+__unknown_file (
+""ÎË
+
+® ®(?
+%10void"0java.io.PrintStream#println(Ljava/lang/String;)V*7
+
+__unknown_file (
+
+%9java.io.PrintStream*E
+
+__unknown_file ()'
+%Ezin da administratzaile bat ezabatu.2println(Ljava/lang/String;)*
+15*∏
+27
+û! û("üú
+
+û! û(4
+%3java.util.List"1domain.Traveler#getReservations()Ljava/util/List;*2
+
+__unknown_file (
+
+tdomain.Traveler2getReservations()*
+25*u
+28
+ù ù( ]
+[
+
+ù ù(!
+tdomain.Traveler"__id*1
+
+__unknown_file (
+
+userdomain.User*
+27*˙
+18
+§	 §(M
+K
+
+§	 §(
+ridedomain.Ride"__id*"
+
+__unknown_file (
+""è
+å
+
+§	 §(
+ridedomain.Ride"
+__arrayGet*9
+
+__unknown_file (
+
+	ridesCopyjava.util.List*"
+
+__unknown_file (
+""*
+19
+9*
+19
+• •(◊‘
+
+• •(
+%8boolean"1dataAccess.DataAccess#cancelRides(Ldomain/Ride;)Z*5
+
+__unknown_file (
+dataAccess.DataAccess*1
+
+__unknown_file (
+
+ridedomain.Ride2cancelRides(Ldomain/Ride;)*
+18*%
+5
+≤
+ ≤("
+
+≤ ≤(
+""*∂
+6
+± ±(üú
+
+± ±(
+%23void"-javax.persistence.EntityTransaction#commit()V*H
+
+__unknown_file (,
+*
+%22#javax.persistence.EntityTransaction2commit()*
+5*˛
+7
+± ±({
+y
+
+± ±(&
+%21javax.persistence.EntityManager"__id*=
+
+__unknown_file (!*
+dataAccess.DataAccess"
+dbÍÁ
+
+± ±(*
+%22#javax.persistence.EntityTransaction"Ujavax.persistence.EntityManager#getTransaction()Ljavax/persistence/EntityTransaction;*D
+
+__unknown_file ((
+&
+%21javax.persistence.EntityManager2getTransaction()*
+6*Ì
+8
+Ø Ø(0b
+`
+
+Ø Ø(0
+managedUserdomain.User"__id*0
+
+__unknown_file (
+
+%18domain.User{
+y
+
+∞ ∞(&
+%19javax.persistence.EntityManager"__id*=
+
+__unknown_file (!*
+dataAccess.DataAccess"
+dbıÚ
+
+∞ ∞(
+%20void";javax.persistence.EntityManager#remove(Ljava/lang/Object;)V*D
+
+__unknown_file ((
+&
+%19javax.persistence.EntityManager*8
+
+__unknown_file (
+
+managedUserdomain.User2remove(Ljava/lang/Object;)*
+7*‹
+9
+Ø Ø({
+y
+
+Ø Ø(&
+%17javax.persistence.EntityManager"__id*=
+
+__unknown_file (!*
+dataAccess.DataAccess"
+db»≈
+
+Ø Ø(/
+%18domain.User"[javax.persistence.EntityManager#find(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;*D
+
+__unknown_file ((
+&
+%17javax.persistence.EntityManager*"
+
+__unknown_file (
+""*1
+
+__unknown_file (
+
+userdomain.User2)find(Ljava/lang/Class;Ljava/lang/Object;)*
+8*¿
+30
+ö ö(õò
+
+ö ö(
+
+%2void",javax.persistence.EntityTransaction#begin()V*G
+
+__unknown_file (+
+)
+%1#javax.persistence.EntityTransaction2begin()*
+16
+28
+23
+12*˝
+31
+ö ö(z
+x
+
+ö ö(%
+%0javax.persistence.EntityManager"__id*=
+
+__unknown_file (!*
+dataAccess.DataAccess"
+dbËÂ
+
+ö ö()
+%1#javax.persistence.EntityTransaction"Ujavax.persistence.EntityManager#getTransaction()Ljavax/persistence/EntityTransaction;*C
+
+__unknown_file ('
+%
+%0javax.persistence.EntityManager2getTransaction()*
+30*Ç
+21
+£ £(9j
+h
+
+£ £(9
+	ridesCopyjava.util.List"__id*7
+
+__unknown_file (
+
+%6java.util.ArrayList*
+18*&
+10
+≠ ≠("
+
+≠ ≠(
+""*ê
+22
+£ £(8><
+
+£ £(*
+%6java.util.ArrayList"java.util.ArrayList∑
+¥
+
+£ £(8
+%7"3java.util.ArrayList#<init>(Ljava/util/Collection;)V*7
+
+__unknown_file (
+
+%6java.util.ArrayList*2
+
+__unknown_file (
+
+%5java.util.List*
+21*∏
+11
+¨ ¨( üú
+
+¨ ¨( 
+%16void"-javax.persistence.EntityTransaction#commit()V*H
+
+__unknown_file (,
+*
+%15#javax.persistence.EntityTransaction2commit()*
+10*Ä
+12
+¨ ¨({
+y
+
+¨ ¨(&
+%14javax.persistence.EntityManager"__id*=
+
+__unknown_file (!*
+dataAccess.DataAccess"
+dbÍÁ
+
+¨ ¨(*
+%15#javax.persistence.EntityTransaction"Ujavax.persistence.EntityManager#getTransaction()Ljavax/persistence/EntityTransaction;*D
+
+__unknown_file ((
+&
+%14javax.persistence.EntityManager2getTransaction()*
+11*É
+23
+¢ ¢([
+Y
+
+¢ ¢(
+ddomain.Driver"__id*1
+
+__unknown_file (
+
+userdomain.Userçä
+
+£+ £(7
+%5java.util.List"(domain.Driver#getRides()Ljava/util/List;*0
+
+__unknown_file (
+
+ddomain.Driver2
+getRides()*
+22:!
+
+ò ò($
+userdomain.UserB
+dataAccess.DataAccessHX

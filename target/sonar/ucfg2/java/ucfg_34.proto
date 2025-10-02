@@ -1,0 +1,155 @@
+
+KdataAccess.DataAccess#getErreserbaBefore(Ldomain/Traveler;)Ljava/util/List;N
+BC:/Users/USER/git/Rides24/src/main/java/dataAccess/DataAccess.javaÕ Õ(,"1*ß
+1
+Ö Ö(z
+x
+
+Ö Ö(%
+%0javax.persistence.EntityManager"__id*=
+
+__unknown_file (!*
+dataAccess.DataAccess"
+dbèå
+
+Ö Ö()
+%1#javax.persistence.EntityTransaction"Ujavax.persistence.EntityManager#getTransaction()Ljavax/persistence/EntityTransaction;*C
+
+__unknown_file ('
+%
+%0javax.persistence.EntityManager2getTransaction()›˜
+
+Ö Ö(
+
+%2void",javax.persistence.EntityTransaction#begin()V*G
+
+__unknown_file (+
+)
+%1#javax.persistence.EntityTransaction2begin()
+Œ
+
+× ×('
+%3java.time.LocalDate".java.time.LocalDate#now()Ljava/time/LocalDate;*3
+
+__unknown_file ("
+java.time.LocalDate
+Š
+
+×5 ×(K
+%4java.time.ZoneId"2java.time.ZoneId#systemDefault()Ljava/time/ZoneId;*0
+
+__unknown_file ("
+java.time.ZoneId‹
+
+× ×(L
+%5java.time.ZonedDateTime"Mjava.time.LocalDate#atStartOfDay(Ljava/time/ZoneId;)Ljava/time/ZonedDateTime;*7
+
+__unknown_file (
+
+%3java.time.LocalDate*4
+
+__unknown_file (
+
+%4java.time.ZoneId2 atStartOfDay(Ljava/time/ZoneId;)·´
+
+× ×(X
+%6java.time.Instant"Cjava.time.chrono.ChronoZonedDateTime#toInstant()Ljava/time/Instant;*;
+
+__unknown_file (
+
+%5java.time.ZonedDateTime2toInstant()Æ
+Ã
+
+× ×(Y
+%7java.util.Date"8java.util.Date#from(Ljava/time/Instant;)Ljava/util/Date;*.
+
+__unknown_file ("
+java.util.Date*5
+
+__unknown_file (
+
+%6java.time.Instant`
+^
+
+× ×(Z
+datejava.util.Date"__id*2
+
+__unknown_file (
+
+%7java.util.Datez
+x
+
+Ø" Ø($%
+%8javax.persistence.EntityManager"__id*=
+
+__unknown_file (!*
+dataAccess.DataAccess"
+db§¤
+Ø" Ø(Œ"
+%9javax.persistence.TypedQuery"njavax.persistence.EntityManager#createQuery(Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;*C
+
+__unknown_file ('
+%
+%8javax.persistence.EntityManager*f
+
+__unknown_file (JH
+FSELECT DISTINCT r FROM Reservation r WHERE r.date<?1 AND r.traveler=?2*"
+
+__unknown_file (
+""20createQuery(Ljava/lang/String;Ljava/lang/Class;)~
+|
+Ø Ø(%
+queryjavax.persistence.TypedQuery"__id*@
+
+__unknown_file ($
+"
+%9javax.persistence.TypedQueryÒÏ
+
+Ù Ù(#
+%10javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*C
+
+__unknown_file ('
+%
+queryjavax.persistence.TypedQuery* 
+
+__unknown_file (2*4
+
+__unknown_file (
+
+datejava.util.Date2!setParameter(ILjava/lang/Object;)×Ô
+
+Ú Ú(!#
+%11javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*C
+
+__unknown_file ('
+%
+queryjavax.persistence.TypedQuery* 
+
+__unknown_file (2*9
+
+__unknown_file (
+
+travelerdomain.Traveler2!setParameter(ILjava/lang/Object;)º·
+
+Û& Û(;
+%12java.util.List"<javax.persistence.TypedQuery#getResultList()Ljava/util/List;*C
+
+__unknown_file ('
+%
+queryjavax.persistence.TypedQuery2getResultList()l
+j
+
+Û Û(<!
+reservationListjava.util.List"__id*3
+
+__unknown_file (
+
+%12java.util.List"1
+
+Ü Ü(#
+!
+reservationListjava.util.List:)
+
+Õ- Õ(>
+travelerdomain.TravelerB
+dataAccess.DataAccessH

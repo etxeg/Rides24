@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Reclamation.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Rides24</a> &gt; <a href="index.source.html" class="el_package">domain</a> &gt; <span class="el_source">Reclamation.java</span></div><h1>Reclamation.java</h1><pre class="source lang-java linenums">package domain;
+
+import java.util.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+
+@Entity
+public class Reclamation {
+	@GeneratedValue
+	private int erreklamazioZenbakia;
+	private Traveler traveler;
+	private Reservation ride;
+	private Date date;
+	private String state;
+	private String why;
+	
+	
+	public Reclamation(Traveler traveler, Reservation ride, Date date, String state, String why) {
+<span class="nc" id="L20">		super();</span>
+<span class="nc" id="L21">		this.traveler = traveler;</span>
+<span class="nc" id="L22">		this.ride = ride;</span>
+<span class="nc" id="L23">		this.date = date;</span>
+<span class="nc" id="L24">		this.state = state;</span>
+<span class="nc" id="L25">		this.why = why;</span>
+<span class="nc" id="L26">	}</span>
+	public int getErreklamazioZenbakia() {
+<span class="nc" id="L28">		return erreklamazioZenbakia;</span>
+	}
+	public void setErreklamazioZenbakia(int erreklamazioZenbakia) {
+<span class="nc" id="L31">		this.erreklamazioZenbakia = erreklamazioZenbakia;</span>
+<span class="nc" id="L32">	}</span>
+	public Traveler getTraveler() {
+<span class="nc" id="L34">		return traveler;</span>
+	}
+	public void setTraveler(Traveler traveler) {
+<span class="nc" id="L37">		this.traveler = traveler;</span>
+<span class="nc" id="L38">	}</span>
+	public Reservation getReservation() {
+<span class="nc" id="L40">		return ride;</span>
+	}
+	public void setReservation(Reservation ride) {
+<span class="nc" id="L43">		this.ride = ride;</span>
+<span class="nc" id="L44">	}</span>
+	
+	public Date getDate() {
+<span class="nc" id="L47">		return date;</span>
+	}
+	public void setDate(Date date) {
+<span class="nc" id="L50">		this.date = date;</span>
+<span class="nc" id="L51">	}</span>
+	
+	public void onartu() {
+<span class="nc" id="L54">		this.state = &quot;Onartua&quot;;</span>
+<span class="nc" id="L55">	}</span>
+	
+	public void baztertu() {
+<span class="nc" id="L58">		this.state = &quot;Baztertua&quot;;</span>
+<span class="nc" id="L59">	}</span>
+	
+	public String getState() {
+<span class="nc" id="L62">		return state;</span>
+	}
+	public void setState(String state) {
+<span class="nc" id="L65">		this.state = state;</span>
+<span class="nc" id="L66">	}</span>
+	public String getWhy() {
+<span class="nc" id="L68">		return why;</span>
+	}
+	public void setWhy(String why) {
+<span class="nc" id="L71">		this.why = why;</span>
+<span class="nc" id="L72">	}</span>
+	
+	@Override
+	public String toString() {
+<span class="nc" id="L76">		return traveler.getName()+ &quot; -&gt; &quot; + ride;</span>
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

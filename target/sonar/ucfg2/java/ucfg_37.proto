@@ -1,0 +1,372 @@
+
+BdataAccess.DataAccess#erreklamazioaKudeatu(Ldomain/Reclamation;I)ZN
+BC:/Users/USER/git/Rides24/src/main/java/dataAccess/DataAccess.javañ ñ($"3*¤#
+2
+õ õ(yw
+
+õ õ(
+
+%6void"domain.Reclamation#onartu()V*5
+
+__unknown_file (
+
+rdomain.Reclamation2onartu()«¨
+
+ö ö(&
+%7domain.Reservation"7domain.Reclamation#getReservation()Ldomain/Reservation;*5
+
+__unknown_file (
+
+rdomain.Reclamation2getReservation()g
+e
+
+ö ö('
+resdomain.Reservation"__id*6
+
+__unknown_file (
+
+%7domain.Reservation‘
+
+÷ ÷(
+%8domain.Ride")domain.Reservation#getRide()Ldomain/Ride;*7
+
+__unknown_file (
+
+resdomain.Reservation2	getRide()X
+V
+
+÷ ÷(
+ridomain.Ride"__id*/
+
+__unknown_file (
+
+%8domain.Rideqo
+
+ø ø(
+%9float"domain.Ride#getPrice()F*/
+
+__unknown_file (
+
+ridomain.Ride2
+getPrice()W
+U
+
+ø ø(
+prijava.lang.Float"__id*)
+
+__unknown_file (
+
+%9float 
+
+ù ù( 
+%10domain.Traveler"1domain.Reclamation#getTraveler()Ldomain/Traveler;*5
+
+__unknown_file (
+
+rdomain.Reclamation2getTraveler()a
+_
+
+ù ù(!
+trdomain.Traveler"__id*4
+
+__unknown_file (
+
+%10domain.Traveler®«
+
+ú ú(
+%11void"domain.User#addMoney(F)V*3
+
+__unknown_file (
+
+trdomain.Traveler*4
+
+__unknown_file (
+
+prijava.lang.Float2addMoney(F)
+
+
+û û((
+%12java.time.LocalDate".java.time.LocalDate#now()Ljava/time/LocalDate;*3
+
+__unknown_file ("
+java.time.LocalDate
+‹
+
+û6 û(L
+%13java.time.ZoneId"2java.time.ZoneId#systemDefault()Ljava/time/ZoneId;*0
+
+__unknown_file ("
+java.time.ZoneId‘
+
+û û(M
+%14java.time.ZonedDateTime"Mjava.time.LocalDate#atStartOfDay(Ljava/time/ZoneId;)Ljava/time/ZonedDateTime;*8
+
+__unknown_file (
+
+%12java.time.LocalDate*5
+
+__unknown_file (
+
+%13java.time.ZoneId2 atStartOfDay(Ljava/time/ZoneId;)¹¶
+
+û û(Y
+%15java.time.Instant"Cjava.time.chrono.ChronoZonedDateTime#toInstant()Ljava/time/Instant;*<
+
+__unknown_file ( 
+
+%14java.time.ZonedDateTime2toInstant()È
+Å
+
+û û(Z
+%16java.util.Date"8java.util.Date#from(Ljava/time/Instant;)Ljava/util/Date;*.
+
+__unknown_file ("
+java.util.Date*6
+
+__unknown_file (
+
+%15java.time.Instanta
+_
+
+û û([
+datejava.util.Date"__id*3
+
+__unknown_file (
+
+%16java.util.Date‡„
+
+ü  ü(6
+
+%17int" domain.User#getMovementsCount()I*3
+
+__unknown_file (
+
+trdomain.Traveler2getMovementsCount()75
+
+ü ü(
+%18domain.Movement"domain.Movement²
+¯
+
+ü ü(H
+%19",domain.Movement#<init>(IDZLjava/util/Date;)V*4
+
+__unknown_file (
+
+%18domain.Movement*(
+
+__unknown_file (
+
+
+%17int*4
+
+__unknown_file (
+
+prijava.lang.Float* 
+
+__unknown_file (2*4
+
+__unknown_file (
+
+datejava.util.Datec
+a
+
+ü ü(I
+movedomain.Movement"__id*4
+
+__unknown_file (
+
+%18domain.MovementÕÒ
+
+ı ı(
+%20void"+domain.User#addMovement(Ldomain/Movement;)V*3
+
+__unknown_file (
+
+trdomain.Traveler*5
+
+__unknown_file (
+
+movedomain.Movement2addMovement(Ldomain/Movement;){
+y
+
+ş ş(&
+%21javax.persistence.EntityManager"__id*=
+
+__unknown_file (!*
+dataAccess.DataAccess"
+dbŠ‡
+
+ş ş(
+%22domain.Traveler"Kjavax.persistence.EntityManager#merge(Ljava/lang/Object;)Ljava/lang/Object;*D
+
+__unknown_file ((
+&
+%21javax.persistence.EntityManager*3
+
+__unknown_file (
+
+trdomain.Traveler2merge(Ljava/lang/Object;){
+y
+
+ÿ ÿ(&
+%23javax.persistence.EntityManager"__id*=
+
+__unknown_file (!*
+dataAccess.DataAccess"
+dbŒ
+
+ÿ ÿ(
+%24domain.Reclamation"Kjavax.persistence.EntityManager#merge(Ljava/lang/Object;)Ljava/lang/Object;*D
+
+__unknown_file ((
+&
+%23javax.persistence.EntityManager*5
+
+__unknown_file (
+
+rdomain.Reclamation2merge(Ljava/lang/Object;){
+y
+
+€ €(&
+%25javax.persistence.EntityManager"__id*=
+
+__unknown_file (!*
+dataAccess.DataAccess"
+dbêç
+
+€ €(*
+%26#javax.persistence.EntityTransaction"Ujavax.persistence.EntityManager#getTransaction()Ljavax/persistence/EntityTransaction;*D
+
+__unknown_file ((
+&
+%25javax.persistence.EntityManager2getTransaction()Ÿœ
+
+€ €(
+%27void"-javax.persistence.EntityTransaction#commit()V*H
+
+__unknown_file (,
+*
+%26#javax.persistence.EntityTransaction2commit()"
+
+ (
+""*¬
+3
+ò ò(z
+x
+
+ò ò(%
+%0javax.persistence.EntityManager"__id*=
+
+__unknown_file (!*
+dataAccess.DataAccess"
+dbèå
+
+ò ò()
+%1#javax.persistence.EntityTransaction"Ujavax.persistence.EntityManager#getTransaction()Ljavax/persistence/EntityTransaction;*C
+
+__unknown_file ('
+%
+%0javax.persistence.EntityManager2getTransaction()›˜
+
+ò ò(
+
+%2void",javax.persistence.EntityTransaction#begin()V*G
+
+__unknown_file (+
+)
+%1#javax.persistence.EntityTransaction2begin()S
+Q
+
+ó ó(
+%3java.io.PrintStream"__id*"
+
+__unknown_file (
+""ÎË
+
+ó ó(!
+
+%4void"0java.io.PrintStream#println(Ljava/lang/String;)V*7
+
+__unknown_file (
+
+%3java.io.PrintStream*)
+
+__unknown_file (
+	Iritsi da2println(Ljava/lang/String;)h
+f
+
+ô ô(
+
+%5boolean"	__compare*
+
+ô ô(	
+==*
+
+ô ô(
+""*
+
+ô	 ô(
+2*
+2
+1*À
+1
+„ „(~|
+
+„ „(
+%28void"domain.Reclamation#baztertu()V*5
+
+__unknown_file (
+
+rdomain.Reclamation2
+baztertu(){
+y
+
+… …(&
+%29javax.persistence.EntityManager"__id*=
+
+__unknown_file (!*
+dataAccess.DataAccess"
+dbŒ
+
+… …(
+%30domain.Reclamation"Kjavax.persistence.EntityManager#merge(Ljava/lang/Object;)Ljava/lang/Object;*D
+
+__unknown_file ((
+&
+%29javax.persistence.EntityManager*5
+
+__unknown_file (
+
+rdomain.Reclamation2merge(Ljava/lang/Object;){
+y
+
+† †(&
+%31javax.persistence.EntityManager"__id*=
+
+__unknown_file (!*
+dataAccess.DataAccess"
+dbêç
+
+† †(*
+%32#javax.persistence.EntityTransaction"Ujavax.persistence.EntityManager#getTransaction()Ljavax/persistence/EntityTransaction;*D
+
+__unknown_file ((
+&
+%31javax.persistence.EntityManager2getTransaction()Ÿœ
+
+† †(
+%33void"-javax.persistence.EntityTransaction#commit()V*H
+
+__unknown_file (,
+*
+%32#javax.persistence.EntityTransaction2commit()"
+
+‡ ‡(
+"":%
+
+ñ% ñ(3
+rdomain.Reclamation: 
+
+__unknown_file (
+""B
+dataAccess.DataAccessHX

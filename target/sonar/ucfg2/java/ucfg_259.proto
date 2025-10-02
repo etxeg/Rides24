@@ -1,0 +1,72 @@
+
+VbusinessLogic.BLFacadeImplementation#getReclamation(Ldomain/Traveler;)Ljava/util/List;]
+QC:/Users/USER/git/Rides24/src/main/java/businessLogic/BLFacadeImplementation.javaÐ Ð(("1*Å
+1
+Ñ Ñ(‡
+„
+
+Ñ Ñ(
+%0dataAccess.DataAccess"__id*S
+
+__unknown_file (7*5&
+$businessLogic.BLFacadeImplementation"
+	dbManager|z
+
+Ñ Ñ(
+
+%1void"dataAccess.DataAccess#open()V*9
+
+__unknown_file (
+
+%0dataAccess.DataAccess2open()‡
+„
+
+Ò  Ò()
+%2dataAccess.DataAccess"__id*S
+
+__unknown_file (7*5&
+$businessLogic.BLFacadeImplementation"
+	dbManagerƒ€
+
+Ò  Ò(>
+%3java.util.List"GdataAccess.DataAccess#getReclamation(Ldomain/Traveler;)Ljava/util/List;*9
+
+__unknown_file (
+
+%2dataAccess.DataAccess*5
+
+__unknown_file (
+
+travdomain.Traveler2!getReclamation(Ldomain/Traveler;)e
+c
+
+Ò Ò(?
+	erantzunajava.util.List"__id*2
+
+__unknown_file (
+
+%3java.util.List‡
+„
+
+Ó Ó(
+%4dataAccess.DataAccess"__id*S
+
+__unknown_file (7*5&
+$businessLogic.BLFacadeImplementation"
+	dbManager~|
+
+Ó Ó(
+
+%5void"dataAccess.DataAccess#close()V*9
+
+__unknown_file (
+
+%4dataAccess.DataAccess2close()"+
+
+Ô Ô(
+
+	erantzunajava.util.List:%
+
+Ð) Ð(6
+travdomain.TravelerB(&
+$businessLogic.BLFacadeImplementationH

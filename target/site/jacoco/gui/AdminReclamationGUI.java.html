@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AdminReclamationGUI.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Rides24</a> &gt; <a href="index.source.html" class="el_package">gui</a> &gt; <span class="el_source">AdminReclamationGUI.java</span></div><h1>AdminReclamationGUI.java</h1><pre class="source lang-java linenums">package gui;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+import businessLogic.BLFacade;
+import domain.Admin;
+import domain.Reclamation;
+import domain.Ride;
+
+import javax.swing.JRadioButton;
+import javax.swing.JComboBox;
+import javax.swing.ButtonGroup;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.util.List;
+import java.util.ResourceBundle;
+import java.awt.event.ActionEvent;
+import java.awt.event.ItemListener;
+import java.awt.event.ItemEvent;
+import javax.swing.JTextPane;
+
+public class AdminReclamationGUI extends JFrame {
+
+	private static final long serialVersionUID = 1L;
+	private JPanel contentPane;
+<span class="nc" id="L31">	private final ButtonGroup buttonGroup = new ButtonGroup();</span>
+<span class="nc" id="L32">	JTextPane textPane = new JTextPane();</span>
+<span class="nc" id="L33">	JComboBox&lt;Reclamation&gt; comboBox= new JComboBox&lt;Reclamation&gt;();</span>
+<span class="nc" id="L34">	DefaultComboBoxModel&lt;Reclamation&gt; reclam = new DefaultComboBoxModel&lt;Reclamation&gt;();</span>
+
+
+
+	/**
+	 * Create the frame.
+	 * @param user 
+	 */
+<span class="nc" id="L42">	public AdminReclamationGUI(Admin user) {</span>
+<span class="nc" id="L43">		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);</span>
+<span class="nc" id="L44">		setBounds(100, 100, 450, 300);</span>
+<span class="nc" id="L45">		contentPane = new JPanel();</span>
+<span class="nc" id="L46">		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));</span>
+		
+<span class="nc" id="L48">		setContentPane(contentPane);</span>
+<span class="nc" id="L49">		contentPane.setLayout(null);</span>
+		
+<span class="nc" id="L51">		JRadioButton rdbtnNewRadioButton = new JRadioButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ManageReservationsGUI.Accept&quot;));</span>
+<span class="nc" id="L52">		buttonGroup.add(rdbtnNewRadioButton);</span>
+<span class="nc" id="L53">		rdbtnNewRadioButton.setBounds(135, 160, 82, 21);</span>
+<span class="nc" id="L54">		contentPane.add(rdbtnNewRadioButton);</span>
+		
+<span class="nc" id="L56">		JRadioButton rdbtnNewRadioButton_1 = new JRadioButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ManageReservationsGUI.Reject&quot;));</span>
+<span class="nc" id="L57">		rdbtnNewRadioButton_1.setSelected(true);</span>
+<span class="nc" id="L58">		buttonGroup.add(rdbtnNewRadioButton_1);</span>
+<span class="nc" id="L59">		rdbtnNewRadioButton_1.setBounds(219, 160, 103, 21);</span>
+<span class="nc" id="L60">		contentPane.add(rdbtnNewRadioButton_1);</span>
+		
+<span class="nc" id="L62">		BLFacade facade = MainGUI.getBusinessLogic();</span>
+<span class="nc" id="L63">		List&lt;Reclamation&gt; origins=facade.getReclamationNotProcesed();</span>
+		
+		
+		
+<span class="nc" id="L67">		comboBox.setBounds(96, 57, 237, 21);</span>
+<span class="nc" id="L68">		comboBox.setModel(reclam);</span>
+<span class="nc" id="L69">		contentPane.add(comboBox);</span>
+		
+<span class="nc" id="L71">		JButton sendButton = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Send&quot;));</span>
+<span class="nc" id="L72">		sendButton.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L74">				sendButton.setEnabled(false);</span>
+<span class="nc" id="L75">				Reclamation erreklamazioa = (Reclamation) comboBox.getSelectedItem();</span>
+<span class="nc bnc" id="L76" title="All 2 branches missed.">				if (rdbtnNewRadioButton.isSelected()) {</span>
+<span class="nc" id="L77">					facade.erreklamazioaKudeatu(erreklamazioa, 1);</span>
+				} else {
+<span class="nc" id="L79">					facade.erreklamazioaKudeatu(erreklamazioa, 0);</span>
+				}
+				
+<span class="nc" id="L82">				List&lt;Reclamation&gt; origins=facade.getReclamationNotProcesed();</span>
+<span class="nc bnc" id="L83" title="All 2 branches missed.">				for(Reclamation actualReclamation:origins) reclam.addElement(actualReclamation);</span>
+				
+<span class="nc" id="L85">			}</span>
+		});
+<span class="nc" id="L87">		sendButton.setEnabled(false);</span>
+<span class="nc" id="L88">		sendButton.setBounds(172, 206, 85, 21);</span>
+<span class="nc" id="L89">		contentPane.add(sendButton);</span>
+		
+<span class="nc" id="L91">		boolean lehenengoa = false;</span>
+		
+<span class="nc bnc" id="L93" title="All 2 branches missed.">		for(Reclamation actualReclamation:origins) {</span>
+<span class="nc bnc" id="L94" title="All 2 branches missed.">			if (lehenengoa == false) {</span>
+<span class="nc" id="L95">				lehenengoa = true;</span>
+<span class="nc" id="L96">				textPane.setText(actualReclamation.getWhy());</span>
+<span class="nc" id="L97">				sendButton.setEnabled(true);</span>
+			}
+<span class="nc" id="L99">			reclam.addElement(actualReclamation);</span>
+<span class="nc" id="L100">		}</span>
+		
+<span class="nc" id="L102">		comboBox.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L104">				textPane.removeAll();</span>
+<span class="nc" id="L105">				Reclamation rec = (Reclamation) comboBox.getSelectedItem();</span>
+<span class="nc" id="L106">				textPane.setText(rec.getWhy());</span>
+<span class="nc" id="L107">				sendButton.setEnabled(true);</span>
+<span class="nc" id="L108">			}</span>
+		});
+<span class="nc" id="L110">		textPane.setEditable(false);</span>
+		
+<span class="nc" id="L112">		textPane.setBounds(96, 98, 237, 49);</span>
+<span class="nc" id="L113">		contentPane.add(textPane);</span>
+<span class="nc" id="L114">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

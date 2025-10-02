@@ -1,0 +1,69 @@
+
+QbusinessLogic.BLFacadeImplementation#erreklamazioaKudeatu(Ldomain/Reclamation;I)Z]
+QC:/Users/USER/git/Rides24/src/main/java/businessLogic/BLFacadeImplementation.java» »($"1*é
+1
+¼ ¼(‡
+„
+
+¼ ¼(
+%0dataAccess.DataAccess"__id*S
+
+__unknown_file (7*5&
+$businessLogic.BLFacadeImplementation"
+	dbManager|z
+
+¼ ¼(
+
+%1void"dataAccess.DataAccess#open()V*9
+
+__unknown_file (
+
+%0dataAccess.DataAccess2open()‡
+„
+
+½ ½(
+%2dataAccess.DataAccess"__id*S
+
+__unknown_file (7*5&
+$businessLogic.BLFacadeImplementation"
+	dbManager¥¢
+
+½ ½(:
+%3boolean"BdataAccess.DataAccess#erreklamazioaKudeatu(Ldomain/Reclamation;I)Z*9
+
+__unknown_file (
+
+%2dataAccess.DataAccess*5
+
+__unknown_file (
+
+rdomain.Reclamation*"
+
+__unknown_file (
+""2+erreklamazioaKudeatu(Ldomain/Reclamation;I)‡
+„
+
+¾ ¾(
+%4dataAccess.DataAccess"__id*S
+
+__unknown_file (7*5&
+$businessLogic.BLFacadeImplementation"
+	dbManager~|
+
+¾ ¾(
+
+%5void"dataAccess.DataAccess#close()V*9
+
+__unknown_file (
+
+%4dataAccess.DataAccess2close()"
+
+¿ ¿(
+"":%
+
+»% »(3
+rdomain.Reclamation: 
+
+__unknown_file (
+""B(&
+$businessLogic.BLFacadeImplementationHX

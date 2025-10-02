@@ -1,0 +1,69 @@
+
+>businessLogic.BLFacadeImplementation#addMoney(Ldomain/User;F)Z]
+QC:/Users/USER/git/Rides24/src/main/java/businessLogic/BLFacadeImplementation.javaÖ Ö("1*¿
+1
+× ×(‡
+„
+
+× ×(
+%0dataAccess.DataAccess"__id*S
+
+__unknown_file (7*5&
+$businessLogic.BLFacadeImplementation"
+	dbManager|z
+
+× ×(
+
+%1void"dataAccess.DataAccess#open()V*9
+
+__unknown_file (
+
+%0dataAccess.DataAccess2open()‡
+„
+
+Ø Ø(
+%2dataAccess.DataAccess"__id*S
+
+__unknown_file (7*5&
+$businessLogic.BLFacadeImplementation"
+	dbManagerûø
+
+Ø Ø(5
+%3boolean"/dataAccess.DataAccess#addMoney(Ldomain/User;F)Z*9
+
+__unknown_file (
+
+%2dataAccess.DataAccess*1
+
+__unknown_file (
+
+userdomain.User*"
+
+__unknown_file (
+""2addMoney(Ldomain/User;F)‡
+„
+
+Ù Ù(
+%4dataAccess.DataAccess"__id*S
+
+__unknown_file (7*5&
+$businessLogic.BLFacadeImplementation"
+	dbManager~|
+
+Ù Ù(
+
+%5void"dataAccess.DataAccess#close()V*9
+
+__unknown_file (
+
+%4dataAccess.DataAccess2close()"
+
+Ú Ú(
+"":!
+
+Ö Ö(#
+userdomain.User: 
+
+__unknown_file (
+""B(&
+$businessLogic.BLFacadeImplementationHX

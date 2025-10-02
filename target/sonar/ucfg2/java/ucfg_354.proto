@@ -1,0 +1,187 @@
+
+(domain.Ride#toString()Ljava/lang/String;D
+8C:/Users/USER/git/Rides24/src/main/java/domain/Ride.java‡ ‡("1*…
+1
+ˆ ˆ(a
+_
+
+ˆ ˆ(
+%0java.util.Date"__id*5
+
+__unknown_file (*
+domain.Ride"
+datesq
+
+ˆ ˆ(	
+%1int"java.util.Date#getYear()I*2
+
+__unknown_file (
+
+%0java.util.Date2	getYear()k
+i
+
+ˆ ˆ($	
+%2int"__calculate*
+
+ˆ ˆ(
++*
+
+ˆ ˆ(
+	
+%1int*
+
+ˆ  ˆ($2ìa
+_
+
+‰ ‰(
+%3java.util.Date"__id*5
+
+__unknown_file (*
+domain.Ride"
+dateus
+
+‰ ‰( 	
+%4int"java.util.Date#getMonth()I*2
+
+__unknown_file (
+
+%3java.util.Date2
+getMonth()j
+h
+
+‰ ‰($	
+%5int"__calculate*
+
+‰! ‰("
++*
+
+‰ ‰( 
+	
+%4int*
+
+‰# ‰($2a
+_
+
+Š Š(
+%6java.util.Date"__id*5
+
+__unknown_file (*
+domain.Ride"
+datesq
+
+Š Š(	
+%7int"java.util.Date#getDate()I*2
+
+__unknown_file (
+
+%6java.util.Date2	getDate()c
+a
+
+‹ ‹(
+%8java.lang.String"__id*5
+
+__unknown_file (*
+domain.Ride"
+fromo
+m
+
+‹ ‹(
+%9java.lang.String"__concat*&
+
+‹ ‹(
+
+%8java.lang.String*
+
+‹ ‹(
+ - b
+`
+
+‹ ‹(
+%10java.lang.String"__id*3
+
+__unknown_file (*
+domain.Ride"
+toƒ
+€
+
+‹ ‹(
+%11java.lang.String"__concat*&
+
+‹ ‹(
+
+%9java.lang.String*'
+
+‹ ‹(
+
+%10java.lang.Stringp
+n
+
+‹ ‹($
+%12java.lang.String"__concat*'
+
+‹ ‹(
+
+%11java.lang.String*
+
+‹  ‹($
+: p
+n
+
+‹ ‹(+
+%13java.lang.String"__concat*'
+
+‹ ‹($
+
+%12java.lang.String*
+
+‹' ‹(+
+""o
+m
+
+‹ ‹(1
+%14java.lang.String"__concat*'
+
+‹ ‹(+
+
+%13java.lang.String*
+
+‹. ‹(1
+/p
+n
+
+‹ ‹(9
+%15java.lang.String"__concat*'
+
+‹ ‹(1
+
+%14java.lang.String*
+
+‹4 ‹(9
+""o
+m
+
+‹ ‹(?
+%16java.lang.String"__concat*'
+
+‹ ‹(9
+
+%15java.lang.String*
+
+‹< ‹(?
+/p
+n
+
+‹ ‹(E
+%17java.lang.String"__concat*'
+
+‹ ‹(?
+
+%16java.lang.String*
+
+‹B ‹(E
+"""'
+
+‹ ‹(F
+
+%17java.lang.StringB
+domain.RideH

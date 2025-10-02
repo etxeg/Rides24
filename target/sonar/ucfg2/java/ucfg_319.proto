@@ -1,0 +1,44 @@
+
+domain.Ride#%field_initializer
+__unknown_file ("1*¨
+1 (pn
+B
+8C:/Users/USER/git/Rides24/src/main/java/domain/Ride.java%6 %(I
+%0java.util.Vector"java.util.Vectorè
+å
+B
+8C:/Users/USER/git/Rides24/src/main/java/domain/Ride.java%2 %(K
+%1"java.util.Vector#<init>()V*$
+ (
+
+%0java.util.Vectorú
+ô
+B
+8C:/Users/USER/git/Rides24/src/main/java/domain/Ride.java$ %(L'
+domain.Ride"
+acceptedReservations"__id*$
+ (
+
+%0java.util.Vectorpn
+B
+8C:/Users/USER/git/Rides24/src/main/java/domain/Ride.java'5 '(H
+%2java.util.Vector"java.util.Vectorè
+å
+B
+8C:/Users/USER/git/Rides24/src/main/java/domain/Ride.java'1 '(J
+%3"java.util.Vector#<init>()V*$
+ (
+
+%2java.util.Vectorõ
+ò
+B
+8C:/Users/USER/git/Rides24/src/main/java/domain/Ride.java& '(K&
+domain.Ride"
+pendingReservations"__id*$
+ (
+
+%2java.util.Vector"X
+A
+8C:/Users/USER/git/Rides24/src/main/java/domain/Ride.java ë(
+implicit returnB
+domain.Ride
