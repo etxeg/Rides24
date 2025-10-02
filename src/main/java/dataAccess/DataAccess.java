@@ -399,8 +399,7 @@ public class DataAccess {
 			int month = today.get(Calendar.MONTH);
 			int year = today.get(Calendar.YEAR);
 			int day = today.get(Calendar.DAY_OF_MONTH);
-			Reservation erreserbaClass = new Reservation(traveler, ride, UtilDate.newDate(year, month, day),
-					ride.getPrice() * nPlaces);
+			Reservation erreserbaClass = new Reservation(traveler, ride, UtilDate.newDate(year, month, day), ride.getPrice() * nPlaces);
 			if (erreserbaClass != null) {
 
 				float prezioa = nPlaces * ride.getPrice();
