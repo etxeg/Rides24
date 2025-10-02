@@ -101,8 +101,8 @@ public class DataAccess {
 			Driver driver1 = new Driver("driver1@gmail.com", "Aitor Fernandez", "123");
 			Driver driver2 = new Driver("driver2@gmail.com", "Ane Gaztañaga", "123");
 			Driver driver3 = new Driver("driver3@gmail.com", "Test Driver", "123");
-			Admin admin1 = new Admin("admin1@gmail.com", "Test Admin", "123");
-			db.persist(admin1);
+//			Admin admin1 = new Admin("admin1@gmail.com", "Test Admin", "123");
+//			db.persist(admin1);
 			// Create travelers
 			Traveler traveler1 = new Traveler("traveler1@gmail.com", "Test Traveler", "123");
 			traveler1.setMoney(500);

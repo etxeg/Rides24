@@ -11,11 +11,13 @@ import businessLogic.BLFacade;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import java.awt.event.ActionListener;
+import java.util.ResourceBundle;
 import java.awt.event.ActionEvent;
 
 import domain.Driver;
 import domain.Traveler;
 import domain.User;
+import javax.swing.SwingConstants;
 
 public class ConfirmDeleteGUI extends JFrame {
 
@@ -26,62 +28,54 @@ public class ConfirmDeleteGUI extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-<span class="nc" id="L29">	public ConfirmDeleteGUI(User user) {</span>
-<span class="nc" id="L30">		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</span>
-<span class="nc" id="L31">		setBounds(100, 100, 450, 300);</span>
-<span class="nc" id="L32">		contentPane = new JPanel();</span>
-<span class="nc" id="L33">		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));</span>
+<span class="nc" id="L31">	public ConfirmDeleteGUI(User user) {</span>
+<span class="nc" id="L32">		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);</span>
+<span class="nc" id="L33">		setBounds(100, 100, 450, 300);</span>
+<span class="nc" id="L34">		contentPane = new JPanel();</span>
+<span class="nc" id="L35">		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));</span>
 
-<span class="nc" id="L35">		setContentPane(contentPane);</span>
-<span class="nc" id="L36">		contentPane.setLayout(null);</span>
+<span class="nc" id="L37">		setContentPane(contentPane);</span>
 
-<span class="nc" id="L38">		BLFacade facade = MainGUI.getBusinessLogic();</span>
+<span class="nc" id="L39">		BLFacade facade = MainGUI.getBusinessLogic();</span>
 
-<span class="nc" id="L40">		JButton btnBai = new JButton(&quot;BAI&quot;);</span>
-<span class="nc" id="L41">		btnBai.addActionListener(new ActionListener() {</span>
+<span class="nc" id="L41">		JButton btnBai = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;DeleteGUI.Yes&quot;));</span>
+<span class="nc" id="L42">		btnBai.setBounds(67, 155, 120, 30);</span>
+<span class="nc" id="L43">		btnBai.addActionListener(new ActionListener() {</span>
 			public void actionPerformed(ActionEvent e) {
-				
-<span class="nc bnc" id="L44" title="All 2 branches missed.">				if (user instanceof Traveler) {</span>
-<span class="nc" id="L45">					Traveler traveler = (Traveler) user;</span>
-<span class="nc" id="L46">					facade.cancelAllReservations(traveler);</span>
-					
-<span class="nc bnc" id="L48" title="All 2 branches missed.">				} else if (user instanceof Driver) {</span>
-<span class="nc" id="L49">					Driver driver = (Driver) user;</span>
-<span class="nc" id="L50">					facade.cancelAllDriversRides(driver);</span>
-				}
-				
-<span class="nc" id="L53">				float dirua = user.getMoney();</span>
-<span class="nc" id="L54">				facade.withdrawMoney(user, dirua);</span>
-<span class="nc" id="L55">				facade.deleteUser(user);</span>
-<span class="nc" id="L56">				JFrame a = new MainGUI();</span>
-<span class="nc" id="L57">				a.setVisible(true);</span>
-<span class="nc" id="L58">			}</span>
+<span class="nc" id="L45">				facade.deleteUser(user);</span>
+<span class="nc" id="L46">				JFrame a = new MainGUI();</span>
+<span class="nc" id="L47">				a.setVisible(true);</span>
+<span class="nc" id="L48">				closeWindow(e);</span>
+<span class="nc" id="L49">			}</span>
 		});
-<span class="nc" id="L60">		btnBai.setBounds(87, 155, 120, 30);</span>
-<span class="nc" id="L61">		contentPane.add(btnBai);</span>
+<span class="nc" id="L51">		contentPane.setLayout(null);</span>
+<span class="nc" id="L52">		contentPane.add(btnBai);</span>
 
-<span class="nc" id="L63">		JButton btnEz = new JButton(&quot;EZ&quot;);</span>
-<span class="nc" id="L64">		btnEz.addActionListener(new ActionListener() {</span>
+<span class="nc" id="L54">		JButton btnEz = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;DeleteGUI.No&quot;));</span>
+<span class="nc" id="L55">		btnEz.setBounds(262, 155, 120, 30);</span>
+<span class="nc" id="L56">		btnEz.addActionListener(new ActionListener() {</span>
 			public void actionPerformed(ActionEvent e) {
-<span class="nc bnc" id="L66" title="All 2 branches missed.">				if (user instanceof Traveler) {</span>
-<span class="nc" id="L67">					Traveler traveler = (Traveler) user;</span>
-<span class="nc" id="L68">					JFrame a = new TravelerGUI(traveler);</span>
-<span class="nc" id="L69">					a.setVisible(true);</span>
+<span class="nc bnc" id="L58" title="All 2 branches missed.">				if (user instanceof Traveler) {</span>
+<span class="nc" id="L59">					Traveler traveler = (Traveler) user;</span>
+<span class="nc" id="L60">					JFrame a = new TravelerGUI(traveler);</span>
+<span class="nc" id="L61">					a.setVisible(true);</span>
 					
-<span class="nc bnc" id="L71" title="All 2 branches missed.">				} else if (user instanceof Driver) {</span>
-<span class="nc" id="L72">					Driver driver = (Driver) user;</span>
-<span class="nc" id="L73">					JFrame a = new DriverGUI(driver);</span>
-<span class="nc" id="L74">					a.setVisible(true);</span>
+<span class="nc bnc" id="L63" title="All 2 branches missed.">				} else if (user instanceof Driver) {</span>
+<span class="nc" id="L64">					Driver driver = (Driver) user;</span>
+<span class="nc" id="L65">					JFrame a = new DriverGUI(driver);</span>
+<span class="nc" id="L66">					a.setVisible(true);</span>
 				}
-				
-<span class="nc" id="L77">			}</span>
+<span class="nc" id="L68">				closeWindow(e);</span>
+<span class="nc" id="L69">			}</span>
 		});
-<span class="nc" id="L79">		btnEz.setBounds(262, 155, 120, 30);</span>
-<span class="nc" id="L80">		contentPane.add(btnEz);</span>
-
-<span class="nc" id="L82">		JLabel lblNewLabel = new JLabel(&quot;Ziur zaude kontua ezabatu nahi duzula?&quot;);</span>
-<span class="nc" id="L83">		lblNewLabel.setBounds(137, 68, 181, 30);</span>
-<span class="nc" id="L84">		contentPane.add(lblNewLabel);</span>
-<span class="nc" id="L85">	}</span>
+<span class="nc" id="L71">		contentPane.add(btnEz);</span>
+<span class="nc" id="L72">		JLabel lblNewLabel = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ConfirmDeleteGUI&quot;));</span>
+<span class="nc" id="L73">		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);</span>
+<span class="nc" id="L74">		lblNewLabel.setBounds(67, 68, 315, 30);</span>
+<span class="nc" id="L75">		contentPane.add(lblNewLabel);</span>
+<span class="nc" id="L76">	}</span>
+	private void closeWindow(ActionEvent e) {
+<span class="nc" id="L78">		this.setVisible(false);</span>
+<span class="nc" id="L79">	}</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

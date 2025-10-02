@@ -7,6 +7,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import businessLogic.BLFacade;
+import domain.Admin;
 import domain.Driver;
 import domain.Traveler;
 import domain.User;
@@ -33,90 +34,95 @@ public class LoginGUI extends JFrame {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
-<span class="nc" id="L36">		EventQueue.invokeLater(new Runnable() {</span>
+<span class="nc" id="L37">		EventQueue.invokeLater(new Runnable() {</span>
 			public void run() {
 				try {
-<span class="nc" id="L39">					LoginGUI frame = new LoginGUI();</span>
-<span class="nc" id="L40">					frame.setVisible(true);</span>
-<span class="nc" id="L41">				} catch (Exception e) {</span>
-<span class="nc" id="L42">					e.printStackTrace();</span>
-<span class="nc" id="L43">				}</span>
-<span class="nc" id="L44">			}</span>
+<span class="nc" id="L40">					LoginGUI frame = new LoginGUI();</span>
+<span class="nc" id="L41">					frame.setVisible(true);</span>
+<span class="nc" id="L42">				} catch (Exception e) {</span>
+<span class="nc" id="L43">					e.printStackTrace();</span>
+<span class="nc" id="L44">				}</span>
+<span class="nc" id="L45">			}</span>
 		});
-<span class="nc" id="L46">	}</span>
+<span class="nc" id="L47">	}</span>
 
 	/**
 	 * Create the frame.
 	 */
-<span class="nc" id="L51">	public LoginGUI() {</span>
-<span class="nc" id="L52">		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);</span>
-<span class="nc" id="L53">		addWindowListener(new WindowAdapter() {</span>
+<span class="nc" id="L52">	public LoginGUI() {</span>
+<span class="nc" id="L53">		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);</span>
+<span class="nc" id="L54">		addWindowListener(new WindowAdapter() {</span>
 			@Override
 			public void windowClosing(WindowEvent evt) {
-<span class="nc" id="L56">				JFrame a = new MainGUI();</span>
-<span class="nc" id="L57">				a.setVisible(true);</span>
-<span class="nc" id="L58">				dispose();</span>
-<span class="nc" id="L59">			}</span>
+<span class="nc" id="L57">				JFrame a = new MainGUI();</span>
+<span class="nc" id="L58">				a.setVisible(true);</span>
+<span class="nc" id="L59">				dispose();</span>
+<span class="nc" id="L60">			}</span>
 		});
-<span class="nc" id="L61">		setBounds(100, 100, 450, 300);</span>
-<span class="nc" id="L62">		contentPane = new JPanel();</span>
-<span class="nc" id="L63">		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));</span>
+<span class="nc" id="L62">		setBounds(100, 100, 450, 300);</span>
+<span class="nc" id="L63">		contentPane = new JPanel();</span>
+<span class="nc" id="L64">		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));</span>
 
-<span class="nc" id="L65">		setContentPane(contentPane);</span>
-<span class="nc" id="L66">		contentPane.setLayout(null);</span>
+<span class="nc" id="L66">		setContentPane(contentPane);</span>
+<span class="nc" id="L67">		contentPane.setLayout(null);</span>
 		
-<span class="nc" id="L68">		textErabiltzailea = new JTextField();</span>
-<span class="nc" id="L69">		textErabiltzailea.setBounds(251, 33, 96, 19);</span>
-<span class="nc" id="L70">		contentPane.add(textErabiltzailea);</span>
-<span class="nc" id="L71">		textErabiltzailea.setColumns(10);</span>
+<span class="nc" id="L69">		textErabiltzailea = new JTextField();</span>
+<span class="nc" id="L70">		textErabiltzailea.setBounds(251, 33, 96, 19);</span>
+<span class="nc" id="L71">		contentPane.add(textErabiltzailea);</span>
+<span class="nc" id="L72">		textErabiltzailea.setColumns(10);</span>
 		
-<span class="nc" id="L73">		JLabel usernameText = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;LoginGUI.User&quot;)); //$NON-NLS-1$ //$NON-NLS-2$</span>
-<span class="nc" id="L74">		usernameText.setBounds(95, 36, 86, 13);</span>
-<span class="nc" id="L75">		contentPane.add(usernameText);</span>
+<span class="nc" id="L74">		JLabel usernameText = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;LoginGUI.User&quot;)); //$NON-NLS-1$ //$NON-NLS-2$</span>
+<span class="nc" id="L75">		usernameText.setBounds(95, 36, 86, 13);</span>
+<span class="nc" id="L76">		contentPane.add(usernameText);</span>
 		
-<span class="nc" id="L77">		JLabel passwordText = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;LoginGUI.Password&quot;)); //$NON-NLS-1$ //$NON-NLS-2$</span>
-<span class="nc" id="L78">		passwordText.setBounds(95, 71, 86, 13);</span>
-<span class="nc" id="L79">		contentPane.add(passwordText);</span>
+<span class="nc" id="L78">		JLabel passwordText = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;LoginGUI.Password&quot;)); //$NON-NLS-1$ //$NON-NLS-2$</span>
+<span class="nc" id="L79">		passwordText.setBounds(95, 71, 86, 13);</span>
+<span class="nc" id="L80">		contentPane.add(passwordText);</span>
 		
-<span class="nc" id="L81">		textPasahitza = new JPasswordField();</span>
-<span class="nc" id="L82">		textPasahitza.setBounds(251, 68, 96, 19);</span>
-<span class="nc" id="L83">		contentPane.add(textPasahitza);</span>
+<span class="nc" id="L82">		textPasahitza = new JPasswordField();</span>
+<span class="nc" id="L83">		textPasahitza.setBounds(251, 68, 96, 19);</span>
+<span class="nc" id="L84">		contentPane.add(textPasahitza);</span>
 		
-<span class="nc" id="L85">		JTextPane sarreraText = new JTextPane();</span>
-<span class="nc" id="L86">		sarreraText.setEditable(false);</span>
-<span class="nc" id="L87">		sarreraText.setBounds(95, 116, 252, 57);</span>
-<span class="nc" id="L88">		contentPane.add(sarreraText);</span>
+<span class="nc" id="L86">		JTextPane sarreraText = new JTextPane();</span>
+<span class="nc" id="L87">		sarreraText.setEditable(false);</span>
+<span class="nc" id="L88">		sarreraText.setBounds(95, 116, 252, 57);</span>
+<span class="nc" id="L89">		contentPane.add(sarreraText);</span>
 		
-<span class="nc" id="L90">		JButton sartuBotoia = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;LoginGUI.Enter&quot;));</span>
-<span class="nc" id="L91">		sartuBotoia.addActionListener(new ActionListener() {</span>
+<span class="nc" id="L91">		JButton sartuBotoia = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;LoginGUI.Enter&quot;));</span>
+<span class="nc" id="L92">		sartuBotoia.addActionListener(new ActionListener() {</span>
 			public void actionPerformed(ActionEvent e) {
-<span class="nc" id="L93">				String izena = textErabiltzailea.getText();</span>
-<span class="nc" id="L94">				String pasahitza = new String(textPasahitza.getPassword());</span>
-<span class="nc" id="L95">				BLFacade facade = MainGUI.getBusinessLogic();</span>
-<span class="nc" id="L96">				User user = facade.checkLogin(izena, pasahitza);</span>
-<span class="nc bnc" id="L97" title="All 2 branches missed.">				if (user != null) {</span>
+<span class="nc" id="L94">				String izena = textErabiltzailea.getText();</span>
+<span class="nc" id="L95">				String pasahitza = new String(textPasahitza.getPassword());</span>
+<span class="nc" id="L96">				BLFacade facade = MainGUI.getBusinessLogic();</span>
+<span class="nc" id="L97">				User user = facade.checkLogin(izena, pasahitza);</span>
+<span class="nc bnc" id="L98" title="All 2 branches missed.">				if (user != null) {</span>
 					//System.out.println(user.getName());
-<span class="nc" id="L99">					sarreraText.setEnabled(false);</span>
-<span class="nc" id="L100">					sarreraText.setText(&quot;Pasahitza zuzena da.&quot;);</span>
-<span class="nc bnc" id="L101" title="All 2 branches missed.">					if (user instanceof Driver) { //Driver-bat da</span>
-<span class="nc" id="L102">						DriverGUI a=new DriverGUI((Driver)user);</span>
-<span class="nc" id="L103">						a.setVisible(true);</span>
-<span class="nc" id="L104">						closeWindow(e);</span>
-<span class="nc" id="L105">					} else {</span>
-<span class="nc" id="L106">						TravelerGUI a=new TravelerGUI((Traveler)user);</span>
-<span class="nc" id="L107">						a.setVisible(true);</span>
-<span class="nc" id="L108">						closeWindow(e);</span>
-<span class="nc" id="L109">					}</span>
-				} else {
-<span class="nc" id="L111">					sarreraText.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;LoginGUI.InvalidUserErrorMsg&quot;));</span>
+<span class="nc" id="L100">					sarreraText.setEnabled(false);</span>
+<span class="nc" id="L101">					sarreraText.setText(&quot;Pasahitza zuzena da.&quot;);</span>
+<span class="nc bnc" id="L102" title="All 2 branches missed.">					if (user instanceof Driver) { //Driver-bat da</span>
+<span class="nc" id="L103">						DriverGUI a=new DriverGUI((Driver)user);</span>
+<span class="nc" id="L104">						a.setVisible(true);</span>
+<span class="nc" id="L105">						closeWindow(e);</span>
+<span class="nc" id="L106">					} else {</span>
+<span class="nc bnc" id="L107" title="All 2 branches missed.">						if(user instanceof Admin) {</span>
+<span class="nc" id="L108">							AdminGUI a=new AdminGUI((Admin)user);</span>
+<span class="nc" id="L109">							a.setVisible(true);</span>
+<span class="nc" id="L110">							closeWindow(e);</span>
+<span class="nc" id="L111">						}else {</span>
+<span class="nc" id="L112">						TravelerGUI a=new TravelerGUI((Traveler)user);</span>
+<span class="nc" id="L113">						a.setVisible(true);</span>
+<span class="nc" id="L114">						closeWindow(e);</span>
+<span class="nc" id="L115">					}</span>
+				}} else {
+<span class="nc" id="L117">					sarreraText.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;LoginGUI.InvalidUserErrorMsg&quot;));</span>
 				}
-<span class="nc" id="L113">			}</span>
+<span class="nc" id="L119">			}</span>
 		});
-<span class="nc" id="L115">		sartuBotoia.setBounds(176, 183, 85, 21);</span>
-<span class="nc" id="L116">		contentPane.add(sartuBotoia);</span>
-<span class="nc" id="L117">	}</span>
+<span class="nc" id="L121">		sartuBotoia.setBounds(176, 183, 85, 21);</span>
+<span class="nc" id="L122">		contentPane.add(sartuBotoia);</span>
+<span class="nc" id="L123">	}</span>
 	private void closeWindow(ActionEvent e) {
-<span class="nc" id="L119">		this.setVisible(false);</span>
-<span class="nc" id="L120">	}</span>
+<span class="nc" id="L125">		this.setVisible(false);</span>
+<span class="nc" id="L126">	}</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

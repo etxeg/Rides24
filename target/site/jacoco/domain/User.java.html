@@ -27,22 +27,22 @@ public class User implements Serializable{
 	private String password;
 	private float money;
 
-<span class="fc" id="L30">	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.MERGE)</span>
+<span class="nc" id="L30">	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.MERGE)</span>
 	private List&lt;Movement&gt; movements = new Vector&lt;Movement&gt;();
 	public User() {
-<span class="fc" id="L33">		super();</span>
-<span class="fc" id="L34">	}</span>
+<span class="nc" id="L33">		super();</span>
+<span class="nc" id="L34">	}</span>
 
-<span class="fc" id="L36">	public User(String email, String name, String password) {</span>
-<span class="fc" id="L37">		this.email = email;</span>
-<span class="fc" id="L38">		this.name = name;</span>
-<span class="fc" id="L39">		this.password = password;</span>
-<span class="fc" id="L40">		this.money = 0;</span>
-<span class="fc" id="L41">	}</span>
+<span class="nc" id="L36">	public User(String email, String name, String password) {</span>
+<span class="nc" id="L37">		this.email = email;</span>
+<span class="nc" id="L38">		this.name = name;</span>
+<span class="nc" id="L39">		this.password = password;</span>
+<span class="nc" id="L40">		this.money = 0;</span>
+<span class="nc" id="L41">	}</span>
 	
 	
 	public String getEmail() {
-<span class="fc" id="L45">		return email;</span>
+<span class="nc" id="L45">		return email;</span>
 	}
 
 	public void setEmail(String email) {

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Ride.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Rides24</a> &gt; <a href="index.source.html" class="el_package">domain</a> &gt; <span class="el_source">Ride.java</span></div><h1>Ride.java</h1><pre class="source lang-java linenums">package domain;
 
 import java.io.*;
+import java.text.DateFormat;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
@@ -32,74 +33,79 @@ public class Ride implements Serializable {
 	private boolean cancelled;
 	
 	private Driver driver;  
-<span class="pc" id="L35">	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.MERGE)</span>
+<span class="nc" id="L36">	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.MERGE)</span>
 	private List&lt;Reservation&gt; acceptedReservations = new Vector&lt;Reservation&gt;();
-<span class="pc" id="L37">	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.MERGE)</span>
+<span class="nc" id="L38">	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.MERGE)</span>
 	private List&lt;Reservation&gt; pendingReservations = new Vector&lt;Reservation&gt;();
 	
 	public Ride(){
-<span class="fc" id="L41">		super();</span>
-<span class="fc" id="L42">	}</span>
+<span class="nc" id="L42">		super();</span>
+<span class="nc" id="L43">	}</span>
 	
 	public Ride(Integer pRideNumber, String pFrom, String pTo, Date pDate, float pPrice, Driver pDriver, Car pCar) {
-<span class="nc" id="L45">		super();</span>
-<span class="nc" id="L46">		this.rideNumber = pRideNumber;</span>
-<span class="nc" id="L47">		this.from = pFrom;</span>
-<span class="nc" id="L48">		this.to = pTo;</span>
-<span class="nc" id="L49">		this.nPlaces = pCar.getPlazak();</span>
-<span class="nc" id="L50">		this.date=pDate;</span>
-<span class="nc" id="L51">		this.price=pPrice;</span>
-<span class="nc" id="L52">		this.driver = pDriver;</span>
-<span class="nc" id="L53">		this.car = pCar;</span>
-<span class="nc" id="L54">		this.cancelled = false;</span>
-<span class="nc" id="L55">	}</span>
+<span class="nc" id="L46">		super();</span>
+<span class="nc" id="L47">		this.rideNumber = pRideNumber;</span>
+<span class="nc" id="L48">		this.from = pFrom;</span>
+<span class="nc" id="L49">		this.to = pTo;</span>
+<span class="nc" id="L50">		this.nPlaces = pCar.getPlazak();</span>
+<span class="nc" id="L51">		this.date=pDate;</span>
+<span class="nc" id="L52">		this.price=pPrice;</span>
+<span class="nc" id="L53">		this.driver = pDriver;</span>
+<span class="nc" id="L54">		this.car = pCar;</span>
+<span class="nc" id="L55">		this.cancelled = false;</span>
+<span class="nc" id="L56">	}</span>
 
 	
 
 	public Ride(String pFrom, String pTo,  Date pDate, float pPrice, Driver pDriver, Car pCar) {
-<span class="fc" id="L60">		super();</span>
-<span class="fc" id="L61">		this.from = pFrom;</span>
-<span class="fc" id="L62">		this.to = pTo;</span>
-<span class="fc" id="L63">		this.nPlaces = pCar.getPlazak();</span>
-<span class="fc" id="L64">		this.date=pDate;</span>
-<span class="fc" id="L65">		this.price=pPrice;</span>
-<span class="fc" id="L66">		this.driver = pDriver;</span>
-<span class="fc" id="L67">		this.car = pCar;</span>
-<span class="fc" id="L68">		this.cancelled = false;</span>
-<span class="fc" id="L69">	}</span>
+<span class="nc" id="L61">		super();</span>
+<span class="nc" id="L62">		this.from = pFrom;</span>
+<span class="nc" id="L63">		this.to = pTo;</span>
+<span class="nc" id="L64">		this.nPlaces = pCar.getPlazak();</span>
+<span class="nc" id="L65">		this.date=pDate;</span>
+<span class="nc" id="L66">		this.price=pPrice;</span>
+<span class="nc" id="L67">		this.driver = pDriver;</span>
+<span class="nc" id="L68">		this.car = pCar;</span>
+<span class="nc" id="L69">		this.cancelled = false;</span>
+<span class="nc" id="L70">	}</span>
 	
 	public void addPendingReservation(Reservation pReservation) {
-<span class="nc" id="L72">		System.out.println(&quot;Ride erreserba: &quot; + pReservation.getErreserbaZenbakia());</span>
-<span class="nc" id="L73">		this.pendingReservations.add(pReservation);</span>
-<span class="nc" id="L74">	}</span>
+<span class="nc" id="L73">		System.out.println(&quot;Ride erreserba: &quot; + pReservation.getErreserbaZenbakia());</span>
+<span class="nc" id="L74">		this.pendingReservations.add(pReservation);</span>
+<span class="nc" id="L75">	}</span>
 	
 	public void removePendingReservation(Reservation pReservation) {
-<span class="nc" id="L77">		this.pendingReservations.remove(pReservation);</span>
-<span class="nc" id="L78">	}</span>
+<span class="nc" id="L78">		this.pendingReservations.remove(pReservation);</span>
+<span class="nc" id="L79">	}</span>
+	
+	public void removeAcceptedReservations(Reservation pReservation) {
+<span class="nc" id="L82">		this.acceptedReservations.remove(pReservation);</span>
+<span class="nc" id="L83">		this.addNChairs(1);</span>
+<span class="nc" id="L84">	}</span>
 	
 	public void addAcceptedReservations(Reservation pReservation) {
-<span class="nc" id="L81">		this.acceptedReservations.add(pReservation);</span>
-<span class="nc" id="L82">	}</span>
-	
-	public void printPendingReservations() {
-<span class="nc bnc" id="L85" title="All 2 branches missed.">		for (Reservation reservation:this.pendingReservations) {</span>
-<span class="nc" id="L86">			System.out.println(reservation.getErreserbaZenbakia());</span>
-<span class="nc" id="L87">		}</span>
+<span class="nc" id="L87">		this.acceptedReservations.add(pReservation);</span>
 <span class="nc" id="L88">	}</span>
 	
+	public void printPendingReservations() {
+<span class="nc bnc" id="L91" title="All 2 branches missed.">		for (Reservation reservation:this.pendingReservations) {</span>
+<span class="nc" id="L92">			System.out.println(reservation.getErreserbaZenbakia());</span>
+<span class="nc" id="L93">		}</span>
+<span class="nc" id="L94">	}</span>
+	
 	public void deleteNChairs(int n) {
-<span class="nc" id="L91">		this.nPlaces = this.nPlaces-n;</span>
-<span class="nc" id="L92">	}</span>
+<span class="nc" id="L97">		this.nPlaces = this.nPlaces-n;</span>
+<span class="nc" id="L98">	}</span>
 	public void addNChairs(int n) {
-<span class="nc" id="L94">		this.nPlaces = this.nPlaces+n;</span>
-<span class="nc" id="L95">	}</span>
+<span class="nc" id="L100">		this.nPlaces = this.nPlaces+n;</span>
+<span class="nc" id="L101">	}</span>
 	/**
 	 * Get the  number of the ride
 	 * 
 	 * @return the ride number
 	 */
 	public Integer getRideNumber() {
-<span class="nc" id="L102">		return rideNumber;</span>
+<span class="nc" id="L108">		return rideNumber;</span>
 	}
 
 	
@@ -109,8 +115,8 @@ public class Ride implements Serializable {
 	 * @param ride Number to be set	 */
 	
 	public void setRideNumber(Integer rideNumber) {
-<span class="nc" id="L112">		this.rideNumber = rideNumber;</span>
-<span class="nc" id="L113">	}</span>
+<span class="nc" id="L118">		this.rideNumber = rideNumber;</span>
+<span class="nc" id="L119">	}</span>
 
 
 	/**
@@ -120,7 +126,7 @@ public class Ride implements Serializable {
 	 */
 
 	public String getFrom() {
-<span class="fc" id="L123">		return from;</span>
+<span class="nc" id="L129">		return from;</span>
 	}
 
 
@@ -131,8 +137,8 @@ public class Ride implements Serializable {
 	 */	
 	
 	public void setFrom(String origin) {
-<span class="nc" id="L134">		this.from = origin;</span>
-<span class="nc" id="L135">	}</span>
+<span class="nc" id="L140">		this.from = origin;</span>
+<span class="nc" id="L141">	}</span>
 
 	/**
 	 * Get the destination  of the ride
@@ -141,7 +147,7 @@ public class Ride implements Serializable {
 	 */
 
 	public String getTo() {
-<span class="fc" id="L144">		return to;</span>
+<span class="nc" id="L150">		return to;</span>
 	}
 
 
@@ -151,8 +157,8 @@ public class Ride implements Serializable {
 	 * @param destination to be set
 	 */	
 	public void setTo(String destination) {
-<span class="nc" id="L154">		this.to = destination;</span>
-<span class="nc" id="L155">	}</span>
+<span class="nc" id="L160">		this.to = destination;</span>
+<span class="nc" id="L161">	}</span>
 	
 	/**
 	 * Get the date  of the ride
@@ -160,7 +166,7 @@ public class Ride implements Serializable {
 	 * @return the ride date 
 	 */
 	public Date getDate() {
-<span class="fc" id="L163">		return date;</span>
+<span class="nc" id="L169">		return date;</span>
 	}
 	/**
 	 * Set the date of the ride
@@ -168,12 +174,12 @@ public class Ride implements Serializable {
 	 * @param date to be set
 	 */	
 	public void setDate(Date date) {
-<span class="nc" id="L171">		this.date = date;</span>
-<span class="nc" id="L172">	}</span>
+<span class="nc" id="L177">		this.date = date;</span>
+<span class="nc" id="L178">	}</span>
 
 	
 	public int getnPlaces() {
-<span class="nc" id="L176">		return nPlaces;</span>
+<span class="nc" id="L182">		return nPlaces;</span>
 	}
 
 	/**
@@ -183,8 +189,8 @@ public class Ride implements Serializable {
 	 */
 
 	public void setBetMinimum(int nPlaces) {
-<span class="nc" id="L186">		this.nPlaces = nPlaces;</span>
-<span class="nc" id="L187">	}</span>
+<span class="nc" id="L192">		this.nPlaces = nPlaces;</span>
+<span class="nc" id="L193">	}</span>
 
 	/**
 	 * Get the driver associated to the ride
@@ -192,7 +198,7 @@ public class Ride implements Serializable {
 	 * @return the associated driver
 	 */
 	public Driver getDriver() {
-<span class="nc" id="L195">		return driver;</span>
+<span class="nc" id="L201">		return driver;</span>
 	}
 
 	/**
@@ -201,60 +207,64 @@ public class Ride implements Serializable {
 	 * @param driver to associate to the ride
 	 */
 	public void setDriver(Driver driver) {
-<span class="nc" id="L204">		this.driver = driver;</span>
-<span class="nc" id="L205">	}</span>
+<span class="nc" id="L210">		this.driver = driver;</span>
+<span class="nc" id="L211">	}</span>
 
 	public float getPrice() {
-<span class="nc" id="L208">		return price;</span>
+<span class="nc" id="L214">		return price;</span>
 	}
 
 	public void setPrice(float price) {
-<span class="nc" id="L212">		this.price = price;</span>
-<span class="nc" id="L213">	}</span>
+<span class="nc" id="L218">		this.price = price;</span>
+<span class="nc" id="L219">	}</span>
 
 	public List&lt;Reservation&gt; getAcceptedReservations() {
-<span class="nc" id="L216">		return acceptedReservations;</span>
+<span class="nc" id="L222">		return acceptedReservations;</span>
 	}
 
 	public void setAcceptedReservations(LinkedList&lt;Reservation&gt; acceptedReservations) {
-<span class="nc" id="L220">		this.acceptedReservations = acceptedReservations;</span>
-<span class="nc" id="L221">	}</span>
+<span class="nc" id="L226">		this.acceptedReservations = acceptedReservations;</span>
+<span class="nc" id="L227">	}</span>
 
 	public List&lt;Reservation&gt; getPendingReservations() {
-<span class="nc" id="L224">		return pendingReservations;</span>
+<span class="nc" id="L230">		return pendingReservations;</span>
 	}
 
 	public void setPendingReservations(LinkedList&lt;Reservation&gt; pendingReservations) {
-<span class="nc" id="L228">		this.pendingReservations = pendingReservations;</span>
-<span class="nc" id="L229">	}</span>
+<span class="nc" id="L234">		this.pendingReservations = pendingReservations;</span>
+<span class="nc" id="L235">	}</span>
 
 	public void setnPlaces(int nPlaces) {
-<span class="nc" id="L232">		this.nPlaces = nPlaces;</span>
-<span class="nc" id="L233">	}</span>
+<span class="nc" id="L238">		this.nPlaces = nPlaces;</span>
+<span class="nc" id="L239">	}</span>
 
 	public Car getCar() {
-<span class="nc" id="L236">		return car;</span>
+<span class="nc" id="L242">		return car;</span>
 	}
 
 	public void setCar(Car car) {
-<span class="nc" id="L240">		this.car = car;</span>
-<span class="nc" id="L241">	}</span>
+<span class="nc" id="L246">		this.car = car;</span>
+<span class="nc" id="L247">	}</span>
 	
 	public void cancelRide() {
-<span class="nc" id="L244">		this.cancelled = true;</span>
-<span class="nc" id="L245">	}</span>
+<span class="nc" id="L250">		this.cancelled = true;</span>
+<span class="nc" id="L251">	}</span>
 	
 	public boolean isCancelled() {
-<span class="nc" id="L248">		return cancelled;</span>
+<span class="nc" id="L254">		return cancelled;</span>
 	}
 	
 	public Assessment addAssessment(Traveler traveler, int stars, String text)  {
-<span class="nc" id="L252">        Assessment assessment = driver.addAssessment(traveler, stars, text);</span>
-<span class="nc" id="L253">        return assessment;</span>
+<span class="nc" id="L258">        Assessment assessment = driver.addAssessment(traveler, stars, text);</span>
+<span class="nc" id="L259">        return assessment;</span>
 	}
 	
-	public String toString(){
-<span class="fc" id="L257">		return from+&quot;-&quot;+to+&quot;: &quot;+date;</span>
+	@Override
+	public String toString(){ 
+<span class="nc" id="L264">		int year  = date.getYear()  + 1900;</span>
+<span class="nc" id="L265">	    int month = date.getMonth() + 1;</span>
+<span class="nc" id="L266">	    int day   = date.getDate(); </span>
+<span class="nc" id="L267">	    return from + &quot; - &quot; + to + &quot;: &quot; + year + &quot;/&quot; + month + &quot;/&quot; + day;</span>
 	}
 
 

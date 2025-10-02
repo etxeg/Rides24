@@ -109,17 +109,23 @@ public class Reservation implements Serializable {
 	public void cancel() {
 <span class="nc" id="L110">		this.state = &quot;Kantzelatua&quot;;</span>
 <span class="nc" id="L111">	}</span>
+	
+	public void cancelReservation() {
+<span class="nc" id="L114">		this.traveler = null;</span>
+<span class="nc" id="L115">		this.ride.removeAcceptedReservations(this);</span>
+<span class="nc" id="L116">		this.ride=null;</span>
+<span class="nc" id="L117">	}</span>
 
 	public int getnSeats() {
-<span class="nc" id="L114">		return nSeats;</span>
+<span class="nc" id="L120">		return nSeats;</span>
 	}
 
 	public void setnSeats(int nSeats) {
-<span class="nc" id="L118">		this.nSeats = nSeats;</span>
-<span class="nc" id="L119">	}</span>
+<span class="nc" id="L124">		this.nSeats = nSeats;</span>
+<span class="nc" id="L125">	}</span>
 	
 	public String toString(){
-<span class="nc" id="L122">		return this.ride.toString();</span>
+<span class="nc" id="L128">		return this.ride.toString();</span>
 	}
 	
 }

@@ -47,34 +47,37 @@ public class AddMoneyGUI extends JFrame {
 <span class="nc" id="L47">		btnAdd.addActionListener(new ActionListener() {</span>
 			public void actionPerformed(ActionEvent e) {
 <span class="nc" id="L49">				String dirua = addMoney.getText();</span>
-<span class="nc" id="L50">				float diruFloat = Float.parseFloat(dirua);</span>
-<span class="nc" id="L51">				facade.addMoney(user, diruFloat);</span>
+<span class="nc bnc" id="L50" title="All 4 branches missed.">				if (dirua == null || dirua.isEmpty()) {</span>
+<span class="nc" id="L51">					return;</span>
+				}
+<span class="nc" id="L53">				float diruFloat = Float.parseFloat(dirua);</span>
+<span class="nc" id="L54">				facade.addMoney(user, diruFloat);</span>
 				
-<span class="nc" id="L53">				jButton2_actionPerformed(e);//Itxi leihoa</span>
-<span class="nc" id="L54">			}</span>
+<span class="nc" id="L56">				jButton2_actionPerformed(e);//Itxi leihoa</span>
+<span class="nc" id="L57">			}</span>
 		});
-<span class="nc" id="L56">		btnAdd.setBounds(180, 146, 85, 21);</span>
-<span class="nc" id="L57">		contentPane.add(btnAdd);</span>
+<span class="nc" id="L59">		btnAdd.setBounds(180, 146, 85, 21);</span>
+<span class="nc" id="L60">		contentPane.add(btnAdd);</span>
 		
-<span class="nc" id="L59">		JLabel lblNewLabel_1 = new JLabel(&quot;€&quot;);</span>
-<span class="nc" id="L60">		lblNewLabel_1.setBounds(326, 63, 45, 13);</span>
-<span class="nc" id="L61">		contentPane.add(lblNewLabel_1);</span>
+<span class="nc" id="L62">		JLabel lblNewLabel_1 = new JLabel(&quot;€&quot;);</span>
+<span class="nc" id="L63">		lblNewLabel_1.setBounds(326, 63, 45, 13);</span>
+<span class="nc" id="L64">		contentPane.add(lblNewLabel_1);</span>
 		
-<span class="nc" id="L63">		JButton jButtonClose = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Close&quot;));</span>
-<span class="nc" id="L64">		jButtonClose.setBounds(180, 232, 85, 21);</span>
-<span class="nc" id="L65">		contentPane.add(jButtonClose);</span>
-<span class="nc" id="L66">		jButtonClose.addActionListener(new ActionListener()</span>
-<span class="nc" id="L67">		{</span>
+<span class="nc" id="L66">		JButton jButtonClose = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Close&quot;));</span>
+<span class="nc" id="L67">		jButtonClose.setBounds(180, 232, 85, 21);</span>
+<span class="nc" id="L68">		contentPane.add(jButtonClose);</span>
+<span class="nc" id="L69">		jButtonClose.addActionListener(new ActionListener()</span>
+<span class="nc" id="L70">		{</span>
 			public void actionPerformed(ActionEvent e)
 			{
-<span class="nc" id="L70">				jButton2_actionPerformed(e);</span>
-<span class="nc" id="L71">			}</span>
+<span class="nc" id="L73">				jButton2_actionPerformed(e);</span>
+<span class="nc" id="L74">			}</span>
 		});
 		
-<span class="nc" id="L74">		setTitle(user.getName()+&quot;: &quot;+user.getMoney()+&quot;€&quot;);</span>
-<span class="nc" id="L75">	}</span>
-	private void jButton2_actionPerformed(ActionEvent e) {
-<span class="nc" id="L77">		this.setVisible(false);</span>
+<span class="nc" id="L77">		setTitle(user.getName()+&quot;: &quot;+user.getMoney()+&quot;€&quot;);</span>
 <span class="nc" id="L78">	}</span>
+	private void jButton2_actionPerformed(ActionEvent e) {
+<span class="nc" id="L80">		this.setVisible(false);</span>
+<span class="nc" id="L81">	}</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

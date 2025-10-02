@@ -88,30 +88,33 @@ public class AddCarGUI extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 <span class="nc" id="L89">				String pMatrikula = matrikulaBox.getText();</span>
 <span class="nc" id="L90">				String pMarka = markaBox.getText();</span>
+<span class="nc bnc" id="L91" title="All 8 branches missed.">				if (pMatrikula == null || pMatrikula.isEmpty() || pMarka == null || pMarka.isEmpty()) {</span>
+<span class="nc" id="L92">					return;</span>
+				}
 				try {
-<span class="nc" id="L92">					int nPlazak = Integer.parseInt(plazakBox.getText());</span>
+<span class="nc" id="L95">					int nPlazak = Integer.parseInt(plazakBox.getText());</span>
 					
-<span class="nc" id="L94">					Car createdCar =facade.createCar(driver, pMatrikula, nPlazak, pMarka);</span>
-<span class="nc bnc" id="L95" title="All 2 branches missed.">					if (createdCar != null) {</span>
-<span class="nc" id="L96">						jButton2_actionPerformed(e);//Itxi leihoa</span>
+<span class="nc" id="L97">					Car createdCar =facade.createCar(driver, pMatrikula, nPlazak, pMarka);</span>
+<span class="nc bnc" id="L98" title="All 2 branches missed.">					if (createdCar != null) {</span>
+<span class="nc" id="L99">						jButton2_actionPerformed(e);//Itxi leihoa</span>
 					} else {
-<span class="nc" id="L98">						errorText.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;AddCar.CarExisted&quot;));</span>
-<span class="nc" id="L99">						errorText.setVisible(true);</span>
+<span class="nc" id="L101">						errorText.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;AddCar.CarExisted&quot;));</span>
+<span class="nc" id="L102">						errorText.setVisible(true);</span>
 					}
 					
-<span class="nc" id="L102">				} catch (NumberFormatException e1) {</span>
-<span class="nc" id="L103">					errorText.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;AddCar.MustBeNumber&quot;));</span>
-<span class="nc" id="L104">					errorText.setVisible(true);</span>
-<span class="nc" id="L105">				}</span>
-<span class="nc" id="L106">			}</span>
+<span class="nc" id="L105">				} catch (NumberFormatException e1) {</span>
+<span class="nc" id="L106">					errorText.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;AddCar.MustBeNumber&quot;));</span>
+<span class="nc" id="L107">					errorText.setVisible(true);</span>
+<span class="nc" id="L108">				}</span>
+<span class="nc" id="L109">			}</span>
 		});
-<span class="nc" id="L108">		btnAdd.setBounds(223, 232, 85, 21);</span>
-<span class="nc" id="L109">		contentPane.add(btnAdd);</span>
+<span class="nc" id="L111">		btnAdd.setBounds(223, 232, 85, 21);</span>
+<span class="nc" id="L112">		contentPane.add(btnAdd);</span>
 		
-<span class="nc" id="L111">		setTitle(driver.getName());</span>
-<span class="nc" id="L112">	}</span>
-	private void jButton2_actionPerformed(ActionEvent e) {
-<span class="nc" id="L114">		this.setVisible(false);</span>
+<span class="nc" id="L114">		setTitle(driver.getName());</span>
 <span class="nc" id="L115">	}</span>
+	private void jButton2_actionPerformed(ActionEvent e) {
+<span class="nc" id="L117">		this.setVisible(false);</span>
+<span class="nc" id="L118">	}</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

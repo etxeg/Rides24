@@ -8,6 +8,7 @@ package gui;
 import javax.swing.*;
 
 import domain.Driver;
+import domain.Ride;
 import domain.Traveler;
 import businessLogic.BLFacade;
 
@@ -16,6 +17,7 @@ import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.util.List;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
@@ -28,122 +30,164 @@ public class TravelerGUI extends JFrame {
     private Traveler traveler;
 	private static final long serialVersionUID = 1L;
 
-<span class="nc" id="L31">	private JPanel jContentPane = null;</span>
-<span class="nc" id="L32">	private JButton jButtonCreateQuery = null;</span>
-<span class="nc" id="L33">	private JButton jButtonQueryQueries = null;</span>
+<span class="nc" id="L33">	private JPanel jContentPane = null;</span>
+<span class="nc" id="L34">	private JButton jButtonCreateQuery = null;</span>
+<span class="nc" id="L35">	private JButton jButtonQueryQueries = null;</span>
 	
 	protected JLabel jLabelSelectOption;
 	private JButton jButtonReservationState;
 	private JButton jButtonConfirmReservation;
 	private JButton jButtonAssessment;
 	private JButton JButtonDelete;
+	private JButton jButtonReclamation;
+	private JButton btnReclamationState;
+	private JButton jButtonDelete;
 	
 	/**
 	 * This is the default constructor
 	 */
 	public TravelerGUI(Traveler t) {
-<span class="nc" id="L45">		super();</span>
-
-<span class="nc" id="L47">		traveler=t;</span>
-		
+<span class="nc" id="L50">		super();</span>
+<span class="nc" id="L51">		BLFacade facade = MainGUI.getBusinessLogic();</span>
+<span class="nc" id="L52">		traveler=t;</span>
+<span class="nc" id="L53">		traveler.printAlerts();</span>
+<span class="nc" id="L54">		System.out.println(&quot;Start\n&quot;);</span>
+<span class="nc" id="L55">		List&lt;Ride&gt; alertRides = facade.checkAlerts(t);</span>
+<span class="nc bnc" id="L56" title="All 2 branches missed.">		if (alertRides.isEmpty() == false) {</span>
+<span class="nc" id="L57">			JFrame a = new AlertFoundGUI(alertRides);</span>
+<span class="nc" id="L58">			a.setVisible(true);</span>
+		}
 		// this.setSize(271, 295);
-<span class="nc" id="L50">		this.setSize(495, 290);</span>
-<span class="nc" id="L51">		jLabelSelectOption = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;MainGUI.SelectOption&quot;));</span>
-<span class="nc" id="L52">		jLabelSelectOption.setFont(new Font(&quot;Tahoma&quot;, Font.BOLD, 13));</span>
-<span class="nc" id="L53">		jLabelSelectOption.setForeground(Color.BLACK);</span>
-<span class="nc" id="L54">		jLabelSelectOption.setHorizontalAlignment(SwingConstants.CENTER);</span>
+<span class="nc" id="L61">		this.setSize(495, 290);</span>
+<span class="nc" id="L62">		jLabelSelectOption = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;MainGUI.SelectOption&quot;));</span>
+<span class="nc" id="L63">		jLabelSelectOption.setFont(new Font(&quot;Tahoma&quot;, Font.BOLD, 13));</span>
+<span class="nc" id="L64">		jLabelSelectOption.setForeground(Color.BLACK);</span>
+<span class="nc" id="L65">		jLabelSelectOption.setHorizontalAlignment(SwingConstants.CENTER);</span>
 		
-<span class="nc" id="L56">		jButtonQueryQueries = new JButton();</span>
-<span class="nc" id="L57">		jButtonQueryQueries.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;DriverGUI.QueryRides&quot;));</span>
-<span class="nc" id="L58">		jButtonQueryQueries.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="nc" id="L67">		jButtonQueryQueries = new JButton();</span>
+<span class="nc" id="L68">		jButtonQueryQueries.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;DriverGUI.QueryRides&quot;));</span>
+<span class="nc" id="L69">		jButtonQueryQueries.addActionListener(new java.awt.event.ActionListener() {</span>
 			public void actionPerformed(java.awt.event.ActionEvent e) {
-<span class="nc" id="L60">				JFrame a = new FindRidesGUI(traveler);</span>
-<span class="nc" id="L61">				a.setVisible(true);</span>
-<span class="nc" id="L62">			}</span>
+<span class="nc" id="L71">				JFrame a = new FindRidesGUI(traveler);</span>
+<span class="nc" id="L72">				a.setVisible(true);</span>
+<span class="nc" id="L73">			}</span>
 		});
 		
-<span class="nc" id="L65">		jContentPane = new JPanel();</span>
-<span class="nc" id="L66">		jContentPane.setLayout(new GridLayout(9, 1, 0, 0));</span>
-<span class="nc" id="L67">		jContentPane.add(jLabelSelectOption);</span>
-<span class="nc" id="L68">		jContentPane.add(jButtonQueryQueries);</span>
+<span class="nc" id="L76">		jContentPane = new JPanel();</span>
+<span class="nc" id="L77">		jContentPane.setLayout(new GridLayout(13, 1, 0, 0));</span>
+<span class="nc" id="L78">		jContentPane.add(jLabelSelectOption);</span>
+<span class="nc" id="L79">		jContentPane.add(jButtonQueryQueries);</span>
 		
-<span class="nc" id="L70">		JButton jButtonAddMoney = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;UserGUI.AddMoney&quot;));</span>
-<span class="nc" id="L71">		jButtonAddMoney.addActionListener(new ActionListener() {</span>
+<span class="nc" id="L81">		JButton jButtonAddMoney = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;UserGUI.AddMoney&quot;));</span>
+<span class="nc" id="L82">		jButtonAddMoney.addActionListener(new ActionListener() {</span>
 			public void actionPerformed(ActionEvent e) {
-<span class="nc" id="L73">				JFrame a = new AddMoneyGUI(traveler);</span>
-<span class="nc" id="L74">				a.setVisible(true);</span>
-<span class="nc" id="L75">			}</span>
+<span class="nc" id="L84">				JFrame a = new AddMoneyGUI(traveler);</span>
+<span class="nc" id="L85">				a.setVisible(true);</span>
+<span class="nc" id="L86">			}</span>
 		});
-<span class="nc" id="L77">		jContentPane.add(jButtonAddMoney);</span>
+<span class="nc" id="L88">		jContentPane.add(jButtonAddMoney);</span>
 		
-<span class="nc" id="L79">		JButton jButtonWithdrawMoney = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;UserGUI.WithdrawMoney&quot;));</span>
-<span class="nc" id="L80">		jButtonWithdrawMoney.addActionListener(new ActionListener() {</span>
+<span class="nc" id="L90">		JButton jButtonWithdrawMoney = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;UserGUI.WithdrawMoney&quot;));</span>
+<span class="nc" id="L91">		jButtonWithdrawMoney.addActionListener(new ActionListener() {</span>
 			public void actionPerformed(ActionEvent e) {
-<span class="nc" id="L82">				JFrame a = new RemoveMoneyGUI(traveler);</span>
-<span class="nc" id="L83">				a.setVisible(true);</span>
-<span class="nc" id="L84">			}</span>
+<span class="nc" id="L93">				JFrame a = new RemoveMoneyGUI(traveler);</span>
+<span class="nc" id="L94">				a.setVisible(true);</span>
+<span class="nc" id="L95">			}</span>
 		});
-<span class="nc" id="L86">		jContentPane.add(jButtonWithdrawMoney);</span>
+<span class="nc" id="L97">		jContentPane.add(jButtonWithdrawMoney);</span>
 		
-<span class="nc" id="L88">		jButtonReservationState = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;TravelerGUI.ReservationState&quot;));</span>
-<span class="nc" id="L89">		jButtonReservationState.addActionListener(new ActionListener() {</span>
+<span class="nc" id="L99">		jButtonReservationState = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;TravelerGUI.ReservationState&quot;));</span>
+<span class="nc" id="L100">		jButtonReservationState.addActionListener(new ActionListener() {</span>
 			public void actionPerformed(ActionEvent e) {
-<span class="nc" id="L91">				JFrame a = new ReservationStateGUI(traveler);</span>
-<span class="nc" id="L92">				a.setVisible(true);</span>
-<span class="nc" id="L93">			}</span>
+<span class="nc" id="L102">				JFrame a = new ReservationStateGUI(traveler);</span>
+<span class="nc" id="L103">				a.setVisible(true);</span>
+<span class="nc" id="L104">			}</span>
 		});
-<span class="nc" id="L95">		jContentPane.add(jButtonReservationState);</span>
+<span class="nc" id="L106">		jContentPane.add(jButtonReservationState);</span>
 		
-<span class="nc" id="L97">		jButtonConfirmReservation = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;TravelerGUI.ConfirmReservation&quot;));</span>
-<span class="nc" id="L98">		jButtonConfirmReservation.addActionListener(new ActionListener() {</span>
+<span class="nc" id="L108">		jButtonConfirmReservation = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;TravelerGUI.ConfirmReservation&quot;));</span>
+<span class="nc" id="L109">		jButtonConfirmReservation.addActionListener(new ActionListener() {</span>
 			public void actionPerformed(ActionEvent e) {
-<span class="nc" id="L100">				JFrame a = new ConfirmReservationGUI(traveler);</span>
-<span class="nc" id="L101">				a.setVisible(true);</span>
-<span class="nc" id="L102">			}</span>
+<span class="nc" id="L111">				JFrame a = new ConfirmReservationGUI(traveler);</span>
+<span class="nc" id="L112">				a.setVisible(true);</span>
+<span class="nc" id="L113">			}</span>
 		});
-<span class="nc" id="L104">		jContentPane.add(jButtonConfirmReservation);</span>
+<span class="nc" id="L115">		jContentPane.add(jButtonConfirmReservation);</span>
 		
-<span class="nc" id="L106">		JButton jButtonMovements = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;DriverGUI.Movements&quot;));</span>
-<span class="nc" id="L107">		jButtonMovements.addActionListener(new ActionListener() {</span>
+<span class="nc" id="L117">		JButton jButtonMovements = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;DriverGUI.Movements&quot;));</span>
+<span class="nc" id="L118">		jButtonMovements.addActionListener(new ActionListener() {</span>
 			public void actionPerformed(ActionEvent e) {
-<span class="nc" id="L109">				JFrame a = new MovementGUI(traveler);</span>
-<span class="nc" id="L110">				a.setVisible(true);</span>
-<span class="nc" id="L111">			}</span>
+<span class="nc" id="L120">				JFrame a = new MovementGUI(traveler);</span>
+<span class="nc" id="L121">				a.setVisible(true);</span>
+<span class="nc" id="L122">			}</span>
 		});
 		
-<span class="nc" id="L114">		jContentPane.add(jButtonMovements);</span>
+<span class="nc" id="L125">		jContentPane.add(jButtonMovements);</span>
 		
-<span class="nc" id="L116">		jButtonAssessment = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;TravelerGUI.Assessment&quot;));</span>
-<span class="nc" id="L117">		jButtonAssessment.addActionListener(new ActionListener() {</span>
+<span class="nc" id="L127">		jButtonAssessment = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;TravelerGUI.Assessment&quot;));</span>
+<span class="nc" id="L128">		jButtonAssessment.addActionListener(new ActionListener() {</span>
 			public void actionPerformed(ActionEvent e) {
-<span class="nc" id="L119">				JFrame a = new AssessmentGUI(traveler);</span>
-<span class="nc" id="L120">				a.setVisible(true);</span>
-<span class="nc" id="L121">			}</span>
+<span class="nc" id="L130">				JFrame a = new AssessmentGUI(traveler);</span>
+<span class="nc" id="L131">				a.setVisible(true);</span>
+<span class="nc" id="L132">			}</span>
 		});
-<span class="nc" id="L123">		jContentPane.add(jButtonAssessment);</span>
+<span class="nc" id="L134">		jContentPane.add(jButtonAssessment);</span>
 		
-<span class="nc" id="L125">		JButtonDelete = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;TravelerGUI.btnNewButton.text&quot;)); //$NON-NLS-1$ //$NON-NLS-2$</span>
-<span class="nc" id="L126">		JButtonDelete.addActionListener(new ActionListener() {</span>
+<span class="nc" id="L136">		JButtonDelete = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;TravelerGUI.DeleteAccount&quot;)); </span>
+<span class="nc" id="L137">		JButtonDelete.addActionListener(new ActionListener() {</span>
 			public void actionPerformed(ActionEvent e){
-<span class="nc" id="L128">				JFrame a = new ConfirmDeleteGUI(traveler);</span>
-<span class="nc" id="L129">				a.setVisible(true);</span>
-<span class="nc" id="L130">			}</span>
+<span class="nc" id="L139">				JFrame a = new ConfirmDeleteGUI(traveler);</span>
+<span class="nc" id="L140">				a.setVisible(true);</span>
+				
+<span class="nc" id="L142">				closeWindow(e);</span>
+<span class="nc" id="L143">			}</span>
 		}); 
-<span class="nc" id="L132">		jContentPane.add(JButtonDelete);</span>
+		
+<span class="nc" id="L146">		jButtonReclamation = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;TravelerGUI.Reclamation&quot;));</span>
+<span class="nc" id="L147">		jButtonReclamation.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L149">				JFrame b=new ReclamationGUI(traveler);</span>
+<span class="nc" id="L150">				b.setVisible(true);</span>
+<span class="nc" id="L151">			}</span>
+		});
+<span class="nc" id="L153">		jContentPane.add(jButtonReclamation);</span>
+		
+<span class="nc" id="L155">		btnReclamationState = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;TravelerGUI.ReclamationState&quot;));</span>
+<span class="nc" id="L156">		btnReclamationState.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L158">				JFrame a = new ReclamationStateGUI(t);</span>
+<span class="nc" id="L159">				a.setVisible(true);</span>
+<span class="nc" id="L160">			}</span>
+		});
+<span class="nc" id="L162">		jContentPane.add(btnReclamationState);</span>
+<span class="nc" id="L163">		jContentPane.add(JButtonDelete);</span>
 		
 		
-<span class="nc" id="L135">		setContentPane(jContentPane);</span>
-<span class="nc" id="L136">		setTitle(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;DriverGUI.MainTitle&quot;) + &quot; - &quot;+ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Traveler&quot;)+&quot;: &quot;+traveler.getName());</span>
+<span class="nc" id="L166">		setContentPane(jContentPane);</span>
 		
-<span class="nc" id="L138">		addWindowListener(new WindowAdapter() {</span>
+<span class="nc" id="L168">		jButtonDelete = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;TravelerGUI.CreateAlert&quot;));</span>
+<span class="nc" id="L169">		jButtonDelete.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L171">				JFrame a = new AlertGUI(t);</span>
+<span class="nc" id="L172">				a.setVisible(true);</span>
+<span class="nc" id="L173">			}</span>
+		});
+<span class="nc" id="L175">		jContentPane.add(jButtonDelete);</span>
+		
+<span class="nc" id="L177">		setTitle(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;DriverGUI.MainTitle&quot;) + &quot; - &quot;+ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Traveler&quot;)+&quot;: &quot;+traveler.getName());</span>
+		
+<span class="nc" id="L179">		addWindowListener(new WindowAdapter() {</span>
 			@Override
 			public void windowClosing(WindowEvent evt) {
-<span class="nc" id="L141">				JFrame a = new MainGUI();</span>
-<span class="nc" id="L142">				a.setVisible(true);</span>
-<span class="nc" id="L143">				dispose();</span>
-<span class="nc" id="L144">			}</span>
+<span class="nc" id="L182">				JFrame a = new MainGUI();</span>
+<span class="nc" id="L183">				a.setVisible(true);</span>
+<span class="nc" id="L184">				dispose();</span>
+<span class="nc" id="L185">			}</span>
 		});
-<span class="nc" id="L146">	}</span>
+<span class="nc" id="L187">	}</span>
+	private void closeWindow(ActionEvent e) {
+<span class="nc" id="L189">		this.setVisible(false);</span>
+<span class="nc" id="L190">	}</span>
 } // @jve:decl-index=0:visual-constraint=&quot;0,0&quot;
 
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

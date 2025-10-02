@@ -21,51 +21,88 @@ import configuration.UtilDate;
 @Entity
 public class Traveler extends User{
 	private static final long serialVersionUID = 1L;
-<span class="pc" id="L24">	@XmlIDREF</span>
+<span class="nc" id="L24">	@XmlIDREF</span>
 	@OneToMany(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE}, orphanRemoval = true)
 	private List&lt;Reservation&gt; reservations = new Vector&lt;Reservation&gt;();
-	
+<span class="nc" id="L27">	@OneToMany(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE}, orphanRemoval = true)</span>
+	private List&lt;Reclamation&gt; reclamations = new Vector&lt;Reclamation&gt;();
+<span class="nc" id="L29">	@OneToMany(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE}, orphanRemoval = true)</span>
+	private List&lt;Alert&gt; alerts=new Vector&lt;Alert&gt;();
 	public Traveler() {
-<span class="fc" id="L29">		super();</span>
-<span class="fc" id="L30">	}</span>
+<span class="nc" id="L32">		super();</span>
+<span class="nc" id="L33">	}</span>
 
 	public Traveler(String email, String name,String password) {
-<span class="nc" id="L33">		super(email,name,password);</span>
-<span class="nc" id="L34">	}</span>
+<span class="nc" id="L36">		super(email,name,password);</span>
+<span class="nc" id="L37">	}</span>
 	
 	
 	public void addReservation(Reservation pReservation) {
-<span class="nc" id="L38">		this.reservations.add(pReservation);</span>
-<span class="nc" id="L39">	}</span>
+<span class="nc" id="L41">		this.reservations.add(pReservation);</span>
+<span class="nc" id="L42">	}</span>
+	
+	public void addReclamation(Reclamation reclam) {
+<span class="nc" id="L45">		this.reclamations.add(reclam);</span>
+<span class="nc" id="L46">	}</span>
 	
 	public void removeReservation(Reservation pReservation) {
-<span class="nc" id="L42">		this.reservations.remove(pReservation);</span>
-<span class="nc" id="L43">	}</span>
+<span class="nc" id="L49">		this.reservations.remove(pReservation);</span>
+<span class="nc" id="L50">	}</span>
 	
 	public boolean containsReservation(Ride pRide) {
-<span class="nc" id="L46">		boolean erantzuna = false;</span>
-<span class="nc bnc" id="L47" title="All 2 branches missed.">		for (Reservation reservationi : this.reservations) {</span>
-<span class="nc bnc" id="L48" title="All 2 branches missed.">			if (pRide.getRideNumber() == reservationi.getRide().getRideNumber()) {</span>
-<span class="nc" id="L49">				erantzuna = true;</span>
+<span class="nc" id="L53">		boolean erantzuna = false;</span>
+<span class="nc bnc" id="L54" title="All 2 branches missed.">		for (Reservation reservationi : this.reservations) {</span>
+<span class="nc bnc" id="L55" title="All 2 branches missed.">			if (pRide.getRideNumber() == reservationi.getRide().getRideNumber()) {</span>
+<span class="nc" id="L56">				erantzuna = true;</span>
 			}
-<span class="nc" id="L51">		}</span>
-<span class="nc" id="L52">		return erantzuna;</span>
+<span class="nc" id="L58">		}</span>
+<span class="nc" id="L59">		return erantzuna;</span>
 	}
 	
 	public void printReservations() {
-<span class="nc bnc" id="L56" title="All 2 branches missed.">		for (Reservation reservation:this.reservations) {</span>
-<span class="nc" id="L57">			System.out.println(&quot;Erreserba zenbakia: &quot;+reservation.getErreserbaZenbakia()+&quot;; Onartua: &quot;+reservation.isOnartua());</span>
-<span class="nc" id="L58">		}</span>
-<span class="nc" id="L59">	}</span>
+<span class="nc bnc" id="L63" title="All 2 branches missed.">		for (Reservation reservation:this.reservations) {</span>
+<span class="nc" id="L64">			System.out.println(&quot;Erreserba zenbakia: &quot;+reservation.getErreserbaZenbakia()+&quot;; Onartua: &quot;+reservation.isOnartua());</span>
+<span class="nc" id="L65">		}</span>
+<span class="nc" id="L66">	}</span>
 
 	public List&lt;Reservation&gt; getReservations() {
-<span class="nc" id="L62">		return reservations;</span>
+<span class="nc" id="L69">		return reservations;</span>
 	}
 
 	public void setReservations(LinkedList&lt;Reservation&gt; reservations) {
-<span class="nc" id="L66">		this.reservations = reservations;</span>
-<span class="nc" id="L67">	}</span>
+<span class="nc" id="L73">		this.reservations = reservations;</span>
+<span class="nc" id="L74">	}</span>
 	
+	
+	public List&lt;Alert&gt; getAlerts() {
+<span class="nc" id="L78">		return alerts;</span>
+	}
+
+	public void setAlerts(List&lt;Alert&gt; alerts) {
+<span class="nc" id="L82">		this.alerts = alerts;</span>
+<span class="nc" id="L83">	}</span>
+	
+	public void printAlerts() {
+<span class="nc bnc" id="L86" title="All 2 branches missed.">		for (Alert actualAlert: this.alerts) {</span>
+<span class="nc" id="L87">			System.out.println(actualAlert);</span>
+<span class="nc" id="L88">		}</span>
+<span class="nc" id="L89">	}</span>
+	
+	public List&lt;Reclamation&gt; getReclamations() {
+<span class="nc" id="L92">		return reclamations;</span>
+	}
+
+	public Alert addAlert(String nundik, String nora, Date data) {
+<span class="nc" id="L96">		Alert alert=new Alert(this, nundik, nora, data);</span>
+<span class="nc" id="L97">	    alerts.add(alert);</span>
+<span class="nc" id="L98">	    return alert;</span>
+	}
+	
+	public void removeAlertList(List&lt;Alert&gt; removeAlerts) {
+<span class="nc bnc" id="L102" title="All 2 branches missed.">		for (Alert alert:removeAlerts) {</span>
+<span class="nc" id="L103">			alerts.remove(alert);</span>
+<span class="nc" id="L104">		}		</span>
+<span class="nc" id="L105">	}	</span>
 	
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

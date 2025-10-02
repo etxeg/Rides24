@@ -57,90 +57,101 @@ public class AssessmentGUI extends JFrame {
 		
 <span class="nc" id="L58">		BLFacade facade = MainGUI.getBusinessLogic();</span>
 		
-<span class="nc" id="L60">		JLabel reservationText = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ReservationStateGUI.SelectReservation&quot;));</span>
-<span class="nc" id="L61">		reservationText.setHorizontalAlignment(SwingConstants.CENTER);</span>
-<span class="nc" id="L62">		reservationText.setBounds(83, 28, 260, 20);</span>
-<span class="nc" id="L63">		contentPane.add(reservationText);</span>
+<span class="nc" id="L60">		JButton jButtonSend = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Send&quot;));</span>
 		
-<span class="nc bnc" id="L65" title="All 2 branches missed.">        for (Reservation actualReservation : traveler.getReservations()){</span>
-<span class="nc bnc" id="L66" title="All 2 branches missed.">        	if (actualReservation.isBaieztatua()) {</span>
-<span class="nc" id="L67">        		rideComboBox.addItem(actualReservation);</span>
+<span class="nc" id="L62">		jButtonSend.setBounds(168, 232, 100, 21);</span>
+<span class="nc" id="L63">		contentPane.add(jButtonSend);</span>
+<span class="nc" id="L64">		jButtonSend.setEnabled(false);</span>
+		
+<span class="nc" id="L66">		JLabel reservationText = new JLabel(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ReservationStateGUI.SelectReservation&quot;));</span>
+<span class="nc" id="L67">		reservationText.setHorizontalAlignment(SwingConstants.CENTER);</span>
+<span class="nc" id="L68">		reservationText.setBounds(83, 28, 260, 20);</span>
+<span class="nc" id="L69">		contentPane.add(reservationText);</span>
+		
+<span class="nc bnc" id="L71" title="All 2 branches missed.">        for (Reservation actualReservation : traveler.getReservations()){</span>
+<span class="nc bnc" id="L72" title="All 2 branches missed.">        	if (actualReservation.isBaieztatua()) {</span>
+<span class="nc" id="L73">        		jButtonSend.setEnabled(true);</span>
+<span class="nc" id="L74">        		rideComboBox.addItem(actualReservation);</span>
         	}
-<span class="nc" id="L69">        }</span>
-<span class="nc" id="L70">        rideComboBox.setBounds(63, 58, 300, 20);</span>
-<span class="nc" id="L71">        contentPane.add(rideComboBox);</span>
+<span class="nc" id="L76">        }</span>
+        
+<span class="nc" id="L78">        rideComboBox.setBounds(63, 58, 300, 20);</span>
+<span class="nc" id="L79">        contentPane.add(rideComboBox);</span>
 		
-<span class="nc" id="L73">		JButton jButtonSend = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Send&quot;));</span>
+<span class="nc" id="L81">		rideComboBox.addActionListener(new ActionListener() {</span>
+        	public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L83">        		jButtonSend.setEnabled(true);</span>
+<span class="nc" id="L84">        	}</span>
+        });
 		
-<span class="nc" id="L75">		jButtonSend.setBounds(168, 232, 100, 21);</span>
-<span class="nc" id="L76">		contentPane.add(jButtonSend);</span>
+<span class="nc" id="L87">		JRadioButton rdbtnBal1 = new JRadioButton();</span>
+<span class="nc" id="L88">		buttonGroup_1.add(rdbtnBal1);</span>
+<span class="nc" id="L89">		rdbtnBal1.setText(&quot;1&quot;);</span>
+<span class="nc" id="L90">		rdbtnBal1.setBounds(120, 132, 41, 21);</span>
+<span class="nc" id="L91">		contentPane.add(rdbtnBal1);</span>
 		
-<span class="nc" id="L78">		JRadioButton rdbtnBal1 = new JRadioButton();</span>
-<span class="nc" id="L79">		buttonGroup_1.add(rdbtnBal1);</span>
-<span class="nc" id="L80">		rdbtnBal1.setText(&quot;1&quot;);</span>
-<span class="nc" id="L81">		rdbtnBal1.setBounds(120, 132, 41, 21);</span>
-<span class="nc" id="L82">		contentPane.add(rdbtnBal1);</span>
+<span class="nc" id="L93">		JRadioButton rdbtnBal2 = new JRadioButton();</span>
+<span class="nc" id="L94">		buttonGroup_1.add(rdbtnBal2);</span>
+<span class="nc" id="L95">		rdbtnBal2.setText(&quot;2&quot;);</span>
+<span class="nc" id="L96">		rdbtnBal2.setBounds(162, 132, 41, 21);</span>
+<span class="nc" id="L97">		contentPane.add(rdbtnBal2);</span>
 		
-<span class="nc" id="L84">		JRadioButton rdbtnBal2 = new JRadioButton();</span>
-<span class="nc" id="L85">		buttonGroup_1.add(rdbtnBal2);</span>
-<span class="nc" id="L86">		rdbtnBal2.setText(&quot;2&quot;);</span>
-<span class="nc" id="L87">		rdbtnBal2.setBounds(162, 132, 41, 21);</span>
-<span class="nc" id="L88">		contentPane.add(rdbtnBal2);</span>
+<span class="nc" id="L99">		JRadioButton rdbtnBal3 = new JRadioButton();</span>
+<span class="nc" id="L100">		rdbtnBal3.setSelected(true);</span>
+<span class="nc" id="L101">		buttonGroup_1.add(rdbtnBal3);</span>
+<span class="nc" id="L102">		rdbtnBal3.setText(&quot;3&quot;);</span>
+<span class="nc" id="L103">		rdbtnBal3.setBounds(204, 132, 41, 21);</span>
+<span class="nc" id="L104">		contentPane.add(rdbtnBal3);</span>
 		
-<span class="nc" id="L90">		JRadioButton rdbtnBal3 = new JRadioButton();</span>
-<span class="nc" id="L91">		buttonGroup_1.add(rdbtnBal3);</span>
-<span class="nc" id="L92">		rdbtnBal3.setText(&quot;3&quot;);</span>
-<span class="nc" id="L93">		rdbtnBal3.setBounds(204, 132, 41, 21);</span>
-<span class="nc" id="L94">		contentPane.add(rdbtnBal3);</span>
+<span class="nc" id="L106">		JRadioButton rdbtnBal4 = new JRadioButton();</span>
+<span class="nc" id="L107">		buttonGroup_1.add(rdbtnBal4);</span>
+<span class="nc" id="L108">		rdbtnBal4.setText(&quot;4&quot;);</span>
+<span class="nc" id="L109">		rdbtnBal4.setBounds(246, 132, 41, 21);</span>
+<span class="nc" id="L110">		contentPane.add(rdbtnBal4);</span>
 		
-<span class="nc" id="L96">		JRadioButton rdbtnBal4 = new JRadioButton();</span>
-<span class="nc" id="L97">		buttonGroup_1.add(rdbtnBal4);</span>
-<span class="nc" id="L98">		rdbtnBal4.setText(&quot;4&quot;);</span>
-<span class="nc" id="L99">		rdbtnBal4.setBounds(246, 132, 41, 21);</span>
-<span class="nc" id="L100">		contentPane.add(rdbtnBal4);</span>
+<span class="nc" id="L112">		JRadioButton rdbtnBal5 = new JRadioButton();</span>
+<span class="nc" id="L113">		buttonGroup_1.add(rdbtnBal5);</span>
+<span class="nc" id="L114">		rdbtnBal5.setText(&quot;5&quot;);</span>
+<span class="nc" id="L115">		rdbtnBal5.setBounds(289, 132, 41, 21);</span>
+<span class="nc" id="L116">		contentPane.add(rdbtnBal5);</span>
 		
-<span class="nc" id="L102">		JRadioButton rdbtnBal5 = new JRadioButton();</span>
-<span class="nc" id="L103">		buttonGroup_1.add(rdbtnBal5);</span>
-<span class="nc" id="L104">		rdbtnBal5.setText(&quot;5&quot;);</span>
-<span class="nc" id="L105">		rdbtnBal5.setBounds(289, 132, 41, 21);</span>
-<span class="nc" id="L106">		contentPane.add(rdbtnBal5);</span>
+<span class="nc" id="L118">		JLabel BalText = new JLabel(&quot;Balorazioa&quot;);</span>
+<span class="nc" id="L119">		BalText.setHorizontalAlignment(SwingConstants.CENTER);</span>
+<span class="nc" id="L120">		BalText.setBounds(83, 99, 260, 13);</span>
+<span class="nc" id="L121">		contentPane.add(BalText);</span>
 		
-<span class="nc" id="L108">		JLabel BalText = new JLabel(&quot;Balorazioa&quot;);</span>
-<span class="nc" id="L109">		BalText.setHorizontalAlignment(SwingConstants.CENTER);</span>
-<span class="nc" id="L110">		BalText.setBounds(83, 99, 260, 13);</span>
-<span class="nc" id="L111">		contentPane.add(BalText);</span>
+<span class="nc" id="L123">		JTextPane textPane = new JTextPane();</span>
+<span class="nc" id="L124">		textPane.setBounds(63, 159, 300, 63);</span>
+<span class="nc" id="L125">		contentPane.add(textPane);</span>
 		
-<span class="nc" id="L113">		JTextPane textPane = new JTextPane();</span>
-<span class="nc" id="L114">		textPane.setBounds(63, 159, 300, 63);</span>
-<span class="nc" id="L115">		contentPane.add(textPane);</span>
-		
-<span class="nc" id="L117">		jButtonSend.addActionListener(new ActionListener() {</span>
+<span class="nc" id="L127">		jButtonSend.addActionListener(new ActionListener() {</span>
 			public void actionPerformed(ActionEvent e) {
-<span class="nc" id="L119">				Reservation reservation = (Reservation) rideComboBox.getSelectedItem();</span>
-<span class="nc" id="L120">				int star = 0;</span>
-<span class="nc bnc" id="L121" title="All 2 branches missed.">				if (rdbtnBal1.isSelected()) {</span>
-<span class="nc" id="L122">					star = 1;</span>
-<span class="nc bnc" id="L123" title="All 2 branches missed.">				} else if (rdbtnBal2.isSelected()) {</span>
-<span class="nc" id="L124">					star = 2;</span>
-<span class="nc bnc" id="L125" title="All 2 branches missed.">				} else if (rdbtnBal3.isSelected()) {</span>
-<span class="nc" id="L126">					star = 3;</span>
-<span class="nc bnc" id="L127" title="All 2 branches missed.">				} else if (rdbtnBal4.isSelected()) {</span>
-<span class="nc" id="L128">					star = 4;</span>
-<span class="nc bnc" id="L129" title="All 2 branches missed.">				} else if (rdbtnBal5.isSelected()) {</span>
-<span class="nc" id="L130">					star = 5;</span>
+<span class="nc" id="L129">				jButtonSend.setEnabled(false);</span>
+<span class="nc" id="L130">				Reservation reservation = (Reservation) rideComboBox.getSelectedItem();</span>
+<span class="nc" id="L131">				int star = 0;</span>
+<span class="nc bnc" id="L132" title="All 2 branches missed.">				if (rdbtnBal1.isSelected()) {</span>
+<span class="nc" id="L133">					star = 1;</span>
+<span class="nc bnc" id="L134" title="All 2 branches missed.">				} else if (rdbtnBal2.isSelected()) {</span>
+<span class="nc" id="L135">					star = 2;</span>
+<span class="nc bnc" id="L136" title="All 2 branches missed.">				} else if (rdbtnBal3.isSelected()) {</span>
+<span class="nc" id="L137">					star = 3;</span>
+<span class="nc bnc" id="L138" title="All 2 branches missed.">				} else if (rdbtnBal4.isSelected()) {</span>
+<span class="nc" id="L139">					star = 4;</span>
+<span class="nc bnc" id="L140" title="All 2 branches missed.">				} else if (rdbtnBal5.isSelected()) {</span>
+<span class="nc" id="L141">					star = 5;</span>
 				}
-<span class="nc" id="L132">				String text = textPane.getText();</span>
-<span class="nc bnc" id="L133" title="All 2 branches missed.">				if (star &gt; 0) {</span>
-<span class="nc" id="L134">					Assessment assessment = facade.createAssessment(reservation.getRide(), traveler, star, text);</span>
-<span class="nc bnc" id="L135" title="All 2 branches missed.">					if (assessment != null) {</span>
-<span class="nc" id="L136">						jButton2_actionPerformed(e);</span>
+<span class="nc" id="L143">				String text = textPane.getText();</span>
+<span class="nc bnc" id="L144" title="All 2 branches missed.">				if (star &gt; 0) {</span>
+<span class="nc" id="L145">					Assessment assessment = facade.createAssessment(reservation.getRide(), traveler, star, text);</span>
+<span class="nc bnc" id="L146" title="All 2 branches missed.">					if (assessment != null) {</span>
+<span class="nc" id="L147">						jButton2_actionPerformed(e);</span>
 					}
 				}
-<span class="nc" id="L139">			}</span>
+<span class="nc" id="L150">			}</span>
 		});
-<span class="nc" id="L141">	}</span>
+<span class="nc" id="L152">	}</span>
 	private void jButton2_actionPerformed(ActionEvent e) {
-<span class="nc" id="L143">		this.setVisible(false);</span>
-<span class="nc" id="L144">	}</span>
+<span class="nc" id="L154">		this.setVisible(false);</span>
+<span class="nc" id="L155">	}</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
