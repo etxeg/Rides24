@@ -45,32 +45,32 @@ public class DataAccess {
 	private EntityManager db;
 	private EntityManagerFactory emf;
 
-<span class="nc" id="L48">	ConfigXML c = ConfigXML.getInstance();</span>
+<span class="pc" id="L48">	ConfigXML c = ConfigXML.getInstance();</span>
 
-<span class="nc" id="L50">	public DataAccess() {</span>
-<span class="nc bnc" id="L51" title="All 2 branches missed.">		if (c.isDatabaseInitialized()) {</span>
-<span class="nc" id="L52">			String fileName = c.getDbFilename();</span>
+<span class="fc" id="L50">	public DataAccess() {</span>
+<span class="pc bpc" id="L51" title="1 of 2 branches missed.">		if (c.isDatabaseInitialized()) {</span>
+<span class="fc" id="L52">			String fileName = c.getDbFilename();</span>
 
-<span class="nc" id="L54">			File fileToDelete = new File(fileName);</span>
-<span class="nc bnc" id="L55" title="All 2 branches missed.">			if (fileToDelete.delete()) {</span>
-<span class="nc" id="L56">				File fileToDeleteTemp = new File(fileName + &quot;$&quot;);</span>
-<span class="nc" id="L57">				fileToDeleteTemp.delete();</span>
+<span class="fc" id="L54">			File fileToDelete = new File(fileName);</span>
+<span class="pc bpc" id="L55" title="1 of 2 branches missed.">			if (fileToDelete.delete()) {</span>
+<span class="fc" id="L56">				File fileToDeleteTemp = new File(fileName + &quot;$&quot;);</span>
+<span class="fc" id="L57">				fileToDeleteTemp.delete();</span>
 
-<span class="nc" id="L59">				System.out.println(&quot;File deleted&quot;);</span>
-<span class="nc" id="L60">			} else {</span>
+<span class="fc" id="L59">				System.out.println(&quot;File deleted&quot;);</span>
+<span class="fc" id="L60">			} else {</span>
 <span class="nc" id="L61">				System.out.println(&quot;Operation failed&quot;);</span>
 			}
 		}
-<span class="nc" id="L64">		open();</span>
-<span class="nc bnc" id="L65" title="All 2 branches missed.">		if (c.isDatabaseInitialized())</span>
-<span class="nc" id="L66">			initializeDB();</span>
+<span class="fc" id="L64">		open();</span>
+<span class="pc bpc" id="L65" title="1 of 2 branches missed.">		if (c.isDatabaseInitialized())</span>
+<span class="fc" id="L66">			initializeDB();</span>
 
-<span class="nc" id="L68">		System.out.println(&quot;DataAccess created =&gt; isDatabaseLocal: &quot; + c.isDatabaseLocal() + &quot; isDatabaseInitialized: &quot;</span>
-<span class="nc" id="L69">				+ c.isDatabaseInitialized());</span>
+<span class="fc" id="L68">		System.out.println(&quot;DataAccess created =&gt; isDatabaseLocal: &quot; + c.isDatabaseLocal() + &quot; isDatabaseInitialized: &quot;</span>
+<span class="fc" id="L69">				+ c.isDatabaseInitialized());</span>
 
-<span class="nc" id="L71">		close();</span>
+<span class="fc" id="L71">		close();</span>
 
-<span class="nc" id="L73">	}</span>
+<span class="fc" id="L73">	}</span>
 
 <span class="nc" id="L75">	public DataAccess(EntityManager db) {</span>
 <span class="nc" id="L76">		this.db = db;</span>
@@ -84,59 +84,59 @@ public class DataAccess {
 	 */
 	public void initializeDB() {
 
-<span class="nc" id="L87">		db.getTransaction().begin();</span>
+<span class="fc" id="L87">		db.getTransaction().begin();</span>
 
 		try {
 
-<span class="nc" id="L91">			Calendar today = Calendar.getInstance();</span>
+<span class="fc" id="L91">			Calendar today = Calendar.getInstance();</span>
 
-<span class="nc" id="L93">			int month = today.get(Calendar.MONTH);</span>
-<span class="nc" id="L94">			int year = today.get(Calendar.YEAR);</span>
-<span class="nc bnc" id="L95" title="All 2 branches missed.">			if (month == 12) {</span>
+<span class="fc" id="L93">			int month = today.get(Calendar.MONTH);</span>
+<span class="fc" id="L94">			int year = today.get(Calendar.YEAR);</span>
+<span class="pc bpc" id="L95" title="1 of 2 branches missed.">			if (month == 12) {</span>
 <span class="nc" id="L96">				month = 1;</span>
 <span class="nc" id="L97">				year += 1;</span>
 			}
 
 			// Create drivers
-<span class="nc" id="L101">			Driver driver1 = new Driver(&quot;driver1@gmail.com&quot;, &quot;Aitor Fernandez&quot;, &quot;123&quot;);</span>
-<span class="nc" id="L102">			Driver driver2 = new Driver(&quot;driver2@gmail.com&quot;, &quot;Ane Gaztañaga&quot;, &quot;123&quot;);</span>
-<span class="nc" id="L103">			Driver driver3 = new Driver(&quot;driver3@gmail.com&quot;, &quot;Test Driver&quot;, &quot;123&quot;);</span>
+<span class="fc" id="L101">			Driver driver1 = new Driver(&quot;driver1@gmail.com&quot;, &quot;Aitor Fernandez&quot;, &quot;123&quot;);</span>
+<span class="fc" id="L102">			Driver driver2 = new Driver(&quot;driver2@gmail.com&quot;, &quot;Ane Gaztañaga&quot;, &quot;123&quot;);</span>
+<span class="fc" id="L103">			Driver driver3 = new Driver(&quot;driver3@gmail.com&quot;, &quot;Test Driver&quot;, &quot;123&quot;);</span>
 //			Admin admin1 = new Admin(&quot;admin1@gmail.com&quot;, &quot;Test Admin&quot;, &quot;123&quot;);
 //			db.persist(admin1);
 			// Create travelers
-<span class="nc" id="L107">			Traveler traveler1 = new Traveler(&quot;traveler1@gmail.com&quot;, &quot;Test Traveler&quot;, &quot;123&quot;);</span>
-<span class="nc" id="L108">			traveler1.setMoney(500);</span>
-<span class="nc" id="L109">			Date date = Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant());</span>
-<span class="nc" id="L110">			Movement move = new Movement(traveler1.getMovementsCount(), 500, true, date);</span>
-<span class="nc" id="L111">			traveler1.addMovement(move);</span>
-<span class="nc" id="L112">			db.persist(move);</span>
-<span class="nc" id="L113">			Traveler traveler2 = new Traveler(&quot;traveler2@gmail.com&quot;, &quot;Test Traveler2&quot;, &quot;123&quot;);</span>
-<span class="nc" id="L114">			traveler2.setMoney(500);</span>
-<span class="nc" id="L115">			Date date2 = Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant());</span>
-<span class="nc" id="L116">			Movement move2 = new Movement(traveler2.getMovementsCount(), 500, true, date2);</span>
-<span class="nc" id="L117">			traveler2.addMovement(move2);</span>
-<span class="nc" id="L118">			db.persist(move2);</span>
+<span class="fc" id="L107">			Traveler traveler1 = new Traveler(&quot;traveler1@gmail.com&quot;, &quot;Test Traveler&quot;, &quot;123&quot;);</span>
+<span class="fc" id="L108">			traveler1.setMoney(500);</span>
+<span class="fc" id="L109">			Date date = Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant());</span>
+<span class="fc" id="L110">			Movement move = new Movement(traveler1.getMovementsCount(), 500, true, date);</span>
+<span class="fc" id="L111">			traveler1.addMovement(move);</span>
+<span class="fc" id="L112">			db.persist(move);</span>
+<span class="fc" id="L113">			Traveler traveler2 = new Traveler(&quot;traveler2@gmail.com&quot;, &quot;Test Traveler2&quot;, &quot;123&quot;);</span>
+<span class="fc" id="L114">			traveler2.setMoney(500);</span>
+<span class="fc" id="L115">			Date date2 = Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant());</span>
+<span class="fc" id="L116">			Movement move2 = new Movement(traveler2.getMovementsCount(), 500, true, date2);</span>
+<span class="fc" id="L117">			traveler2.addMovement(move2);</span>
+<span class="fc" id="L118">			db.persist(move2);</span>
 
-<span class="nc" id="L120">			Car car1 = new Car(&quot;ABC&quot;, driver1, 4, &quot;Toyota&quot;);</span>
-<span class="nc" id="L121">			driver1.addCar(car1);</span>
-<span class="nc" id="L122">			Car car2 = new Car(&quot;CBA&quot;, driver2, 4, &quot;Toyota&quot;);</span>
-<span class="nc" id="L123">			driver2.addCar(car2);</span>
-<span class="nc" id="L124">			Car car3 = new Car(&quot;ABA&quot;, driver3, 4, &quot;Toyota&quot;);</span>
-<span class="nc" id="L125">			driver3.addCar(car3);</span>
+<span class="fc" id="L120">			Car car1 = new Car(&quot;ABC&quot;, driver1, 4, &quot;Toyota&quot;);</span>
+<span class="fc" id="L121">			driver1.addCar(car1);</span>
+<span class="fc" id="L122">			Car car2 = new Car(&quot;CBA&quot;, driver2, 4, &quot;Toyota&quot;);</span>
+<span class="fc" id="L123">			driver2.addCar(car2);</span>
+<span class="fc" id="L124">			Car car3 = new Car(&quot;ABA&quot;, driver3, 4, &quot;Toyota&quot;);</span>
+<span class="fc" id="L125">			driver3.addCar(car3);</span>
 
 			// Create rides
-<span class="nc" id="L128">			driver1.addRide(&quot;Donostia&quot;, &quot;Bilbo&quot;, UtilDate.newDate(year, month, 15), 7, car1);</span>
-<span class="nc" id="L129">			driver1.addRide(&quot;Donostia&quot;, &quot;Gazteiz&quot;, UtilDate.newDate(year, month, 6), 8, car1);</span>
-<span class="nc" id="L130">			driver1.addRide(&quot;Bilbo&quot;, &quot;Donostia&quot;, UtilDate.newDate(year, month, 25), 4, car1);</span>
+<span class="fc" id="L128">			driver1.addRide(&quot;Donostia&quot;, &quot;Bilbo&quot;, UtilDate.newDate(year, month, 15), 7, car1);</span>
+<span class="fc" id="L129">			driver1.addRide(&quot;Donostia&quot;, &quot;Gazteiz&quot;, UtilDate.newDate(year, month, 6), 8, car1);</span>
+<span class="fc" id="L130">			driver1.addRide(&quot;Bilbo&quot;, &quot;Donostia&quot;, UtilDate.newDate(year, month, 25), 4, car1);</span>
 			//Ride ride1 = driver1.addRide(&quot;Donostia&quot;, &quot;Bilbo&quot;, UtilDate.newDate(year, month, 1), 5, car1);
 			
-<span class="nc" id="L133">			driver1.addRide(&quot;Donostia&quot;, &quot;Iruña&quot;, UtilDate.newDate(year, month, 7), 8, car1);</span>
+<span class="fc" id="L133">			driver1.addRide(&quot;Donostia&quot;, &quot;Iruña&quot;, UtilDate.newDate(year, month, 7), 8, car1);</span>
 
-<span class="nc" id="L135">			driver2.addRide(&quot;Donostia&quot;, &quot;Bilbo&quot;, UtilDate.newDate(year, month, 15), 3, car2);</span>
-<span class="nc" id="L136">			driver2.addRide(&quot;Bilbo&quot;, &quot;Donostia&quot;, UtilDate.newDate(year, month, 25), 5, car2);</span>
-<span class="nc" id="L137">			driver2.addRide(&quot;Eibar&quot;, &quot;Gasteiz&quot;, UtilDate.newDate(year, month, 6), 5, car2);</span>
+<span class="fc" id="L135">			driver2.addRide(&quot;Donostia&quot;, &quot;Bilbo&quot;, UtilDate.newDate(year, month, 15), 3, car2);</span>
+<span class="fc" id="L136">			driver2.addRide(&quot;Bilbo&quot;, &quot;Donostia&quot;, UtilDate.newDate(year, month, 25), 5, car2);</span>
+<span class="fc" id="L137">			driver2.addRide(&quot;Eibar&quot;, &quot;Gasteiz&quot;, UtilDate.newDate(year, month, 6), 5, car2);</span>
 
-<span class="nc" id="L139">			driver3.addRide(&quot;Bilbo&quot;, &quot;Donostia&quot;, UtilDate.newDate(year, month, 14), 3, car3);</span>
+<span class="fc" id="L139">			driver3.addRide(&quot;Bilbo&quot;, &quot;Donostia&quot;, UtilDate.newDate(year, month, 14), 3, car3);</span>
 
 			/*Reservation erreserba = new Reservation(traveler1, ride1, UtilDate.newDate(year, month, 1),5);
 			erreserba.baieztatu();
@@ -146,22 +146,22 @@ public class DataAccess {
 			db.persist(erreserba);
 			db.merge(ride1);*/
 			
-<span class="nc" id="L149">			db.persist(car1);</span>
-<span class="nc" id="L150">			db.persist(car2);</span>
-<span class="nc" id="L151">			db.persist(car3);</span>
-<span class="nc" id="L152">			db.persist(driver1);</span>
-<span class="nc" id="L153">			db.persist(driver2);</span>
-<span class="nc" id="L154">			db.persist(driver3);</span>
-<span class="nc" id="L155">			db.persist(traveler1);</span>
-<span class="nc" id="L156">			db.persist(traveler2);</span>
+<span class="fc" id="L149">			db.persist(car1);</span>
+<span class="fc" id="L150">			db.persist(car2);</span>
+<span class="fc" id="L151">			db.persist(car3);</span>
+<span class="fc" id="L152">			db.persist(driver1);</span>
+<span class="fc" id="L153">			db.persist(driver2);</span>
+<span class="fc" id="L154">			db.persist(driver3);</span>
+<span class="fc" id="L155">			db.persist(traveler1);</span>
+<span class="fc" id="L156">			db.persist(traveler2);</span>
 			
 
-<span class="nc" id="L159">			db.getTransaction().commit();</span>
-<span class="nc" id="L160">			System.out.println(&quot;Db initialized&quot;);</span>
+<span class="fc" id="L159">			db.getTransaction().commit();</span>
+<span class="fc" id="L160">			System.out.println(&quot;Db initialized&quot;);</span>
 <span class="nc" id="L161">		} catch (Exception e) {</span>
 <span class="nc" id="L162">			e.printStackTrace();</span>
-<span class="nc" id="L163">		}</span>
-<span class="nc" id="L164">	}</span>
+<span class="fc" id="L163">		}</span>
+<span class="fc" id="L164">	}</span>
 
 	/**
 	 * This method returns all the cities where rides depart
@@ -394,18 +394,18 @@ public class DataAccess {
 
 	public boolean createReservation(Traveler traveler, Ride ride, int nPlaces) {
 		try {
-<span class="nc" id="L397">			db.getTransaction().begin();</span>
-<span class="nc" id="L398">			Calendar today = Calendar.getInstance();</span>
-<span class="nc" id="L399">			int month = today.get(Calendar.MONTH);</span>
-<span class="nc" id="L400">			int year = today.get(Calendar.YEAR);</span>
-<span class="nc" id="L401">			int day = today.get(Calendar.DAY_OF_MONTH);</span>
-<span class="nc" id="L402">			Reservation erreserbaClass = new Reservation(traveler, ride, UtilDate.newDate(year, month, day),</span>
-<span class="nc" id="L403">					ride.getPrice() * nPlaces);</span>
-<span class="nc bnc" id="L404" title="All 2 branches missed.">			if (erreserbaClass != null) {</span>
+<span class="fc" id="L397">			db.getTransaction().begin();</span>
+<span class="fc" id="L398">			Calendar today = Calendar.getInstance();</span>
+<span class="fc" id="L399">			int month = today.get(Calendar.MONTH);</span>
+<span class="fc" id="L400">			int year = today.get(Calendar.YEAR);</span>
+<span class="fc" id="L401">			int day = today.get(Calendar.DAY_OF_MONTH);</span>
+<span class="fc" id="L402">			Reservation erreserbaClass = new Reservation(traveler, ride, UtilDate.newDate(year, month, day),</span>
+<span class="fc" id="L403">					ride.getPrice() * nPlaces);</span>
+<span class="pc bpc" id="L404" title="1 of 2 branches missed.">			if (erreserbaClass != null) {</span>
 
-<span class="nc" id="L406">				float prezioa = nPlaces * ride.getPrice();</span>
-<span class="nc" id="L407">				float travelerMoney = traveler.getMoney();</span>
-<span class="nc bnc" id="L408" title="All 2 branches missed.">				if (travelerMoney &gt;= prezioa) {</span>
+<span class="fc" id="L406">				float prezioa = nPlaces * ride.getPrice();</span>
+<span class="fc" id="L407">				float travelerMoney = traveler.getMoney();</span>
+<span class="pc bpc" id="L408" title="1 of 2 branches missed.">				if (travelerMoney &gt;= prezioa) {</span>
 <span class="nc" id="L409">					ride.addPendingReservation(erreserbaClass);</span>
 <span class="nc" id="L410">					traveler.addReservation(erreserbaClass);</span>
 <span class="nc" id="L411">					traveler.setMoney(travelerMoney - prezioa);</span>
@@ -420,14 +420,14 @@ public class DataAccess {
 <span class="nc" id="L420">					db.merge(traveler);</span>
 <span class="nc" id="L421">					System.out.println(&quot;Erreserba zenbakia: &quot; + erreserbaClass.getErreserbaZenbakia());</span>
 <span class="nc" id="L422">				} else {</span>
-<span class="nc" id="L423">					System.out.println(&quot;Dirua falta da&quot;);</span>
+<span class="fc" id="L423">					System.out.println(&quot;Dirua falta da&quot;);</span>
 				}
 			}
-<span class="nc" id="L426">			db.getTransaction().commit();</span>
-<span class="nc" id="L427">			return true;</span>
-<span class="nc" id="L428">		} catch (Exception e) {</span>
-<span class="nc" id="L429">			e.printStackTrace();</span>
-<span class="nc" id="L430">			return false;</span>
+<span class="fc" id="L426">			db.getTransaction().commit();</span>
+<span class="fc" id="L427">			return true;</span>
+<span class="fc" id="L428">		} catch (Exception e) {</span>
+<span class="fc" id="L429">			e.printStackTrace();</span>
+<span class="fc" id="L430">			return false;</span>
 		}
 	}
 
@@ -852,10 +852,10 @@ public class DataAccess {
 
 	public void open() {
 
-<span class="nc" id="L855">		String fileName = c.getDbFilename();</span>
-<span class="nc bnc" id="L856" title="All 2 branches missed.">		if (c.isDatabaseLocal()) {</span>
-<span class="nc" id="L857">			emf = Persistence.createEntityManagerFactory(&quot;objectdb:&quot; + fileName);</span>
-<span class="nc" id="L858">			db = emf.createEntityManager();</span>
+<span class="fc" id="L855">		String fileName = c.getDbFilename();</span>
+<span class="pc bpc" id="L856" title="1 of 2 branches missed.">		if (c.isDatabaseLocal()) {</span>
+<span class="fc" id="L857">			emf = Persistence.createEntityManagerFactory(&quot;objectdb:&quot; + fileName);</span>
+<span class="fc" id="L858">			db = emf.createEntityManager();</span>
 		} else {
 <span class="nc" id="L860">			Map&lt;String, String&gt; properties = new HashMap&lt;&gt;();</span>
 <span class="nc" id="L861">			properties.put(&quot;javax.persistence.jdbc.user&quot;, c.getUser());</span>
@@ -865,14 +865,14 @@ public class DataAccess {
 <span class="nc" id="L865">					&quot;objectdb://&quot; + c.getDatabaseNode() + &quot;:&quot; + c.getDatabasePort() + &quot;/&quot; + fileName, properties);</span>
 <span class="nc" id="L866">			db = emf.createEntityManager();</span>
 		}
-<span class="nc" id="L868">		System.out.println(&quot;DataAccess opened =&gt; isDatabaseLocal: &quot; + c.isDatabaseLocal());</span>
+<span class="fc" id="L868">		System.out.println(&quot;DataAccess opened =&gt; isDatabaseLocal: &quot; + c.isDatabaseLocal());</span>
 
-<span class="nc" id="L870">	}</span>
+<span class="fc" id="L870">	}</span>
 
 	public void close() {
-<span class="nc" id="L873">		db.close();</span>
-<span class="nc" id="L874">		System.out.println(&quot;DataAcess closed&quot;);</span>
-<span class="nc" id="L875">	}</span>
+<span class="fc" id="L873">		db.close();</span>
+<span class="fc" id="L874">		System.out.println(&quot;DataAcess closed&quot;);</span>
+<span class="fc" id="L875">	}</span>
 
 	public List&lt;Reservation&gt; getAllReservationsByTraveler(Traveler traveler) {
 <span class="nc" id="L878">		TypedQuery&lt;Reservation&gt; query = db.createQuery(&quot;SELECT re FROM Reservation re WHERE re.traveler=?1&quot;,</span>

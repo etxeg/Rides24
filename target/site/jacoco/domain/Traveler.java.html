@@ -21,20 +21,20 @@ import configuration.UtilDate;
 @Entity
 public class Traveler extends User{
 	private static final long serialVersionUID = 1L;
-<span class="nc" id="L24">	@XmlIDREF</span>
+<span class="pc" id="L24">	@XmlIDREF</span>
 	@OneToMany(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE}, orphanRemoval = true)
 	private List&lt;Reservation&gt; reservations = new Vector&lt;Reservation&gt;();
-<span class="nc" id="L27">	@OneToMany(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE}, orphanRemoval = true)</span>
+<span class="pc" id="L27">	@OneToMany(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE}, orphanRemoval = true)</span>
 	private List&lt;Reclamation&gt; reclamations = new Vector&lt;Reclamation&gt;();
-<span class="nc" id="L29">	@OneToMany(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE}, orphanRemoval = true)</span>
+<span class="pc" id="L29">	@OneToMany(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE}, orphanRemoval = true)</span>
 	private List&lt;Alert&gt; alerts=new Vector&lt;Alert&gt;();
 	public Traveler() {
 <span class="nc" id="L32">		super();</span>
 <span class="nc" id="L33">	}</span>
 
 	public Traveler(String email, String name,String password) {
-<span class="nc" id="L36">		super(email,name,password);</span>
-<span class="nc" id="L37">	}</span>
+<span class="fc" id="L36">		super(email,name,password);</span>
+<span class="fc" id="L37">	}</span>
 	
 	
 	public void addReservation(Reservation pReservation) {

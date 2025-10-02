@@ -21,11 +21,11 @@ import java.util.TimeZone;
 	
 	public static Date newDate(int year,int month,int day) {
 
-<span class="nc" id="L24">	     Calendar calendar = Calendar.getInstance();</span>
-<span class="nc" id="L25">		 calendar.setTimeZone(TimeZone.getTimeZone(&quot;CET&quot;));</span>
-<span class="nc" id="L26">	     calendar.set(year, month, day,0,0,0);</span>
-<span class="nc" id="L27">	     calendar.set(Calendar.MILLISECOND, 0);</span>
-<span class="nc" id="L28">	     return calendar.getTime();</span>
+<span class="fc" id="L24">	     Calendar calendar = Calendar.getInstance();</span>
+<span class="fc" id="L25">		 calendar.setTimeZone(TimeZone.getTimeZone(&quot;CET&quot;));</span>
+<span class="fc" id="L26">	     calendar.set(year, month, day,0,0,0);</span>
+<span class="fc" id="L27">	     calendar.set(Calendar.MILLISECOND, 0);</span>
+<span class="fc" id="L28">	     return calendar.getTime();</span>
 	}
 	
 	public static Date firstDayMonth(Date date) {

@@ -4,7 +4,7 @@ Rides24,javax.persistence.metamodel,Attribute.PersistentAttributeType,74,0,0,0,8
 Rides24,javax.persistence.metamodel,Bindable.BindableType,34,0,0,0,4,0,1,0,1,0
 Rides24,javax.persistence.metamodel,Type.PersistenceType,44,0,0,0,5,0,1,0,1,0
 Rides24,dataAccess,ObjectdbManagerServer,192,0,2,0,43,0,3,0,2,0
-Rides24,dataAccess,DataAccess,2195,0,72,0,521,0,76,0,40,0
+Rides24,dataAccess,DataAccess,1755,440,65,7,432,89,71,5,35,5
 Rides24,dataAccess,ObjectdbManagerServer.new ActionListener() {...},48,0,0,0,12,0,2,0,2,0
 Rides24,javax.transaction.xa,XAException,13,0,0,0,7,0,3,0,3,0
 Rides24,javax.jdo,JDOFatalUserException,34,0,0,0,14,0,7,0,7,0
@@ -13,15 +13,15 @@ Rides24,javax.jdo,JDOHelper,1866,0,194,0,480,0,152,0,55,0
 Rides24,javax.jdo,JDOFatalDataStoreException,34,0,0,0,14,0,7,0,7,0
 Rides24,javax.jdo,JDOFatalInternalException,34,0,0,0,14,0,7,0,7,0
 Rides24,javax.jdo,JDOCanRetryException,34,0,0,0,14,0,7,0,7,0
-Rides24,javax.jdo,JDOHelper.new PrivilegedAction() {...},5,0,0,0,2,0,2,0,2,0
-Rides24,javax.jdo,JDOHelper.new JDOImplHelper.StateInterrogationObjectReturn() {...},7,0,0,0,2,0,2,0,2,0
-Rides24,javax.jdo,JDOHelper.new JDOImplHelper.StateInterrogationObjectReturn() {...},7,0,0,0,2,0,2,0,2,0
-Rides24,javax.jdo,JDOHelper.new JDOImplHelper.StateInterrogationBooleanReturn() {...},7,0,0,0,2,0,2,0,2,0
-Rides24,javax.jdo,JDOHelper.new JDOImplHelper.StateInterrogationBooleanReturn() {...},7,0,0,0,2,0,2,0,2,0
-Rides24,javax.jdo,JDOHelper.new JDOImplHelper.StateInterrogationObjectReturn() {...},7,0,0,0,2,0,2,0,2,0
-Rides24,javax.jdo,JDOHelper.new JDOImplHelper.StateInterrogationObjectReturn() {...},7,0,0,0,2,0,2,0,2,0
-Rides24,javax.jdo,JDOHelper.new JDOImplHelper.StateInterrogationBooleanReturn() {...},7,0,0,0,2,0,2,0,2,0
-Rides24,javax.jdo,JDOHelper.new JDOImplHelper.StateInterrogationBooleanReturn() {...},7,0,0,0,2,0,2,0,2,0
+Rides24,javax.jdo,JDOHelper.new PrivilegedAction() {...},0,5,0,0,0,2,0,2,0,2
+Rides24,javax.jdo,JDOHelper.new JDOImplHelper.StateInterrogationObjectReturn() {...},4,3,0,0,1,1,1,1,1,1
+Rides24,javax.jdo,JDOHelper.new JDOImplHelper.StateInterrogationObjectReturn() {...},4,3,0,0,1,1,1,1,1,1
+Rides24,javax.jdo,JDOHelper.new JDOImplHelper.StateInterrogationBooleanReturn() {...},4,3,0,0,1,1,1,1,1,1
+Rides24,javax.jdo,JDOHelper.new JDOImplHelper.StateInterrogationBooleanReturn() {...},4,3,0,0,1,1,1,1,1,1
+Rides24,javax.jdo,JDOHelper.new JDOImplHelper.StateInterrogationObjectReturn() {...},4,3,0,0,1,1,1,1,1,1
+Rides24,javax.jdo,JDOHelper.new JDOImplHelper.StateInterrogationObjectReturn() {...},4,3,0,0,1,1,1,1,1,1
+Rides24,javax.jdo,JDOHelper.new JDOImplHelper.StateInterrogationBooleanReturn() {...},4,3,0,0,1,1,1,1,1,1
+Rides24,javax.jdo,JDOHelper.new JDOImplHelper.StateInterrogationBooleanReturn() {...},4,3,0,0,1,1,1,1,1,1
 Rides24,javax.jdo,JDOObjectNotFoundException,34,0,0,0,14,0,7,0,7,0
 Rides24,javax.jdo,JDOUserCallbackException,34,0,0,0,14,0,7,0,7,0
 Rides24,javax.jdo,JDOFatalException,34,0,0,0,14,0,7,0,7,0
@@ -33,9 +33,9 @@ Rides24,javax.jdo,JDOHelper.new PrivilegedExceptionAction() {...},20,0,0,0,2,0,2
 Rides24,javax.jdo,JDOHelper.new PrivilegedExceptionAction() {...},20,0,0,0,2,0,2,0,2,0
 Rides24,javax.jdo,JDOHelper.new PrivilegedAction() {...},6,0,0,0,2,0,2,0,2,0
 Rides24,javax.jdo,JDOHelper.new PrivilegedAction() {...},15,0,0,0,2,0,2,0,2,0
-Rides24,javax.jdo,JDOHelper.new JDOImplHelper.StateInterrogationBooleanReturn() {...},7,0,0,0,2,0,2,0,2,0
+Rides24,javax.jdo,JDOHelper.new JDOImplHelper.StateInterrogationBooleanReturn() {...},4,3,0,0,1,1,1,1,1,1
 Rides24,javax.jdo,JDOHelper.new ErrorHandler() {...},8,0,0,0,4,0,4,0,4,0
-Rides24,javax.jdo,JDOHelper.new JDOImplHelper.StateInterrogationBooleanReturn() {...},7,0,0,0,2,0,2,0,2,0
+Rides24,javax.jdo,JDOHelper.new JDOImplHelper.StateInterrogationBooleanReturn() {...},4,3,0,0,1,1,1,1,1,1
 Rides24,javax.jdo,JDOException,376,0,42,0,91,0,38,0,17,0
 Rides24,javax.jdo,JDOUserException,34,0,0,0,14,0,7,0,7,0
 Rides24,javax.jdo,JDOUnsupportedOptionException,17,0,0,0,8,0,4,0,4,0
@@ -50,8 +50,8 @@ Rides24,com.objectdb.jpa.type,MappedSuperclassTypeImpl,7,0,0,0,3,0,2,0,2,0
 Rides24,com.objectdb.jpa.type,EmbeddableTypeImpl,6,0,0,0,3,0,2,0,2,0
 Rides24,com.objectdb.jpa.type,BasicTypeImpl,6,0,0,0,3,0,2,0,2,0
 Rides24,com.objectdb.jpa.type,EntityTypeImpl,19,0,0,0,7,0,5,0,5,0
-Rides24,configuration,ConfigXML,225,0,0,0,49,0,16,0,16,0
-Rides24,configuration,UtilDate,118,0,0,0,32,0,5,0,5,0
+Rides24,configuration,ConfigXML,41,184,0,0,12,37,9,7,9,7
+Rides24,configuration,UtilDate,97,21,0,0,27,5,4,1,4,1
 Rides24,com.objectdb.jpa.attr,PluralAttributeImpl,18,0,0,0,6,0,4,0,4,0
 Rides24,com.objectdb.jpa.attr,MapAttributeImpl,19,0,0,0,6,0,4,0,4,0
 Rides24,com.objectdb.jpa.attr,CollectionAttributeImpl,9,0,0,0,3,0,2,0,2,0
@@ -147,16 +147,16 @@ Rides24,com.objectdb.jpa.criteria,CriteriaQueryImpl.a,51,0,6,0,13,0,8,0,5,0
 Rides24,com.objectdb.jpa.criteria,JoinImpl.a,24,0,0,0,7,0,5,0,5,0
 Rides24,com.objectdb.jpa.criteria,CriteriaQueryImpl,159,0,16,0,41,0,24,0,16,0
 Rides24,com.objectdb.jpa.criteria,SubqueryImpl,211,0,4,0,53,0,22,0,20,0
-Rides24,com.objectdb.spi,OVisitor,3,0,0,0,1,0,1,0,1,0
+Rides24,com.objectdb.spi,OVisitor,0,3,0,0,0,1,0,1,0,1
 Rides24,com.objectdb.spi,OMember,11,0,0,0,4,0,4,0,4,0
 Rides24,com.objectdb.spi,Tracker,397,0,68,0,130,0,87,0,53,0
-Rides24,com.objectdb.spi,OWriter,3,0,0,0,1,0,1,0,1,0
+Rides24,com.objectdb.spi,OWriter,0,3,0,0,0,1,0,1,0,1
 Rides24,com.objectdb.spi,Trackable,4,0,0,0,1,0,1,0,1,0
 Rides24,com.objectdb.spi,OType,3,0,0,0,1,0,1,0,1,0
 Rides24,com.objectdb.spi,DetachedTracker,164,0,18,0,48,0,22,0,13,0
 Rides24,com.objectdb.spi,SignedType,4,0,0,0,1,0,1,0,1,0
 Rides24,com.objectdb.spi,TrackableSysType,4,0,0,0,1,0,1,0,1,0
-Rides24,com.objectdb.spi,OReader,3,0,0,0,1,0,1,0,1,0
+Rides24,com.objectdb.spi,OReader,0,3,0,0,0,1,0,1,0,1
 Rides24,com.objectdb.spi,TrackableUserType,4,0,0,0,1,0,1,0,1,0
 Rides24,javax.jdo.annotations,DiscriminatorStrategy,44,0,0,0,5,0,1,0,1,0
 Rides24,javax.jdo.annotations,PersistenceModifier,44,0,0,0,5,0,1,0,1,0
@@ -190,16 +190,16 @@ Rides24,javax.persistence.spi,PersistenceProviderResolverHolder.DefaultPersisten
 Rides24,javax.persistence.criteria,Predicate.BooleanOperator,24,0,0,0,2,0,1,0,1,0
 Rides24,javax.persistence.criteria,CriteriaBuilder.Trimspec,34,0,0,0,4,0,1,0,1,0
 Rides24,javax.persistence.criteria,JoinType,34,0,0,0,4,0,1,0,1,0
-Rides24,domain,Ride,292,0,2,0,84,0,36,0,35,0
+Rides24,domain,Ride,251,41,2,0,71,13,34,2,33,2
 Rides24,domain,Assessment,66,0,0,0,22,0,12,0,12,0
-Rides24,domain,Traveler,175,0,10,0,41,0,20,0,15,0
-Rides24,domain,Driver,192,0,22,0,41,0,24,0,13,0
-Rides24,domain,Car,56,0,0,0,19,0,10,0,10,0
+Rides24,domain,Traveler,154,21,10,0,36,5,19,1,14,1
+Rides24,domain,Driver,148,44,22,0,31,10,21,3,10,3
+Rides24,domain,Car,38,18,0,0,12,7,8,2,8,2
 Rides24,domain,IntegerAdapter,14,0,2,0,4,0,4,0,3,0
 Rides24,domain,Alert,58,0,0,0,16,0,8,0,8,0
-Rides24,domain,Reservation,111,0,4,0,44,0,23,0,21,0
-Rides24,domain,Movement,43,0,0,0,18,0,9,0,9,0
-Rides24,domain,User,116,0,10,0,41,0,21,0,16,0
+Rides24,domain,Reservation,90,21,4,0,36,8,22,1,20,1
+Rides24,domain,Movement,28,15,0,0,12,6,8,1,8,1
+Rides24,domain,User,60,56,9,1,22,19,12,9,7,9
 Rides24,domain,Admin,26,0,0,0,8,0,4,0,4,0
 Rides24,domain,Reclamation,82,0,0,0,30,0,16,0,16,0
 Rides24,com.objectdb.o,DQI,254,0,46,0,69,0,27,0,4,0
@@ -952,7 +952,7 @@ Rides24,javax.jdo.spi,JDOPermission,30,0,0,0,8,0,3,0,3,0
 Rides24,javax.jdo.spi,JDOImplHelper.new JDOImplHelper.StringConstructor() {...},25,0,0,0,6,0,2,0,2,0
 Rides24,javax.jdo.spi,JDOImplHelper.new JDOImplHelper.StringConstructor() {...},15,0,0,0,4,0,2,0,2,0
 Rides24,javax.jdo.spi,JDOImplHelper.new JDOImplHelper.StringConstructor() {...},49,0,2,0,10,0,3,0,2,0
-Rides24,javax.jdo.spi,JDOImplHelper.new PrivilegedAction() {...},5,0,0,0,2,0,2,0,2,0
+Rides24,javax.jdo.spi,JDOImplHelper.new PrivilegedAction() {...},0,5,0,0,0,2,0,2,0,2
 Rides24,javax.jdo.spi,I18NHelper.new PrivilegedAction() {...},10,0,0,0,2,0,2,0,2,0
 Rides24,javax.jdo.spi,I18NHelper.new PrivilegedAction() {...},5,0,0,0,2,0,2,0,2,0
 Rides24,javax.jdo.spi,JDOImplHelper,772,0,74,0,234,0,76,0,39,0

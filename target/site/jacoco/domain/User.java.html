@@ -27,22 +27,22 @@ public class User implements Serializable{
 	private String password;
 	private float money;
 
-<span class="nc" id="L30">	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.MERGE)</span>
+<span class="pc" id="L30">	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.MERGE)</span>
 	private List&lt;Movement&gt; movements = new Vector&lt;Movement&gt;();
 	public User() {
 <span class="nc" id="L33">		super();</span>
 <span class="nc" id="L34">	}</span>
 
-<span class="nc" id="L36">	public User(String email, String name, String password) {</span>
-<span class="nc" id="L37">		this.email = email;</span>
-<span class="nc" id="L38">		this.name = name;</span>
-<span class="nc" id="L39">		this.password = password;</span>
-<span class="nc" id="L40">		this.money = 0;</span>
-<span class="nc" id="L41">	}</span>
+<span class="fc" id="L36">	public User(String email, String name, String password) {</span>
+<span class="fc" id="L37">		this.email = email;</span>
+<span class="fc" id="L38">		this.name = name;</span>
+<span class="fc" id="L39">		this.password = password;</span>
+<span class="fc" id="L40">		this.money = 0;</span>
+<span class="fc" id="L41">	}</span>
 	
 	
 	public String getEmail() {
-<span class="nc" id="L45">		return email;</span>
+<span class="fc" id="L45">		return email;</span>
 	}
 
 	public void setEmail(String email) {
@@ -54,19 +54,19 @@ public class User implements Serializable{
 	}
 	
 	public void addMovement(Movement move) {
-<span class="nc" id="L57">		this.movements.add(move);</span>
-<span class="nc" id="L58">	}</span>
+<span class="fc" id="L57">		this.movements.add(move);</span>
+<span class="fc" id="L58">	}</span>
 	
 	public int getMovementsCount() {
-<span class="nc bnc" id="L61" title="All 2 branches missed.">		if (movements != null) {</span>
-<span class="nc" id="L62">			return movements.size();</span>
+<span class="pc bpc" id="L61" title="1 of 2 branches missed.">		if (movements != null) {</span>
+<span class="fc" id="L62">			return movements.size();</span>
 		} else {
 <span class="nc" id="L64">			return 1;</span>
 		}
 	}
 	
 	public String getName() {
-<span class="nc" id="L69">		return name;</span>
+<span class="fc" id="L69">		return name;</span>
 	}
 
 	public void setName(String name) {
@@ -74,7 +74,7 @@ public class User implements Serializable{
 <span class="nc" id="L74">	}</span>
 	
 	public String getPassword() {
-<span class="nc" id="L77">		return password;</span>
+<span class="fc" id="L77">		return password;</span>
 	}
 
 	public void setPassword(String password) {
@@ -84,20 +84,20 @@ public class User implements Serializable{
 	
 
 	public void addMoney(float money) {
-<span class="nc" id="L87">		this.money = this.money + money;</span>
-<span class="nc" id="L88">	}</span>
+<span class="fc" id="L87">		this.money = this.money + money;</span>
+<span class="fc" id="L88">	}</span>
 	
 	public void withdrawMoney(float money) {
 <span class="nc" id="L91">		this.money = this.money - money;</span>
 <span class="nc" id="L92">	}</span>
 	
 	public float getMoney() {
-<span class="nc" id="L95">		return money;</span>
+<span class="fc" id="L95">		return money;</span>
 	}
 
 	public void setMoney(float money) {
-<span class="nc" id="L99">		this.money = money;</span>
-<span class="nc" id="L100">	}</span>
+<span class="fc" id="L99">		this.money = money;</span>
+<span class="fc" id="L100">	}</span>
 		
 	@Override
 	public boolean equals(Object obj) {

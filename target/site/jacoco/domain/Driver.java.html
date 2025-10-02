@@ -19,14 +19,14 @@ public class Driver extends User implements Serializable  {
 	/**
 	 * 
 	 */
-<span class="nc" id="L22">	@XmlIDREF</span>
+<span class="pc" id="L22">	@XmlIDREF</span>
 	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.PERSIST)
 	private List&lt;Ride&gt; rides=new Vector&lt;Ride&gt;();
 	
-<span class="nc" id="L26">	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.MERGE)</span>
+<span class="pc" id="L26">	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.MERGE)</span>
 	private List&lt;Car&gt; cars=new Vector&lt;Car&gt;();
 	
-<span class="nc" id="L29">	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.PERSIST)</span>
+<span class="pc" id="L29">	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.PERSIST)</span>
 	private List&lt;Assessment&gt; assessments=new Vector&lt;Assessment&gt;();
 
 	public Driver() {
@@ -34,8 +34,8 @@ public class Driver extends User implements Serializable  {
 <span class="nc" id="L34">	}</span>
 
 	public Driver(String email, String name,String password) {
-<span class="nc" id="L37">		super(email,name,password);</span>
-<span class="nc" id="L38">	}</span>
+<span class="fc" id="L37">		super(email,name,password);</span>
+<span class="fc" id="L38">	}</span>
 	
 	
 	/**
@@ -46,14 +46,14 @@ public class Driver extends User implements Serializable  {
 	 * @return Bet
 	 */
 	public Ride addRide(String from, String to, Date date, float price, Car pCar)  {
-<span class="nc" id="L49">        Ride ride=new Ride(from,to,date,price, this,pCar);</span>
-<span class="nc" id="L50">        rides.add(ride);</span>
-<span class="nc" id="L51">        return ride;</span>
+<span class="fc" id="L49">        Ride ride=new Ride(from,to,date,price, this,pCar);</span>
+<span class="fc" id="L50">        rides.add(ride);</span>
+<span class="fc" id="L51">        return ride;</span>
 	}
 
 	public void addCar(Car pCar)  {
-<span class="nc" id="L55">        cars.add(pCar);</span>
-<span class="nc" id="L56">	}</span>
+<span class="fc" id="L55">        cars.add(pCar);</span>
+<span class="fc" id="L56">	}</span>
 	
 	/**
 	 * This method checks if the ride already exists for that driver

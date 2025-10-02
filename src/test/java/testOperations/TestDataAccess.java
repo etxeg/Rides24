@@ -12,6 +12,7 @@ import configuration.ConfigXML;
 import domain.Car;
 import domain.Driver;
 import domain.Ride;
+import domain.Traveler;
 
 
 public class TestDataAccess {
@@ -128,6 +129,46 @@ public class TestDataAccess {
 			return null;
 
 		}
+		
+		public boolean existTraveler(String email) { 
+
+		 	return db.find(Traveler.class, email)!=null; 
+
+		} 
+
+		 
+
+		public Traveler addTravelerWithMoney(Traveler traveler, float i) { 
+
+			System.out.println(">> TestDataAccess: addTravelerWithMoney"); 
+
+			Traveler traveler2=null; 
+
+			db.getTransaction().begin(); 
+
+			try { 
+
+				traveler2 = db.find(Traveler.class,	traveler.getEmail()); 
+
+				if (traveler2==null) {
+					traveler2=new Traveler(traveler.getName(),traveler.getEmail(),traveler.getPassword()); 
+
+					traveler2.addMoney(i); 
+
+					db.getTransaction().commit();
+				}
+				
+				return traveler2; 
+
+			} catch (Exception e){ 
+
+				e.printStackTrace(); 
+
+			} 
+
+			return null; 
+
+		} 
 
 
 		
