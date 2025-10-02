@@ -11,6 +11,7 @@ import javax.persistence.Persistence;
 import configuration.ConfigXML;
 import domain.Car;
 import domain.Driver;
+import domain.Reservation;
 import domain.Ride;
 import domain.Traveler;
 
