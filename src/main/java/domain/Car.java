@@ -9,7 +9,7 @@ import javax.xml.bind.annotation.XmlIDREF;
 @Entity
 public class Car  {
 	
-	//Prueba automatizatzeko SonarCloud
+	//Prueba 2 automatizatzeko SonarCloud
 	/**
 	 * 
 	 */
