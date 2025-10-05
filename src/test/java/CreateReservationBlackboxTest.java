@@ -85,18 +85,38 @@ public class CreateReservationBlackboxTest {
     public void testCase4_nullTraveler() throws Exception {
         Ride ride = createRide("Donostia", "Gasteiz", 2025, 10, 2, "driver@gmail.com");
 
-        sut.open();
-        assertThrows(NullPointerException.class, () -> sut.createReservation(null, ride, 2));
-        sut.close();
+        try {
+            testDA.open();
+            //testDA.addTravelerWithMoney(traveler, 100);
+            testDA.close();
+
+            sut.open();
+            boolean result = sut.createReservation(null, ride, 5); // 5 > 3
+            sut.close();
+
+            assertTrue(!result);
+        } catch (Exception e) {
+            fail("Exception not expected: " + e.getMessage());
+        }
     }
 
     @Test
     public void testCase5_nullRide() throws Exception {
         Traveler traveler = new Traveler("traveler@gmail.com", "Traveler", "123");
 
-        sut.open();
-        assertThrows(NullPointerException.class, () -> sut.createReservation(traveler, null, 2));
-        sut.close();
+        try {
+            testDA.open();
+            testDA.addTravelerWithMoney(traveler, 100);
+            testDA.close();
+
+            sut.open();
+            boolean result = sut.createReservation(traveler, null, 5); // 5 > 3
+            sut.close();
+
+            assertTrue(!result);
+        } catch (Exception e) {
+            fail("Exception not expected: " + e.getMessage());
+        }
     }
 
     @Test
@@ -104,9 +124,19 @@ public class CreateReservationBlackboxTest {
         Traveler traveler = new Traveler("traveler@gmail.com", "Traveler", "123");
         Ride ride = createRide("Donostia", "Gasteiz", 2025, 10, 2, "driver@gmail.com");
 
-        sut.open();
-        assertThrows(IllegalArgumentException.class, () -> sut.createReservation(traveler, ride, 0));
-        sut.close();
+        try {
+            testDA.open();
+            testDA.addTravelerWithMoney(traveler, 100);
+            testDA.close();
+
+            sut.open();
+            boolean result = sut.createReservation(traveler, ride, 0);
+            sut.close();
+
+            assertTrue(!result);
+        } catch (Exception e) {
+            fail("Exception not expected: " + e.getMessage());
+        }
     }
 
     // helper method to create a ride quickly

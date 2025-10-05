@@ -23,37 +23,30 @@ import domain.Traveler;
 
 public class CreateReservationWhiteboxMockTest {
 
-    static DataAccess sut;
+	static DataAccess sut;
+	protected MockedStatic<Persistence> persistenceMock;
+	@Mock
+	protected EntityManagerFactory entityManagerFactory;
+	@Mock
+	protected EntityManager db;
+	@Mock
+	protected EntityTransaction et;
 
-    protected MockedStatic<Persistence> persistenceMock;
-
-    @Mock
-    protected EntityManagerFactory entityManagerFactory;
-
-    @Mock
-    protected EntityManager db;
-
-    @Mock
-    protected EntityTransaction et;
-
-    @Before
-    public void init() {
-        MockitoAnnotations.openMocks(this);
-
-        persistenceMock = Mockito.mockStatic(Persistence.class);
-        persistenceMock.when(() -> Persistence.createEntityManagerFactory(Mockito.any()))
-                       .thenReturn(entityManagerFactory);
-
-        Mockito.doReturn(db).when(entityManagerFactory).createEntityManager();
-        Mockito.doReturn(et).when(db).getTransaction();
-
-        sut = new DataAccess(db);
-    }
-
-    @After
-    public void tearDown() {
-        persistenceMock.close();
-    }
+	@Before
+	public void init() {
+		MockitoAnnotations.openMocks(this);
+	
+		persistenceMock = Mockito.mockStatic(Persistence.class);
+		persistenceMock.when(() ->
+		Persistence.createEntityManagerFactory(Mockito.any())).thenReturn(entityManagerFactory);
+		Mockito.doReturn(db).when(entityManagerFactory).createEntityManager();
+		Mockito.doReturn(et).when(db).getTransaction();
+		sut=new DataAccess(db);
+	 }
+	@After
+	public void tearDown() {
+		persistenceMock.close();
+	 }
 
     private Traveler traveler;
     private Ride ride;

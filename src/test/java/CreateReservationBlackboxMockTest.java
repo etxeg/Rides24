@@ -117,18 +117,28 @@ public class CreateReservationBlackboxMockTest {
     public void testCase4_nullTraveler() throws Exception {
         Ride ride = createRide("Donostia", "Gasteiz", 2025, 10, 2, "driver@gmail.com");
 
+        //when(db.find(Traveler.class, traveler.getEmail())).thenReturn(traveler);
+        when(db.find(Ride.class, ride.getRideNumber())).thenReturn(ride);
+
         sut.open();
-        assertThrows(NullPointerException.class, () -> sut.createReservation(null, ride, 2));
+        boolean result = sut.createReservation(null, ride, 1);
         sut.close();
+
+        assertFalse(result);
     }
 
     @Test
     public void testCase5_nullRide() throws Exception {
         Traveler traveler = new Traveler("traveler@gmail.com", "Traveler", "123");
 
+        when(db.find(Traveler.class, traveler.getEmail())).thenReturn(traveler);
+        //when(db.find(Ride.class, ride.getRideNumber())).thenReturn(ride);
+        
         sut.open();
-        assertThrows(NullPointerException.class, () -> sut.createReservation(traveler, null, 2));
+        boolean result = sut.createReservation(traveler, null, 1);
         sut.close();
+
+        assertFalse(result);
     }
 
     @Test
@@ -137,8 +147,13 @@ public class CreateReservationBlackboxMockTest {
         traveler.addMoney(100);
         Ride ride = createRide("Donostia", "Gasteiz", 2025, 10, 2, "driver@gmail.com");
 
+        when(db.find(Traveler.class, traveler.getEmail())).thenReturn(traveler);
+        when(db.find(Ride.class, ride.getRideNumber())).thenReturn(ride);
+
         sut.open();
-        assertThrows(IllegalArgumentException.class, () -> sut.createReservation(traveler, ride, 0));
+        boolean result = sut.createReservation(traveler, ride, 0);
         sut.close();
+
+        assertFalse(result);
     }
 }
