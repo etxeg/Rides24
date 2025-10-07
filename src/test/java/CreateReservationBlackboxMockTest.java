@@ -71,8 +71,8 @@ public class CreateReservationBlackboxMockTest {
         traveler.addMoney(100);
         Ride ride = createRide("Donostia", "Gasteiz", 2025, 10, 2, "driver@gmail.com");
 
-        when(db.find(Traveler.class, traveler.getEmail())).thenReturn(traveler);
-        when(db.find(Ride.class, ride.getRideNumber())).thenReturn(ride);
+        Mockito.when(db.find(Traveler.class, traveler.getEmail())).thenReturn(traveler);
+    	Mockito.when(db.find(Ride.class, ride.getRideNumber())).thenReturn(ride);
 
         sut.open();
         boolean result = sut.createReservation(traveler, ride, 2);
@@ -87,8 +87,8 @@ public class CreateReservationBlackboxMockTest {
         traveler.addMoney(10); // not enough
         Ride ride = createRide("Donostia", "Gasteiz", 2025, 10, 2, "driver@gmail.com");
 
-        when(db.find(Traveler.class, traveler.getEmail())).thenReturn(traveler);
-        when(db.find(Ride.class, ride.getRideNumber())).thenReturn(ride);
+        Mockito.when(db.find(Traveler.class, traveler.getEmail())).thenReturn(traveler);
+    	Mockito.when(db.find(Ride.class, ride.getRideNumber())).thenReturn(ride);
 
         sut.open();
         boolean result = sut.createReservation(traveler, ride, 2);
@@ -103,8 +103,8 @@ public class CreateReservationBlackboxMockTest {
         traveler.addMoney(100);
         Ride ride = createRide("Donostia", "Gasteiz", 2025, 10, 3, "driver@gmail.com"); // 3 seats
 
-        when(db.find(Traveler.class, traveler.getEmail())).thenReturn(traveler);
-        when(db.find(Ride.class, ride.getRideNumber())).thenReturn(ride);
+        Mockito.when(db.find(Traveler.class, traveler.getEmail())).thenReturn(traveler);
+    	Mockito.when(db.find(Ride.class, ride.getRideNumber())).thenReturn(ride);
 
         sut.open();
         boolean result = sut.createReservation(traveler, ride, 5); // 5 > 3
@@ -117,8 +117,8 @@ public class CreateReservationBlackboxMockTest {
     public void testCase4_nullTraveler() throws Exception {
         Ride ride = createRide("Donostia", "Gasteiz", 2025, 10, 2, "driver@gmail.com");
 
-        //when(db.find(Traveler.class, traveler.getEmail())).thenReturn(traveler);
-        when(db.find(Ride.class, ride.getRideNumber())).thenReturn(ride);
+        //Mockito.when(db.find(Traveler.class, traveler.getEmail())).thenReturn(traveler);
+    	Mockito.when(db.find(Ride.class, ride.getRideNumber())).thenReturn(ride);
 
         sut.open();
         boolean result = sut.createReservation(null, ride, 1);
@@ -131,8 +131,8 @@ public class CreateReservationBlackboxMockTest {
     public void testCase5_nullRide() throws Exception {
         Traveler traveler = new Traveler("traveler@gmail.com", "Traveler", "123");
 
-        when(db.find(Traveler.class, traveler.getEmail())).thenReturn(traveler);
-        //when(db.find(Ride.class, ride.getRideNumber())).thenReturn(ride);
+        Mockito.when(db.find(Traveler.class, traveler.getEmail())).thenReturn(traveler);
+    	//Mockito.when(db.find(Ride.class, ride.getRideNumber())).thenReturn(ride);
         
         sut.open();
         boolean result = sut.createReservation(traveler, null, 1);
@@ -147,8 +147,8 @@ public class CreateReservationBlackboxMockTest {
         traveler.addMoney(100);
         Ride ride = createRide("Donostia", "Gasteiz", 2025, 10, 2, "driver@gmail.com");
 
-        when(db.find(Traveler.class, traveler.getEmail())).thenReturn(traveler);
-        when(db.find(Ride.class, ride.getRideNumber())).thenReturn(ride);
+        Mockito.when(db.find(Traveler.class, traveler.getEmail())).thenReturn(traveler);
+    	Mockito.when(db.find(Ride.class, ride.getRideNumber())).thenReturn(ride);
 
         sut.open();
         boolean result = sut.createReservation(traveler, ride, 0);
