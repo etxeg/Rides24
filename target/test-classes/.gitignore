@@ -1,0 +1,7 @@
+/testOperations/
+/RegisterBlackboxMockTest.class
+/RegisterBlackboxTest.class
+/RegisterWhiteboxMockTest.class
+/RegisterWhiteboxTest.class
+/InvalidInputException.class
+/UserAlreadyExistsException.class

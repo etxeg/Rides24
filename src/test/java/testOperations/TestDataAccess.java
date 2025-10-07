@@ -2,6 +2,7 @@ package testOperations;
 
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.persistence.EntityManager;
@@ -14,6 +15,7 @@ import domain.Driver;
 import domain.Reservation;
 import domain.Ride;
 import domain.Traveler;
+import domain.User;
 
 
 public class TestDataAccess {
@@ -172,7 +174,16 @@ public class TestDataAccess {
 		} 
 
 
-		
+
+
+
+		public int countUsers() {
+		    long drivers = db.createQuery("SELECT COUNT(d) FROM Driver d", Long.class).getSingleResult();
+		    long travelers = db.createQuery("SELECT COUNT(t) FROM Traveler t", Long.class).getSingleResult();
+		    //long admins = db.createQuery("SELECT COUNT(a) FROM Admin a", Long.class).getSingleResult();
+		    return (int)(drivers + travelers);
+		}
+
 }
 
 
