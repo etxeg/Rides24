@@ -169,7 +169,35 @@ public class TestDataAccess {
 
 			return null; 
 
-		} 
+		}
+
+		
+		public Traveler createTraveler(String email, String name) {
+			System.out.println(">> TestDataAccess: addDriver");
+			Traveler traveler=null;
+				db.getTransaction().begin();
+				try {
+				    traveler=new Traveler(email,name,"123");
+					db.persist(traveler);
+					db.getTransaction().commit();
+				}
+				catch (Exception e){
+					e.printStackTrace();
+				}
+				return traveler;
+	    }
+		
+		public boolean removeTraveler(String travelerEmail) {
+			System.out.println(">> TestDataAccess: removeTraveler");
+			Traveler d = db.find(Traveler.class, travelerEmail);
+			if (d!=null) {
+				db.getTransaction().begin();
+				db.remove(d);
+				db.getTransaction().commit();
+				return true;
+			} else 
+			return false;
+	    }
 
 
 		
