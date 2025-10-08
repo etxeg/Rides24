@@ -27,7 +27,7 @@ import domain.Driver;
 import domain.Ride;
 import domain.Traveler;
 
-public class checkAlertsBDWhiteMockTest {
+public class CheckAlertsBDWhiteMockTest {
 
 static DataAccess sut;
 	
@@ -180,3 +180,4 @@ static DataAccess sut;
 	}
 
 }
+
