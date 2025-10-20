@@ -17,7 +17,7 @@ import domain.*;
 
 public class RegisterWhiteboxMockTest {
 	//change 1
-	//change2
+	//change3
 	static DataAccess sut;
 	protected MockedStatic<Persistence> persistenceMock;
 	@Mock
