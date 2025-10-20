@@ -27,7 +27,7 @@ import domain.Driver;
 import domain.Ride;
 import domain.Traveler;
 
-public class CheckAlertsBDBlackMockTest {
+public class CheckAlertsBlackMockTest {
 //aldaketa
 	static DataAccess sut;
 	
@@ -215,3 +215,4 @@ public class CheckAlertsBDBlackMockTest {
 	}
 
 }
+
