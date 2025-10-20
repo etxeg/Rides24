@@ -15,7 +15,7 @@ import domain.Ride;
 import domain.Traveler;
 import testOperations.TestDataAccess;
 
-public class checkAlertsBDBlackTest {
+public class CheckAlertsBDBlackTest {
 
 	//sut:system under test
 		 static DataAccess sut=new DataAccess();
@@ -212,3 +212,4 @@ public class checkAlertsBDBlackTest {
 	}
 
 }
+

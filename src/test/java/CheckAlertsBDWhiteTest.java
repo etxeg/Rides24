@@ -15,7 +15,7 @@ import domain.Ride;
 import domain.Traveler;
 import testOperations.TestDataAccess;
 
-public class checkAlertsBDWhiteTest {
+public class CheckAlertsBDWhiteTest {
 
 	
 	//sut:system under test
@@ -167,3 +167,4 @@ public class checkAlertsBDWhiteTest {
 	}
 
 }
+
