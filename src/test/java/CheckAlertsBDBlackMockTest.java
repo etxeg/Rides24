@@ -28,7 +28,7 @@ import domain.Ride;
 import domain.Traveler;
 
 public class CheckAlertsBDBlackMockTest {
-
+//aldaketa
 	static DataAccess sut;
 	
 	protected MockedStatic <Persistence> persistenceMock;
