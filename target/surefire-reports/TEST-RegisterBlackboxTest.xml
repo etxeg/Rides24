@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="RegisterBlackboxTest" time="0.091" tests="10" errors="0" skipped="0" failures="10">
+  <properties>
+    <property name="jansi.mode" value="force"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="java.vm.version" value="21.0.8+9-LTS"/>
+    <property name="sun.boot.library.path" value="/home/ander/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_21.0.8.v20250724-1412/jre/lib"/>
+    <property name="maven.multiModuleProjectDirectory" value="/home/ander/git/Rides24"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=":"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/home/ander/git/Rides24"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="java.runtime.version" value="21.0.8+9-LTS"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="os.name" value="Linux"/>
+    <property name="classworlds.conf" value="/home/ander/eclipse-workspace/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf12116260264098863925.tmp"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="65.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="6.8.0-84-generic"/>
+    <property name="user.home" value="/home/ander"/>
+    <property name="user.timezone" value="Europe/Madrid"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="21"/>
+    <property name="user.name" value="ander"/>
+    <property name="java.class.path" value="/home/ander/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_3.9.1100.20250811-2018/jars/plexus-classworlds-2.9.0.jar"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B -Dstyle.color=always clean org.jacoco:jacoco-maven-plugin:prepare-agent org.jacoco:jacoco-maven-plugin:report install sonar:sonar"/>
+    <property name="java.home" value="/home/ander/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_21.0.8.v20250724-1412/jre"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="21.0.8"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="maven.home" value="/home/ander/git/Rides24/EMBEDDED"/>
+    <property name="style.color" value="always"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.version.date" value="2025-07-15"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="java.vendor.version" value="Temurin-21.0.8+9"/>
+    <property name="m2e.build.project.data.socket.port" value="41817"/>
+  </properties>
+  <testcase name="testRegisterNewDriver" classname="RegisterBlackboxTest" time="0.004">
+    <failure type="java.lang.AssertionError">java.lang.AssertionError
+	at RegisterBlackboxTest.testRegisterNewDriver(RegisterBlackboxTest.java:27)
+</failure>
+    <system-out><![CDATA[Operation failed
+DataAccess opened => isDatabaseLocal: true
+DataAccess created => isDatabaseLocal: true isDatabaseInitialized: true
+DataAcess closed
+TestDataAccess created
+DataAccess opened => isDatabaseLocal: true
+DataAcess closed
+]]></system-out>
+    <system-err><![CDATA[[ObjectDB 2.8.1] javax.persistence.RollbackException
+Failed to commit transaction: Attempt to reuse an existing primary key value (domain.Car:'ABA') (error 613)
+	at com.objectdb.jpa.EMImpl.commit(EMImpl.java:289)
+	at dataAccess.DataAccess.initializeDB(DataAccess.java:159)
+	at dataAccess.DataAccess.<init>(DataAccess.java:66)
+	at RegisterBlackboxTest.<clinit>(RegisterBlackboxTest.java:18)
+	at java.base/jdk.internal.misc.Unsafe.ensureClassInitialized0(Native Method)
+	at java.base/jdk.internal.misc.Unsafe.ensureClassInitialized(Unsafe.java:1160)
+	at java.base/jdk.internal.reflect.MethodHandleAccessorFactory.ensureClassInitialized(MethodHandleAccessorFactory.java:300)
+	at java.base/jdk.internal.reflect.MethodHandleAccessorFactory.newConstructorAccessor(MethodHandleAccessorFactory.java:103)
+	at java.base/jdk.internal.reflect.ReflectionFactory.newConstructorAccessor(ReflectionFactory.java:200)
+	at java.base/java.lang.reflect.Constructor.acquireConstructorAccessor(Constructor.java:549)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.junit.runners.BlockJUnit4ClassRunner.createTest(BlockJUnit4ClassRunner.java:250)
+	at org.junit.runners.BlockJUnit4ClassRunner.createTest(BlockJUnit4ClassRunner.java:260)
+	at org.junit.runners.BlockJUnit4ClassRunner$2.runReflectiveCall(BlockJUnit4ClassRunner.java:309)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.BlockJUnit4ClassRunner.methodBlock(BlockJUnit4ClassRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:367)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:274)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:161)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+Caused by: javax.persistence.EntityExistsException: com.objectdb.o.UserException: Attempt to reuse an existing primary key value (domain.Car:'ABA')
+	at com.objectdb.o._EntityExistsException.a(_EntityExistsException.java:46)
+	at com.objectdb.o.JPE.d(JPE.java:100)
+	at com.objectdb.o.JPE.d(JPE.java:80)
+	... 37 more
+Caused by: com.objectdb.o.UserException: Attempt to reuse an existing primary key value (domain.Car:'ABA')
+	at com.objectdb.o.MSG.a(MSG.java:64)
+	at com.objectdb.o.PPW.ad(PPW.java:209)
+	at com.objectdb.o.PGW.ak(PGW.java:212)
+	at com.objectdb.o.UPT.u(UPT.java:135)
+	at com.objectdb.o.URT.g(URT.java:173)
+	at com.objectdb.o.TSK.b(TSK.java:146)
+	at com.objectdb.o.TSK.c(TSK.java:96)
+	at com.objectdb.o.TSM.a(TSM.java:88)
+	at com.objectdb.o.UTT.r(UTT.java:377)
+	at com.objectdb.o.UTT.g(UTT.java:210)
+	at com.objectdb.o.TSK.b(TSK.java:146)
+	at com.objectdb.o.TSK.c(TSK.java:96)
+	at com.objectdb.o.TSM.a(TSM.java:88)
+	at com.objectdb.o.MST.ZR(MST.java:1437)
+	at com.objectdb.o.WRA.ZR(WRA.java:398)
+	at com.objectdb.o.WSM.ZR(WSM.java:186)
+	at com.objectdb.o.OBM.aP(OBM.java:959)
+	at com.objectdb.o.OBM.aS(OBM.java:859)
+	at com.objectdb.o.OBM.aG(OBM.java:759)
+	at com.objectdb.jpa.EMImpl.commit(EMImpl.java:286)
+	... 34 more
+]]></system-err>
+  </testcase>
+  <testcase name="testRegisterInvalidEmail" classname="RegisterBlackboxTest" time="0.009">
+    <failure message="Expected InvalidInputException" type="java.lang.AssertionError">java.lang.AssertionError: Expected InvalidInputException
+	at RegisterBlackboxTest.testRegisterInvalidEmail(RegisterBlackboxTest.java:114)
+</failure>
+    <system-out><![CDATA[DataAccess opened => isDatabaseLocal: true
+DataAcess closed
+]]></system-out>
+  </testcase>
+  <testcase name="testRegisterPasswordNull" classname="RegisterBlackboxTest" time="0.008">
+    <failure message="Expected InvalidInputException" type="java.lang.AssertionError">java.lang.AssertionError: Expected InvalidInputException
+	at RegisterBlackboxTest.testRegisterPasswordNull(RegisterBlackboxTest.java:78)
+</failure>
+    <system-out><![CDATA[DataAccess opened => isDatabaseLocal: true
+DataAcess closed
+]]></system-out>
+  </testcase>
+  <testcase name="testRegisterMotaNull" classname="RegisterBlackboxTest" time="0.01">
+    <failure message="Expected InvalidInputException" type="java.lang.AssertionError">java.lang.AssertionError: Expected InvalidInputException
+	at RegisterBlackboxTest.testRegisterMotaNull(RegisterBlackboxTest.java:90)
+</failure>
+    <system-out><![CDATA[DataAccess opened => isDatabaseLocal: true
+DataAcess closed
+]]></system-out>
+  </testcase>
+  <testcase name="testRegisterInvalidPassword" classname="RegisterBlackboxTest" time="0.009">
+    <failure message="Expected InvalidInputException" type="java.lang.AssertionError">java.lang.AssertionError: Expected InvalidInputException
+	at RegisterBlackboxTest.testRegisterInvalidPassword(RegisterBlackboxTest.java:126)
+</failure>
+    <system-out><![CDATA[DataAccess opened => isDatabaseLocal: true
+DataAcess closed
+]]></system-out>
+  </testcase>
+  <testcase name="testRegisterInvalidMota" classname="RegisterBlackboxTest" time="0.008">
+    <failure message="Expected InvalidInputException" type="java.lang.AssertionError">java.lang.AssertionError: Expected InvalidInputException
+	at RegisterBlackboxTest.testRegisterInvalidMota(RegisterBlackboxTest.java:138)
+</failure>
+    <system-out><![CDATA[DataAccess opened => isDatabaseLocal: true
+DataAcess closed
+]]></system-out>
+  </testcase>
+  <testcase name="testRegisterInvalidName" classname="RegisterBlackboxTest" time="0.009">
+    <failure message="Expected InvalidInputException" type="java.lang.AssertionError">java.lang.AssertionError: Expected InvalidInputException
+	at RegisterBlackboxTest.testRegisterInvalidName(RegisterBlackboxTest.java:102)
+</failure>
+    <system-out><![CDATA[DataAccess opened => isDatabaseLocal: true
+DataAcess closed
+]]></system-out>
+  </testcase>
+  <testcase name="testRegisterNameNull" classname="RegisterBlackboxTest" time="0.009">
+    <failure message="Expected InvalidInputException" type="java.lang.AssertionError">java.lang.AssertionError: Expected InvalidInputException
+	at RegisterBlackboxTest.testRegisterNameNull(RegisterBlackboxTest.java:54)
+</failure>
+    <system-out><![CDATA[DataAccess opened => isDatabaseLocal: true
+DataAcess closed
+]]></system-out>
+  </testcase>
+  <testcase name="testRegisterUserAlreadyExists" classname="RegisterBlackboxTest" time="0.016">
+    <failure message="Expected UserAlreadyExistsException" type="java.lang.AssertionError">java.lang.AssertionError: Expected UserAlreadyExistsException
+	at RegisterBlackboxTest.testRegisterUserAlreadyExists(RegisterBlackboxTest.java:41)
+</failure>
+    <system-out><![CDATA[TestDataAccess opened
+>> TestDataAccess: addDriver
+TestDataAccess closed
+DataAccess opened => isDatabaseLocal: true
+DataAcess closed
+]]></system-out>
+  </testcase>
+  <testcase name="testRegisterEmailNull" classname="RegisterBlackboxTest" time="0.008">
+    <failure message="Expected InvalidInputException" type="java.lang.AssertionError">java.lang.AssertionError: Expected InvalidInputException
+	at RegisterBlackboxTest.testRegisterEmailNull(RegisterBlackboxTest.java:66)
+</failure>
+    <system-out><![CDATA[DataAccess opened => isDatabaseLocal: true
+DataAcess closed
+]]></system-out>
+  </testcase>
+</testsuite>

@@ -1,2 +1,7 @@
-/META-INF/
+/businessLogic/
+/configuration/
 /dataAccess/
+/domain/
+/exceptions/
+/gui/
+/META-INF/

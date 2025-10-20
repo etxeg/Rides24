@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: DeleteUserWhiteboxTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.086 sec <<< FAILURE! - in DeleteUserWhiteboxTest
+testCase1_travelerWithReservations(DeleteUserWhiteboxTest)  Time elapsed: 0.023 sec  <<< FAILURE!
+java.lang.AssertionError
+	at DeleteUserWhiteboxTest.testCase1_travelerWithReservations(DeleteUserWhiteboxTest.java:21)
+
+testCase2_driverWithRides(DeleteUserWhiteboxTest)  Time elapsed: 0.016 sec  <<< FAILURE!
+java.lang.AssertionError
+	at DeleteUserWhiteboxTest.testCase2_driverWithRides(DeleteUserWhiteboxTest.java:36)
+

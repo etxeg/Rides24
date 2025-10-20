@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: RegisterWhiteboxTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.038 sec <<< FAILURE! - in RegisterWhiteboxTest
+testRegisterNewDriver(RegisterWhiteboxTest)  Time elapsed: 0.008 sec  <<< FAILURE!
+java.lang.AssertionError
+	at RegisterWhiteboxTest.testRegisterNewDriver(RegisterWhiteboxTest.java:48)
+
+testRegisterNewTraveler(RegisterWhiteboxTest)  Time elapsed: 0.008 sec  <<< FAILURE!
+java.lang.AssertionError
+	at RegisterWhiteboxTest.testRegisterNewTraveler(RegisterWhiteboxTest.java:68)
+

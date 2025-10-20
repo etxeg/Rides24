@@ -1,14 +1,0 @@
-
-"]"java.lang.String
-&"Alert [nundik="java.lang.String
-	", nora="java.lang.String
-	", data="java.lang.String this; ;("domain.Alert"ö9
-7
-< <(""#get-field# nundik:Bjava.lang.String7
-5
-<1 <(5"#get-field# nora:Bjava.lang.String5
-3
-<D <(H"#get-field# data:Bjava.util.Date9
-7
-<	 <(N	"	#binop +#2+:Bjava.lang.String
-< <(O	*9C:/Users/USER/git/Rides24/src/main/java/domain/Alert.java

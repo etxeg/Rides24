@@ -1,15 +1,15 @@
 
-0dataAccess.DataAccess#deleteUser(Ldomain/User;)ZN
-BC:/Users/USER/git/Rides24/src/main/java/dataAccess/DataAccess.java˜ ˜("31*&
+0dataAccess.DataAccess#deleteUser(Ldomain/User;)ZL
+@/home/ander/git/Rides24/src/main/java/dataAccess/DataAccess.java— —("31*&
 13
-ª ª("
+© ©("
 
-ª ª(
+© ©(
 ""*¸
 14
-© ©( Ÿœ
+¨ ¨( Ÿœ
 
-© ©( 
+¨ ¨( 
 %13void"-javax.persistence.EntityTransaction#commit()V*H
 
 __unknown_file (,
@@ -17,17 +17,17 @@ BC:/Users/USER/git/Rides24/src/main/java/dataAccess/DataAccess.java˜ ˜("3
 %12#javax.persistence.EntityTransaction2commit()*
 13*
 25
-	 ( [
+	 ( [
 Y
 
-	 ( !
+	 ( !
 reservationdomain.Reservation"__id*"
 
 __unknown_file (
 ""–
 “
 
-	 ( !
+	 ( !
 reservationdomain.Reservation"
 __arrayGet*2
 
@@ -40,17 +40,17 @@ __arrayGet*2
 26
 9*€
 15
-© ©({
+¨ ¨({
 y
 
-© ©(&
+¨ ¨(&
 %11javax.persistence.EntityManager"__id*=
 
 __unknown_file (!*
 dataAccess.DataAccess"
 dbêç
 
-© ©(*
+¨ ¨(*
 %12#javax.persistence.EntityTransaction"Ujavax.persistence.EntityManager#getTransaction()Ljavax/persistence/EntityTransaction;*D
 
 __unknown_file ((
@@ -58,9 +58,9 @@ y
 %11javax.persistence.EntityManager2getTransaction()*
 14*³
 26
-Ÿ Ÿ(š—
+ (š—
 
-Ÿ Ÿ($
+ ($
 
 %4void"'domain.Reservation#cancelReservation()V*?
 
@@ -69,17 +69,17 @@ y
 reservationdomain.Reservation2cancelReservation()*
 25*Ù
 16
-¨ ¨(
+§ §(
 S
 Q
 
-¨ ¨(
+§ §(
 %9java.io.PrintStream"__id*"
 
 __unknown_file (
 ""ëè
 
-¨ ¨(?
+§ §(?
 %10void"0java.io.PrintStream#println(Ljava/lang/String;)V*7
 
 __unknown_file (
@@ -90,9 +90,9 @@ Q
 %Ezin da administratzaile bat ezabatu.2println(Ljava/lang/String;)*
 15*¸
 27
-! ("Ÿœ
+! ("Ÿœ
 
-! (4
+! (4
 %3java.util.List"1domain.Traveler#getReservations()Ljava/util/List;*2
 
 __unknown_file (
@@ -100,10 +100,10 @@ Q
 tdomain.Traveler2getReservations()*
 25*u
 28
- ( ]
+œ œ( ]
 [
 
- (!
+œ œ(!
 tdomain.Traveler"__id*1
 
 __unknown_file (
@@ -111,17 +111,17 @@ Q
 userdomain.User*
 27*ú
 18
-¤	 ¤(M
+£	 £(M
 K
 
-¤	 ¤(
+£	 £(
 ridedomain.Ride"__id*"
 
 __unknown_file (
 ""
 Œ
 
-¤	 ¤(
+£	 £(
 ridedomain.Ride"
 __arrayGet*9
 
@@ -134,9 +134,9 @@ __arrayGet*9
 19
 9*ğ
 19
-¥ ¥(×Ô
+¤ ¤(×Ô
 
-¥ ¥(
+¤ ¤(
 %8boolean"1dataAccess.DataAccess#cancelRides(Ldomain/Ride;)Z*5
 
 __unknown_file (
@@ -147,15 +147,15 @@ __arrayGet*9
 ridedomain.Ride2cancelRides(Ldomain/Ride;)*
 18*%
 5
-²
- ²("
+±
+ ±("
 
-² ²(
+± ±(
 ""*¶
 6
-± ±(Ÿœ
+° °(Ÿœ
 
-± ±(
+° °(
 %23void"-javax.persistence.EntityTransaction#commit()V*H
 
 __unknown_file (,
@@ -163,17 +163,17 @@ __arrayGet*9
 %22#javax.persistence.EntityTransaction2commit()*
 5*ş
 7
-± ±({
+° °({
 y
 
-± ±(&
+° °(&
 %21javax.persistence.EntityManager"__id*=
 
 __unknown_file (!*
 dataAccess.DataAccess"
 dbêç
 
-± ±(*
+° °(*
 %22#javax.persistence.EntityTransaction"Ujavax.persistence.EntityManager#getTransaction()Ljavax/persistence/EntityTransaction;*D
 
 __unknown_file ((
@@ -181,10 +181,10 @@ y
 %21javax.persistence.EntityManager2getTransaction()*
 6*í
 8
-¯ ¯(0b
+® ®(0b
 `
 
-¯ ¯(0
+® ®(0
 managedUserdomain.User"__id*0
 
 __unknown_file (
@@ -192,14 +192,14 @@ y
 %18domain.User{
 y
 
-° °(&
+¯ ¯(&
 %19javax.persistence.EntityManager"__id*=
 
 __unknown_file (!*
 dataAccess.DataAccess"
 dbõò
 
-° °(
+¯ ¯(
 %20void";javax.persistence.EntityManager#remove(Ljava/lang/Object;)V*D
 
 __unknown_file ((
@@ -211,17 +211,17 @@ y
 managedUserdomain.User2remove(Ljava/lang/Object;)*
 7*Ü
 9
-¯ ¯({
+® ®({
 y
 
-¯ ¯(&
+® ®(&
 %17javax.persistence.EntityManager"__id*=
 
 __unknown_file (!*
 dataAccess.DataAccess"
 dbÈÅ
 
-¯ ¯(/
+® ®(/
 %18domain.User"[javax.persistence.EntityManager#find(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;*D
 
 __unknown_file ((
@@ -236,9 +236,9 @@ y
 userdomain.User2)find(Ljava/lang/Class;Ljava/lang/Object;)*
 8*À
 30
-š š(›˜
+™ ™(›˜
 
-š š(
+™ ™(
 
 %2void",javax.persistence.EntityTransaction#begin()V*G
 
@@ -250,17 +250,17 @@ y
 23
 12*ı
 31
-š š(z
+™ ™(z
 x
 
-š š(%
+™ ™(%
 %0javax.persistence.EntityManager"__id*=
 
 __unknown_file (!*
 dataAccess.DataAccess"
 dbèå
 
-š š()
+™ ™()
 %1#javax.persistence.EntityTransaction"Ujavax.persistence.EntityManager#getTransaction()Ljavax/persistence/EntityTransaction;*C
 
 __unknown_file ('
@@ -268,10 +268,10 @@ x
 %0javax.persistence.EntityManager2getTransaction()*
 30*‚
 21
-£ £(9j
+¢ ¢(9j
 h
 
-£ £(9
+¢ ¢(9
 	ridesCopyjava.util.List"__id*7
 
 __unknown_file (
@@ -279,18 +279,18 @@ h
 %6java.util.ArrayList*
 18*&
 10
-­ ­("
+¬ ¬("
 
-­ ­(
+¬ ¬(
 ""*
 22
-£ £(8><
+¢ ¢(8><
 
-£ £(*
+¢ ¢(*
 %6java.util.ArrayList"java.util.ArrayList·
 ´
 
-£ £(8
+¢ ¢(8
 %7"3java.util.ArrayList#<init>(Ljava/util/Collection;)V*7
 
 __unknown_file (
@@ -302,9 +302,9 @@ h
 %5java.util.List*
 21*¸
 11
-¬ ¬( Ÿœ
+« «( Ÿœ
 
-¬ ¬( 
+« «( 
 %16void"-javax.persistence.EntityTransaction#commit()V*H
 
 __unknown_file (,
@@ -312,17 +312,17 @@ h
 %15#javax.persistence.EntityTransaction2commit()*
 10*€
 12
-¬ ¬({
+« «({
 y
 
-¬ ¬(&
+« «(&
 %14javax.persistence.EntityManager"__id*=
 
 __unknown_file (!*
 dataAccess.DataAccess"
 dbêç
 
-¬ ¬(*
+« «(*
 %15#javax.persistence.EntityTransaction"Ujavax.persistence.EntityManager#getTransaction()Ljavax/persistence/EntityTransaction;*D
 
 __unknown_file ((
@@ -330,17 +330,17 @@ y
 %14javax.persistence.EntityManager2getTransaction()*
 11*ƒ
 23
-¢ ¢([
+¡ ¡([
 Y
 
-¢ ¢(
+¡ ¡(
 ddomain.Driver"__id*1
 
 __unknown_file (
 
 userdomain.UserŠ
 
-£+ £(7
+¢+ ¢(7
 %5java.util.List"(domain.Driver#getRides()Ljava/util/List;*0
 
 __unknown_file (
@@ -349,6 +349,6 @@ Y
 getRides()*
 22:!
 
-˜ ˜($
+— —($
 userdomain.UserB
 dataAccess.DataAccessHX

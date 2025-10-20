@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Traveler.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Rides24</a> &gt; <a href="index.source.html" class="el_package">domain</a> &gt; <span class="el_source">Traveler.java</span></div><h1>Traveler.java</h1><pre class="source lang-java linenums">package domain;
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Traveler.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Rides24</a> &gt; <a href="index.source.html" class="el_package">domain</a> &gt; <span class="el_source">Traveler.java</span></div><h1>Traveler.java</h1><pre class="source lang-java linenums">package domain;
 
 import java.util.Calendar;
 import java.util.LinkedList;
@@ -21,16 +21,16 @@ import configuration.UtilDate;
 @Entity
 public class Traveler extends User{
 	private static final long serialVersionUID = 1L;
-<span class="pc" id="L24">	@XmlIDREF</span>
+<span class="fc" id="L24">	@XmlIDREF</span>
 	@OneToMany(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE}, orphanRemoval = true)
 	private List&lt;Reservation&gt; reservations = new Vector&lt;Reservation&gt;();
-<span class="pc" id="L27">	@OneToMany(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE}, orphanRemoval = true)</span>
+<span class="fc" id="L27">	@OneToMany(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE}, orphanRemoval = true)</span>
 	private List&lt;Reclamation&gt; reclamations = new Vector&lt;Reclamation&gt;();
-<span class="pc" id="L29">	@OneToMany(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE}, orphanRemoval = true)</span>
+<span class="fc" id="L29">	@OneToMany(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE}, orphanRemoval = true)</span>
 	private List&lt;Alert&gt; alerts=new Vector&lt;Alert&gt;();
 	public Traveler() {
-<span class="nc" id="L32">		super();</span>
-<span class="nc" id="L33">	}</span>
+<span class="fc" id="L32">		super();</span>
+<span class="fc" id="L33">	}</span>
 
 	public Traveler(String email, String name,String password) {
 <span class="fc" id="L36">		super(email,name,password);</span>
@@ -38,8 +38,8 @@ public class Traveler extends User{
 	
 	
 	public void addReservation(Reservation pReservation) {
-<span class="nc" id="L41">		this.reservations.add(pReservation);</span>
-<span class="nc" id="L42">	}</span>
+<span class="fc" id="L41">		this.reservations.add(pReservation);</span>
+<span class="fc" id="L42">	}</span>
 	
 	public void addReclamation(Reclamation reclam) {
 <span class="nc" id="L45">		this.reclamations.add(reclam);</span>
@@ -66,7 +66,7 @@ public class Traveler extends User{
 <span class="nc" id="L66">	}</span>
 
 	public List&lt;Reservation&gt; getReservations() {
-<span class="nc" id="L69">		return reservations;</span>
+<span class="fc" id="L69">		return reservations;</span>
 	}
 
 	public void setReservations(LinkedList&lt;Reservation&gt; reservations) {
@@ -75,7 +75,7 @@ public class Traveler extends User{
 	
 	
 	public List&lt;Alert&gt; getAlerts() {
-<span class="nc" id="L78">		return alerts;</span>
+<span class="fc" id="L78">		return alerts;</span>
 	}
 
 	public void setAlerts(List&lt;Alert&gt; alerts) {
@@ -93,16 +93,16 @@ public class Traveler extends User{
 	}
 
 	public Alert addAlert(String nundik, String nora, Date data) {
-<span class="nc" id="L96">		Alert alert=new Alert(this, nundik, nora, data);</span>
-<span class="nc" id="L97">	    alerts.add(alert);</span>
-<span class="nc" id="L98">	    return alert;</span>
+<span class="fc" id="L96">		Alert alert=new Alert(this, nundik, nora, data);</span>
+<span class="fc" id="L97">	    alerts.add(alert);</span>
+<span class="fc" id="L98">	    return alert;</span>
 	}
 	
 	public void removeAlertList(List&lt;Alert&gt; removeAlerts) {
-<span class="nc bnc" id="L102" title="All 2 branches missed.">		for (Alert alert:removeAlerts) {</span>
-<span class="nc" id="L103">			alerts.remove(alert);</span>
-<span class="nc" id="L104">		}		</span>
-<span class="nc" id="L105">	}	</span>
+<span class="fc bfc" id="L102" title="All 2 branches covered.">		for (Alert alert:removeAlerts) {</span>
+<span class="fc" id="L103">			alerts.remove(alert);</span>
+<span class="fc" id="L104">		}		</span>
+<span class="fc" id="L105">	}	</span>
 	
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

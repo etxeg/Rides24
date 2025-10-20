@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>DataAccess.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Rides24</a> &gt; <a href="index.source.html" class="el_package">dataAccess</a> &gt; <span class="el_source">DataAccess.java</span></div><h1>DataAccess.java</h1><pre class="source lang-java linenums">package dataAccess;
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>DataAccess.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Rides24</a> &gt; <a href="index.source.html" class="el_package">dataAccess</a> &gt; <span class="el_source">DataAccess.java</span></div><h1>DataAccess.java</h1><pre class="source lang-java linenums">package dataAccess;
 
 import java.io.File;
 import java.net.NoRouteToHostException;
@@ -45,20 +45,20 @@ public class DataAccess {
 	private EntityManager db;
 	private EntityManagerFactory emf;
 
-<span class="pc" id="L48">	ConfigXML c = ConfigXML.getInstance();</span>
+<span class="fc" id="L48">	ConfigXML c = ConfigXML.getInstance();</span>
 
 <span class="fc" id="L50">	public DataAccess() {</span>
 <span class="pc bpc" id="L51" title="1 of 2 branches missed.">		if (c.isDatabaseInitialized()) {</span>
 <span class="fc" id="L52">			String fileName = c.getDbFilename();</span>
 
 <span class="fc" id="L54">			File fileToDelete = new File(fileName);</span>
-<span class="pc bpc" id="L55" title="1 of 2 branches missed.">			if (fileToDelete.delete()) {</span>
+<span class="fc bfc" id="L55" title="All 2 branches covered.">			if (fileToDelete.delete()) {</span>
 <span class="fc" id="L56">				File fileToDeleteTemp = new File(fileName + &quot;$&quot;);</span>
 <span class="fc" id="L57">				fileToDeleteTemp.delete();</span>
 
 <span class="fc" id="L59">				System.out.println(&quot;File deleted&quot;);</span>
 <span class="fc" id="L60">			} else {</span>
-<span class="nc" id="L61">				System.out.println(&quot;Operation failed&quot;);</span>
+<span class="fc" id="L61">				System.out.println(&quot;Operation failed&quot;);</span>
 			}
 		}
 <span class="fc" id="L64">		open();</span>
@@ -72,9 +72,9 @@ public class DataAccess {
 
 <span class="fc" id="L73">	}</span>
 
-<span class="nc" id="L75">	public DataAccess(EntityManager db) {</span>
-<span class="nc" id="L76">		this.db = db;</span>
-<span class="nc" id="L77">	}</span>
+<span class="fc" id="L75">	public DataAccess(EntityManager db) {</span>
+<span class="fc" id="L76">		this.db = db;</span>
+<span class="fc" id="L77">	}</span>
 
 	/**
 	 * This is the data access method that initializes the database with some events
@@ -158,8 +158,8 @@ public class DataAccess {
 
 <span class="fc" id="L159">			db.getTransaction().commit();</span>
 <span class="fc" id="L160">			System.out.println(&quot;Db initialized&quot;);</span>
-<span class="nc" id="L161">		} catch (Exception e) {</span>
-<span class="nc" id="L162">			e.printStackTrace();</span>
+<span class="fc" id="L161">		} catch (Exception e) {</span>
+<span class="fc" id="L162">			e.printStackTrace();</span>
 <span class="fc" id="L163">		}</span>
 <span class="fc" id="L164">	}</span>
 
@@ -238,12 +238,12 @@ public class DataAccess {
 	
 	public Alert createAlert(Traveler u, String nundik, String nora, Date data) {
 		 try {
-<span class="nc" id="L241">				db.getTransaction().begin();</span>
-<span class="nc" id="L242">				Alert actualAlert = u.addAlert(nundik, nora, data);</span>
+<span class="fc" id="L241">				db.getTransaction().begin();</span>
+<span class="fc" id="L242">				Alert actualAlert = u.addAlert(nundik, nora, data);</span>
 				// db.persist(actualAlert);
-<span class="nc" id="L244">				db.merge(u);</span>
-<span class="nc" id="L245">				db.getTransaction().commit();</span>
-<span class="nc" id="L246">				return actualAlert;	</span>
+<span class="fc" id="L244">				db.merge(u);</span>
+<span class="fc" id="L245">				db.getTransaction().commit();</span>
+<span class="fc" id="L246">				return actualAlert;	</span>
 <span class="nc" id="L247">			} catch (Exception e) {</span>
 				// TODO Auto-generated catch block
 <span class="nc" id="L249">				System.out.println(&quot;Error&quot;);</span>
@@ -399,421 +399,420 @@ public class DataAccess {
 <span class="fc" id="L399">			int month = today.get(Calendar.MONTH);</span>
 <span class="fc" id="L400">			int year = today.get(Calendar.YEAR);</span>
 <span class="fc" id="L401">			int day = today.get(Calendar.DAY_OF_MONTH);</span>
-<span class="fc" id="L402">			Reservation erreserbaClass = new Reservation(traveler, ride, UtilDate.newDate(year, month, day),</span>
-<span class="fc" id="L403">					ride.getPrice() * nPlaces);</span>
-<span class="pc bpc" id="L404" title="1 of 2 branches missed.">			if (erreserbaClass != null) {</span>
+<span class="fc" id="L402">			Reservation erreserbaClass = new Reservation(traveler, ride, UtilDate.newDate(year, month, day), ride.getPrice() * nPlaces);</span>
+<span class="pc bpc" id="L403" title="1 of 2 branches missed.">			if (erreserbaClass != null) {</span>
 
-<span class="fc" id="L406">				float prezioa = nPlaces * ride.getPrice();</span>
-<span class="fc" id="L407">				float travelerMoney = traveler.getMoney();</span>
-<span class="pc bpc" id="L408" title="1 of 2 branches missed.">				if (travelerMoney &gt;= prezioa) {</span>
-<span class="nc" id="L409">					ride.addPendingReservation(erreserbaClass);</span>
-<span class="nc" id="L410">					traveler.addReservation(erreserbaClass);</span>
-<span class="nc" id="L411">					traveler.setMoney(travelerMoney - prezioa);</span>
-<span class="nc" id="L412">					Date date = Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant());</span>
-<span class="nc" id="L413">					Movement move = new Movement(traveler.getMovementsCount(), prezioa, false, date);</span>
-<span class="nc" id="L414">					traveler.addMovement(move);</span>
-<span class="nc" id="L415">					erreserbaClass.setnSeats(nPlaces);</span>
-<span class="nc" id="L416">					ride.deleteNChairs(nPlaces);</span>
+<span class="fc" id="L405">				float prezioa = nPlaces * ride.getPrice();</span>
+<span class="fc" id="L406">				float travelerMoney = traveler.getMoney();</span>
+<span class="fc bfc" id="L407" title="All 2 branches covered.">				if (travelerMoney &gt;= prezioa) {</span>
+<span class="fc" id="L408">					ride.addPendingReservation(erreserbaClass);</span>
+<span class="fc" id="L409">					traveler.addReservation(erreserbaClass);</span>
+<span class="fc" id="L410">					traveler.setMoney(travelerMoney - prezioa);</span>
+<span class="fc" id="L411">					Date date = Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant());</span>
+<span class="fc" id="L412">					Movement move = new Movement(traveler.getMovementsCount(), prezioa, false, date);</span>
+<span class="fc" id="L413">					traveler.addMovement(move);</span>
+<span class="fc" id="L414">					erreserbaClass.setnSeats(nPlaces);</span>
+<span class="fc" id="L415">					ride.deleteNChairs(nPlaces);</span>
 
-<span class="nc" id="L418">					db.persist(erreserbaClass);</span>
-<span class="nc" id="L419">					db.merge(ride);</span>
-<span class="nc" id="L420">					db.merge(traveler);</span>
-<span class="nc" id="L421">					System.out.println(&quot;Erreserba zenbakia: &quot; + erreserbaClass.getErreserbaZenbakia());</span>
-<span class="nc" id="L422">				} else {</span>
-<span class="fc" id="L423">					System.out.println(&quot;Dirua falta da&quot;);</span>
+<span class="fc" id="L417">					db.persist(erreserbaClass);</span>
+<span class="fc" id="L418">					db.merge(ride);</span>
+<span class="fc" id="L419">					db.merge(traveler);</span>
+<span class="fc" id="L420">					System.out.println(&quot;Erreserba zenbakia: &quot; + erreserbaClass.getErreserbaZenbakia());</span>
+<span class="fc" id="L421">				} else {</span>
+<span class="fc" id="L422">					System.out.println(&quot;Dirua falta da&quot;);</span>
 				}
 			}
-<span class="fc" id="L426">			db.getTransaction().commit();</span>
-<span class="fc" id="L427">			return true;</span>
-<span class="fc" id="L428">		} catch (Exception e) {</span>
-<span class="fc" id="L429">			e.printStackTrace();</span>
-<span class="fc" id="L430">			return false;</span>
+<span class="fc" id="L425">			db.getTransaction().commit();</span>
+<span class="fc" id="L426">			return true;</span>
+<span class="fc" id="L427">		} catch (Exception e) {</span>
+<span class="fc" id="L428">			e.printStackTrace();</span>
+<span class="fc" id="L429">			return false;</span>
 		}
 	}
 
 	public boolean cancelRide(Ride ride) {
 		try {
-<span class="nc" id="L436">			db.getTransaction().begin();</span>
-<span class="nc" id="L437">			ride.cancelRide();</span>
-<span class="nc bnc" id="L438" title="All 2 branches missed.">			for (Reservation reservation : ride.getAcceptedReservations()) { // Dirua bueltatu</span>
-<span class="nc" id="L439">				float money = reservation.getTraveler().getMoney() + reservation.getPrezioa();</span>
-<span class="nc" id="L440">				reservation.getTraveler().setMoney(money);</span>
-<span class="nc" id="L441">				Date date = Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant());</span>
-<span class="nc" id="L442">				Movement move = new Movement(reservation.getTraveler().getMovementsCount(), reservation.getPrezioa(),</span>
+<span class="nc" id="L435">			db.getTransaction().begin();</span>
+<span class="nc" id="L436">			ride.cancelRide();</span>
+<span class="nc bnc" id="L437" title="All 2 branches missed.">			for (Reservation reservation : ride.getAcceptedReservations()) { // Dirua bueltatu</span>
+<span class="nc" id="L438">				float money = reservation.getTraveler().getMoney() + reservation.getPrezioa();</span>
+<span class="nc" id="L439">				reservation.getTraveler().setMoney(money);</span>
+<span class="nc" id="L440">				Date date = Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant());</span>
+<span class="nc" id="L441">				Movement move = new Movement(reservation.getTraveler().getMovementsCount(), reservation.getPrezioa(),</span>
 						true, date);
-<span class="nc" id="L444">				reservation.getTraveler().addMovement(move);</span>
+<span class="nc" id="L443">				reservation.getTraveler().addMovement(move);</span>
 
-<span class="nc" id="L446">				reservation.cancel();</span>
+<span class="nc" id="L445">				reservation.cancel();</span>
 
-<span class="nc" id="L448">				db.merge(reservation);</span>
-<span class="nc" id="L449">				db.merge(reservation.getTraveler());</span>
-<span class="nc" id="L450">			}</span>
+<span class="nc" id="L447">				db.merge(reservation);</span>
+<span class="nc" id="L448">				db.merge(reservation.getTraveler());</span>
+<span class="nc" id="L449">			}</span>
 
-<span class="nc" id="L452">			Driver driver = ride.getDriver();</span>
-<span class="nc" id="L453">			driver.cancelRide(ride);</span>
+<span class="nc" id="L451">			Driver driver = ride.getDriver();</span>
+<span class="nc" id="L452">			driver.cancelRide(ride);</span>
 
-<span class="nc" id="L455">			db.merge(ride);</span>
-<span class="nc" id="L456">			db.merge(driver);</span>
-<span class="nc" id="L457">			db.getTransaction().commit();</span>
-<span class="nc" id="L458">			return true;</span>
-<span class="nc" id="L459">		} catch (Exception e) {</span>
-<span class="nc" id="L460">			e.printStackTrace();</span>
-<span class="nc" id="L461">			return false;</span>
+<span class="nc" id="L454">			db.merge(ride);</span>
+<span class="nc" id="L455">			db.merge(driver);</span>
+<span class="nc" id="L456">			db.getTransaction().commit();</span>
+<span class="nc" id="L457">			return true;</span>
+<span class="nc" id="L458">		} catch (Exception e) {</span>
+<span class="nc" id="L459">			e.printStackTrace();</span>
+<span class="nc" id="L460">			return false;</span>
 		}
 	}
 	
 	public boolean cancelRides(Ride ride) {
 		try {
-<span class="nc" id="L467">			ride.cancelRide();</span>
-<span class="nc bnc" id="L468" title="All 2 branches missed.">			for (Reservation reservation : ride.getAcceptedReservations()) { // Dirua bueltatu</span>
-<span class="nc" id="L469">				float money = reservation.getTraveler().getMoney() + reservation.getPrezioa();</span>
-<span class="nc" id="L470">				reservation.getTraveler().setMoney(money);</span>
-<span class="nc" id="L471">				Date date = Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant());</span>
-<span class="nc" id="L472">				Movement move = new Movement(reservation.getTraveler().getMovementsCount(), reservation.getPrezioa(),</span>
+<span class="nc" id="L466">			ride.cancelRide();</span>
+<span class="nc bnc" id="L467" title="All 2 branches missed.">			for (Reservation reservation : ride.getAcceptedReservations()) { // Dirua bueltatu</span>
+<span class="nc" id="L468">				float money = reservation.getTraveler().getMoney() + reservation.getPrezioa();</span>
+<span class="nc" id="L469">				reservation.getTraveler().setMoney(money);</span>
+<span class="nc" id="L470">				Date date = Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant());</span>
+<span class="nc" id="L471">				Movement move = new Movement(reservation.getTraveler().getMovementsCount(), reservation.getPrezioa(),</span>
 						true, date);
-<span class="nc" id="L474">				reservation.getTraveler().addMovement(move);</span>
+<span class="nc" id="L473">				reservation.getTraveler().addMovement(move);</span>
 
-<span class="nc" id="L476">				reservation.cancel();</span>
+<span class="nc" id="L475">				reservation.cancel();</span>
 
-<span class="nc" id="L478">				db.merge(reservation);</span>
-<span class="nc" id="L479">				db.merge(reservation.getTraveler());</span>
-<span class="nc" id="L480">			}</span>
+<span class="nc" id="L477">				db.merge(reservation);</span>
+<span class="nc" id="L478">				db.merge(reservation.getTraveler());</span>
+<span class="nc" id="L479">			}</span>
 
-<span class="nc" id="L482">			Driver driver = ride.getDriver();</span>
-<span class="nc" id="L483">			driver.cancelRide(ride);</span>
+<span class="nc" id="L481">			Driver driver = ride.getDriver();</span>
+<span class="nc" id="L482">			driver.cancelRide(ride);</span>
 
-<span class="nc" id="L485">			db.merge(ride);</span>
-<span class="nc" id="L486">			db.merge(driver);</span>
-<span class="nc" id="L487">			return true;</span>
-<span class="nc" id="L488">		} catch (Exception e) {</span>
-<span class="nc" id="L489">			e.printStackTrace();</span>
-<span class="nc" id="L490">			return false;</span>
+<span class="nc" id="L484">			db.merge(ride);</span>
+<span class="nc" id="L485">			db.merge(driver);</span>
+<span class="nc" id="L486">			return true;</span>
+<span class="nc" id="L487">		} catch (Exception e) {</span>
+<span class="nc" id="L488">			e.printStackTrace();</span>
+<span class="nc" id="L489">			return false;</span>
 		}
 	}
 
 	public boolean updateRide(Ride ride) {
 		try {
-<span class="nc" id="L496">			db.getTransaction().begin();</span>
-<span class="nc" id="L497">			db.merge(ride);</span>
-<span class="nc" id="L498">			db.getTransaction().commit();</span>
-<span class="nc" id="L499">			return true;</span>
-<span class="nc" id="L500">		} catch (Exception e) {</span>
-<span class="nc" id="L501">			e.printStackTrace();</span>
-<span class="nc" id="L502">			return false;</span>
+<span class="nc" id="L495">			db.getTransaction().begin();</span>
+<span class="nc" id="L496">			db.merge(ride);</span>
+<span class="nc" id="L497">			db.getTransaction().commit();</span>
+<span class="nc" id="L498">			return true;</span>
+<span class="nc" id="L499">		} catch (Exception e) {</span>
+<span class="nc" id="L500">			e.printStackTrace();</span>
+<span class="nc" id="L501">			return false;</span>
 		}
 	}
 
 	public boolean updateReservation(Reservation reservation) {
 		try {
-<span class="nc" id="L508">			db.getTransaction().begin();</span>
-<span class="nc" id="L509">			db.merge(reservation);</span>
-<span class="nc" id="L510">			db.getTransaction().commit();</span>
-<span class="nc" id="L511">			return true;</span>
-<span class="nc" id="L512">		} catch (Exception e) {</span>
-<span class="nc" id="L513">			e.printStackTrace();</span>
-<span class="nc" id="L514">			return false;</span>
+<span class="nc" id="L507">			db.getTransaction().begin();</span>
+<span class="nc" id="L508">			db.merge(reservation);</span>
+<span class="nc" id="L509">			db.getTransaction().commit();</span>
+<span class="nc" id="L510">			return true;</span>
+<span class="nc" id="L511">		} catch (Exception e) {</span>
+<span class="nc" id="L512">			e.printStackTrace();</span>
+<span class="nc" id="L513">			return false;</span>
 		}
 	}
 
 	public boolean removeReservation(Reservation reservation) {
 		try {
-<span class="nc" id="L520">			db.getTransaction().begin();</span>
-<span class="nc" id="L521">			TypedQuery&lt;Driver&gt; query = db.createQuery(&quot;DELETE r FROM Reservation r WHERE r.erreserbaZenbakia=?1&quot;,</span>
+<span class="nc" id="L519">			db.getTransaction().begin();</span>
+<span class="nc" id="L520">			TypedQuery&lt;Driver&gt; query = db.createQuery(&quot;DELETE r FROM Reservation r WHERE r.erreserbaZenbakia=?1&quot;,</span>
 					Driver.class);
-<span class="nc" id="L523">			query.setParameter(1, reservation.getErreserbaZenbakia());</span>
+<span class="nc" id="L522">			query.setParameter(1, reservation.getErreserbaZenbakia());</span>
 			// db.remove(reservation);
-<span class="nc" id="L525">			db.getTransaction().commit();</span>
-<span class="nc" id="L526">			return true;</span>
-<span class="nc" id="L527">		} catch (Exception e) {</span>
-<span class="nc" id="L528">			e.printStackTrace();</span>
-<span class="nc" id="L529">			return false;</span>
+<span class="nc" id="L524">			db.getTransaction().commit();</span>
+<span class="nc" id="L525">			return true;</span>
+<span class="nc" id="L526">		} catch (Exception e) {</span>
+<span class="nc" id="L527">			e.printStackTrace();</span>
+<span class="nc" id="L528">			return false;</span>
 		}
 	}
 
 	public boolean updateTraveler(Traveler traveler) {
 		try {
-<span class="nc" id="L535">			db.getTransaction().begin();</span>
-<span class="nc" id="L536">			db.merge(traveler);</span>
-<span class="nc" id="L537">			db.getTransaction().commit();</span>
-<span class="nc" id="L538">			return true;</span>
-<span class="nc" id="L539">		} catch (Exception e) {</span>
-<span class="nc" id="L540">			e.printStackTrace();</span>
-<span class="nc" id="L541">			return false;</span>
+<span class="nc" id="L534">			db.getTransaction().begin();</span>
+<span class="nc" id="L535">			db.merge(traveler);</span>
+<span class="nc" id="L536">			db.getTransaction().commit();</span>
+<span class="nc" id="L537">			return true;</span>
+<span class="nc" id="L538">		} catch (Exception e) {</span>
+<span class="nc" id="L539">			e.printStackTrace();</span>
+<span class="nc" id="L540">			return false;</span>
 		}
 	}
 
 	public boolean addMoney(User user, float money) {
 		try {
-<span class="nc" id="L547">			db.getTransaction().begin();</span>
-<span class="nc" id="L548">			user.addMoney(money);</span>
-<span class="nc" id="L549">			Date date = Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant());</span>
-<span class="nc" id="L550">			Movement move = new Movement(user.getMovementsCount(), money, true, date);</span>
-<span class="nc" id="L551">			user.addMovement(move);</span>
+<span class="nc" id="L546">			db.getTransaction().begin();</span>
+<span class="nc" id="L547">			user.addMoney(money);</span>
+<span class="nc" id="L548">			Date date = Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant());</span>
+<span class="nc" id="L549">			Movement move = new Movement(user.getMovementsCount(), money, true, date);</span>
+<span class="nc" id="L550">			user.addMovement(move);</span>
 
-<span class="nc" id="L553">			db.persist(move);</span>
-<span class="nc" id="L554">			db.merge(user);</span>
-<span class="nc" id="L555">			db.getTransaction().commit();</span>
-<span class="nc" id="L556">			return true;</span>
-<span class="nc" id="L557">		} catch (Exception e) {</span>
-<span class="nc" id="L558">			e.printStackTrace();</span>
-<span class="nc" id="L559">			return false;</span>
+<span class="nc" id="L552">			db.persist(move);</span>
+<span class="nc" id="L553">			db.merge(user);</span>
+<span class="nc" id="L554">			db.getTransaction().commit();</span>
+<span class="nc" id="L555">			return true;</span>
+<span class="nc" id="L556">		} catch (Exception e) {</span>
+<span class="nc" id="L557">			e.printStackTrace();</span>
+<span class="nc" id="L558">			return false;</span>
 		}
 	}
 
 	public boolean withdrawMoney(User user, float money) {
 		try {
-<span class="nc" id="L565">			db.getTransaction().begin();</span>
-<span class="nc bnc" id="L566" title="All 2 branches missed.">			if (user.getMoney() &gt;= money) {</span>
-<span class="nc" id="L567">				user.withdrawMoney(money);</span>
-<span class="nc" id="L568">				Date date = Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant());</span>
-<span class="nc" id="L569">				Movement move = new Movement(user.getMovementsCount(), money, false, date);</span>
-<span class="nc" id="L570">				user.addMovement(move);</span>
-<span class="nc" id="L571">				db.persist(move);</span>
-<span class="nc" id="L572">				db.merge(user);</span>
-<span class="nc" id="L573">				db.getTransaction().commit();</span>
-<span class="nc" id="L574">				return true;</span>
+<span class="nc" id="L564">			db.getTransaction().begin();</span>
+<span class="nc bnc" id="L565" title="All 2 branches missed.">			if (user.getMoney() &gt;= money) {</span>
+<span class="nc" id="L566">				user.withdrawMoney(money);</span>
+<span class="nc" id="L567">				Date date = Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant());</span>
+<span class="nc" id="L568">				Movement move = new Movement(user.getMovementsCount(), money, false, date);</span>
+<span class="nc" id="L569">				user.addMovement(move);</span>
+<span class="nc" id="L570">				db.persist(move);</span>
+<span class="nc" id="L571">				db.merge(user);</span>
+<span class="nc" id="L572">				db.getTransaction().commit();</span>
+<span class="nc" id="L573">				return true;</span>
 			} else {
-<span class="nc" id="L576">				db.getTransaction().commit();</span>
-<span class="nc" id="L577">				return false;</span>
+<span class="nc" id="L575">				db.getTransaction().commit();</span>
+<span class="nc" id="L576">				return false;</span>
 			}
-<span class="nc" id="L579">		} catch (Exception e) {</span>
-<span class="nc" id="L580">			e.printStackTrace();</span>
-<span class="nc" id="L581">			return false;</span>
+<span class="nc" id="L578">		} catch (Exception e) {</span>
+<span class="nc" id="L579">			e.printStackTrace();</span>
+<span class="nc" id="L580">			return false;</span>
 		}
 	}
 
 	public Driver getDriverByName(String driver) {
-<span class="nc" id="L586">		TypedQuery&lt;Driver&gt; query = db.createQuery(&quot;SELECT r FROM User r WHERE r.name=?1&quot;, Driver.class);</span>
-<span class="nc" id="L587">		query.setParameter(1, driver);</span>
+<span class="nc" id="L585">		TypedQuery&lt;Driver&gt; query = db.createQuery(&quot;SELECT r FROM User r WHERE r.name=?1&quot;, Driver.class);</span>
+<span class="nc" id="L586">		query.setParameter(1, driver);</span>
 
-<span class="nc" id="L589">		List&lt;Driver&gt; driverList = query.getResultList();</span>
-<span class="nc bnc" id="L590" title="All 2 branches missed.">		if (!driverList.isEmpty()) {</span>
-<span class="nc" id="L591">			Driver actualDriver = driverList.get(0);</span>
-<span class="nc" id="L592">			return actualDriver;</span>
+<span class="nc" id="L588">		List&lt;Driver&gt; driverList = query.getResultList();</span>
+<span class="nc bnc" id="L589" title="All 2 branches missed.">		if (!driverList.isEmpty()) {</span>
+<span class="nc" id="L590">			Driver actualDriver = driverList.get(0);</span>
+<span class="nc" id="L591">			return actualDriver;</span>
 
 		} else {
-<span class="nc" id="L595">			return null;</span>
+<span class="nc" id="L594">			return null;</span>
 		}
 
 	}
 
 	public Ride getRideByParams(Driver driver, int nPlaces, float price, String from, String to, Date date) {
-<span class="nc" id="L601">		TypedQuery&lt;Ride&gt; query = db</span>
-<span class="nc" id="L602">				.createQuery(&quot;SELECT r FROM Ride r WHERE r.driver=?1 AND r.nPlaces=?2 AND r.price=?3&quot;, Ride.class);</span>
-<span class="nc" id="L603">		query.setParameter(1, driver);</span>
-<span class="nc" id="L604">		query.setParameter(2, nPlaces);</span>
-<span class="nc" id="L605">		query.setParameter(3, price);</span>
+<span class="nc" id="L600">		TypedQuery&lt;Ride&gt; query = db</span>
+<span class="nc" id="L601">				.createQuery(&quot;SELECT r FROM Ride r WHERE r.driver=?1 AND r.nPlaces=?2 AND r.price=?3&quot;, Ride.class);</span>
+<span class="nc" id="L602">		query.setParameter(1, driver);</span>
+<span class="nc" id="L603">		query.setParameter(2, nPlaces);</span>
+<span class="nc" id="L604">		query.setParameter(3, price);</span>
 
-<span class="nc" id="L607">		List&lt;Ride&gt; rideList = query.getResultList();</span>
-<span class="nc bnc" id="L608" title="All 2 branches missed.">		if (!rideList.isEmpty()) {</span>
-<span class="nc" id="L609">			Ride actualRide = rideList.get(0);</span>
-<span class="nc" id="L610">			return actualRide;</span>
+<span class="nc" id="L606">		List&lt;Ride&gt; rideList = query.getResultList();</span>
+<span class="nc bnc" id="L607" title="All 2 branches missed.">		if (!rideList.isEmpty()) {</span>
+<span class="nc" id="L608">			Ride actualRide = rideList.get(0);</span>
+<span class="nc" id="L609">			return actualRide;</span>
 
 		} else {
-<span class="nc" id="L613">			return null;</span>
+<span class="nc" id="L612">			return null;</span>
 		}
 
 	}
 
 	public Ride getRideByID(int iD) {
-<span class="nc" id="L619">		TypedQuery&lt;Ride&gt; query = db.createQuery(&quot;SELECT r FROM Ride r WHERE r.driver=?1&quot;, Ride.class);</span>
-<span class="nc" id="L620">		query.setParameter(1, iD);</span>
+<span class="nc" id="L618">		TypedQuery&lt;Ride&gt; query = db.createQuery(&quot;SELECT r FROM Ride r WHERE r.driver=?1&quot;, Ride.class);</span>
+<span class="nc" id="L619">		query.setParameter(1, iD);</span>
 
-<span class="nc" id="L622">		List&lt;Ride&gt; rideList = query.getResultList();</span>
-<span class="nc bnc" id="L623" title="All 2 branches missed.">		if (!rideList.isEmpty()) {</span>
-<span class="nc" id="L624">			Ride actualRide = rideList.get(0);</span>
-<span class="nc" id="L625">			return actualRide;</span>
+<span class="nc" id="L621">		List&lt;Ride&gt; rideList = query.getResultList();</span>
+<span class="nc bnc" id="L622" title="All 2 branches missed.">		if (!rideList.isEmpty()) {</span>
+<span class="nc" id="L623">			Ride actualRide = rideList.get(0);</span>
+<span class="nc" id="L624">			return actualRide;</span>
 
 		} else {
-<span class="nc" id="L628">			return null;</span>
+<span class="nc" id="L627">			return null;</span>
 		}
 
 	}
 
 	public User checkLogin(String name, String password) {
-<span class="nc" id="L634">		TypedQuery&lt;User&gt; query = db.createQuery(&quot;SELECT r FROM User r WHERE r.name=?1 AND r.password=?2&quot;, User.class);</span>
-<span class="nc" id="L635">		query.setParameter(1, name);</span>
-<span class="nc" id="L636">		query.setParameter(2, password);</span>
+<span class="nc" id="L633">		TypedQuery&lt;User&gt; query = db.createQuery(&quot;SELECT r FROM User r WHERE r.name=?1 AND r.password=?2&quot;, User.class);</span>
+<span class="nc" id="L634">		query.setParameter(1, name);</span>
+<span class="nc" id="L635">		query.setParameter(2, password);</span>
 
-<span class="nc" id="L638">		List&lt;User&gt; userList = query.getResultList();</span>
-<span class="nc bnc" id="L639" title="All 2 branches missed.">		if (!userList.isEmpty()) {</span>
-<span class="nc" id="L640">			User actualUser = userList.get(0);</span>
-<span class="nc" id="L641">			return actualUser;</span>
+<span class="nc" id="L637">		List&lt;User&gt; userList = query.getResultList();</span>
+<span class="nc bnc" id="L638" title="All 2 branches missed.">		if (!userList.isEmpty()) {</span>
+<span class="nc" id="L639">			User actualUser = userList.get(0);</span>
+<span class="nc" id="L640">			return actualUser;</span>
 
 		} else {
-<span class="nc" id="L644">			return null;</span>
+<span class="nc" id="L643">			return null;</span>
 		}
 
 	}
 	
 	public Reclamation getReclamationByID(int iD) {
-<span class="nc" id="L650">		TypedQuery&lt;Reclamation&gt; query = db.createQuery(&quot;SELECT r FROM Reclamation r WHERE r.erreklamazioZenbakia=?1&quot;,Reclamation.class);   </span>
-<span class="nc" id="L651">		query.setParameter(1, iD);</span>
+<span class="nc" id="L649">		TypedQuery&lt;Reclamation&gt; query = db.createQuery(&quot;SELECT r FROM Reclamation r WHERE r.erreklamazioZenbakia=?1&quot;,Reclamation.class);   </span>
+<span class="nc" id="L650">		query.setParameter(1, iD);</span>
 		
-<span class="nc" id="L653">		List&lt;Reclamation&gt; rideList = query.getResultList();</span>
-<span class="nc bnc" id="L654" title="All 2 branches missed.">		if (!rideList.isEmpty()) {</span>
-<span class="nc" id="L655">			Reclamation actualRide = rideList.get(0);</span>
-<span class="nc" id="L656">		 	return actualRide;</span>
+<span class="nc" id="L652">		List&lt;Reclamation&gt; rideList = query.getResultList();</span>
+<span class="nc bnc" id="L653" title="All 2 branches missed.">		if (!rideList.isEmpty()) {</span>
+<span class="nc" id="L654">			Reclamation actualRide = rideList.get(0);</span>
+<span class="nc" id="L655">		 	return actualRide;</span>
 			
 		} else {
-<span class="nc" id="L659">			return null;</span>
+<span class="nc" id="L658">			return null;</span>
 		}
 		
 	}
 	
 	public boolean deleteUser(User user) {
 		try {
-<span class="nc" id="L666">			db.getTransaction().begin();</span>
+<span class="fc" id="L665">			db.getTransaction().begin();</span>
 			
-<span class="nc bnc" id="L668" title="All 2 branches missed.">			if (user instanceof Traveler) {</span>
-<span class="nc" id="L669">				Traveler t = (Traveler) user;</span>
-<span class="nc bnc" id="L670" title="All 2 branches missed.">				for (Reservation reservation:t.getReservations()) {</span>
-<span class="nc" id="L671">					reservation.cancelReservation();</span>
-<span class="nc" id="L672">				}</span>
-<span class="nc bnc" id="L673" title="All 2 branches missed.">			} else if (user instanceof Driver) {</span>
-<span class="nc" id="L674">				Driver d = (Driver) user;</span>
-<span class="nc" id="L675">				List&lt;Ride&gt; ridesCopy = new ArrayList&lt;&gt;(d.getRides());</span>
-<span class="nc bnc" id="L676" title="All 2 branches missed.">				for (Ride ride:ridesCopy) {</span>
-<span class="nc" id="L677">					cancelRides(ride);</span>
-<span class="nc" id="L678">				}</span>
-<span class="nc bnc" id="L679" title="All 2 branches missed.">			} else if (user instanceof Admin) {</span>
-<span class="nc" id="L680">				System.out.println(&quot;Ezin da administratzaile bat ezabatu.&quot;);</span>
-<span class="nc" id="L681">				db.getTransaction().commit();</span>
-<span class="nc" id="L682">				return true;</span>
+<span class="fc bfc" id="L667" title="All 2 branches covered.">			if (user instanceof Traveler) {</span>
+<span class="fc" id="L668">				Traveler t = (Traveler) user;</span>
+<span class="pc bpc" id="L669" title="1 of 2 branches missed.">				for (Reservation reservation:t.getReservations()) {</span>
+<span class="nc" id="L670">					reservation.cancelReservation();</span>
+<span class="nc" id="L671">				}</span>
+<span class="fc bfc" id="L672" title="All 2 branches covered.">			} else if (user instanceof Driver) {</span>
+<span class="fc" id="L673">				Driver d = (Driver) user;</span>
+<span class="fc" id="L674">				List&lt;Ride&gt; ridesCopy = new ArrayList&lt;&gt;(d.getRides());</span>
+<span class="pc bpc" id="L675" title="1 of 2 branches missed.">				for (Ride ride:ridesCopy) {</span>
+<span class="nc" id="L676">					cancelRides(ride);</span>
+<span class="nc" id="L677">				}</span>
+<span class="pc bpc" id="L678" title="1 of 2 branches missed.">			} else if (user instanceof Admin) {</span>
+<span class="nc" id="L679">				System.out.println(&quot;Ezin da administratzaile bat ezabatu.&quot;);</span>
+<span class="nc" id="L680">				db.getTransaction().commit();</span>
+<span class="nc" id="L681">				return true;</span>
 			} else {
-<span class="nc" id="L684">				db.getTransaction().commit();</span>
-<span class="nc" id="L685">				return false;</span>
+<span class="fc" id="L683">				db.getTransaction().commit();</span>
+<span class="fc" id="L684">				return false;</span>
 			}
-<span class="nc" id="L687">			User managedUser = db.find(User.class, user);</span>
-<span class="nc" id="L688">			db.remove(managedUser);</span>
-<span class="nc" id="L689">			db.getTransaction().commit();</span>
-<span class="nc" id="L690">			return true;</span>
-<span class="nc" id="L691">		} catch (Exception e) {</span>
-<span class="nc" id="L692">			db.getTransaction().rollback();</span>
-<span class="nc" id="L693">			e.printStackTrace();</span>
-<span class="nc" id="L694">			return false;</span>
+<span class="fc" id="L686">			User managedUser = db.find(User.class, user);</span>
+<span class="nc" id="L687">			db.remove(managedUser);</span>
+<span class="nc" id="L688">			db.getTransaction().commit();</span>
+<span class="nc" id="L689">			return true;</span>
+<span class="fc" id="L690">		} catch (Exception e) {</span>
+<span class="fc" id="L691">			db.getTransaction().rollback();</span>
+<span class="fc" id="L692">			e.printStackTrace();</span>
+<span class="fc" id="L693">			return false;</span>
 		}
 	}
 	
 	public boolean reclamation(Traveler traveler, Reservation res, String why) {
 		try {
-<span class="nc" id="L700">			db.getTransaction().begin();</span>
+<span class="nc" id="L699">			db.getTransaction().begin();</span>
 			//Ride r = getRideByID(zenb);
 			//if (r==null) {
 			//	return false;
 			//}
-<span class="nc" id="L705">			System.out.println(&quot;Iritsi da&quot;);</span>
+<span class="nc" id="L704">			System.out.println(&quot;Iritsi da&quot;);</span>
 			//Driver driver =r.getDriver();
-<span class="nc" id="L707">			Date date = Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant());</span>
-<span class="nc" id="L708">			String state=&quot;prozesatu-gabea&quot;;</span>
-<span class="nc" id="L709">			Reclamation reclam = new Reclamation(traveler, res, date, state, why);</span>
-<span class="nc" id="L710">			traveler.addReclamation(reclam);</span>
+<span class="nc" id="L706">			Date date = Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant());</span>
+<span class="nc" id="L707">			String state=&quot;prozesatu-gabea&quot;;</span>
+<span class="nc" id="L708">			Reclamation reclam = new Reclamation(traveler, res, date, state, why);</span>
+<span class="nc" id="L709">			traveler.addReclamation(reclam);</span>
 			//driver.addReclamation(reclam);
-<span class="nc" id="L712">			db.persist(reclam);</span>
-<span class="nc" id="L713">			db.merge(traveler);</span>
-<span class="nc" id="L714">			db.getTransaction().commit();</span>
-<span class="nc" id="L715">			return true;</span>
-<span class="nc" id="L716">		}catch(Exception e) {</span>
-<span class="nc" id="L717">			System.out.println(e.getCause());</span>
-<span class="nc" id="L718">			System.out.println(e.getMessage());</span>
-<span class="nc" id="L719">			db.getTransaction().commit();</span>
-<span class="nc" id="L720">			return false;</span>
+<span class="nc" id="L711">			db.persist(reclam);</span>
+<span class="nc" id="L712">			db.merge(traveler);</span>
+<span class="nc" id="L713">			db.getTransaction().commit();</span>
+<span class="nc" id="L714">			return true;</span>
+<span class="nc" id="L715">		}catch(Exception e) {</span>
+<span class="nc" id="L716">			System.out.println(e.getCause());</span>
+<span class="nc" id="L717">			System.out.println(e.getMessage());</span>
+<span class="nc" id="L718">			db.getTransaction().commit();</span>
+<span class="nc" id="L719">			return false;</span>
 		}
 		
 	}
 	
 	public List&lt;Reservation&gt; getErreserbaBefore(Traveler traveler){
-<span class="nc" id="L726">		db.getTransaction().begin();</span>
-<span class="nc" id="L727">		Date date = Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant());</span>
-<span class="nc" id="L728">		TypedQuery&lt;Reservation&gt; query = db.createQuery(&quot;SELECT DISTINCT r FROM Reservation r WHERE r.date&lt;?1 AND r.traveler=?2&quot;,Reservation.class);</span>
-<span class="nc" id="L729">		query.setParameter(1, date);</span>
-<span class="nc" id="L730">		query.setParameter(2, traveler);		</span>
-<span class="nc" id="L731">		List&lt;Reservation&gt; reservationList = query.getResultList();</span>
-<span class="nc" id="L732">		return reservationList;</span>
+<span class="nc" id="L725">		db.getTransaction().begin();</span>
+<span class="nc" id="L726">		Date date = Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant());</span>
+<span class="nc" id="L727">		TypedQuery&lt;Reservation&gt; query = db.createQuery(&quot;SELECT DISTINCT r FROM Reservation r WHERE r.date&lt;?1 AND r.traveler=?2&quot;,Reservation.class);</span>
+<span class="nc" id="L728">		query.setParameter(1, date);</span>
+<span class="nc" id="L729">		query.setParameter(2, traveler);		</span>
+<span class="nc" id="L730">		List&lt;Reservation&gt; reservationList = query.getResultList();</span>
+<span class="nc" id="L731">		return reservationList;</span>
 		
 	}
 	
 	public List&lt;Reclamation&gt; getReclamationNotProcesed(){
-<span class="nc" id="L737">		db.getTransaction().begin();</span>
-<span class="nc" id="L738">		TypedQuery&lt;Reclamation&gt; query = db.createQuery(&quot;SELECT DISTINCT r FROM Reclamation r WHERE r.state=?1&quot;,Reclamation.class);</span>
-<span class="nc" id="L739">		query.setParameter(1, &quot;prozesatu-gabea&quot;);</span>
-<span class="nc" id="L740">		List&lt;Reclamation&gt; reclamList = query.getResultList();</span>
-<span class="nc" id="L741">		return reclamList;</span>
+<span class="nc" id="L736">		db.getTransaction().begin();</span>
+<span class="nc" id="L737">		TypedQuery&lt;Reclamation&gt; query = db.createQuery(&quot;SELECT DISTINCT r FROM Reclamation r WHERE r.state=?1&quot;,Reclamation.class);</span>
+<span class="nc" id="L738">		query.setParameter(1, &quot;prozesatu-gabea&quot;);</span>
+<span class="nc" id="L739">		List&lt;Reclamation&gt; reclamList = query.getResultList();</span>
+<span class="nc" id="L740">		return reclamList;</span>
 		
 	}
 	
 	public List&lt;Reclamation&gt; getReclamation(Traveler traveler){
-<span class="nc" id="L746">		db.getTransaction().begin();</span>
-<span class="nc" id="L747">		TypedQuery&lt;Reclamation&gt; query = db.createQuery(&quot;SELECT r FROM Reclamation r WHERE r.traveler=?1&quot;,Reclamation.class);</span>
-<span class="nc" id="L748">		query.setParameter(1, traveler);</span>
-<span class="nc" id="L749">		List&lt;Reclamation&gt; reclamList = query.getResultList();</span>
-<span class="nc" id="L750">		return reclamList;</span>
+<span class="nc" id="L745">		db.getTransaction().begin();</span>
+<span class="nc" id="L746">		TypedQuery&lt;Reclamation&gt; query = db.createQuery(&quot;SELECT r FROM Reclamation r WHERE r.traveler=?1&quot;,Reclamation.class);</span>
+<span class="nc" id="L747">		query.setParameter(1, traveler);</span>
+<span class="nc" id="L748">		List&lt;Reclamation&gt; reclamList = query.getResultList();</span>
+<span class="nc" id="L749">		return reclamList;</span>
 	}
 	
 	public boolean erreklamazioaKudeatu(Reclamation r, int a) {
-<span class="nc" id="L754">		db.getTransaction().begin();</span>
-<span class="nc" id="L755">		System.out.println(&quot;Iritsi da&quot;);</span>
-<span class="nc bnc" id="L756" title="All 2 branches missed.">		if (a==1) {</span>
-<span class="nc" id="L757">			r.onartu();</span>
-<span class="nc" id="L758">			Reservation res =r.getReservation();</span>
-<span class="nc" id="L759">			Ride ri = res.getRide();</span>
-<span class="nc" id="L760">			Float pri = ri.getPrice();</span>
-<span class="nc" id="L761">			Traveler tr = r.getTraveler();</span>
-<span class="nc" id="L762">			tr.addMoney(pri);</span>
-<span class="nc" id="L763">			Date date = Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant());</span>
-<span class="nc" id="L764">			Movement move = new Movement(tr.getMovementsCount(), pri, true, date);</span>
-<span class="nc" id="L765">			tr.addMovement(move);</span>
-<span class="nc" id="L766">			db.merge(tr);</span>
-<span class="nc" id="L767">			db.merge(r);</span>
-<span class="nc" id="L768">			db.getTransaction().commit();</span>
-<span class="nc" id="L769">			return true;</span>
+<span class="nc" id="L753">		db.getTransaction().begin();</span>
+<span class="nc" id="L754">		System.out.println(&quot;Iritsi da&quot;);</span>
+<span class="nc bnc" id="L755" title="All 2 branches missed.">		if (a==1) {</span>
+<span class="nc" id="L756">			r.onartu();</span>
+<span class="nc" id="L757">			Reservation res =r.getReservation();</span>
+<span class="nc" id="L758">			Ride ri = res.getRide();</span>
+<span class="nc" id="L759">			Float pri = ri.getPrice();</span>
+<span class="nc" id="L760">			Traveler tr = r.getTraveler();</span>
+<span class="nc" id="L761">			tr.addMoney(pri);</span>
+<span class="nc" id="L762">			Date date = Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant());</span>
+<span class="nc" id="L763">			Movement move = new Movement(tr.getMovementsCount(), pri, true, date);</span>
+<span class="nc" id="L764">			tr.addMovement(move);</span>
+<span class="nc" id="L765">			db.merge(tr);</span>
+<span class="nc" id="L766">			db.merge(r);</span>
+<span class="nc" id="L767">			db.getTransaction().commit();</span>
+<span class="nc" id="L768">			return true;</span>
 			
 		}else {
-<span class="nc" id="L772">			r.baztertu();</span>
-<span class="nc" id="L773">			db.merge(r);</span>
-<span class="nc" id="L774">			db.getTransaction().commit();</span>
-<span class="nc" id="L775">			return true;</span>
+<span class="nc" id="L771">			r.baztertu();</span>
+<span class="nc" id="L772">			db.merge(r);</span>
+<span class="nc" id="L773">			db.getTransaction().commit();</span>
+<span class="nc" id="L774">			return true;</span>
 			
 		}
 	}
 
 	public User register(String name, String email, String password, String mota) {
 		try {
-<span class="nc" id="L782">			db.getTransaction().begin();</span>
-<span class="nc" id="L783">			TypedQuery&lt;User&gt; query = db.createQuery(&quot;SELECT r FROM User r WHERE r.name=?1 OR r.email=?2&quot;,User.class);</span>
-<span class="nc" id="L784">			query.setParameter(1, name);</span>
-<span class="nc" id="L785">			query.setParameter(2, email);</span>
-<span class="nc" id="L786">			List&lt;User&gt; userList = query.getResultList();</span>
+<span class="fc" id="L781">			db.getTransaction().begin();</span>
+<span class="fc" id="L782">			TypedQuery&lt;User&gt; query = db.createQuery(&quot;SELECT r FROM User r WHERE r.name=?1 OR r.email=?2&quot;,User.class);</span>
+<span class="fc" id="L783">			query.setParameter(1, name);</span>
+<span class="fc" id="L784">			query.setParameter(2, email);</span>
+<span class="fc" id="L785">			List&lt;User&gt; userList = query.getResultList();</span>
 			
-<span class="nc bnc" id="L788" title="All 2 branches missed.">			if (userList.isEmpty()) {</span>
-<span class="nc bnc" id="L789" title="All 2 branches missed.">				if (mota==ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;RegisterGUI.Driver&quot;)) {</span>
-<span class="nc" id="L790">					Driver dri = new Driver(email, name, password);</span>
-<span class="nc" id="L791">					db.persist(dri);</span>
-<span class="nc" id="L792">					db.getTransaction().commit();</span>
-<span class="nc" id="L793">					return(dri);</span>
+<span class="pc bpc" id="L787" title="1 of 2 branches missed.">			if (userList.isEmpty()) {</span>
+<span class="pc bpc" id="L788" title="1 of 2 branches missed.">				if (mota==ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;RegisterGUI.Driver&quot;)) {</span>
+<span class="nc" id="L789">					Driver dri = new Driver(email, name, password);</span>
+<span class="nc" id="L790">					db.persist(dri);</span>
+<span class="nc" id="L791">					db.getTransaction().commit();</span>
+<span class="nc" id="L792">					return(dri);</span>
 					
-<span class="nc bnc" id="L795" title="All 2 branches missed.">				}else if (mota==ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;RegisterGUI.Traveler&quot;)) {</span>
-<span class="nc" id="L796">					Traveler tra = new Traveler(email, name, password);</span>
-<span class="nc" id="L797">					db.persist(tra);</span>
-<span class="nc" id="L798">					db.getTransaction().commit();</span>
-<span class="nc" id="L799">					return(tra);</span>
-<span class="nc bnc" id="L800" title="All 2 branches missed.">				} else if(mota==ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;RegisterGUI.Admin&quot;)){</span>
-<span class="nc" id="L801">					Admin adm = new Admin(email, name, password);</span>
-<span class="nc" id="L802">					db.persist(adm);</span>
-<span class="nc" id="L803">					db.getTransaction().commit();</span>
-<span class="nc" id="L804">					return(adm);</span>
+<span class="pc bpc" id="L794" title="1 of 2 branches missed.">				}else if (mota==ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;RegisterGUI.Traveler&quot;)) {</span>
+<span class="nc" id="L795">					Traveler tra = new Traveler(email, name, password);</span>
+<span class="nc" id="L796">					db.persist(tra);</span>
+<span class="nc" id="L797">					db.getTransaction().commit();</span>
+<span class="nc" id="L798">					return(tra);</span>
+<span class="pc bpc" id="L799" title="1 of 2 branches missed.">				} else if(mota==ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;RegisterGUI.Admin&quot;)){</span>
+<span class="nc" id="L800">					Admin adm = new Admin(email, name, password);</span>
+<span class="nc" id="L801">					db.persist(adm);</span>
+<span class="nc" id="L802">					db.getTransaction().commit();</span>
+<span class="nc" id="L803">					return(adm);</span>
 				}else {
-<span class="nc" id="L806">					return(null);</span>
+<span class="fc" id="L805">					return(null);</span>
 				}
 				
 				
 			} else {
-<span class="nc" id="L811">				db.getTransaction().commit();</span>
-<span class="nc" id="L812">				return(null);</span>
+<span class="nc" id="L810">				db.getTransaction().commit();</span>
+<span class="nc" id="L811">				return(null);</span>
 			}
 			
-<span class="nc" id="L815">		}catch(Exception e) {</span>
-<span class="nc" id="L816">			return(null);</span>
+<span class="nc" id="L814">		}catch(Exception e) {</span>
+<span class="nc" id="L815">			return(null);</span>
 		}
 		
 		
@@ -829,96 +828,96 @@ public class DataAccess {
 	 * @return collection of rides
 	 */
 	public List&lt;Date&gt; getThisMonthDatesWithRides(String from, String to, Date date) {
-<span class="nc" id="L832">		System.out.println(&quot;&gt;&gt; DataAccess: getEventsMonth&quot;);</span>
-<span class="nc" id="L833">		List&lt;Date&gt; res = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L831">		System.out.println(&quot;&gt;&gt; DataAccess: getEventsMonth&quot;);</span>
+<span class="nc" id="L832">		List&lt;Date&gt; res = new ArrayList&lt;&gt;();</span>
 
-<span class="nc" id="L835">		Date firstDayMonthDate = UtilDate.firstDayMonth(date);</span>
-<span class="nc" id="L836">		Date lastDayMonthDate = UtilDate.lastDayMonth(date);</span>
+<span class="nc" id="L834">		Date firstDayMonthDate = UtilDate.firstDayMonth(date);</span>
+<span class="nc" id="L835">		Date lastDayMonthDate = UtilDate.lastDayMonth(date);</span>
 
-<span class="nc" id="L838">		TypedQuery&lt;Date&gt; query = db.createQuery(</span>
+<span class="nc" id="L837">		TypedQuery&lt;Date&gt; query = db.createQuery(</span>
 				&quot;SELECT DISTINCT r.date FROM Ride r WHERE r.from=?1 AND r.to=?2 AND r.date BETWEEN ?3 and ?4&quot;,
 				Date.class);
 
-<span class="nc" id="L842">		query.setParameter(1, from);</span>
-<span class="nc" id="L843">		query.setParameter(2, to);</span>
-<span class="nc" id="L844">		query.setParameter(3, firstDayMonthDate);</span>
-<span class="nc" id="L845">		query.setParameter(4, lastDayMonthDate);</span>
-<span class="nc" id="L846">		List&lt;Date&gt; dates = query.getResultList();</span>
-<span class="nc bnc" id="L847" title="All 2 branches missed.">		for (Date d : dates) {</span>
-<span class="nc" id="L848">			res.add(d);</span>
-<span class="nc" id="L849">		}</span>
-<span class="nc" id="L850">		return res;</span>
+<span class="nc" id="L841">		query.setParameter(1, from);</span>
+<span class="nc" id="L842">		query.setParameter(2, to);</span>
+<span class="nc" id="L843">		query.setParameter(3, firstDayMonthDate);</span>
+<span class="nc" id="L844">		query.setParameter(4, lastDayMonthDate);</span>
+<span class="nc" id="L845">		List&lt;Date&gt; dates = query.getResultList();</span>
+<span class="nc bnc" id="L846" title="All 2 branches missed.">		for (Date d : dates) {</span>
+<span class="nc" id="L847">			res.add(d);</span>
+<span class="nc" id="L848">		}</span>
+<span class="nc" id="L849">		return res;</span>
 	}
 
 	public void open() {
 
-<span class="fc" id="L855">		String fileName = c.getDbFilename();</span>
-<span class="pc bpc" id="L856" title="1 of 2 branches missed.">		if (c.isDatabaseLocal()) {</span>
-<span class="fc" id="L857">			emf = Persistence.createEntityManagerFactory(&quot;objectdb:&quot; + fileName);</span>
-<span class="fc" id="L858">			db = emf.createEntityManager();</span>
+<span class="fc" id="L854">		String fileName = c.getDbFilename();</span>
+<span class="pc bpc" id="L855" title="1 of 2 branches missed.">		if (c.isDatabaseLocal()) {</span>
+<span class="fc" id="L856">			emf = Persistence.createEntityManagerFactory(&quot;objectdb:&quot; + fileName);</span>
+<span class="fc" id="L857">			db = emf.createEntityManager();</span>
 		} else {
-<span class="nc" id="L860">			Map&lt;String, String&gt; properties = new HashMap&lt;&gt;();</span>
-<span class="nc" id="L861">			properties.put(&quot;javax.persistence.jdbc.user&quot;, c.getUser());</span>
-<span class="nc" id="L862">			properties.put(&quot;javax.persistence.jdbc.password&quot;, c.getPassword());</span>
+<span class="nc" id="L859">			Map&lt;String, String&gt; properties = new HashMap&lt;&gt;();</span>
+<span class="nc" id="L860">			properties.put(&quot;javax.persistence.jdbc.user&quot;, c.getUser());</span>
+<span class="nc" id="L861">			properties.put(&quot;javax.persistence.jdbc.password&quot;, c.getPassword());</span>
 
-<span class="nc" id="L864">			emf = Persistence.createEntityManagerFactory(</span>
-<span class="nc" id="L865">					&quot;objectdb://&quot; + c.getDatabaseNode() + &quot;:&quot; + c.getDatabasePort() + &quot;/&quot; + fileName, properties);</span>
-<span class="nc" id="L866">			db = emf.createEntityManager();</span>
+<span class="nc" id="L863">			emf = Persistence.createEntityManagerFactory(</span>
+<span class="nc" id="L864">					&quot;objectdb://&quot; + c.getDatabaseNode() + &quot;:&quot; + c.getDatabasePort() + &quot;/&quot; + fileName, properties);</span>
+<span class="nc" id="L865">			db = emf.createEntityManager();</span>
 		}
-<span class="fc" id="L868">		System.out.println(&quot;DataAccess opened =&gt; isDatabaseLocal: &quot; + c.isDatabaseLocal());</span>
+<span class="fc" id="L867">		System.out.println(&quot;DataAccess opened =&gt; isDatabaseLocal: &quot; + c.isDatabaseLocal());</span>
 
-<span class="fc" id="L870">	}</span>
+<span class="fc" id="L869">	}</span>
 
 	public void close() {
-<span class="fc" id="L873">		db.close();</span>
-<span class="fc" id="L874">		System.out.println(&quot;DataAcess closed&quot;);</span>
-<span class="fc" id="L875">	}</span>
+<span class="fc" id="L872">		db.close();</span>
+<span class="fc" id="L873">		System.out.println(&quot;DataAcess closed&quot;);</span>
+<span class="fc" id="L874">	}</span>
 
 	public List&lt;Reservation&gt; getAllReservationsByTraveler(Traveler traveler) {
-<span class="nc" id="L878">		TypedQuery&lt;Reservation&gt; query = db.createQuery(&quot;SELECT re FROM Reservation re WHERE re.traveler=?1&quot;,</span>
+<span class="nc" id="L877">		TypedQuery&lt;Reservation&gt; query = db.createQuery(&quot;SELECT re FROM Reservation re WHERE re.traveler=?1&quot;,</span>
 				Reservation.class);
-<span class="nc" id="L880">		query.setParameter(1, traveler);</span>
-<span class="nc" id="L881">		List&lt;Reservation&gt; reservations = query.getResultList();</span>
-<span class="nc" id="L882">		return reservations;</span>
+<span class="nc" id="L879">		query.setParameter(1, traveler);</span>
+<span class="nc" id="L880">		List&lt;Reservation&gt; reservations = query.getResultList();</span>
+<span class="nc" id="L881">		return reservations;</span>
 	}
 	
 	public List&lt;Ride&gt; checkAlerts(Traveler traveler) {
-<span class="nc" id="L886">		db.getTransaction().begin();</span>
-<span class="nc" id="L887">		List&lt;Ride&gt; rideResult = new ArrayList&lt;Ride&gt;();</span>
-<span class="nc" id="L888">		List&lt;Alert&gt; removeAlerts = new ArrayList&lt;Alert&gt;();</span>
-<span class="nc bnc" id="L889" title="All 2 branches missed.">		for (Alert actualAlert : traveler.getAlerts()) {</span>
-<span class="nc" id="L890">			TypedQuery&lt;Ride&gt; query = db.createQuery(&quot;SELECT r FROM Ride r WHERE r.from=?1 AND r.to=?2 AND r.date=?3&quot;,</span>
+<span class="fc" id="L885">		db.getTransaction().begin();</span>
+<span class="fc" id="L886">		List&lt;Ride&gt; rideResult = new ArrayList&lt;Ride&gt;();</span>
+<span class="fc" id="L887">		List&lt;Alert&gt; removeAlerts = new ArrayList&lt;Alert&gt;();</span>
+<span class="fc bfc" id="L888" title="All 2 branches covered.">		for (Alert actualAlert : traveler.getAlerts()) {</span>
+<span class="fc" id="L889">			TypedQuery&lt;Ride&gt; query = db.createQuery(&quot;SELECT r FROM Ride r WHERE r.from=?1 AND r.to=?2 AND r.date=?3&quot;,</span>
 					Ride.class);
-<span class="nc" id="L892">			query.setParameter(1, actualAlert.getNundik());</span>
-<span class="nc" id="L893">			query.setParameter(2, actualAlert.getNora());</span>
-<span class="nc" id="L894">			query.setParameter(3, actualAlert.getData());		</span>
-<span class="nc" id="L895">			List&lt;Ride&gt; rideList = query.getResultList();</span>
-<span class="nc bnc" id="L896" title="All 2 branches missed.">			if (rideList.isEmpty() == false) {</span>
-<span class="nc" id="L897">				rideResult.addAll(rideList);</span>
-<span class="nc" id="L898">				removeAlerts.add(actualAlert);</span>
+<span class="fc" id="L891">			query.setParameter(1, actualAlert.getNundik());</span>
+<span class="fc" id="L892">			query.setParameter(2, actualAlert.getNora());</span>
+<span class="fc" id="L893">			query.setParameter(3, actualAlert.getData());		</span>
+<span class="fc" id="L894">			List&lt;Ride&gt; rideList = query.getResultList();</span>
+<span class="fc bfc" id="L895" title="All 2 branches covered.">			if (rideList.isEmpty() == false) {</span>
+<span class="fc" id="L896">				rideResult.addAll(rideList);</span>
+<span class="fc" id="L897">				removeAlerts.add(actualAlert);</span>
 			}
-<span class="nc" id="L900">		}</span>
-<span class="nc" id="L901">		traveler.removeAlertList(removeAlerts);</span>
-<span class="nc bnc" id="L902" title="All 2 branches missed.">		for (Alert alert:removeAlerts) {</span>
-<span class="nc" id="L903">			Alert managed = db.merge(alert);</span>
-<span class="nc" id="L904">		    db.remove(managed);</span>
-<span class="nc" id="L905">		}</span>
-<span class="nc" id="L906">		db.merge(traveler);</span>
-<span class="nc" id="L907">		db.getTransaction().commit();</span>
-<span class="nc" id="L908">		return rideResult;</span>
+<span class="fc" id="L899">		}</span>
+<span class="fc" id="L900">		traveler.removeAlertList(removeAlerts);</span>
+<span class="fc bfc" id="L901" title="All 2 branches covered.">		for (Alert alert:removeAlerts) {</span>
+<span class="fc" id="L902">			Alert managed = db.merge(alert);</span>
+<span class="fc" id="L903">		    db.remove(managed);</span>
+<span class="fc" id="L904">		}</span>
+<span class="fc" id="L905">		db.merge(traveler);</span>
+<span class="fc" id="L906">		db.getTransaction().commit();</span>
+<span class="fc" id="L907">		return rideResult;</span>
 	}
 
 	public List&lt;Ride&gt; getAllRidesByDriver(Driver driver) {
-<span class="nc" id="L912">		List&lt;Ride&gt; res = new ArrayList&lt;&gt;();</span>
-<span class="nc" id="L913">		TypedQuery&lt;Ride&gt; query = db.createQuery(&quot;SELECT r FROM Ride r WHERE r.driver=?1&quot;, Ride.class);</span>
-<span class="nc" id="L914">		query.setParameter(1, driver);</span>
-<span class="nc" id="L915">		List&lt;Ride&gt; rides = query.getResultList();</span>
-<span class="nc bnc" id="L916" title="All 2 branches missed.">		for (Ride ride : rides) {</span>
-<span class="nc bnc" id="L917" title="All 2 branches missed.">			if (ride.isCancelled() == false) {</span>
-<span class="nc" id="L918">				res.add(ride);</span>
+<span class="nc" id="L911">		List&lt;Ride&gt; res = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L912">		TypedQuery&lt;Ride&gt; query = db.createQuery(&quot;SELECT r FROM Ride r WHERE r.driver=?1&quot;, Ride.class);</span>
+<span class="nc" id="L913">		query.setParameter(1, driver);</span>
+<span class="nc" id="L914">		List&lt;Ride&gt; rides = query.getResultList();</span>
+<span class="nc bnc" id="L915" title="All 2 branches missed.">		for (Ride ride : rides) {</span>
+<span class="nc bnc" id="L916" title="All 2 branches missed.">			if (ride.isCancelled() == false) {</span>
+<span class="nc" id="L917">				res.add(ride);</span>
 			}
-<span class="nc" id="L920">		}</span>
-<span class="nc" id="L921">		return res;</span>
+<span class="nc" id="L919">		}</span>
+<span class="nc" id="L920">		return res;</span>
 
 	}
 }

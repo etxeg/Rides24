@@ -1,7 +1,47 @@
 
-domain.User#getMoney()FB
-8C:/Users/USER/git/Rides24/src/main/java/domain/User.java^ ^("1*!
-1_	 _("
-_ _(
+ domain.User#getMovementsCount()I@
+6/home/ander/git/Rides24/src/main/java/domain/User.java< <("3*ô
+2>
+ >(d
+b
+>
+ >(
+%2java.util.List"__id*:
+
+__unknown_file (*
+domain.User"
+	movementski
+>
+ >(	
+%3int"java.util.List#size()I*2
+
+__unknown_file (
+
+%2java.util.List2size()"
+> >(
+""*ï
+3= =(d
+b
+= =(
+%0java.util.List"__id*:
+
+__unknown_file (*
+domain.User"
+	movementsr
+p
+= =(
+%1boolean"	__compare*
+= =(
+!=*"
+= =(
+
+%0java.util.List*
+= =(
+""*
+2
+1*!
+1@
+ @("
+@ @(
 ""B
 domain.UserHX

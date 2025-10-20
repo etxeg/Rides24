@@ -1,32 +1,114 @@
 
-"domain.Reservation#isBaieztatua()ZI
-?C:/Users/USER/git/Rides24/src/main/java/domain/Reservation.javaY Y("3*!
-2[
- [("
-[ [(
-""*À
-3Z Z(i
-g
-Z Z(
-%0java.lang.String"__id*=
+Sdomain.Driver#doesRideExists(Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;)ZB
+8/home/ander/git/Rides24/src/main/java/domain/Driver.javaB B("7*Â
+2C C(H
+F
+C C(
+rdomain.Ride"__id*"
 
-__unknown_file (!*
-domain.Reservation"
-state»≈
-Z Z( 
-%1boolean",java.lang.String#equals(Ljava/lang/Object;)Z*4
+__unknown_file (
+""É
+Ä
+C C(
+rdomain.Ride"
+__arrayGet*2
+
+__unknown_file (
+
+%0java.util.List*"
+
+__unknown_file (
+""*
+6
+1*!
+3E E("
+E E(
+""*ú
+4De D(iÜÉ
+	D~ D(â
+%5java.util.Date"%domain.Ride#getDate()Ljava/util/Date;*.
+
+__unknown_file (
+
+rdomain.Ride2	getDate()˚
+¯
+	De D(è
+%6boolean"?java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z*1
+
+__unknown_file ("
+java.util.Objects*2
+
+__unknown_file (
+
+%5java.util.Date*4
 
 __unknown_file (
 
-%0java.lang.String**
-
-__unknown_file (
-
-Baieztatua2equals(Ljava/lang/Object;)*
+datejava.util.Date*
 2
-1*!
-1]
- ]("
-] ](
-""B
-domain.ReservationHX
+3*ú
+5D9 D(=ÖÇ
+DR D([
+%3java.lang.String"%domain.Ride#getTo()Ljava/lang/String;*.
+
+__unknown_file (
+
+rdomain.Ride2getTo()¸
+˘
+D9 D(_
+%4boolean"?java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z*1
+
+__unknown_file ("
+java.util.Objects*4
+
+__unknown_file (
+
+%3java.lang.String*4
+
+__unknown_file (
+
+tojava.lang.String*
+2
+4*¢
+6D	 D(âÜ
+D" D(-
+%1java.lang.String"'domain.Ride#getFrom()Ljava/lang/String;*.
+
+__unknown_file (
+
+rdomain.Ride2	getFrom()˛
+˚
+D	 D(3
+%2boolean"?java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z*1
+
+__unknown_file ("
+java.util.Objects*4
+
+__unknown_file (
+
+%1java.lang.String*6
+
+__unknown_file (
+
+fromjava.lang.String*
+2
+5*v
+7C C(b
+`
+C C(
+%0java.util.List"__id*8
+
+__unknown_file (*
+domain.Driver"
+rides*
+2*!
+1G	 G("
+G G(
+"":$
+B B(+
+fromjava.lang.String:"
+B, B(6
+tojava.lang.String:"
+B7 B(@
+datejava.util.DateB
+domain.DriverHX

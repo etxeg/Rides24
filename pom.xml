@@ -48,10 +48,10 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<maven.compiler.source>1.8</maven.compiler.source>
 
-		<sonar.organization>cianaranburu</sonar.organization>
+		<sonar.organization>etxeg</sonar.organization>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
-		<sonar.projectKey>cianaranburu_rides24</sonar.projectKey>
-		<sonar.login>6ea71dfade5b3cf05ed2df340eb1e892a3aed8f3</sonar.login>
+		<sonar.projectKey>etxeg_rides24</sonar.projectKey>
+		<sonar.login>9cb49946213c9dbe422ff82025581eae090e73df</sonar.login>
 	</properties>
 
 	<!-- https://mvnrepository.com/artifact/junit/junit -->
@@ -140,7 +140,7 @@
 		<!-- https://mvnrepository.com/artifact/org.mockito/mockito-all -->
 		<dependency>
 			<groupId>org.mockito</groupId>
-			<artifactId>mockito-inline</artifactId>
+			<artifactId>mockito-core</artifactId>
 			<version>3.4.0</version>
 			<scope>test</scope>
 		</dependency>

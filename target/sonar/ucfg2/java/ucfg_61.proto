@@ -1,63 +1,63 @@
 
 "domain.Traveler#%field_initializer
-__unknown_file ("1*å
+__unknown_file ("1*Ñ
 
-1 (tr
-F
-<C:/Users/USER/git/Rides24/src/main/java/domain/Traveler.java. (A
-%0java.util.Vector"java.util.Vector“
-
-F
-<C:/Users/USER/git/Rides24/src/main/java/domain/Traveler.java* (C
+1 (rp
+D
+:/home/ander/git/Rides24/src/main/java/domain/Traveler.java. (A
+%0java.util.Vector"java.util.Vector‘
+Ž
+D
+:/home/ander/git/Rides24/src/main/java/domain/Traveler.java* (C
 %1"java.util.Vector#<init>()V*$
  (
 
-%0java.util.Vectorœ
-™
-F
-<C:/Users/USER/git/Rides24/src/main/java/domain/Traveler.java (D#
+%0java.util.Vectorš
+—
+D
+:/home/ander/git/Rides24/src/main/java/domain/Traveler.java (D#
 domain.Traveler"
 reservations"__id*$
  (
 
-%0java.util.Vectortr
-F
-<C:/Users/USER/git/Rides24/src/main/java/domain/Traveler.java. (A
-%2java.util.Vector"java.util.Vector“
-
-F
-<C:/Users/USER/git/Rides24/src/main/java/domain/Traveler.java* (C
+%0java.util.Vectorrp
+D
+:/home/ander/git/Rides24/src/main/java/domain/Traveler.java. (A
+%2java.util.Vector"java.util.Vector‘
+Ž
+D
+:/home/ander/git/Rides24/src/main/java/domain/Traveler.java* (C
 %3"java.util.Vector#<init>()V*$
  (
 
-%2java.util.Vectorœ
-™
-F
-<C:/Users/USER/git/Rides24/src/main/java/domain/Traveler.java (D#
+%2java.util.Vectorš
+—
+D
+:/home/ander/git/Rides24/src/main/java/domain/Traveler.java (D#
 domain.Traveler"
 reclamations"__id*$
  (
 
-%2java.util.Vectortr
-F
-<C:/Users/USER/git/Rides24/src/main/java/domain/Traveler.java  (-
-%4java.util.Vector"java.util.Vector“
-
-F
-<C:/Users/USER/git/Rides24/src/main/java/domain/Traveler.java (/
+%2java.util.Vectorrp
+D
+:/home/ander/git/Rides24/src/main/java/domain/Traveler.java  (-
+%4java.util.Vector"java.util.Vector‘
+Ž
+D
+:/home/ander/git/Rides24/src/main/java/domain/Traveler.java (/
 %5"java.util.Vector#<init>()V*$
  (
 
-%4java.util.Vector–
-“
-F
-<C:/Users/USER/git/Rides24/src/main/java/domain/Traveler.java (0
+%4java.util.Vector”
+‘
+D
+:/home/ander/git/Rides24/src/main/java/domain/Traveler.java (0
 domain.Traveler"
 alerts"__id*$
  (
 
-%4java.util.Vector"[
-D
-<C:/Users/USER/git/Rides24/src/main/java/domain/Traveler.java k(
+%4java.util.Vector"Y
+B
+:/home/ander/git/Rides24/src/main/java/domain/Traveler.java k(
 implicit returnB
 domain.Traveler

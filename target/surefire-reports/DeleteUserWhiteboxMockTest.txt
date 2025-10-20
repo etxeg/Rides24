@@ -1,0 +1,74 @@
+-------------------------------------------------------------------------------
+Test set: DeleteUserWhiteboxMockTest
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 0, Errors: 10, Skipped: 0, Time elapsed: 0.004 sec <<< FAILURE! - in DeleteUserWhiteboxMockTest
+testCase4_invalidUser(DeleteUserWhiteboxMockTest)  Time elapsed: 0 sec  <<< ERROR!
+org.mockito.exceptions.base.MockitoException: 
+
+The used MockMaker SubclassByteBuddyMockMaker does not support the creation of static mocks
+
+Mockito's inline mock maker supports static mocks based on the Instrumentation API.
+You can simply enable this mock mode, by placing the 'mockito-inline' artifact where you are currently using 'mockito-core'.
+Note that Mockito's inline mock maker is not supported on Android.
+	at DeleteUserWhiteboxMockTest.init(DeleteUserWhiteboxMockTest.java:23)
+
+testCase4_invalidUser(DeleteUserWhiteboxMockTest)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.mockito.MockedStatic.close()" because "this.persistenceMock" is null
+	at DeleteUserWhiteboxMockTest.tearDown(DeleteUserWhiteboxMockTest.java:33)
+
+testCase3_admin(DeleteUserWhiteboxMockTest)  Time elapsed: 0.001 sec  <<< ERROR!
+org.mockito.exceptions.base.MockitoException: 
+
+The used MockMaker SubclassByteBuddyMockMaker does not support the creation of static mocks
+
+Mockito's inline mock maker supports static mocks based on the Instrumentation API.
+You can simply enable this mock mode, by placing the 'mockito-inline' artifact where you are currently using 'mockito-core'.
+Note that Mockito's inline mock maker is not supported on Android.
+	at DeleteUserWhiteboxMockTest.init(DeleteUserWhiteboxMockTest.java:23)
+
+testCase3_admin(DeleteUserWhiteboxMockTest)  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.mockito.MockedStatic.close()" because "this.persistenceMock" is null
+	at DeleteUserWhiteboxMockTest.tearDown(DeleteUserWhiteboxMockTest.java:33)
+
+testCase1_travelerWithReservations(DeleteUserWhiteboxMockTest)  Time elapsed: 0.001 sec  <<< ERROR!
+org.mockito.exceptions.base.MockitoException: 
+
+The used MockMaker SubclassByteBuddyMockMaker does not support the creation of static mocks
+
+Mockito's inline mock maker supports static mocks based on the Instrumentation API.
+You can simply enable this mock mode, by placing the 'mockito-inline' artifact where you are currently using 'mockito-core'.
+Note that Mockito's inline mock maker is not supported on Android.
+	at DeleteUserWhiteboxMockTest.init(DeleteUserWhiteboxMockTest.java:23)
+
+testCase1_travelerWithReservations(DeleteUserWhiteboxMockTest)  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.mockito.MockedStatic.close()" because "this.persistenceMock" is null
+	at DeleteUserWhiteboxMockTest.tearDown(DeleteUserWhiteboxMockTest.java:33)
+
+testCase5_exception(DeleteUserWhiteboxMockTest)  Time elapsed: 0.001 sec  <<< ERROR!
+org.mockito.exceptions.base.MockitoException: 
+
+The used MockMaker SubclassByteBuddyMockMaker does not support the creation of static mocks
+
+Mockito's inline mock maker supports static mocks based on the Instrumentation API.
+You can simply enable this mock mode, by placing the 'mockito-inline' artifact where you are currently using 'mockito-core'.
+Note that Mockito's inline mock maker is not supported on Android.
+	at DeleteUserWhiteboxMockTest.init(DeleteUserWhiteboxMockTest.java:23)
+
+testCase5_exception(DeleteUserWhiteboxMockTest)  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.mockito.MockedStatic.close()" because "this.persistenceMock" is null
+	at DeleteUserWhiteboxMockTest.tearDown(DeleteUserWhiteboxMockTest.java:33)
+
+testCase2_driverWithRides(DeleteUserWhiteboxMockTest)  Time elapsed: 0.001 sec  <<< ERROR!
+org.mockito.exceptions.base.MockitoException: 
+
+The used MockMaker SubclassByteBuddyMockMaker does not support the creation of static mocks
+
+Mockito's inline mock maker supports static mocks based on the Instrumentation API.
+You can simply enable this mock mode, by placing the 'mockito-inline' artifact where you are currently using 'mockito-core'.
+Note that Mockito's inline mock maker is not supported on Android.
+	at DeleteUserWhiteboxMockTest.init(DeleteUserWhiteboxMockTest.java:23)
+
+testCase2_driverWithRides(DeleteUserWhiteboxMockTest)  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.mockito.MockedStatic.close()" because "this.persistenceMock" is null
+	at DeleteUserWhiteboxMockTest.tearDown(DeleteUserWhiteboxMockTest.java:33)
+

@@ -4,7 +4,7 @@ Rides24,javax.persistence.metamodel,Attribute.PersistentAttributeType,74,0,0,0,8
 Rides24,javax.persistence.metamodel,Bindable.BindableType,34,0,0,0,4,0,1,0,1,0
 Rides24,javax.persistence.metamodel,Type.PersistenceType,44,0,0,0,5,0,1,0,1,0
 Rides24,dataAccess,ObjectdbManagerServer,192,0,2,0,43,0,3,0,2,0
-Rides24,dataAccess,DataAccess,1755,440,65,7,432,89,71,5,35,5
+Rides24,dataAccess,DataAccess,1452,743,46,26,361,159,59,17,30,10
 Rides24,dataAccess,ObjectdbManagerServer.new ActionListener() {...},48,0,0,0,12,0,2,0,2,0
 Rides24,javax.transaction.xa,XAException,13,0,0,0,7,0,3,0,3,0
 Rides24,javax.jdo,JDOFatalUserException,34,0,0,0,14,0,7,0,7,0
@@ -176,7 +176,7 @@ Rides24,javax.jdo.identity,LongIdentity,155,0,16,0,45,0,20,0,12,0
 Rides24,javax.jdo.identity,ObjectIdentity.new PrivilegedAction() {...},5,0,0,0,2,0,2,0,2,0
 Rides24,javax.jdo.identity,ByteIdentity,139,0,12,0,40,0,18,0,12,0
 Rides24,javax.jdo.identity,ShortIdentity,139,0,12,0,40,0,18,0,12,0
-Rides24,javax.jdo.identity,StringIdentity,108,0,10,0,29,0,13,0,8,0
+Rides24,javax.jdo.identity,StringIdentity,94,14,10,0,25,4,12,1,7,1
 Rides24,javax.jdo.identity,SingleFieldIdentity,131,0,16,0,41,0,23,0,15,0
 Rides24,javax.persistence.spi,PersistenceProviderResolverHolder.DefaultPersistenceProviderResolver,347,0,28,0,75,0,23,0,9,0
 Rides24,javax.persistence.spi,PersistenceProviderResolverHolder.DefaultPersistenceProviderResolver.LoaderReference,14,0,0,0,5,0,2,0,2,0
@@ -190,16 +190,16 @@ Rides24,javax.persistence.spi,PersistenceProviderResolverHolder.DefaultPersisten
 Rides24,javax.persistence.criteria,Predicate.BooleanOperator,24,0,0,0,2,0,1,0,1,0
 Rides24,javax.persistence.criteria,CriteriaBuilder.Trimspec,34,0,0,0,4,0,1,0,1,0
 Rides24,javax.persistence.criteria,JoinType,34,0,0,0,4,0,1,0,1,0
-Rides24,domain,Ride,251,41,2,0,71,13,34,2,33,2
+Rides24,domain,Ride,205,87,2,0,61,23,28,8,27,8
 Rides24,domain,Assessment,66,0,0,0,22,0,12,0,12,0
-Rides24,domain,Traveler,154,21,10,0,36,5,19,1,14,1
-Rides24,domain,Driver,148,44,22,0,31,10,21,3,10,3
+Rides24,domain,Traveler,92,83,8,2,23,18,12,8,8,7
+Rides24,domain,Driver,80,112,14,8,18,23,16,8,7,6
 Rides24,domain,Car,38,18,0,0,12,7,8,2,8,2
 Rides24,domain,IntegerAdapter,14,0,2,0,4,0,4,0,3,0
-Rides24,domain,Alert,58,0,0,0,16,0,8,0,8,0
-Rides24,domain,Reservation,90,21,4,0,36,8,22,1,20,1
+Rides24,domain,Alert,34,24,0,0,7,9,4,4,4,4
+Rides24,domain,Reservation,83,28,4,0,33,11,20,3,18,3
 Rides24,domain,Movement,28,15,0,0,12,6,8,1,8,1
-Rides24,domain,User,60,56,9,1,22,19,12,9,7,9
+Rides24,domain,User,52,64,9,1,20,21,11,10,6,10
 Rides24,domain,Admin,26,0,0,0,8,0,4,0,4,0
 Rides24,domain,Reclamation,82,0,0,0,30,0,16,0,16,0
 Rides24,com.objectdb.o,DQI,254,0,46,0,69,0,27,0,4,0
@@ -875,10 +875,10 @@ Rides24,gui,FindRidesGUI.new ItemListener() {...},46,0,2,0,10,0,3,0,2,0
 Rides24,gui,TravelerGUI.new ActionListener() {...},17,0,0,0,4,0,2,0,2,0
 Rides24,gui,TravelerGUI.new ActionListener() {...},17,0,0,0,4,0,2,0,2,0
 Rides24,gui,TravelerGUI.new ActionListener() {...},17,0,0,0,4,0,2,0,2,0
+Rides24,gui,TravelerGUI.new ActionListener() {...},17,0,0,0,4,0,2,0,2,0
 Rides24,gui,AdminReclamationGUI.new ActionListener() {...},30,0,0,0,6,0,2,0,2,0
 Rides24,gui,TravelerGUI.new ActionListener() {...},17,0,0,0,4,0,2,0,2,0
 Rides24,gui,AdminReclamationGUI.new ActionListener() {...},63,0,4,0,9,0,4,0,2,0
-Rides24,gui,TravelerGUI.new ActionListener() {...},17,0,0,0,4,0,2,0,2,0
 Rides24,gui,TravelerGUI.new ActionListener() {...},17,0,0,0,4,0,2,0,2,0
 Rides24,gui,TravelerGUI.new ActionListener() {...},17,0,0,0,4,0,2,0,2,0
 Rides24,gui,TravelerGUI.new ActionListener() {...},17,0,0,0,4,0,2,0,2,0
@@ -917,16 +917,16 @@ Rides24,gui,ReservationStateGUI,188,0,2,0,36,0,3,0,2,0
 Rides24,gui,AddMoneyGUI.new ActionListener() {...},38,0,4,0,8,0,4,0,2,0
 Rides24,gui,AddMoneyGUI.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
 Rides24,gui,CancelRideGUI.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
-Rides24,gui,AlertGUI.new ActionListener() {...},74,0,8,0,11,0,6,0,2,0
 Rides24,gui,CancelRideGUI.new ActionListener() {...},26,0,0,0,5,0,2,0,2,0
+Rides24,gui,AlertGUI.new ActionListener() {...},74,0,8,0,11,0,6,0,2,0
 Rides24,gui,AlertGUI,217,0,0,0,41,0,2,0,2,0
 Rides24,gui,DriverGUI.new ActionListener() {...},21,0,0,0,5,0,2,0,2,0
 Rides24,gui,DriverGUI.new ActionListener() {...},17,0,0,0,4,0,2,0,2,0
 Rides24,gui,DriverGUI.new ActionListener() {...},17,0,0,0,4,0,2,0,2,0
 Rides24,gui,DriverGUI.new ActionListener() {...},17,0,0,0,4,0,2,0,2,0
 Rides24,gui,DriverGUI.new ActionListener() {...},17,0,0,0,4,0,2,0,2,0
-Rides24,gui,DriverGUI.new ActionListener() {...},17,0,0,0,4,0,2,0,2,0
 Rides24,gui,MainGUI,280,0,0,0,53,0,5,0,5,0
+Rides24,gui,DriverGUI.new ActionListener() {...},17,0,0,0,4,0,2,0,2,0
 Rides24,gui,DriverGUI.new ActionListener() {...},17,0,0,0,4,0,2,0,2,0
 Rides24,gui,DriverGUI.new ActionListener() {...},17,0,0,0,4,0,2,0,2,0
 Rides24,gui,DriverGUI.new ActionListener() {...},17,0,0,0,4,0,2,0,2,0

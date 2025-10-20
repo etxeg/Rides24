@@ -1,0 +1,44 @@
+-------------------------------------------------------------------------------
+Test set: RegisterBlackboxMockTest
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 10, Errors: 0, Skipped: 0, Time elapsed: 0.123 sec <<< FAILURE! - in RegisterBlackboxMockTest
+testRegisterNewDriver(RegisterBlackboxMockTest)  Time elapsed: 0.036 sec  <<< FAILURE!
+java.lang.AssertionError
+	at RegisterBlackboxMockTest.testRegisterNewDriver(RegisterBlackboxMockTest.java:49)
+
+testRegisterInvalidEmail(RegisterBlackboxMockTest)  Time elapsed: 0.01 sec  <<< FAILURE!
+java.lang.AssertionError: Expected InvalidInputException
+	at RegisterBlackboxMockTest.testRegisterInvalidEmail(RegisterBlackboxMockTest.java:154)
+
+testRegisterPasswordNull(RegisterBlackboxMockTest)  Time elapsed: 0.01 sec  <<< FAILURE!
+java.lang.AssertionError: Expected InvalidInputException
+	at RegisterBlackboxMockTest.testRegisterPasswordNull(RegisterBlackboxMockTest.java:109)
+
+testRegisterMotaNull(RegisterBlackboxMockTest)  Time elapsed: 0.01 sec  <<< FAILURE!
+java.lang.AssertionError: Expected InvalidInputException
+	at RegisterBlackboxMockTest.testRegisterMotaNull(RegisterBlackboxMockTest.java:124)
+
+testRegisterInvalidPassword(RegisterBlackboxMockTest)  Time elapsed: 0.01 sec  <<< FAILURE!
+java.lang.AssertionError: Expected InvalidInputException
+	at RegisterBlackboxMockTest.testRegisterInvalidPassword(RegisterBlackboxMockTest.java:169)
+
+testRegisterInvalidMota(RegisterBlackboxMockTest)  Time elapsed: 0.009 sec  <<< FAILURE!
+java.lang.AssertionError: Expected InvalidInputException
+	at RegisterBlackboxMockTest.testRegisterInvalidMota(RegisterBlackboxMockTest.java:184)
+
+testRegisterInvalidName(RegisterBlackboxMockTest)  Time elapsed: 0.009 sec  <<< FAILURE!
+java.lang.AssertionError: Expected InvalidInputException
+	at RegisterBlackboxMockTest.testRegisterInvalidName(RegisterBlackboxMockTest.java:139)
+
+testRegisterNameNull(RegisterBlackboxMockTest)  Time elapsed: 0.01 sec  <<< FAILURE!
+java.lang.AssertionError: Expected InvalidInputException
+	at RegisterBlackboxMockTest.testRegisterNameNull(RegisterBlackboxMockTest.java:77)
+
+testRegisterUserAlreadyExists(RegisterBlackboxMockTest)  Time elapsed: 0.01 sec  <<< FAILURE!
+java.lang.AssertionError: Expected UserAlreadyExistsException
+	at RegisterBlackboxMockTest.testRegisterUserAlreadyExists(RegisterBlackboxMockTest.java:62)
+
+testRegisterEmailNull(RegisterBlackboxMockTest)  Time elapsed: 0.009 sec  <<< FAILURE!
+java.lang.AssertionError: Expected InvalidInputException
+	at RegisterBlackboxMockTest.testRegisterEmailNull(RegisterBlackboxMockTest.java:93)
+

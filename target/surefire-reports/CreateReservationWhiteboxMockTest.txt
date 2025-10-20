@@ -1,0 +1,60 @@
+-------------------------------------------------------------------------------
+Test set: CreateReservationWhiteboxMockTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 8, Skipped: 0, Time elapsed: 0.004 sec <<< FAILURE! - in CreateReservationWhiteboxMockTest
+test1(CreateReservationWhiteboxMockTest)  Time elapsed: 0.001 sec  <<< ERROR!
+org.mockito.exceptions.base.MockitoException: 
+
+The used MockMaker SubclassByteBuddyMockMaker does not support the creation of static mocks
+
+Mockito's inline mock maker supports static mocks based on the Instrumentation API.
+You can simply enable this mock mode, by placing the 'mockito-inline' artifact where you are currently using 'mockito-core'.
+Note that Mockito's inline mock maker is not supported on Android.
+	at CreateReservationWhiteboxMockTest.init(CreateReservationWhiteboxMockTest.java:39)
+
+test1(CreateReservationWhiteboxMockTest)  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.mockito.MockedStatic.close()" because "this.persistenceMock" is null
+	at CreateReservationWhiteboxMockTest.tearDown(CreateReservationWhiteboxMockTest.java:48)
+
+test2(CreateReservationWhiteboxMockTest)  Time elapsed: 0.001 sec  <<< ERROR!
+org.mockito.exceptions.base.MockitoException: 
+
+The used MockMaker SubclassByteBuddyMockMaker does not support the creation of static mocks
+
+Mockito's inline mock maker supports static mocks based on the Instrumentation API.
+You can simply enable this mock mode, by placing the 'mockito-inline' artifact where you are currently using 'mockito-core'.
+Note that Mockito's inline mock maker is not supported on Android.
+	at CreateReservationWhiteboxMockTest.init(CreateReservationWhiteboxMockTest.java:39)
+
+test2(CreateReservationWhiteboxMockTest)  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.mockito.MockedStatic.close()" because "this.persistenceMock" is null
+	at CreateReservationWhiteboxMockTest.tearDown(CreateReservationWhiteboxMockTest.java:48)
+
+test3(CreateReservationWhiteboxMockTest)  Time elapsed: 0.001 sec  <<< ERROR!
+org.mockito.exceptions.base.MockitoException: 
+
+The used MockMaker SubclassByteBuddyMockMaker does not support the creation of static mocks
+
+Mockito's inline mock maker supports static mocks based on the Instrumentation API.
+You can simply enable this mock mode, by placing the 'mockito-inline' artifact where you are currently using 'mockito-core'.
+Note that Mockito's inline mock maker is not supported on Android.
+	at CreateReservationWhiteboxMockTest.init(CreateReservationWhiteboxMockTest.java:39)
+
+test3(CreateReservationWhiteboxMockTest)  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.mockito.MockedStatic.close()" because "this.persistenceMock" is null
+	at CreateReservationWhiteboxMockTest.tearDown(CreateReservationWhiteboxMockTest.java:48)
+
+test4(CreateReservationWhiteboxMockTest)  Time elapsed: 0.001 sec  <<< ERROR!
+org.mockito.exceptions.base.MockitoException: 
+
+The used MockMaker SubclassByteBuddyMockMaker does not support the creation of static mocks
+
+Mockito's inline mock maker supports static mocks based on the Instrumentation API.
+You can simply enable this mock mode, by placing the 'mockito-inline' artifact where you are currently using 'mockito-core'.
+Note that Mockito's inline mock maker is not supported on Android.
+	at CreateReservationWhiteboxMockTest.init(CreateReservationWhiteboxMockTest.java:39)
+
+test4(CreateReservationWhiteboxMockTest)  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.mockito.MockedStatic.close()" because "this.persistenceMock" is null
+	at CreateReservationWhiteboxMockTest.tearDown(CreateReservationWhiteboxMockTest.java:48)
+

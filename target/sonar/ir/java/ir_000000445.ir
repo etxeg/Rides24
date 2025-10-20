@@ -1,9 +1,0 @@
-thisV V("domain.UsermoneyV V(!"float"‘-
-+
-W W("#get-field# money:Bfloat)
-'
-W W(!"	#binop +#2+:Bfloat'
-%
-W W(!"#set-field# money:
-
-X X(*8C:/Users/USER/git/Rides24/src/main/java/domain/User.java

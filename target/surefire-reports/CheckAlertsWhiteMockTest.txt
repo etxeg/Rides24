@@ -1,0 +1,46 @@
+-------------------------------------------------------------------------------
+Test set: CheckAlertsWhiteMockTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 6, Skipped: 0, Time elapsed: 1.069 sec <<< FAILURE! - in CheckAlertsWhiteMockTest
+test1(CheckAlertsWhiteMockTest)  Time elapsed: 0.974 sec  <<< ERROR!
+org.mockito.exceptions.base.MockitoException: 
+
+The used MockMaker SubclassByteBuddyMockMaker does not support the creation of static mocks
+
+Mockito's inline mock maker supports static mocks based on the Instrumentation API.
+You can simply enable this mock mode, by placing the 'mockito-inline' artifact where you are currently using 'mockito-core'.
+Note that Mockito's inline mock maker is not supported on Android.
+	at CheckAlertsWhiteMockTest.init(CheckAlertsWhiteMockTest.java:49)
+
+test1(CheckAlertsWhiteMockTest)  Time elapsed: 0.975 sec  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.mockito.MockedStatic.close()" because "this.persistenceMock" is null
+	at CheckAlertsWhiteMockTest.tearDown(CheckAlertsWhiteMockTest.java:62)
+
+test2(CheckAlertsWhiteMockTest)  Time elapsed: 0 sec  <<< ERROR!
+org.mockito.exceptions.base.MockitoException: 
+
+The used MockMaker SubclassByteBuddyMockMaker does not support the creation of static mocks
+
+Mockito's inline mock maker supports static mocks based on the Instrumentation API.
+You can simply enable this mock mode, by placing the 'mockito-inline' artifact where you are currently using 'mockito-core'.
+Note that Mockito's inline mock maker is not supported on Android.
+	at CheckAlertsWhiteMockTest.init(CheckAlertsWhiteMockTest.java:49)
+
+test2(CheckAlertsWhiteMockTest)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.mockito.MockedStatic.close()" because "this.persistenceMock" is null
+	at CheckAlertsWhiteMockTest.tearDown(CheckAlertsWhiteMockTest.java:62)
+
+test3(CheckAlertsWhiteMockTest)  Time elapsed: 0 sec  <<< ERROR!
+org.mockito.exceptions.base.MockitoException: 
+
+The used MockMaker SubclassByteBuddyMockMaker does not support the creation of static mocks
+
+Mockito's inline mock maker supports static mocks based on the Instrumentation API.
+You can simply enable this mock mode, by placing the 'mockito-inline' artifact where you are currently using 'mockito-core'.
+Note that Mockito's inline mock maker is not supported on Android.
+	at CheckAlertsWhiteMockTest.init(CheckAlertsWhiteMockTest.java:49)
+
+test3(CheckAlertsWhiteMockTest)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.mockito.MockedStatic.close()" because "this.persistenceMock" is null
+	at CheckAlertsWhiteMockTest.tearDown(CheckAlertsWhiteMockTest.java:62)
+
