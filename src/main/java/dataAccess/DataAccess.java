@@ -43,7 +43,7 @@ import exceptions.RideMustBeLaterThanTodayException;
  */
 public class DataAccess {
 	
-	//change
+	//change 1
 	private EntityManager db;
 	private EntityManagerFactory emf;
 
