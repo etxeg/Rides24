@@ -23,7 +23,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="stderr.encoding" value="UTF-8"/>
     <property name="os.name" value="Linux"/>
-    <property name="classworlds.conf" value="/home/ander/eclipse-workspace/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf12116260264098863925.tmp"/>
+    <property name="classworlds.conf" value="/home/ander/eclipse-workspace/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf15123003037301715839.tmp"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="stdout.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
@@ -56,7 +56,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="java.vendor.version" value="Temurin-21.0.8+9"/>
-    <property name="m2e.build.project.data.socket.port" value="41817"/>
+    <property name="m2e.build.project.data.socket.port" value="35189"/>
   </properties>
   <testcase name="test1" classname="CheckAlertsBlackMockTest" time="0">
     <error message="&#10;The used MockMaker SubclassByteBuddyMockMaker does not support the creation of static mocks&#10;&#10;Mockito&apos;s inline mock maker supports static mocks based on the Instrumentation API.&#10;You can simply enable this mock mode, by placing the &apos;mockito-inline&apos; artifact where you are currently using &apos;mockito-core&apos;.&#10;Note that Mockito&apos;s inline mock maker is not supported on Android." type="org.mockito.exceptions.base.MockitoException">org.mockito.exceptions.base.MockitoException: 
@@ -106,7 +106,7 @@ Note that Mockito's inline mock maker is not supported on Android.
 	at CheckAlertsBlackMockTest.tearDown(CheckAlertsBlackMockTest.java:62)
 </error>
   </testcase>
-  <testcase name="test4" classname="CheckAlertsBlackMockTest" time="0">
+  <testcase name="test4" classname="CheckAlertsBlackMockTest" time="0.001">
     <error message="&#10;The used MockMaker SubclassByteBuddyMockMaker does not support the creation of static mocks&#10;&#10;Mockito&apos;s inline mock maker supports static mocks based on the Instrumentation API.&#10;You can simply enable this mock mode, by placing the &apos;mockito-inline&apos; artifact where you are currently using &apos;mockito-core&apos;.&#10;Note that Mockito&apos;s inline mock maker is not supported on Android." type="org.mockito.exceptions.base.MockitoException">org.mockito.exceptions.base.MockitoException: 
 
 The used MockMaker SubclassByteBuddyMockMaker does not support the creation of static mocks
@@ -117,7 +117,7 @@ Note that Mockito's inline mock maker is not supported on Android.
 	at CheckAlertsBlackMockTest.init(CheckAlertsBlackMockTest.java:49)
 </error>
   </testcase>
-  <testcase name="test4" classname="CheckAlertsBlackMockTest" time="0">
+  <testcase name="test4" classname="CheckAlertsBlackMockTest" time="0.001">
     <error message="Cannot invoke &quot;org.mockito.MockedStatic.close()&quot; because &quot;this.persistenceMock&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke "org.mockito.MockedStatic.close()" because "this.persistenceMock" is null
 	at CheckAlertsBlackMockTest.tearDown(CheckAlertsBlackMockTest.java:62)
 </error>

@@ -1,7 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: DeleteUserBlackboxMockTest
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 0, Errors: 8, Skipped: 0, Time elapsed: 0.002 sec <<< FAILURE! - in DeleteUserBlackboxMockTest
+Tests run: 8, Failures: 0, Errors: 8, Skipped: 0, Time elapsed: 0.001 sec <<< FAILURE! - in DeleteUserBlackboxMockTest
 testCase1_deleteTraveler(DeleteUserBlackboxMockTest)  Time elapsed: 0 sec  <<< ERROR!
 org.mockito.exceptions.base.MockitoException: 
 
@@ -30,7 +30,7 @@ testCase4_invalidUser(DeleteUserBlackboxMockTest)  Time elapsed: 0 sec  <<< ERRO
 java.lang.NullPointerException: Cannot invoke "org.mockito.MockedStatic.close()" because "this.persistenceMock" is null
 	at DeleteUserBlackboxMockTest.tearDown(DeleteUserBlackboxMockTest.java:58)
 
-testCase5_exception(DeleteUserBlackboxMockTest)  Time elapsed: 0.001 sec  <<< ERROR!
+testCase5_exception(DeleteUserBlackboxMockTest)  Time elapsed: 0 sec  <<< ERROR!
 org.mockito.exceptions.base.MockitoException: 
 
 The used MockMaker SubclassByteBuddyMockMaker does not support the creation of static mocks
@@ -40,7 +40,7 @@ You can simply enable this mock mode, by placing the 'mockito-inline' artifact w
 Note that Mockito's inline mock maker is not supported on Android.
 	at DeleteUserBlackboxMockTest.init(DeleteUserBlackboxMockTest.java:46)
 
-testCase5_exception(DeleteUserBlackboxMockTest)  Time elapsed: 0.001 sec  <<< ERROR!
+testCase5_exception(DeleteUserBlackboxMockTest)  Time elapsed: 0 sec  <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "org.mockito.MockedStatic.close()" because "this.persistenceMock" is null
 	at DeleteUserBlackboxMockTest.tearDown(DeleteUserBlackboxMockTest.java:58)
 

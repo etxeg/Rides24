@@ -1,12 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: CreateReservationBlackboxTest
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.68 sec <<< FAILURE! - in CreateReservationBlackboxTest
-testCase3_tooManyPlaces(CreateReservationBlackboxTest)  Time elapsed: 0.018 sec  <<< FAILURE!
+Tests run: 6, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.751 sec <<< FAILURE! - in CreateReservationBlackboxTest
+testCase3_tooManyPlaces(CreateReservationBlackboxTest)  Time elapsed: 0.02 sec  <<< FAILURE!
 java.lang.AssertionError
 	at CreateReservationBlackboxTest.testCase3_tooManyPlaces(CreateReservationBlackboxTest.java:78)
 
-testCase2_notEnoughMoney(CreateReservationBlackboxTest)  Time elapsed: 0.015 sec  <<< FAILURE!
+testCase2_notEnoughMoney(CreateReservationBlackboxTest)  Time elapsed: 0.018 sec  <<< FAILURE!
 java.lang.AssertionError
 	at CreateReservationBlackboxTest.testCase2_notEnoughMoney(CreateReservationBlackboxTest.java:58)
 

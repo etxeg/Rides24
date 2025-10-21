@@ -1,10 +1,10 @@
 
 1dataAccess.DataAccess#cancelRides(Ldomain/Ride;)ZL
-@/home/ander/git/Rides24/src/main/java/dataAccess/DataAccess.java– –("30*¥
+@/home/ander/git/Rides24/src/main/java/dataAccess/DataAccess.java“ “("30*¥
 24
-’' ’(,õò
+◊' ◊(,õò
 
-’ ’(-
+◊ ◊(-
 
 %7void"domain.User#setMoney(F)V*3
 
@@ -16,24 +16,24 @@
 ""2setMoney(F)*
 23*ª
 25
-‘ ‘(Qw
+÷ ÷(Qw
 u
 
-‘ ‘(Q
+÷ ÷(Q
 %5float"__calculate*
 
-‘7 ‘(8
+÷7 ÷(8
 +*
 
-‘ ‘(6
+÷ ÷(6
 
 %3float*
 
-‘9 ‘(Q
+÷9 ÷(Q
 
 %4float©¶
 
-’ ’(
+◊ ◊(
 %6domain.Traveler"1domain.Reservation#getTraveler()Ldomain/Traveler;*?
 
 __unknown_file (#
@@ -41,9 +41,9 @@ u
 reservationdomain.Reservation2getTraveler()*
 24*¶
 26
-‘9 ‘(Dçä
+÷9 ÷(Dçä
 
-‘9 ‘(Q
+÷9 ÷(Q
 %4float" domain.Reservation#getPrezioa()F*?
 
 __unknown_file (#
@@ -51,9 +51,9 @@ u
 reservationdomain.Reservation2getPrezioa()*
 25*ç
 27
-‘ ‘(6us
+÷ ÷(6us
 
-‘ ‘(6
+÷ ÷(6
 %3float"domain.User#getMoney()F*3
 
 __unknown_file (
@@ -62,9 +62,9 @@ u
 getMoney()*
 26*¬
 28
-‘ ‘(©¶
+÷ ÷(©¶
 
-‘ ‘(+
+÷ ÷(+
 %2domain.Traveler"1domain.Reservation#getTraveler()Ldomain/Traveler;*?
 
 __unknown_file (#
@@ -72,9 +72,9 @@ getMoney()*
 reservationdomain.Reservation2getTraveler()*
 27*¬
 29
-”" ”(&™ß
+’" ’(&™ß
 
-”" ”(@
+’" ’(@
 %1java.util.List"5domain.Ride#getAcceptedReservations()Ljava/util/List;*1
 
 __unknown_file (
@@ -82,9 +82,9 @@ getMoney()*
 ridedomain.Ride2getAcceptedReservations()*
 8*é
 30
-“ “(vt
+‘ ‘(vt
 
-“ “(
+‘ ‘(
 
 %0void"domain.Ride#cancelRide()V*1
 
@@ -93,17 +93,17 @@ getMoney()*
 ridedomain.Ride2cancelRide()*
 29*ø
 10
-ﬁ ﬁ({
+‡ ‡({
 y
 
-ﬁ ﬁ(&
+‡ ‡(&
 %23javax.persistence.EntityManager"__id*=
 
 __unknown_file (!*
 dataAccess.DataAccess"
 db™ß
 
-ﬁ ﬁ(&
+‡ ‡(&
 %24domain.Traveler"1domain.Reservation#getTraveler()Ldomain/Traveler;*?
 
 __unknown_file (#
@@ -111,17 +111,17 @@ y
 reservationdomain.Reservation2getTraveler()*
 9*Ø
 11
-› ›({
+ﬂ ﬂ({
 y
 
-› ›(&
+ﬂ ﬂ(&
 %21javax.persistence.EntityManager"__id*=
 
 __unknown_file (!*
 dataAccess.DataAccess"
 dbôñ
 
-› ›(
+ﬂ ﬂ(
 %22domain.Reservation"Kjavax.persistence.EntityManager#merge(Ljava/lang/Object;)Ljava/lang/Object;*D
 
 __unknown_file ((
@@ -133,9 +133,9 @@ y
 reservationdomain.Reservation2merge(Ljava/lang/Object;)*
 10*û
 12
-€ €(ÖÇ
+› ›(ÖÇ
 
-€ €(
+› ›(
 %20void"domain.Reservation#cancel()V*?
 
 __unknown_file (#
@@ -143,9 +143,9 @@ y
 reservationdomain.Reservation2cancel()*
 11*Ô
 13
-Ÿ* Ÿ(.÷”
+€* €(.÷”
 
-Ÿ Ÿ(/
+€ €(/
 %19void"+domain.User#addMovement(Ldomain/Movement;)V*4
 
 __unknown_file (
@@ -157,17 +157,17 @@ y
 movedomain.Movement2addMovement(Ldomain/Movement;)*
 12*®
 14
-◊ ÿ(c
+Ÿ ⁄(c
 a
 
-◊ ÿ(
+Ÿ ⁄(
 movedomain.Movement"__id*4
 
 __unknown_file (
 
 %16domain.Movement™ß
 
-Ÿ Ÿ(
+€ €(
 %18domain.Traveler"1domain.Reservation#getTraveler()Ldomain/Traveler;*?
 
 __unknown_file (#
@@ -175,14 +175,14 @@ a
 reservationdomain.Reservation2getTraveler()*
 13*˙
 15
-ÿ ÿ(
+⁄ ⁄(
 75
 
-◊ ◊( 
+Ÿ Ÿ( 
 %16domain.Movement"domain.Movement®
 •
 
-◊ ÿ(
+Ÿ ⁄(
 %17",domain.Movement#<init>(IDZLjava/util/Date;)V*4
 
 __unknown_file (
@@ -205,9 +205,9 @@ a
 datejava.util.Date*
 14*ß
 16
-◊P ◊([éã
+ŸP Ÿ([éã
 
-◊P ◊(h
+ŸP Ÿ(h
 %15float" domain.Reservation#getPrezioa()F*?
 
 __unknown_file (#
@@ -215,9 +215,9 @@ a
 reservationdomain.Reservation2getPrezioa()*
 15*°
 17
-◊! ◊(NàÖ
+Ÿ! Ÿ(NàÖ
 
-◊! ◊(N
+Ÿ! Ÿ(N
 
 %14int" domain.User#getMovementsCount()I*4
 
@@ -226,17 +226,17 @@ a
 %13domain.Traveler2getMovementsCount()*
 16*¶
 18
-÷ ÷(\a
+ÿ ÿ(\a
 _
 
-÷ ÷(\
+ÿ ÿ(\
 datejava.util.Date"__id*3
 
 __unknown_file (
 
 %12java.util.Date™ß
 
-◊! ◊(:
+Ÿ! Ÿ(:
 %13domain.Traveler"1domain.Reservation#getTraveler()Ldomain/Traveler;*?
 
 __unknown_file (#
@@ -244,10 +244,10 @@ _
 reservationdomain.Reservation2getTraveler()*
 17*·
 19
-÷ ÷([»
+ÿ ÿ([»
 ≈
 
-÷ ÷([
+ÿ ÿ([
 %12java.util.Date"8java.util.Date#from(Ljava/time/Instant;)Ljava/util/Date;*.
 
 __unknown_file ("
@@ -258,23 +258,23 @@ _
 %11java.time.Instant*
 18*%
 3
-Ê
- Ê("
+Ë
+ Ë("
 
-Ê Ê(
+Ë Ë(
 ""*û
 4
-Â Â({
+Á Á({
 y
 
-Â Â(&
+Á Á(&
 %30javax.persistence.EntityManager"__id*=
 
 __unknown_file (!*
 dataAccess.DataAccess"
 dbäá
 
-Â Â(
+Á Á(
 %31domain.Driver"Kjavax.persistence.EntityManager#merge(Ljava/lang/Object;)Ljava/lang/Object;*D
 
 __unknown_file ((
@@ -286,17 +286,17 @@ y
 driverdomain.Driver2merge(Ljava/lang/Object;)*
 3*ò
 5
-‰ ‰({
+Ê Ê({
 y
 
-‰ ‰(&
+Ê Ê(&
 %28javax.persistence.EntityManager"__id*=
 
 __unknown_file (!*
 dataAccess.DataAccess"
 dbÑÅ
 
-‰ ‰(
+Ê Ê(
 %29domain.Ride"Kjavax.persistence.EntityManager#merge(Ljava/lang/Object;)Ljava/lang/Object;*D
 
 __unknown_file ((
@@ -308,17 +308,17 @@ y
 ridedomain.Ride2merge(Ljava/lang/Object;)*
 4*≈
 6
-· ·($a
+„ „($a
 _
 
-· ·($
+„ „($
 driverdomain.Driver"__id*2
 
 __unknown_file (
 
 %26domain.DriverÀ»
 
-‚ ‚(
+‰ ‰(
 %27void"(domain.Driver#cancelRide(Ldomain/Ride;)V*5
 
 __unknown_file (
@@ -330,9 +330,9 @@ _
 ridedomain.Ride2cancelRide(Ldomain/Ride;)*
 5*§
 7
-· ·(çä
+„ „(çä
 
-· ·(#
+„ „(#
 %26domain.Driver"&domain.Ride#getDriver()Ldomain/Driver;*1
 
 __unknown_file (
@@ -340,17 +340,17 @@ _
 ridedomain.Ride2getDriver()*
 6*é
 8
-” ”([
+’ ’([
 Y
 
-” ”(!
+’ ’(!
 reservationdomain.Reservation"__id*"
 
 __unknown_file (
 ""ñ
 ì
 
-” ”(!
+’ ’(!
 reservationdomain.Reservation"
 __arrayGet*2
 
@@ -363,9 +363,9 @@ __arrayGet*2
 28
 7*¢
 9
-ﬁ ﬁ('ãà
+‡ ‡('ãà
 
-ﬁ ﬁ('
+‡ ‡('
 %25domain.Traveler"Kjavax.persistence.EntityManager#merge(Ljava/lang/Object;)Ljava/lang/Object;*D
 
 __unknown_file ((
@@ -377,9 +377,9 @@ __arrayGet*2
 %24domain.Traveler2merge(Ljava/lang/Object;)*
 8*“
 20
-÷ ÷(Zπ∂
+ÿ ÿ(Zπ∂
 
-÷ ÷(Z
+ÿ ÿ(Z
 %11java.time.Instant"Cjava.time.chrono.ChronoZonedDateTime#toInstant()Ljava/time/Instant;*<
 
 __unknown_file ( 
@@ -387,9 +387,9 @@ __arrayGet*2
 %10java.time.ZonedDateTime2toInstant()*
 19*®
 21
-÷ ÷(Nèå
+ÿ ÿ(Nèå
 
-÷ ÷(N
+ÿ ÿ(N
 %10java.time.ZonedDateTime"Mjava.time.LocalDate#atStartOfDay(Ljava/time/ZoneId;)Ljava/time/ZonedDateTime;*7
 
 __unknown_file (
@@ -401,26 +401,26 @@ __arrayGet*2
 %9java.time.ZoneId2 atStartOfDay(Ljava/time/ZoneId;)*
 20*¶
 22
-÷7 ÷(=ç
+ÿ7 ÿ(=ç
 ä
 
-÷7 ÷(M
+ÿ7 ÿ(M
 %9java.time.ZoneId"2java.time.ZoneId#systemDefault()Ljava/time/ZoneId;*0
 
 __unknown_file ("
 java.time.ZoneId*
 21*®
 23
-÷ ÷(è
+ÿ ÿ(è
 å
 
-÷ ÷()
+ÿ ÿ()
 %8java.time.LocalDate".java.time.LocalDate#now()Ljava/time/LocalDate;*3
 
 __unknown_file ("
 java.time.LocalDate*
 22:!
 
-– –(%
+“ “(%
 ridedomain.RideB
 dataAccess.DataAccessHX

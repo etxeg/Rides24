@@ -1,25 +1,25 @@
 
 AdataAccess.DataAccess#getReclamationNotProcesed()Ljava/util/List;L
-@/home/ander/git/Rides24/src/main/java/dataAccess/DataAccess.javaß ß(3"1*È
+@/home/ander/git/Rides24/src/main/java/dataAccess/DataAccess.javaá á(3"1*È
 1
-à à(z
+â â(z
 x
 
-à à(%
+â â(%
 %0javax.persistence.EntityManager"__id*=
 
 __unknown_file (!*
 dataAccess.DataAccess"
 dbèå
 
-à à()
+â â()
 %1#javax.persistence.EntityTransaction"Ujavax.persistence.EntityManager#getTransaction()Ljavax/persistence/EntityTransaction;*C
 
 __unknown_file ('
 %
 %0javax.persistence.EntityManager2getTransaction()›˜
 
-à à(
+â â(
 
 %2void",javax.persistence.EntityTransaction#begin()V*G
 
@@ -28,14 +28,14 @@ x
 %1#javax.persistence.EntityTransaction2begin()z
 x
 
-á" á($%
+ã" ã($%
 %3javax.persistence.EntityManager"__id*=
 
 __unknown_file (!*
 dataAccess.DataAccess"
 db•’
 
-á" á({"
+ã" ã({"
 %4javax.persistence.TypedQuery"njavax.persistence.EntityManager#createQuery(Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;*C
 
 __unknown_file ('
@@ -49,14 +49,14 @@ x
 ""20createQuery(Ljava/lang/String;Ljava/lang/Class;)}
 {
 
-á á(|%
+ã ã(|%
 queryjavax.persistence.TypedQuery"__id*@
 
 __unknown_file ($
 "
 %4javax.persistence.TypedQueryÌÉ
 
-â â(*"
+ä ä(*"
 %5javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*C
 
 __unknown_file ('
@@ -68,7 +68,7 @@ x
 __unknown_file (
 prozesatu-gabea2!setParameter(ILjava/lang/Object;)¹¶
 
-ã! ã(6
+å! å(6
 %6java.util.List"<javax.persistence.TypedQuery#getResultList()Ljava/util/List;*C
 
 __unknown_file ('
@@ -76,7 +76,7 @@ x
 queryjavax.persistence.TypedQuery2getResultList()f
 d
 
-ã ã(7
+å å(7
 
 reclamListjava.util.List"__id*2
 
@@ -84,7 +84,7 @@ reclamListjava.util.List"__id*2
 
 %6java.util.List",
 
-ä ä(
+æ æ(
 
 
 reclamListjava.util.ListB

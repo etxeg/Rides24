@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="DeleteUserBlackboxTest" time="0.04" tests="4" errors="0" skipped="0" failures="2">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="DeleteUserBlackboxTest" time="0.047" tests="4" errors="0" skipped="0" failures="2">
   <properties>
     <property name="jansi.mode" value="force"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -23,7 +23,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="stderr.encoding" value="UTF-8"/>
     <property name="os.name" value="Linux"/>
-    <property name="classworlds.conf" value="/home/ander/eclipse-workspace/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf12116260264098863925.tmp"/>
+    <property name="classworlds.conf" value="/home/ander/eclipse-workspace/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf15123003037301715839.tmp"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="stdout.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
@@ -56,9 +56,9 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="java.vendor.version" value="Temurin-21.0.8+9"/>
-    <property name="m2e.build.project.data.socket.port" value="41817"/>
+    <property name="m2e.build.project.data.socket.port" value="35189"/>
   </properties>
-  <testcase name="testCase1_deleteTraveler" classname="DeleteUserBlackboxTest" time="0.014">
+  <testcase name="testCase1_deleteTraveler" classname="DeleteUserBlackboxTest" time="0.02">
     <failure type="java.lang.AssertionError">java.lang.AssertionError
 	at DeleteUserBlackboxTest.testCase1_deleteTraveler(DeleteUserBlackboxTest.java:30)
 </failure>
@@ -75,8 +75,8 @@ DataAcess closed
     <system-err><![CDATA[[ObjectDB 2.8.1] javax.persistence.RollbackException
 Failed to commit transaction: Attempt to reuse an existing primary key value (domain.Car:'ABA') (error 613)
 	at com.objectdb.jpa.EMImpl.commit(EMImpl.java:289)
-	at dataAccess.DataAccess.initializeDB(DataAccess.java:159)
-	at dataAccess.DataAccess.<init>(DataAccess.java:66)
+	at dataAccess.DataAccess.initializeDB(DataAccess.java:161)
+	at dataAccess.DataAccess.<init>(DataAccess.java:68)
 	at DeleteUserBlackboxTest.<clinit>(DeleteUserBlackboxTest.java:18)
 	at java.base/jdk.internal.misc.Unsafe.ensureClassInitialized0(Native Method)
 	at java.base/jdk.internal.misc.Unsafe.ensureClassInitialized(Unsafe.java:1160)
@@ -139,7 +139,7 @@ Caused by: com.objectdb.o.UserException: Attempt to reuse an existing primary ke
 java.lang.IllegalArgumentException: Unexpected null argument
 	at com.objectdb.o.ERR.assertNotNull(ERR.java:232)
 	at com.objectdb.jpa.EMImpl.remove(EMImpl.java:431)
-	at dataAccess.DataAccess.deleteUser(DataAccess.java:687)
+	at dataAccess.DataAccess.deleteUser(DataAccess.java:689)
 	at DeleteUserBlackboxTest.testCase1_deleteTraveler(DeleteUserBlackboxTest.java:28)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -168,9 +168,9 @@ java.lang.IllegalArgumentException: Unexpected null argument
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
 ]]></system-err>
   </testcase>
-  <testcase name="testCase4_invalidUser" classname="DeleteUserBlackboxTest" time="0.006"/>
-  <testcase name="testCase5_nullUser" classname="DeleteUserBlackboxTest" time="0.006"/>
-  <testcase name="testCase2_deleteDriver" classname="DeleteUserBlackboxTest" time="0.014">
+  <testcase name="testCase4_invalidUser" classname="DeleteUserBlackboxTest" time="0.007"/>
+  <testcase name="testCase5_nullUser" classname="DeleteUserBlackboxTest" time="0.007"/>
+  <testcase name="testCase2_deleteDriver" classname="DeleteUserBlackboxTest" time="0.013">
     <failure type="java.lang.AssertionError">java.lang.AssertionError
 	at DeleteUserBlackboxTest.testCase2_deleteDriver(DeleteUserBlackboxTest.java:45)
 </failure>
@@ -182,7 +182,7 @@ DataAcess closed
     <system-err><![CDATA[java.lang.IllegalArgumentException: Unexpected null argument
 	at com.objectdb.o.ERR.assertNotNull(ERR.java:232)
 	at com.objectdb.jpa.EMImpl.remove(EMImpl.java:431)
-	at dataAccess.DataAccess.deleteUser(DataAccess.java:687)
+	at dataAccess.DataAccess.deleteUser(DataAccess.java:689)
 	at DeleteUserBlackboxTest.testCase2_deleteDriver(DeleteUserBlackboxTest.java:43)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)

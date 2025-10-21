@@ -1,12 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: DeleteUserBlackboxTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.04 sec <<< FAILURE! - in DeleteUserBlackboxTest
-testCase1_deleteTraveler(DeleteUserBlackboxTest)  Time elapsed: 0.014 sec  <<< FAILURE!
+Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.047 sec <<< FAILURE! - in DeleteUserBlackboxTest
+testCase1_deleteTraveler(DeleteUserBlackboxTest)  Time elapsed: 0.02 sec  <<< FAILURE!
 java.lang.AssertionError
 	at DeleteUserBlackboxTest.testCase1_deleteTraveler(DeleteUserBlackboxTest.java:30)
 
-testCase2_deleteDriver(DeleteUserBlackboxTest)  Time elapsed: 0.014 sec  <<< FAILURE!
+testCase2_deleteDriver(DeleteUserBlackboxTest)  Time elapsed: 0.013 sec  <<< FAILURE!
 java.lang.AssertionError
 	at DeleteUserBlackboxTest.testCase2_deleteDriver(DeleteUserBlackboxTest.java:45)
 

@@ -44,7 +44,7 @@ test3(CheckAlertsBlackMockTest)  Time elapsed: 0 sec  <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "org.mockito.MockedStatic.close()" because "this.persistenceMock" is null
 	at CheckAlertsBlackMockTest.tearDown(CheckAlertsBlackMockTest.java:62)
 
-test4(CheckAlertsBlackMockTest)  Time elapsed: 0 sec  <<< ERROR!
+test4(CheckAlertsBlackMockTest)  Time elapsed: 0.001 sec  <<< ERROR!
 org.mockito.exceptions.base.MockitoException: 
 
 The used MockMaker SubclassByteBuddyMockMaker does not support the creation of static mocks
@@ -54,7 +54,7 @@ You can simply enable this mock mode, by placing the 'mockito-inline' artifact w
 Note that Mockito's inline mock maker is not supported on Android.
 	at CheckAlertsBlackMockTest.init(CheckAlertsBlackMockTest.java:49)
 
-test4(CheckAlertsBlackMockTest)  Time elapsed: 0 sec  <<< ERROR!
+test4(CheckAlertsBlackMockTest)  Time elapsed: 0.001 sec  <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "org.mockito.MockedStatic.close()" because "this.persistenceMock" is null
 	at CheckAlertsBlackMockTest.tearDown(CheckAlertsBlackMockTest.java:62)
 

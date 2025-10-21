@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: CheckAlertsBDBlackTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.123 sec <<< FAILURE! - in CheckAlertsBDBlackTest
-test2(CheckAlertsBDBlackTest)  Time elapsed: 0.038 sec  <<< FAILURE!
+Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.122 sec <<< FAILURE! - in CheckAlertsBDBlackTest
+test2(CheckAlertsBDBlackTest)  Time elapsed: 0.036 sec  <<< FAILURE!
 java.lang.AssertionError
 	at CheckAlertsBDBlackTest.test2(CheckAlertsBDBlackTest.java:91)
 

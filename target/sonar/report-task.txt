@@ -1,7 +1,7 @@
 organization=etxeg
 projectKey=etxeg_rides24
 serverUrl=https://sonarcloud.io
-serverVersion=8.0.0.68867
+serverVersion=8.0.0.68933
 dashboardUrl=https://sonarcloud.io/dashboard?id=etxeg_rides24
-ceTaskId=AZoDJmKn_2nZ1cmwBn8E
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AZoDJmKn_2nZ1cmwBn8E
+ceTaskId=AZoGJaO30yl6bm_TVoOn
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AZoGJaO30yl6bm_TVoOn

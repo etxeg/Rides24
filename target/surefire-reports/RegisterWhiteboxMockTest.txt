@@ -10,11 +10,11 @@ The used MockMaker SubclassByteBuddyMockMaker does not support the creation of s
 Mockito's inline mock maker supports static mocks based on the Instrumentation API.
 You can simply enable this mock mode, by placing the 'mockito-inline' artifact where you are currently using 'mockito-core'.
 Note that Mockito's inline mock maker is not supported on Android.
-	at RegisterWhiteboxMockTest.setup(RegisterWhiteboxMockTest.java:35)
+	at RegisterWhiteboxMockTest.setup(RegisterWhiteboxMockTest.java:36)
 
 testRegisterNewDriver(RegisterWhiteboxMockTest)  Time elapsed: 0 sec  <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "org.mockito.MockedStatic.close()" because "this.persistenceMock" is null
-	at RegisterWhiteboxMockTest.tearDown(RegisterWhiteboxMockTest.java:45)
+	at RegisterWhiteboxMockTest.tearDown(RegisterWhiteboxMockTest.java:46)
 
 testRegisterNewTraveler(RegisterWhiteboxMockTest)  Time elapsed: 0 sec  <<< ERROR!
 org.mockito.exceptions.base.MockitoException: 
@@ -24,11 +24,11 @@ The used MockMaker SubclassByteBuddyMockMaker does not support the creation of s
 Mockito's inline mock maker supports static mocks based on the Instrumentation API.
 You can simply enable this mock mode, by placing the 'mockito-inline' artifact where you are currently using 'mockito-core'.
 Note that Mockito's inline mock maker is not supported on Android.
-	at RegisterWhiteboxMockTest.setup(RegisterWhiteboxMockTest.java:35)
+	at RegisterWhiteboxMockTest.setup(RegisterWhiteboxMockTest.java:36)
 
 testRegisterNewTraveler(RegisterWhiteboxMockTest)  Time elapsed: 0 sec  <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "org.mockito.MockedStatic.close()" because "this.persistenceMock" is null
-	at RegisterWhiteboxMockTest.tearDown(RegisterWhiteboxMockTest.java:45)
+	at RegisterWhiteboxMockTest.tearDown(RegisterWhiteboxMockTest.java:46)
 
 testRegisterInvalidMota(RegisterWhiteboxMockTest)  Time elapsed: 0 sec  <<< ERROR!
 org.mockito.exceptions.base.MockitoException: 
@@ -38,11 +38,11 @@ The used MockMaker SubclassByteBuddyMockMaker does not support the creation of s
 Mockito's inline mock maker supports static mocks based on the Instrumentation API.
 You can simply enable this mock mode, by placing the 'mockito-inline' artifact where you are currently using 'mockito-core'.
 Note that Mockito's inline mock maker is not supported on Android.
-	at RegisterWhiteboxMockTest.setup(RegisterWhiteboxMockTest.java:35)
+	at RegisterWhiteboxMockTest.setup(RegisterWhiteboxMockTest.java:36)
 
 testRegisterInvalidMota(RegisterWhiteboxMockTest)  Time elapsed: 0 sec  <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "org.mockito.MockedStatic.close()" because "this.persistenceMock" is null
-	at RegisterWhiteboxMockTest.tearDown(RegisterWhiteboxMockTest.java:45)
+	at RegisterWhiteboxMockTest.tearDown(RegisterWhiteboxMockTest.java:46)
 
 testRegisterUserExists(RegisterWhiteboxMockTest)  Time elapsed: 0 sec  <<< ERROR!
 org.mockito.exceptions.base.MockitoException: 
@@ -52,9 +52,9 @@ The used MockMaker SubclassByteBuddyMockMaker does not support the creation of s
 Mockito's inline mock maker supports static mocks based on the Instrumentation API.
 You can simply enable this mock mode, by placing the 'mockito-inline' artifact where you are currently using 'mockito-core'.
 Note that Mockito's inline mock maker is not supported on Android.
-	at RegisterWhiteboxMockTest.setup(RegisterWhiteboxMockTest.java:35)
+	at RegisterWhiteboxMockTest.setup(RegisterWhiteboxMockTest.java:36)
 
 testRegisterUserExists(RegisterWhiteboxMockTest)  Time elapsed: 0 sec  <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "org.mockito.MockedStatic.close()" because "this.persistenceMock" is null
-	at RegisterWhiteboxMockTest.tearDown(RegisterWhiteboxMockTest.java:45)
+	at RegisterWhiteboxMockTest.tearDown(RegisterWhiteboxMockTest.java:46)
 

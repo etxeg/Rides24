@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="CreateReservationWhiteboxTest" time="0.03" tests="4" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="CreateReservationWhiteboxTest" time="0.033" tests="4" errors="0" skipped="0" failures="0">
   <properties>
     <property name="jansi.mode" value="force"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -23,7 +23,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="stderr.encoding" value="UTF-8"/>
     <property name="os.name" value="Linux"/>
-    <property name="classworlds.conf" value="/home/ander/eclipse-workspace/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf12116260264098863925.tmp"/>
+    <property name="classworlds.conf" value="/home/ander/eclipse-workspace/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf15123003037301715839.tmp"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="stdout.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
@@ -56,10 +56,10 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="java.vendor.version" value="Temurin-21.0.8+9"/>
-    <property name="m2e.build.project.data.socket.port" value="41817"/>
+    <property name="m2e.build.project.data.socket.port" value="35189"/>
   </properties>
-  <testcase name="test1" classname="CreateReservationWhiteboxTest" time="0.001"/>
+  <testcase name="test1" classname="CreateReservationWhiteboxTest" time="0.006"/>
   <testcase name="test2" classname="CreateReservationWhiteboxTest" time="0.013"/>
-  <testcase name="test3" classname="CreateReservationWhiteboxTest" time="0.008"/>
-  <testcase name="test4" classname="CreateReservationWhiteboxTest" time="0.008"/>
+  <testcase name="test3" classname="CreateReservationWhiteboxTest" time="0.007"/>
+  <testcase name="test4" classname="CreateReservationWhiteboxTest" time="0.007"/>
 </testsuite>

@@ -1,7 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: CreateReservationBlackboxMockTest
 -------------------------------------------------------------------------------
-Tests run: 12, Failures: 0, Errors: 12, Skipped: 0, Time elapsed: 0.001 sec <<< FAILURE! - in CreateReservationBlackboxMockTest
+Tests run: 12, Failures: 0, Errors: 12, Skipped: 0, Time elapsed: 0 sec <<< FAILURE! - in CreateReservationBlackboxMockTest
 testCase4_nullTraveler(CreateReservationBlackboxMockTest)  Time elapsed: 0 sec  <<< ERROR!
 org.mockito.exceptions.base.MockitoException: 
 
@@ -16,7 +16,7 @@ testCase4_nullTraveler(CreateReservationBlackboxMockTest)  Time elapsed: 0 sec  
 java.lang.NullPointerException: Cannot invoke "org.mockito.MockedStatic.close()" because "this.persistenceMock" is null
 	at CreateReservationBlackboxMockTest.tearDown(CreateReservationBlackboxMockTest.java:58)
 
-testCase5_nullRide(CreateReservationBlackboxMockTest)  Time elapsed: 0.001 sec  <<< ERROR!
+testCase5_nullRide(CreateReservationBlackboxMockTest)  Time elapsed: 0 sec  <<< ERROR!
 org.mockito.exceptions.base.MockitoException: 
 
 The used MockMaker SubclassByteBuddyMockMaker does not support the creation of static mocks
@@ -26,7 +26,7 @@ You can simply enable this mock mode, by placing the 'mockito-inline' artifact w
 Note that Mockito's inline mock maker is not supported on Android.
 	at CreateReservationBlackboxMockTest.init(CreateReservationBlackboxMockTest.java:46)
 
-testCase5_nullRide(CreateReservationBlackboxMockTest)  Time elapsed: 0.001 sec  <<< ERROR!
+testCase5_nullRide(CreateReservationBlackboxMockTest)  Time elapsed: 0 sec  <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "org.mockito.MockedStatic.close()" because "this.persistenceMock" is null
 	at CreateReservationBlackboxMockTest.tearDown(CreateReservationBlackboxMockTest.java:58)
 
