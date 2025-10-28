@@ -51,7 +51,7 @@
 		<sonar.organization>etxeg</sonar.organization>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 		<sonar.projectKey>etxeg_rides24</sonar.projectKey>
-		<sonar.login>7026a89d2a305ea5ffd39d5ac73112abe78fa4ab</sonar.login>
+		<sonar.login>${{ secrets.SONAR_TOKEN }}</sonar.login>
 	</properties>
 
 	<!-- https://mvnrepository.com/artifact/junit/junit -->

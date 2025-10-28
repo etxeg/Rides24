@@ -12,6 +12,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.ResourceBundle;
+import java.util.function.Supplier;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -393,44 +394,48 @@ public class DataAccess {
 			return false;
 		}
 	}
-
+	
 	public boolean createReservation(Traveler traveler, Ride ride, int nPlaces) {
-		try {
-			db.getTransaction().begin();
-			Calendar today = Calendar.getInstance();
-			int month = today.get(Calendar.MONTH);
-			int year = today.get(Calendar.YEAR);
-			int day = today.get(Calendar.DAY_OF_MONTH);
-			Reservation erreserbaClass = new Reservation(traveler, ride, UtilDate.newDate(year, month, day), ride.getPrice() * nPlaces);
-			if (erreserbaClass != null) {
-
-				float prezioa = nPlaces * ride.getPrice();
-				float travelerMoney = traveler.getMoney();
-				if (travelerMoney >= prezioa) {
-					ride.addPendingReservation(erreserbaClass);
-					traveler.addReservation(erreserbaClass);
-					traveler.setMoney(travelerMoney - prezioa);
-					Date date = Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant());
-					Movement move = new Movement(traveler.getMovementsCount(), prezioa, false, date);
-					traveler.addMovement(move);
-					erreserbaClass.setnSeats(nPlaces);
-					ride.deleteNChairs(nPlaces);
-
-					db.persist(erreserbaClass);
-					db.merge(ride);
-					db.merge(traveler);
-					System.out.println("Erreserba zenbakia: " + erreserbaClass.getErreserbaZenbakia());
-				} else {
-					System.out.println("Dirua falta da");
-				}
-			}
-			db.getTransaction().commit();
-			return true;
-		} catch (Exception e) {
-			e.printStackTrace();
-			return false;
-		}
+	    try {
+	        db.getTransaction().begin();
+	        Reservation res = createNewReservation(traveler, ride, nPlaces);
+	        if (res != null && hasEnoughMoney(traveler, res)) {
+	            processReservation(traveler, ride, res, nPlaces);
+	        }
+	        db.getTransaction().commit();
+	        return true;
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	        return false;
+	    }
 	}
+
+	private Reservation createNewReservation(Traveler t, Ride r, int nPlaces) {
+	    Calendar today = Calendar.getInstance();
+	    return new Reservation(t, r, UtilDate.newDate(today.get(Calendar.YEAR),
+	        today.get(Calendar.MONTH), today.get(Calendar.DAY_OF_MONTH)), r.getPrice() * nPlaces);
+	}
+
+	private boolean hasEnoughMoney(Traveler t, Reservation res) {
+	    return t.getMoney() >= res.getPrezioa();
+	}
+
+	private void processReservation(Traveler t, Ride r, Reservation res, int nPlaces) {
+		r.addPendingReservation(res);
+		t.addReservation(res);
+		t.setMoney(t.getMoney() - r.getPrice());
+		Date date = Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant());
+		Movement move = new Movement(t.getMovementsCount(), r.getPrice(), false, date);
+		t.addMovement(move);
+		res.setnSeats(nPlaces);
+		r.deleteNChairs(nPlaces);
+
+		db.persist(res);
+		db.merge(r);
+		db.merge(t);
+		System.out.println("Erreserba zenbakia: " + res.getErreserbaZenbakia());
+	}
+
 
 	public boolean cancelRide(Ride ride) {
 		try {
@@ -779,45 +784,62 @@ public class DataAccess {
 	}
 
 	public User register(String name, String email, String password, String mota) {
-		try {
-			db.getTransaction().begin();
-			TypedQuery<User> query = db.createQuery("SELECT r FROM User r WHERE r.name=?1 OR r.email=?2",User.class);
-			query.setParameter(1, name);
-			query.setParameter(2, email);
-			List<User> userList = query.getResultList();
-			
-			if (userList.isEmpty()) {
-				if (mota==ResourceBundle.getBundle("Etiquetas").getString("RegisterGUI.Driver")) {
-					Driver dri = new Driver(email, name, password);
-					db.persist(dri);
-					db.getTransaction().commit();
-					return(dri);
-					
-				}else if (mota==ResourceBundle.getBundle("Etiquetas").getString("RegisterGUI.Traveler")) {
-					Traveler tra = new Traveler(email, name, password);
-					db.persist(tra);
-					db.getTransaction().commit();
-					return(tra);
-				} else if(mota==ResourceBundle.getBundle("Etiquetas").getString("RegisterGUI.Admin")){
-					Admin adm = new Admin(email, name, password);
-					db.persist(adm);
-					db.getTransaction().commit();
-					return(adm);
-				}else {
-					return(null);
-				}
-				
-				
-			} else {
-				db.getTransaction().commit();
-				return(null);
-			}
-			
-		}catch(Exception e) {
-			return(null);
-		}
-		
-		
+	    try {
+	        db.getTransaction().begin();
+
+	        if (userAlreadyExists(name, email)) {
+	            db.getTransaction().commit();
+	            return null;
+	        }
+
+	        User newUser = createUserByType(mota, email, name, password);
+	        if (newUser == null) {
+	            db.getTransaction().commit();
+	            return null;
+	        }
+
+	        db.persist(newUser);
+	        db.getTransaction().commit();
+	        return newUser;
+
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	        if (db.getTransaction().isActive()) db.getTransaction().rollback();
+	        return null;
+	    }
+	}
+
+	/**
+	 * Laguntzailea: erabiltzaile existitzen den egiaztatzen du
+	 */
+	private boolean userAlreadyExists(String name, String email) {
+	    TypedQuery<User> query = db.createQuery("SELECT r FROM User r WHERE r.name=?1 OR r.email=?2", User.class);
+	    query.setParameter(1, name);
+	    query.setParameter(2, email);
+	    return !query.getResultList().isEmpty();
+	}
+
+	/**
+	 * Laguntzailea: erabiltzaile mota baten arabera objektua sortzen du
+	 */
+	private User createUserByType(String mota, String email, String name, String password) {
+	    String driverKey = getString("RegisterGUI.Driver");
+	    String travelerKey = getString("RegisterGUI.Traveler");
+	    String adminKey = getString("RegisterGUI.Admin");
+
+	    Map<String, Supplier<User>> userFactories = new HashMap<>();
+	    userFactories.put(driverKey, () -> new Driver(email, name, password));
+	    userFactories.put(travelerKey, () -> new Traveler(email, name, password));
+	    userFactories.put(adminKey, () -> new Admin(email, name, password));
+
+	    return userFactories.getOrDefault(mota, () -> null).get();
+	}
+
+	/**
+	 * Laguntzailea: ResourceBundle-etik testuak lortzeko
+	 */
+	private String getString(String key) {
+	    return ResourceBundle.getBundle("Etiquetas").getString(key);
 	}
 
 	/**
