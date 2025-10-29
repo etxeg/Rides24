@@ -83,7 +83,8 @@ public class BLFacadeImplementation implements BLFacade {
 			throws RideMustBeLaterThanTodayException, RideAlreadyExistException {
 
 		dbManager.open();
-		Ride ride = dbManager.createRide(from, to, date, price, driverEmail, pCar);
+		String rideInfo = from+"/"+to+"/"+driverEmail;
+		Ride ride = dbManager.createRide(rideInfo, date, price, pCar);
 		dbManager.close();
 		return ride;
 	};

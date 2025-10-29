@@ -208,8 +208,17 @@ public class DataAccess {
 	 * @throws RideAlreadyExistException         if the same ride already exists for
 	 *                                           the driver
 	 */
-	public Ride createRide(String from, String to, Date date, float price, String driverEmail, Car pCar)
+	
+	
+	public Ride createRide(String rideInfo, Date date, float price, Car pCar)
 			throws RideAlreadyExistException, RideMustBeLaterThanTodayException {
+		String[] parts = rideInfo.split("/");
+        if (parts.length != 3) {
+            throw new IllegalArgumentException("Input must be in the format: from/to/driverEmail");
+        }
+        String from = parts[0];
+        String to = parts[1];
+        String driverEmail = parts[2];
 		System.out.println(">> DataAccess: createRide=> from= " + from + " to= " + to + " driver=" + driverEmail
 				+ " date " + date);
 		try {
@@ -438,63 +447,53 @@ public class DataAccess {
 
 
 	public boolean cancelRide(Ride ride) {
-		try {
-			db.getTransaction().begin();
-			ride.cancelRide();
-			for (Reservation reservation : ride.getAcceptedReservations()) { // Dirua bueltatu
-				float money = reservation.getTraveler().getMoney() + reservation.getPrezioa();
-				reservation.getTraveler().setMoney(money);
-				Date date = Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant());
-				Movement move = new Movement(reservation.getTraveler().getMovementsCount(), reservation.getPrezioa(),
-						true, date);
-				reservation.getTraveler().addMovement(move);
-
-				reservation.cancel();
-
-				db.merge(reservation);
-				db.merge(reservation.getTraveler());
-			}
-
-			Driver driver = ride.getDriver();
-			driver.cancelRide(ride);
-
-			db.merge(ride);
-			db.merge(driver);
-			db.getTransaction().commit();
-			return true;
-		} catch (Exception e) {
-			e.printStackTrace();
-			return false;
-		}
+	    // cancelRide kasuan transakzioa barruan kudeatzen da
+	    return cancelRideInternal(ride, true);
 	}
-	
+
 	public boolean cancelRides(Ride ride) {
-		try {
-			ride.cancelRide();
-			for (Reservation reservation : ride.getAcceptedReservations()) { // Dirua bueltatu
-				float money = reservation.getTraveler().getMoney() + reservation.getPrezioa();
-				reservation.getTraveler().setMoney(money);
-				Date date = Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant());
-				Movement move = new Movement(reservation.getTraveler().getMovementsCount(), reservation.getPrezioa(),
-						true, date);
-				reservation.getTraveler().addMovement(move);
+	    // cancelRides kasuan transakzioa kanpoan kudeatzen da
+	    return cancelRideInternal(ride, false);
+	}
 
-				reservation.cancel();
+	//transakzioa da bien arteko desberdintasuna eta booleanaren bidez identifikatuko da
+	private boolean cancelRideInternal(Ride ride, boolean withTransaction) {
+	    try {
+	        if (withTransaction) db.getTransaction().begin();
 
-				db.merge(reservation);
-				db.merge(reservation.getTraveler());
-			}
+	        // Ride bertan behera uztea
+	        ride.cancelRide();
 
-			Driver driver = ride.getDriver();
-			driver.cancelRide(ride);
+	        // Erreserba onartutakoak itzultzea
+	        for (Reservation reservation : ride.getAcceptedReservations()) {
+	            Traveler traveler = reservation.getTraveler();
+	            float money = traveler.getMoney() + reservation.getPrezioa();
+	            traveler.setMoney(money);
 
-			db.merge(ride);
-			db.merge(driver);
-			return true;
-		} catch (Exception e) {
-			e.printStackTrace();
-			return false;
-		}
+	            Date date = Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant());
+	            Movement move = new Movement(traveler.getMovementsCount(), reservation.getPrezioa(), true, date);
+	            traveler.addMovement(move);
+
+	            reservation.cancel();
+
+	            db.merge(reservation);
+	            db.merge(traveler);
+	        }
+
+	        // Driver eguneratzea
+	        Driver driver = ride.getDriver();
+	        driver.cancelRide(ride);
+
+	        db.merge(ride);
+	        db.merge(driver);
+
+	        if (withTransaction) db.getTransaction().commit();
+	        return true;
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	        if (withTransaction && db.getTransaction().isActive()) db.getTransaction().rollback();
+	        return false;
+	    }
 	}
 
 	public boolean updateRide(Ride ride) {

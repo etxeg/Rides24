@@ -179,7 +179,7 @@ public class CreateRideGUI extends JFrame {
 				BLFacade facade = MainGUI.getBusinessLogic();
 				Car selectedCar = (Car) carComboBox.getSelectedItem();
 				float price = Float.parseFloat(jTextFieldPrice.getText());
-
+				
 				Ride r=facade.createRide(fieldOrigin.getText(), fieldDestination.getText(), UtilDate.trim(jCalendar.getDate()), price, driver.getEmail(),selectedCar);
 				jLabelMsg.setText(ResourceBundle.getBundle("Etiquetas").getString("CreateRideGUI.RideCreated"));
 
