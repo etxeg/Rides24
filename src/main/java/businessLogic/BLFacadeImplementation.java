@@ -235,7 +235,7 @@ public class BLFacadeImplementation implements BLFacade {
 
 	public Ride getRideByParams(Driver driver, int nPlaces, float price, String from, String to, Date date) {
 		dbManager.open();
-		Ride erantzuna = dbManager.getRideByParams(driver, nPlaces, price, from, to, date);
+		Ride erantzuna = dbManager.getRideByParams(driver, nPlaces, price);
 		dbManager.close();
 		return erantzuna;
 	}
