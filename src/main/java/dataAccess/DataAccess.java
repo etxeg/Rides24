@@ -602,7 +602,7 @@ public class DataAccess {
 
 	}
 
-	public Ride getRideByParams(Driver driver, int nPlaces, float price, String from, String to, Date date) {
+	public Ride getRideByParams(Driver driver, int nPlaces, float price) {
 		TypedQuery<Ride> query = db
 				.createQuery("SELECT r FROM Ride r WHERE r.driver=?1 AND r.nPlaces=?2 AND r.price=?3", Ride.class);
 		query.setParameter(1, driver);
@@ -670,23 +670,7 @@ public class DataAccess {
 		try {
 			db.getTransaction().begin();
 			
-			if (user instanceof Traveler) {
-				Traveler t = (Traveler) user;
-				for (Reservation reservation:t.getReservations()) {
-					reservation.cancelReservation();
-				}
-			} else if (user instanceof Driver) {
-				Driver d = (Driver) user;
-				List<Ride> ridesCopy = new ArrayList<>(d.getRides());
-				for (Ride ride:ridesCopy) {
-					cancelRides(ride);
-				}
-			} else if (user instanceof Admin) {
-				System.out.println("Ezin da administratzaile bat ezabatu.");
-				db.getTransaction().commit();
-				return true;
-			} else {
-				db.getTransaction().commit();
+			if(!ezabatuDaiteke(user)) {
 				return false;
 			}
 			User managedUser = db.find(User.class, user);
@@ -696,6 +680,30 @@ public class DataAccess {
 		} catch (Exception e) {
 			db.getTransaction().rollback();
 			e.printStackTrace();
+			return false;
+		}
+	}
+
+	private boolean ezabatuDaiteke(User user) {
+		if (user instanceof Traveler) {
+			Traveler t = (Traveler) user;
+			for (Reservation reservation:t.getReservations()) {
+				reservation.cancelReservation();
+			}
+			return true;
+		} else if (user instanceof Driver) {
+			Driver d = (Driver) user;
+			List<Ride> ridesCopy = new ArrayList<>(d.getRides());
+			for (Ride ride:ridesCopy) {
+				cancelRides(ride);
+			}
+			return true;
+		} else if (user instanceof Admin) {
+			System.out.println("Ezin da administratzaile bat ezabatu.");
+			db.getTransaction().commit();
+			return false;
+		} else {
+			db.getTransaction().commit();
 			return false;
 		}
 	}
@@ -904,30 +912,44 @@ public class DataAccess {
 		return reservations;
 	}
 	
-	public List<Ride> checkAlerts(Traveler traveler) {
-		db.getTransaction().begin();
-		List<Ride> rideResult = new ArrayList<Ride>();
-		List<Alert> removeAlerts = new ArrayList<Alert>();
-		for (Alert actualAlert : traveler.getAlerts()) {
-			TypedQuery<Ride> query = db.createQuery("SELECT r FROM Ride r WHERE r.from=?1 AND r.to=?2 AND r.date=?3",
-					Ride.class);
-			query.setParameter(1, actualAlert.getNundik());
-			query.setParameter(2, actualAlert.getNora());
-			query.setParameter(3, actualAlert.getData());		
-			List<Ride> rideList = query.getResultList();
-			if (rideList.isEmpty() == false) {
-				rideResult.addAll(rideList);
-				removeAlerts.add(actualAlert);
-			}
-		}
-		traveler.removeAlertList(removeAlerts);
-		for (Alert alert:removeAlerts) {
-			Alert managed = db.merge(alert);
-		    db.remove(managed);
-		}
-		db.merge(traveler);
-		db.getTransaction().commit();
-		return rideResult;
+public List<Ride> checkAlerts(Traveler traveler) {
+	    db.getTransaction().begin();
+	    List<Ride> rides = new ArrayList<>();
+	    List<Alert> toRemove = findMatchedAlerts(traveler, rides);
+	    removeAlerts(traveler, toRemove);
+	    db.getTransaction().commit();
+	    return rides;
+	}
+
+	private List<Alert> findMatchedAlerts(Traveler traveler, List<Ride> ridesOut) {
+	    List<Alert> toRemove = new ArrayList<>();
+	    for (Alert alert : traveler.getAlerts()) {
+	        List<Ride> matches = queryRides(alert);
+	        if (!matches.isEmpty()) {
+	            ridesOut.addAll(matches);
+	            toRemove.add(alert);
+	        }
+	    }
+	    return toRemove;
+	}
+
+	private List<Ride> queryRides(Alert alert) {
+	    TypedQuery<Ride> q = db.createQuery(
+	        "SELECT r FROM Ride r WHERE r.from = :from AND r.to = :to AND r.date = :date",
+	        Ride.class
+	    );
+	    q.setParameter("from", alert.getNundik());
+	    q.setParameter("to",   alert.getNora());
+	    q.setParameter("date", alert.getData());
+	    return q.getResultList();
+	}
+
+	private void removeAlerts(Traveler traveler, List<Alert> toRemove) {
+	    traveler.removeAlertList(toRemove);
+	    for (Alert alert : toRemove) {
+	        db.remove(db.merge(alert));
+	    }
+	    db.merge(traveler);
 	}
 
 	public List<Ride> getAllRidesByDriver(Driver driver) {
