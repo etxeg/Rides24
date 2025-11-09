@@ -89,58 +89,13 @@ public class DataAccess {
 
 		db.getTransaction().begin();
 
-		try {
-
-			Calendar today = Calendar.getInstance();
-
-			int month = today.get(Calendar.MONTH);
-			int year = today.get(Calendar.YEAR);
-			if (month == 12) {
-				month = 1;
-				year += 1;
-			}
-
-			// Create drivers
-			Driver driver1 = new Driver("driver1@gmail.com", "Aitor Fernandez", "123");
-			Driver driver2 = new Driver("driver2@gmail.com", "Ane Gaztañaga", "123");
-			Driver driver3 = new Driver("driver3@gmail.com", "Test Driver", "123");
-//			Admin admin1 = new Admin("admin1@gmail.com", "Test Admin", "123");
-//			db.persist(admin1);
-			// Create travelers
-			Traveler traveler1 = new Traveler("traveler1@gmail.com", "Test Traveler", "123");
-			traveler1.setMoney(500);
-			Date date = Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant());
-			Movement move = new Movement(traveler1.getMovementsCount(), 500, true, date);
-			traveler1.addMovement(move);
-			db.persist(move);
-			Traveler traveler2 = new Traveler("traveler2@gmail.com", "Test Traveler2", "123");
-			traveler2.setMoney(500);
-			Date date2 = Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant());
-			Movement move2 = new Movement(traveler2.getMovementsCount(), 500, true, date2);
-			traveler2.addMovement(move2);
-			db.persist(move2);
-
-			Car car1 = new Car("ABC", driver1, 4, "Toyota");
-			driver1.addCar(car1);
-			Car car2 = new Car("CBA", driver2, 4, "Toyota");
-			driver2.addCar(car2);
-			Car car3 = new Car("ABA", driver3, 4, "Toyota");
-			driver3.addCar(car3);
-
-			// Create rides
-			driver1.addRide("Donostia", "Bilbo", UtilDate.newDate(year, month, 15), 7, car1);
-			driver1.addRide("Donostia", "Gazteiz", UtilDate.newDate(year, month, 6), 8, car1);
-			driver1.addRide("Bilbo", "Donostia", UtilDate.newDate(year, month, 25), 4, car1);
-			//Ride ride1 = driver1.addRide("Donostia", "Bilbo", UtilDate.newDate(year, month, 1), 5, car1);
+		try {		
+			int[] yearMonth = getYearMonth();
+			List<Driver> drivers = createDrivers();
+			List<Car> cars = createCars(drivers);
+			List<Traveler> travelers = createTravelers();
+			createRides(drivers, cars, yearMonth[0], yearMonth[1]);
 			
-			driver1.addRide("Donostia", "Iruña", UtilDate.newDate(year, month, 7), 8, car1);
-
-			driver2.addRide("Donostia", "Bilbo", UtilDate.newDate(year, month, 15), 3, car2);
-			driver2.addRide("Bilbo", "Donostia", UtilDate.newDate(year, month, 25), 5, car2);
-			driver2.addRide("Eibar", "Gasteiz", UtilDate.newDate(year, month, 6), 5, car2);
-
-			driver3.addRide("Bilbo", "Donostia", UtilDate.newDate(year, month, 14), 3, car3);
-
 			/*Reservation erreserba = new Reservation(traveler1, ride1, UtilDate.newDate(year, month, 1),5);
 			erreserba.baieztatu();
 			ride1.addAcceptedReservations(erreserba);
@@ -148,22 +103,99 @@ public class DataAccess {
 			
 			db.persist(erreserba);
 			db.merge(ride1);*/
-			
-			db.persist(car1);
-			db.persist(car2);
-			db.persist(car3);
-			db.persist(driver1);
-			db.persist(driver2);
-			db.persist(driver3);
-			db.persist(traveler1);
-			db.persist(traveler2);
-			
 
 			db.getTransaction().commit();
 			System.out.println("Db initialized");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	private  int[] getYearMonth(){
+		Calendar today = Calendar.getInstance();
+
+		int month = today.get(Calendar.MONTH);
+		int year = today.get(Calendar.YEAR);
+		if (month == 12) {
+			month = 1;
+			year += 1;
+		}
+		return new int[] {year, month};
+	}
+	
+	public List<Driver> createDrivers() {
+		List<Driver> drivers = new ArrayList <Driver>();
+		Driver driver1 = new Driver("driver1@gmail.com", "Aitor Fernandez", "123");
+		drivers.add(driver1);
+		Driver driver2 = new Driver("driver2@gmail.com", "Ane Gaztañaga", "123");
+		drivers.add(driver2);
+		Driver driver3 = new Driver("driver3@gmail.com", "Test Driver", "123");
+		drivers.add(driver3);
+//		Admin admin1 = new Admin("admin1@gmail.com", "Test Admin", "123");
+//		db.persist(admin1);
+		
+		db.persist(driver1);
+		db.persist(driver2);
+		db.persist(driver3);
+			
+		return drivers;
+	}
+	
+	public List<Car> createCars(List<Driver> drivers) {
+		List<Car> cars = new ArrayList<Car>();
+		Car car1 = new Car("ABC", drivers.get(0), 4, "Toyota");
+		drivers.get(0).addCar(car1);
+		cars.add(car1);
+		
+		Car car2 = new Car("CBA", drivers.get(1), 4, "Toyota");
+		drivers.get(1).addCar(car2);
+		cars.add(car2);
+		
+		Car car3 = new Car("ABA", drivers.get(2), 4, "Toyota");
+		drivers.get(2).addCar(car3);
+		cars.add(car3);
+		
+		db.persist(car1);
+		db.persist(car2);
+		db.persist(car3);
+		
+		return cars;
+	}
+	
+	private Traveler createTraveler(String email, String name, float money) {
+	    Traveler traveler = new Traveler(email, name, "123");
+	    traveler.setMoney(money);
+	    Date date = Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant());
+	    Movement move = new Movement(traveler.getMovementsCount(), money, true, date);
+	    traveler.addMovement(move);
+	    db.persist(move);
+	    db.persist(traveler);
+	    return traveler;
+	}
+	
+	public List<Traveler> createTravelers() {
+		List<Traveler> travelers = new ArrayList<>();
+		
+		travelers.add(createTraveler("traveler1@gmail.com", "Test Traveler", 500));
+		travelers.add(createTraveler("traveler2@gmail.com", "Test Traveler2", 500));
+		
+		return travelers;
+	}
+	
+	public void createRides(List<Driver> drivers, List<Car> cars, int year, int month ) {	
+
+		drivers.get(0).addRide("Donostia", "Bilbo", UtilDate.newDate(year, month, 15), 7, cars.get(0));
+		drivers.get(0).addRide("Donostia", "Gazteiz", UtilDate.newDate(year, month, 6), 8, cars.get(0));
+		drivers.get(0).addRide("Bilbo", "Donostia", UtilDate.newDate(year, month, 25), 4, cars.get(0));
+		//Ride ride1 = driver1.addRide("Donostia", "Bilbo", UtilDate.newDate(year, month, 1), 5, car1);
+		drivers.get(0).addRide("Donostia", "Iruña", UtilDate.newDate(year, month, 7), 8, cars.get(0));
+
+		drivers.get(1).addRide("Donostia", "Bilbo", UtilDate.newDate(year, month, 15), 3, cars.get(1));
+		drivers.get(1).addRide("Bilbo", "Donostia", UtilDate.newDate(year, month, 25), 5, cars.get(1));
+		drivers.get(1).addRide("Eibar", "Gasteiz", UtilDate.newDate(year, month, 6), 5, cars.get(1));
+
+		drivers.get(2).addRide("Bilbo", "Donostia", UtilDate.newDate(year, month, 14), 3, cars.get(2));
+
 	}
 
 	/**
@@ -624,7 +656,7 @@ public class DataAccess {
 
 	}
 
-	public Ride getRideByParams(Driver driver, int nPlaces, float price, String from, String to, Date date) {
+	public Ride getRideByParams(Driver driver, int nPlaces, float price) {
 		TypedQuery<Ride> query = db
 				.createQuery("SELECT r FROM Ride r WHERE r.driver=?1 AND r.nPlaces=?2 AND r.price=?3", Ride.class);
 		query.setParameter(1, driver);
@@ -692,23 +724,7 @@ public class DataAccess {
 		try {
 			db.getTransaction().begin();
 			
-			if (user instanceof Traveler) {
-				Traveler t = (Traveler) user;
-				for (Reservation reservation:t.getReservations()) {
-					reservation.cancelReservation();
-				}
-			} else if (user instanceof Driver) {
-				Driver d = (Driver) user;
-				List<Ride> ridesCopy = new ArrayList<>(d.getRides());
-				for (Ride ride:ridesCopy) {
-					cancelRides(ride);
-				}
-			} else if (user instanceof Admin) {
-				System.out.println("Ezin da administratzaile bat ezabatu.");
-				db.getTransaction().commit();
-				return true;
-			} else {
-				db.getTransaction().commit();
+			if(!ezabatuDaiteke(user)) {
 				return false;
 			}
 			User managedUser = db.find(User.class, user);
@@ -718,6 +734,30 @@ public class DataAccess {
 		} catch (Exception e) {
 			db.getTransaction().rollback();
 			e.printStackTrace();
+			return false;
+		}
+	}
+
+	private boolean ezabatuDaiteke(User user) {
+		if (user instanceof Traveler) {
+			Traveler t = (Traveler) user;
+			for (Reservation reservation:t.getReservations()) {
+				reservation.cancelReservation();
+			}
+			return true;
+		} else if (user instanceof Driver) {
+			Driver d = (Driver) user;
+			List<Ride> ridesCopy = new ArrayList<>(d.getRides());
+			for (Ride ride:ridesCopy) {
+				cancelRides(ride);
+			}
+			return true;
+		} else if (user instanceof Admin) {
+			System.out.println("Ezin da administratzaile bat ezabatu.");
+			db.getTransaction().commit();
+			return false;
+		} else {
+			db.getTransaction().commit();
 			return false;
 		}
 	}
@@ -926,30 +966,44 @@ public class DataAccess {
 		return reservations;
 	}
 	
-	public List<Ride> checkAlerts(Traveler traveler) {
-		db.getTransaction().begin();
-		List<Ride> rideResult = new ArrayList<Ride>();
-		List<Alert> removeAlerts = new ArrayList<Alert>();
-		for (Alert actualAlert : traveler.getAlerts()) {
-			TypedQuery<Ride> query = db.createQuery("SELECT r FROM Ride r WHERE r.from=?1 AND r.to=?2 AND r.date=?3",
-					Ride.class);
-			query.setParameter(1, actualAlert.getNundik());
-			query.setParameter(2, actualAlert.getNora());
-			query.setParameter(3, actualAlert.getData());		
-			List<Ride> rideList = query.getResultList();
-			if (rideList.isEmpty() == false) {
-				rideResult.addAll(rideList);
-				removeAlerts.add(actualAlert);
-			}
-		}
-		traveler.removeAlertList(removeAlerts);
-		for (Alert alert:removeAlerts) {
-			Alert managed = db.merge(alert);
-		    db.remove(managed);
-		}
-		db.merge(traveler);
-		db.getTransaction().commit();
-		return rideResult;
+public List<Ride> checkAlerts(Traveler traveler) {
+	    db.getTransaction().begin();
+	    List<Ride> rides = new ArrayList<>();
+	    List<Alert> toRemove = findMatchedAlerts(traveler, rides);
+	    removeAlerts(traveler, toRemove);
+	    db.getTransaction().commit();
+	    return rides;
+	}
+
+	private List<Alert> findMatchedAlerts(Traveler traveler, List<Ride> ridesOut) {
+	    List<Alert> toRemove = new ArrayList<>();
+	    for (Alert alert : traveler.getAlerts()) {
+	        List<Ride> matches = queryRides(alert);
+	        if (!matches.isEmpty()) {
+	            ridesOut.addAll(matches);
+	            toRemove.add(alert);
+	        }
+	    }
+	    return toRemove;
+	}
+
+	private List<Ride> queryRides(Alert alert) {
+	    TypedQuery<Ride> q = db.createQuery(
+	        "SELECT r FROM Ride r WHERE r.from = :from AND r.to = :to AND r.date = :date",
+	        Ride.class
+	    );
+	    q.setParameter("from", alert.getNundik());
+	    q.setParameter("to",   alert.getNora());
+	    q.setParameter("date", alert.getData());
+	    return q.getResultList();
+	}
+
+	private void removeAlerts(Traveler traveler, List<Alert> toRemove) {
+	    traveler.removeAlertList(toRemove);
+	    for (Alert alert : toRemove) {
+	        db.remove(db.merge(alert));
+	    }
+	    db.merge(traveler);
 	}
 
 	public List<Ride> getAllRidesByDriver(Driver driver) {
