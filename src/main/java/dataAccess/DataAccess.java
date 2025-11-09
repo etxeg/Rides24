@@ -380,21 +380,11 @@ public class DataAccess {
 	public boolean rejectReservation(Reservation erreserba) {
 		try {
 			db.getTransaction().begin();
-			erreserba.getRide().removePendingReservation(erreserba);
-			erreserba.getTraveler().removeReservation(erreserba);
-			erreserba.getRide().addNChairs(erreserba.getnSeats());
-
-			float addMoney = erreserba.getTraveler().getMoney() + erreserba.getPrezioa();
-			erreserba.getTraveler().setMoney(addMoney);
-			Date date = Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant());
-			Movement move = new Movement(erreserba.getTraveler().getMovementsCount(), addMoney, true, date);
-			erreserba.getTraveler().addMovement(move);
-
-			db.merge(erreserba.getTraveler());
-			db.merge(erreserba.getRide());
-			// Erreserba datu basetik ezabatu
-			erreserba = db.merge(erreserba);
-			db.remove(erreserba);
+			
+			updateRideAndTraveler(erreserba);
+			refundMoney(erreserba);
+			refundMovement(erreserba);
+			persistChange(erreserba);
 
 			db.getTransaction().commit();
 			return true;
@@ -402,6 +392,38 @@ public class DataAccess {
 			e.printStackTrace();
 			return false;
 		}
+	}
+	
+	public void updateRideAndTraveler(Reservation res) {
+		
+		res.getRide().removePendingReservation(res);
+		res.getTraveler().removeReservation(res);
+		res.getRide().addNChairs(res.getnSeats());
+		
+	}
+	
+	public void refundMoney(Reservation res) {
+		Traveler t = res.getTraveler();
+		float refund = t.getMoney() + res.getPrezioa();
+		t.setMoney(refund);
+		
+	}
+	
+	public void refundMovement(Reservation res) {
+		Traveler t = res.getTraveler();
+		float amount = t.getMoney();
+		Date date = Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant());
+		Movement move = new Movement(t.getMovementsCount(), amount, true, date);
+		t.addMovement(move);
+		
+	}
+	
+	public void persistChange(Reservation res) {
+		db.merge(res.getTraveler());
+		db.merge(res.getRide());
+		Reservation merged = db.merge(res);
+		db.remove(merged);
+		
 	}
 	
 	public boolean createReservation(Traveler traveler, Ride ride, int nPlaces) {
