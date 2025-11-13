@@ -1,0 +1,521 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-11-13 10:49:37 #1 store] 
+Database 'C:\Users\jlara\git\Rides24\src\main\resources\rides.temp' is opened by 13048@LAPTOP-EEOQBCUU
+
+[2025-11-13 10:49:37 #2 type.registry] 
+New type domain.User
+
+[2025-11-13 10:49:37 #3 type.registry] 
+New type domain.Driver
+
+[2025-11-13 10:49:37 #4 type] 
+Type domain.User is not enhanced.
+
+[2025-11-13 10:49:37 #5 type.registry] 
+New type domain.Movement
+
+[2025-11-13 10:49:37 #6 type] 
+Type domain.Driver is not enhanced.
+
+[2025-11-13 10:49:37 #7 type.registry] 
+New type domain.Assessment
+
+[2025-11-13 10:49:37 #8 type.registry] 
+New type domain.Car
+
+[2025-11-13 10:49:37 #9 type.registry] 
+New type domain.Ride
+
+[2025-11-13 10:49:37 #10 type] 
+Type domain.Movement is not enhanced.
+
+[2025-11-13 10:49:37 #11 type] 
+Type domain.Assessment is not enhanced.
+
+[2025-11-13 10:49:37 #12 type.registry] 
+New type domain.Traveler
+
+[2025-11-13 10:49:37 #13 type] 
+Type domain.Car is not enhanced.
+
+[2025-11-13 10:49:37 #14 type] 
+Type domain.Ride is not enhanced.
+
+[2025-11-13 10:49:37 #15 type.registry] 
+New type domain.Reservation
+
+[2025-11-13 10:49:37 #16 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-11-13 10:49:37 #17 type.registry] 
+New type domain.Alert
+
+[2025-11-13 10:49:37 #18 type.registry] 
+New type domain.Reclamation
+
+[2025-11-13 10:49:37 #19 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-11-13 10:49:37 #20 type] 
+Type domain.Alert is not enhanced.
+
+[2025-11-13 10:49:37 #21 type] 
+Type domain.Reclamation is not enhanced.
+
+[2025-11-13 10:49:37 #22 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-11-13 10:49:37 #23 type.registry] 
+New type java.util.Vector<domain.Movement>
+
+[2025-11-13 10:49:37 #24 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+[2025-11-13 10:49:37 #25 type.registry] 
+New type java.util.Vector<domain.Car>
+
+[2025-11-13 10:49:37 #26 type.registry] 
+New type java.util.Vector<domain.Assessment>
+
+[2025-11-13 10:49:37 #27 type.registry] 
+New type java.util.Vector<domain.Reservation>
+
+[2025-11-13 10:49:37 #28 type.registry] 
+New type java.util.Vector<domain.Reclamation>
+
+[2025-11-13 10:49:37 #29 type.registry] 
+New type java.util.Vector<domain.Alert>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-11-13 10:50:16 #1 store] 
+Database 'C:\Users\jlara\git\Rides24\src\main\resources\rides.temp' is opened by 7028@LAPTOP-EEOQBCUU
+
+[2025-11-13 10:50:16 #2 type.registry] 
+New type domain.User
+
+[2025-11-13 10:50:16 #3 type.registry] 
+New type domain.Driver
+
+[2025-11-13 10:50:16 #4 type] 
+Type domain.User is not enhanced.
+
+[2025-11-13 10:50:16 #5 type.registry] 
+New type domain.Movement
+
+[2025-11-13 10:50:16 #6 type] 
+Type domain.Driver is not enhanced.
+
+[2025-11-13 10:50:16 #7 type.registry] 
+New type domain.Assessment
+
+[2025-11-13 10:50:16 #8 type.registry] 
+New type domain.Car
+
+[2025-11-13 10:50:16 #9 type.registry] 
+New type domain.Ride
+
+[2025-11-13 10:50:16 #10 type] 
+Type domain.Movement is not enhanced.
+
+[2025-11-13 10:50:16 #11 type] 
+Type domain.Assessment is not enhanced.
+
+[2025-11-13 10:50:16 #12 type.registry] 
+New type domain.Traveler
+
+[2025-11-13 10:50:16 #13 type] 
+Type domain.Car is not enhanced.
+
+[2025-11-13 10:50:16 #14 type] 
+Type domain.Ride is not enhanced.
+
+[2025-11-13 10:50:16 #15 type.registry] 
+New type domain.Reservation
+
+[2025-11-13 10:50:16 #16 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-11-13 10:50:16 #17 type.registry] 
+New type domain.Alert
+
+[2025-11-13 10:50:16 #18 type.registry] 
+New type domain.Reclamation
+
+[2025-11-13 10:50:16 #19 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-11-13 10:50:16 #20 type] 
+Type domain.Alert is not enhanced.
+
+[2025-11-13 10:50:16 #21 type] 
+Type domain.Reclamation is not enhanced.
+
+[2025-11-13 10:50:16 #22 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-11-13 10:50:16 #23 type.registry] 
+New type java.util.Vector<domain.Movement>
+
+[2025-11-13 10:50:16 #24 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+[2025-11-13 10:50:16 #25 type.registry] 
+New type java.util.Vector<domain.Car>
+
+[2025-11-13 10:50:16 #26 type.registry] 
+New type java.util.Vector<domain.Assessment>
+
+[2025-11-13 10:50:16 #27 type.registry] 
+New type java.util.Vector<domain.Reservation>
+
+[2025-11-13 10:50:16 #28 type.registry] 
+New type java.util.Vector<domain.Reclamation>
+
+[2025-11-13 10:50:16 #29 type.registry] 
+New type java.util.Vector<domain.Alert>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-11-13 10:50:32 #1 store] 
+Database 'C:\Users\jlara\git\Rides24\src\main\resources\rides.temp' is opened by 10916@LAPTOP-EEOQBCUU
+
+[2025-11-13 10:50:32 #2 type.registry] 
+New type domain.User
+
+[2025-11-13 10:50:32 #3 type.registry] 
+New type domain.Driver
+
+[2025-11-13 10:50:32 #4 type] 
+Type domain.User is not enhanced.
+
+[2025-11-13 10:50:32 #5 type.registry] 
+New type domain.Movement
+
+[2025-11-13 10:50:32 #6 type] 
+Type domain.Driver is not enhanced.
+
+[2025-11-13 10:50:32 #7 type.registry] 
+New type domain.Assessment
+
+[2025-11-13 10:50:32 #8 type.registry] 
+New type domain.Car
+
+[2025-11-13 10:50:32 #9 type.registry] 
+New type domain.Ride
+
+[2025-11-13 10:50:32 #10 type] 
+Type domain.Movement is not enhanced.
+
+[2025-11-13 10:50:32 #11 type] 
+Type domain.Assessment is not enhanced.
+
+[2025-11-13 10:50:32 #12 type.registry] 
+New type domain.Traveler
+
+[2025-11-13 10:50:32 #13 type] 
+Type domain.Car is not enhanced.
+
+[2025-11-13 10:50:32 #14 type] 
+Type domain.Ride is not enhanced.
+
+[2025-11-13 10:50:32 #15 type.registry] 
+New type domain.Reservation
+
+[2025-11-13 10:50:32 #16 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-11-13 10:50:32 #17 type.registry] 
+New type domain.Alert
+
+[2025-11-13 10:50:32 #18 type.registry] 
+New type domain.Reclamation
+
+[2025-11-13 10:50:32 #19 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-11-13 10:50:32 #20 type] 
+Type domain.Alert is not enhanced.
+
+[2025-11-13 10:50:32 #21 type] 
+Type domain.Reclamation is not enhanced.
+
+[2025-11-13 10:50:32 #22 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-11-13 10:50:32 #23 type.registry] 
+New type java.util.Vector<domain.Movement>
+
+[2025-11-13 10:50:32 #24 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+[2025-11-13 10:50:32 #25 type.registry] 
+New type java.util.Vector<domain.Car>
+
+[2025-11-13 10:50:32 #26 type.registry] 
+New type java.util.Vector<domain.Assessment>
+
+[2025-11-13 10:50:32 #27 type.registry] 
+New type java.util.Vector<domain.Reservation>
+
+[2025-11-13 10:50:32 #28 type.registry] 
+New type java.util.Vector<domain.Reclamation>
+
+[2025-11-13 10:50:32 #29 type.registry] 
+New type java.util.Vector<domain.Alert>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-11-13 10:52:39 #1 store] 
+Database 'C:\Users\jlara\git\Rides24\src\main\resources\rides.temp' is opened by 11580@LAPTOP-EEOQBCUU
+
+[2025-11-13 10:52:39 #2 type.registry] 
+New type domain.User
+
+[2025-11-13 10:52:39 #3 type.registry] 
+New type domain.Driver
+
+[2025-11-13 10:52:39 #4 type] 
+Type domain.User is not enhanced.
+
+[2025-11-13 10:52:39 #5 type.registry] 
+New type domain.Movement
+
+[2025-11-13 10:52:39 #6 type] 
+Type domain.Driver is not enhanced.
+
+[2025-11-13 10:52:39 #7 type.registry] 
+New type domain.Assessment
+
+[2025-11-13 10:52:39 #8 type.registry] 
+New type domain.Car
+
+[2025-11-13 10:52:39 #9 type.registry] 
+New type domain.Ride
+
+[2025-11-13 10:52:39 #10 type] 
+Type domain.Movement is not enhanced.
+
+[2025-11-13 10:52:39 #11 type] 
+Type domain.Assessment is not enhanced.
+
+[2025-11-13 10:52:39 #12 type.registry] 
+New type domain.Traveler
+
+[2025-11-13 10:52:39 #13 type] 
+Type domain.Car is not enhanced.
+
+[2025-11-13 10:52:39 #14 type] 
+Type domain.Ride is not enhanced.
+
+[2025-11-13 10:52:39 #15 type.registry] 
+New type domain.Reservation
+
+[2025-11-13 10:52:39 #16 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-11-13 10:52:39 #17 type.registry] 
+New type domain.Alert
+
+[2025-11-13 10:52:39 #18 type.registry] 
+New type domain.Reclamation
+
+[2025-11-13 10:52:39 #19 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-11-13 10:52:39 #20 type] 
+Type domain.Alert is not enhanced.
+
+[2025-11-13 10:52:39 #21 type] 
+Type domain.Reclamation is not enhanced.
+
+[2025-11-13 10:52:39 #22 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-11-13 10:52:39 #23 type.registry] 
+New type java.util.Vector<domain.Movement>
+
+[2025-11-13 10:52:39 #24 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+[2025-11-13 10:52:39 #25 type.registry] 
+New type java.util.Vector<domain.Car>
+
+[2025-11-13 10:52:39 #26 type.registry] 
+New type java.util.Vector<domain.Assessment>
+
+[2025-11-13 10:52:39 #27 type.registry] 
+New type java.util.Vector<domain.Reservation>
+
+[2025-11-13 10:52:39 #28 type.registry] 
+New type java.util.Vector<domain.Reclamation>
+
+[2025-11-13 10:52:39 #29 type.registry] 
+New type java.util.Vector<domain.Alert>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-11-13 10:53:54 #1 store] 
+Database 'C:\Users\jlara\git\Rides24\src\main\resources\rides.temp' is opened by 8752@LAPTOP-EEOQBCUU
+
+[2025-11-13 10:53:54 #2 type.registry] 
+New type domain.User
+
+[2025-11-13 10:53:54 #3 type.registry] 
+New type domain.Driver
+
+[2025-11-13 10:53:54 #4 type] 
+Type domain.User is not enhanced.
+
+[2025-11-13 10:53:54 #5 type.registry] 
+New type domain.Movement
+
+[2025-11-13 10:53:54 #6 type] 
+Type domain.Driver is not enhanced.
+
+[2025-11-13 10:53:54 #7 type.registry] 
+New type domain.Assessment
+
+[2025-11-13 10:53:54 #8 type.registry] 
+New type domain.Car
+
+[2025-11-13 10:53:54 #9 type.registry] 
+New type domain.Ride
+
+[2025-11-13 10:53:54 #10 type] 
+Type domain.Movement is not enhanced.
+
+[2025-11-13 10:53:54 #11 type] 
+Type domain.Assessment is not enhanced.
+
+[2025-11-13 10:53:54 #12 type.registry] 
+New type domain.Traveler
+
+[2025-11-13 10:53:54 #13 type] 
+Type domain.Car is not enhanced.
+
+[2025-11-13 10:53:54 #14 type] 
+Type domain.Ride is not enhanced.
+
+[2025-11-13 10:53:54 #15 type.registry] 
+New type domain.Reservation
+
+[2025-11-13 10:53:54 #16 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-11-13 10:53:54 #17 type.registry] 
+New type domain.Alert
+
+[2025-11-13 10:53:54 #18 type.registry] 
+New type domain.Reclamation
+
+[2025-11-13 10:53:54 #19 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-11-13 10:53:54 #20 type] 
+Type domain.Alert is not enhanced.
+
+[2025-11-13 10:53:54 #21 type] 
+Type domain.Reclamation is not enhanced.
+
+[2025-11-13 10:53:54 #22 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-11-13 10:53:54 #23 type.registry] 
+New type java.util.Vector<domain.Movement>
+
+[2025-11-13 10:53:54 #24 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+[2025-11-13 10:53:54 #25 type.registry] 
+New type java.util.Vector<domain.Car>
+
+[2025-11-13 10:53:54 #26 type.registry] 
+New type java.util.Vector<domain.Assessment>
+
+[2025-11-13 10:53:54 #27 type.registry] 
+New type java.util.Vector<domain.Reservation>
+
+[2025-11-13 10:53:54 #28 type.registry] 
+New type java.util.Vector<domain.Reclamation>
+
+[2025-11-13 10:53:54 #29 type.registry] 
+New type java.util.Vector<domain.Alert>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-11-13 10:55:52 #1 store] 
+Database 'C:\Users\jlara\git\Rides24\src\main\resources\rides.temp' has been recovered (tr. 1-12)
+
+[2025-11-13 10:55:52 #2 store] 
+Database 'C:\Users\jlara\git\Rides24\src\main\resources\rides.temp' is opened by 13984@LAPTOP-EEOQBCUU
+
+[2025-11-13 10:55:52 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-11-13 10:55:52 #4 type] 
+Type domain.Driver is not enhanced.
+
+[2025-11-13 10:55:52 #5 type] 
+Type domain.Movement is not enhanced.
+
+[2025-11-13 10:55:52 #6 type] 
+Type domain.Assessment is not enhanced.
+
+[2025-11-13 10:55:52 #7 type] 
+Type domain.Car is not enhanced.
+
+[2025-11-13 10:55:52 #8 type] 
+Type domain.Ride is not enhanced.
+
+[2025-11-13 10:55:52 #9 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-11-13 10:55:52 #10 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-11-13 10:55:52 #11 type] 
+Type domain.Alert is not enhanced.
+
+[2025-11-13 10:55:52 #12 type] 
+Type domain.Reclamation is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-11-13 10:56:58 #1 store] 
+Database 'C:\Users\jlara\git\Rides24\src\main\resources\rides.temp' has been recovered (tr. 13-16)
+
+[2025-11-13 10:56:58 #2 store] 
+Database 'C:\Users\jlara\git\Rides24\src\main\resources\rides.temp' is opened by 13644@LAPTOP-EEOQBCUU
+
+[2025-11-13 10:56:58 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-11-13 10:56:58 #4 type] 
+Type domain.Driver is not enhanced.
+
+[2025-11-13 10:56:58 #5 type] 
+Type domain.Movement is not enhanced.
+
+[2025-11-13 10:56:58 #6 type] 
+Type domain.Assessment is not enhanced.
+
+[2025-11-13 10:56:58 #7 type] 
+Type domain.Car is not enhanced.
+
+[2025-11-13 10:56:58 #8 type] 
+Type domain.Ride is not enhanced.
+
+[2025-11-13 10:56:58 #9 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-11-13 10:56:58 #10 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-11-13 10:56:58 #11 type] 
+Type domain.Alert is not enhanced.
+
+[2025-11-13 10:56:58 #12 type] 
+Type domain.Reclamation is not enhanced.
+
