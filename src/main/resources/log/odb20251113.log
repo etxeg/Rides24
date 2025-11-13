@@ -519,3 +519,38 @@ Type domain.Alert is not enhanced.
 [2025-11-13 10:56:58 #12 type] 
 Type domain.Reclamation is not enhanced.
 
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-11-13 21:39:52 #1 store] 
+Database '/home/ander/git/Rides24/src/main/resources/rides.temp' is opened by 832463@ander-HP-Laptop-15s-eq2xxx
+
+[2025-11-13 21:39:52 #2 type] 
+Type domain.User is not enhanced.
+
+[2025-11-13 21:39:52 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-11-13 21:39:52 #4 type] 
+Type domain.Movement is not enhanced.
+
+[2025-11-13 21:39:52 #5 type] 
+Type domain.Assessment is not enhanced.
+
+[2025-11-13 21:39:52 #6 type] 
+Type domain.Car is not enhanced.
+
+[2025-11-13 21:39:52 #7 type] 
+Type domain.Ride is not enhanced.
+
+[2025-11-13 21:39:52 #8 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-11-13 21:39:52 #9 type] 
+Type domain.Reservation is not enhanced.
+
+[2025-11-13 21:39:52 #10 type] 
+Type domain.Alert is not enhanced.
+
+[2025-11-13 21:39:52 #11 type] 
+Type domain.Reclamation is not enhanced.
+

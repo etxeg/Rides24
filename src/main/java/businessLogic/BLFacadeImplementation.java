@@ -21,12 +21,13 @@ import domain.Reclamation;
 import domain.Reservation;
 import exceptions.RideMustBeLaterThanTodayException;
 import exceptions.RideAlreadyExistException;
+import businessLogic.ExtendedIteratorCities;
 
 /**
  * It implements the business logic as a web service.
  */
 @WebService(endpointInterface = "businessLogic.BLFacade")
-public class BLFacadeImplementation implements BLFacade {
+public class BLFacadeImplementation implements BLFacade{
 	DataAccess dbManager;
 
 	public BLFacadeImplementation() {
@@ -59,6 +60,17 @@ public class BLFacadeImplementation implements BLFacade {
 
 		return departLocations;
 
+	}
+	
+	public	ExtendedIterator<String>getDepartingCitiesIterator(){
+		dbManager.open();
+
+		List<String> departLocations = dbManager.getDepartCities();
+
+		dbManager.close();
+		
+		return new ExtendedIteratorCities(departLocations);
+		
 	}
 
 	/**
